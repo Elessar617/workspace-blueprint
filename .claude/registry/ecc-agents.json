@@ -1,0 +1,840 @@
+[
+  {
+    "name": "architect",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Software architecture specialist for system design, scalability, and technical decision-making. Use PROACTIVELY when planning new features, refactoring large systems, or making architectural decisions.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob"
+    ],
+    "model": "opus",
+    "path": "agents/architect.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "build-error-resolver",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Build and TypeScript error resolution specialist. Use PROACTIVELY when build fails or type errors occur. Fixes build/type errors only with minimal diffs, no architectural edits. Focuses on getting the build green quickly.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "model": "sonnet",
+    "path": "agents/build-error-resolver.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "chief-of-staff",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Personal communication chief of staff that triages email, Slack, LINE, and Messenger. Classifies messages into 4 tiers (skip/info_only/meeting_info/action_required), generates draft replies, and enforces post-send follow-through via hooks. Use when managing multi-channel communication workflows.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash",
+      "Edit",
+      "Write"
+    ],
+    "model": "opus",
+    "path": "agents/chief-of-staff.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "code-architect",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Designs feature architectures by analyzing existing codebase patterns and conventions, then providing implementation blueprints with concrete files, interfaces, data flow, and build order.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "model": "sonnet",
+    "path": "agents/code-architect.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "code-explorer",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Deeply analyzes existing codebase features by tracing execution paths, mapping architecture layers, and documenting dependencies to inform new development.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "model": "sonnet",
+    "path": "agents/code-explorer.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "code-reviewer",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Expert code review specialist. Proactively reviews code for quality, security, and maintainability. Use immediately after writing or modifying code. MUST BE USED for all code changes.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "model": "sonnet",
+    "path": "agents/code-reviewer.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "code-simplifier",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Simplifies and refines code for clarity, consistency, and maintainability while preserving behavior. Focus on recently modified code unless instructed otherwise.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "model": "sonnet",
+    "path": "agents/code-simplifier.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "comment-analyzer",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Analyze code comments for accuracy, completeness, maintainability, and comment rot risk.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "model": "sonnet",
+    "path": "agents/comment-analyzer.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "conversation-analyzer",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Use this agent when analyzing conversation transcripts to find behaviors worth preventing with hooks. Triggered by /hookify without arguments.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Grep"
+    ],
+    "model": "sonnet",
+    "path": "agents/conversation-analyzer.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "cpp-build-resolver",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "C++ build, CMake, and compilation error resolution specialist. Fixes build errors, linker issues, and template errors with minimal changes. Use when C++ builds fail.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "model": "sonnet",
+    "path": "agents/cpp-build-resolver.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "cpp-reviewer",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Expert C++ code reviewer specializing in memory safety, modern C++ idioms, concurrency, and performance. Use for all C++ code changes. MUST BE USED for C++ projects.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "model": "sonnet",
+    "path": "agents/cpp-reviewer.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "csharp-reviewer",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Expert C# code reviewer specializing in .NET conventions, async patterns, security, nullable reference types, and performance. Use for all C# code changes. MUST BE USED for C# projects.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "model": "sonnet",
+    "path": "agents/csharp-reviewer.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "dart-build-resolver",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Dart/Flutter build, analysis, and dependency error resolution specialist. Fixes `dart analyze` errors, Flutter compilation failures, pub dependency conflicts, and build_runner issues with minimal, surgical changes. Use when Dart/Flutter builds fail.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "model": "sonnet",
+    "path": "agents/dart-build-resolver.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "database-reviewer",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "PostgreSQL database specialist for query optimization, schema design, security, and performance. Use PROACTIVELY when writing SQL, creating migrations, designing schemas, or troubleshooting database performance. Incorporates Supabase best practices.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "model": "sonnet",
+    "path": "agents/database-reviewer.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "doc-updater",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Documentation and codemap specialist. Use PROACTIVELY for updating codemaps and documentation. Runs /update-codemaps and /update-docs, generates docs/CODEMAPS/*, updates READMEs and guides.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "model": "haiku",
+    "path": "agents/doc-updater.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "docs-lookup",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "When the user asks how to use a library, framework, or API or needs up-to-date code examples, use Context7 MCP to fetch current documentation and return answers with examples. Invoke for docs/API/setup questions.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Grep",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__query-docs"
+    ],
+    "model": "sonnet",
+    "path": "agents/docs-lookup.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "e2e-runner",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "End-to-end testing specialist using Vercel Agent Browser (preferred) with Playwright fallback. Use PROACTIVELY for generating, maintaining, and running E2E tests. Manages test journeys, quarantines flaky tests, uploads artifacts (screenshots, videos, traces), and ensures critical user flows work.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "model": "sonnet",
+    "path": "agents/e2e-runner.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "flutter-reviewer",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Flutter and Dart code reviewer. Reviews Flutter code for widget best practices, state management patterns, Dart idioms, performance pitfalls, accessibility, and clean architecture violations. Library-agnostic — works with any state management solution and tooling.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "model": "sonnet",
+    "path": "agents/flutter-reviewer.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "gan-evaluator",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "GAN Harness — Evaluator agent. Tests the live running application via Playwright, scores against rubric, and provides actionable feedback to the Generator.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Write",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "model": "opus",
+    "path": "agents/gan-evaluator.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "gan-generator",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "GAN Harness — Generator agent. Implements features according to the spec, reads evaluator feedback, and iterates until quality threshold is met.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "model": "opus",
+    "path": "agents/gan-generator.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "gan-planner",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "GAN Harness — Planner agent. Expands a one-line prompt into a full product specification with features, sprints, evaluation criteria, and design direction.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Write",
+      "Grep",
+      "Glob"
+    ],
+    "model": "opus",
+    "path": "agents/gan-planner.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "go-build-resolver",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Go build, vet, and compilation error resolution specialist. Fixes build errors, go vet issues, and linter warnings with minimal changes. Use when Go builds fail.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "model": "sonnet",
+    "path": "agents/go-build-resolver.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "go-reviewer",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Expert Go code reviewer specializing in idiomatic Go, concurrency patterns, error handling, and performance. Use for all Go code changes. MUST BE USED for Go projects.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "model": "sonnet",
+    "path": "agents/go-reviewer.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "harness-optimizer",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Analyze and improve the local agent harness configuration for reliability, cost, and throughput.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash",
+      "Edit"
+    ],
+    "model": "sonnet",
+    "path": "agents/harness-optimizer.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "healthcare-reviewer",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Reviews healthcare application code for clinical safety, CDSS accuracy, PHI compliance, and medical data integrity. Specialized for EMR/EHR, clinical decision support, and health information systems.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob"
+    ],
+    "model": "opus",
+    "path": "agents/healthcare-reviewer.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "java-build-resolver",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Java/Maven/Gradle build, compilation, and dependency error resolution specialist. Fixes build errors, Java compiler errors, and Maven/Gradle issues with minimal changes. Use when Java or Spring Boot builds fail.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "model": "sonnet",
+    "path": "agents/java-build-resolver.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "java-reviewer",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Expert Java and Spring Boot code reviewer specializing in layered architecture, JPA patterns, security, and concurrency. Use for all Java code changes. MUST BE USED for Spring Boot projects.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "model": "sonnet",
+    "path": "agents/java-reviewer.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "kotlin-build-resolver",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Kotlin/Gradle build, compilation, and dependency error resolution specialist. Fixes build errors, Kotlin compiler errors, and Gradle issues with minimal changes. Use when Kotlin builds fail.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "model": "sonnet",
+    "path": "agents/kotlin-build-resolver.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "kotlin-reviewer",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Kotlin and Android/KMP code reviewer. Reviews Kotlin code for idiomatic patterns, coroutine safety, Compose best practices, clean architecture violations, and common Android pitfalls.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "model": "sonnet",
+    "path": "agents/kotlin-reviewer.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "loop-operator",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Operate autonomous agent loops, monitor progress, and intervene safely when loops stall.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash",
+      "Edit"
+    ],
+    "model": "sonnet",
+    "path": "agents/loop-operator.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "opensource-forker",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Fork any project for open-sourcing. Copies files, strips secrets and credentials (20+ patterns), replaces internal references with placeholders, generates .env.example, and cleans git history. First stage of the opensource-pipeline skill.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "model": "sonnet",
+    "path": "agents/opensource-forker.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "opensource-packager",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Generate complete open-source packaging for a sanitized project. Produces CLAUDE.md, setup.sh, README.md, LICENSE, CONTRIBUTING.md, and GitHub issue templates. Makes any repo immediately usable with Claude Code. Third stage of the opensource-pipeline skill.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "model": "sonnet",
+    "path": "agents/opensource-packager.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "opensource-sanitizer",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Verify an open-source fork is fully sanitized before release. Scans for leaked secrets, PII, internal references, and dangerous files using 20+ regex patterns. Generates a PASS/FAIL/PASS-WITH-WARNINGS report. Second stage of the opensource-pipeline skill. Use PROACTIVELY before any public release.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "model": "sonnet",
+    "path": "agents/opensource-sanitizer.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "performance-optimizer",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Performance analysis and optimization specialist. Use PROACTIVELY for identifying bottlenecks, optimizing slow code, reducing bundle sizes, and improving runtime performance. Profiling, memory leaks, render optimization, and algorithmic improvements.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "model": "sonnet",
+    "path": "agents/performance-optimizer.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "planner",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Expert planning specialist for complex features and refactoring. Use PROACTIVELY when users request feature implementation, architectural changes, or complex refactoring. Automatically activated for planning tasks.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob"
+    ],
+    "model": "opus",
+    "path": "agents/planner.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "pr-test-analyzer",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Review pull request test coverage quality and completeness, with emphasis on behavioral coverage and real bug prevention.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "model": "sonnet",
+    "path": "agents/pr-test-analyzer.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "python-reviewer",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Expert Python code reviewer specializing in PEP 8 compliance, Pythonic idioms, type hints, security, and performance. Use for all Python code changes. MUST BE USED for Python projects.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "model": "sonnet",
+    "path": "agents/python-reviewer.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "pytorch-build-resolver",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "PyTorch runtime, CUDA, and training error resolution specialist. Fixes tensor shape mismatches, device errors, gradient issues, DataLoader problems, and mixed precision failures with minimal changes. Use when PyTorch training or inference crashes.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "model": "sonnet",
+    "path": "agents/pytorch-build-resolver.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "refactor-cleaner",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Dead code cleanup and consolidation specialist. Use PROACTIVELY for removing unused code, duplicates, and refactoring. Runs analysis tools (knip, depcheck, ts-prune) to identify dead code and safely removes it.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "model": "sonnet",
+    "path": "agents/refactor-cleaner.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "rust-build-resolver",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Rust build, compilation, and dependency error resolution specialist. Fixes cargo build errors, borrow checker issues, and Cargo.toml problems with minimal changes. Use when Rust builds fail.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "model": "sonnet",
+    "path": "agents/rust-build-resolver.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "rust-reviewer",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Expert Rust code reviewer specializing in ownership, lifetimes, error handling, unsafe usage, and idiomatic patterns. Use for all Rust code changes. MUST BE USED for Rust projects.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "model": "sonnet",
+    "path": "agents/rust-reviewer.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "security-reviewer",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Security vulnerability detection and remediation specialist. Use PROACTIVELY after writing code that handles user input, authentication, API endpoints, or sensitive data. Flags secrets, SSRF, injection, unsafe crypto, and OWASP Top 10 vulnerabilities.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "model": "sonnet",
+    "path": "agents/security-reviewer.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "seo-specialist",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "SEO specialist for technical SEO audits, on-page optimization, structured data, Core Web Vitals, and content/keyword mapping. Use for site audits, meta tag reviews, schema markup, sitemap and robots issues, and SEO remediation plans.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash",
+      "WebSearch",
+      "WebFetch"
+    ],
+    "model": "sonnet",
+    "path": "agents/seo-specialist.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "silent-failure-hunter",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Review code for silent failures, swallowed errors, bad fallbacks, and missing error propagation.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "model": "sonnet",
+    "path": "agents/silent-failure-hunter.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "tdd-guide",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Test-Driven Development specialist enforcing write-tests-first methodology. Use PROACTIVELY when writing new features, fixing bugs, or refactoring code. Ensures 80%+ test coverage.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep"
+    ],
+    "model": "sonnet",
+    "path": "agents/tdd-guide.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "type-design-analyzer",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Analyze type design for encapsulation, invariant expression, usefulness, and enforcement.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "model": "sonnet",
+    "path": "agents/type-design-analyzer.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  },
+  {
+    "name": "typescript-reviewer",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Expert TypeScript/JavaScript code reviewer specializing in type safety, async correctness, Node/web security, and idiomatic patterns. Use for all TypeScript and JavaScript code changes. MUST BE USED for TypeScript/JavaScript projects.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "model": "sonnet",
+    "path": "agents/typescript-reviewer.md",
+    "indexed_at": "2026-05-11T09:35:33.985Z",
+    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+  }
+]
