@@ -1,8 +1,10 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync, renameSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { homedir } from 'node:os';
 import { scrapeEcc } from './lib/ecc-scraper.mjs';
 import { scrapeHarness } from './lib/harness-scraper.mjs';
+import { scrapeNative } from './lib/native-scraper.mjs';
 import { extractNames, classifyNames } from './lib/validate.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -40,8 +42,20 @@ async function main() {
     }
   }
 
-  const harness = scrapeHarness();
+  const native = scrapeNative(REPO_ROOT);
+  const hookProfiles = [
+    { name: 'minimal', kind: 'hook-profile', source: 'native', description: 'Hooks no-op; exit 0 immediately.' },
+    { name: 'standard', kind: 'hook-profile', source: 'native', description: 'Current hook behavior (default).' },
+    { name: 'strict', kind: 'hook-profile', source: 'native', description: 'Current behavior plus future stricter variants.' },
+  ];
+  const harness = scrapeHarness({
+    settingsPaths: [
+      join(REPO_ROOT, '.claude', 'settings.json'),
+      join(homedir(), '.claude', 'settings.json'),
+    ],
+  });
   console.log(`[rebuild-registry] Harness: ${harness.skills.length} skills, ${harness.mcps.length} mcps`);
+  console.log(`[rebuild-registry] Native: ${native.length} items`);
 
   if (!HARNESS_ONLY) {
     writeJsonAtomic(join(REGISTRY_DIR, 'ecc-agents.json'), eccResult.agents);
@@ -49,12 +63,9 @@ async function main() {
     writeJsonAtomic(join(REGISTRY_DIR, 'ecc-commands.json'), eccResult.commands);
     writeJsonAtomic(join(REGISTRY_DIR, 'ecc-mcps.json'), eccResult.mcps);
     writeJsonAtomic(join(REGISTRY_DIR, 'ecc-language-rules.json'), eccResult.rules);
-    writeJsonAtomic(join(REGISTRY_DIR, 'ecc-hook-profiles.json'), {
-      minimal: { description: 'Hooks no-op; exit 0 immediately.' },
-      standard: { description: 'Current hook behavior (default).' },
-      strict: { description: 'Current behavior plus future stricter variants.' },
-    });
+    writeJsonAtomic(join(REGISTRY_DIR, 'ecc-hook-profiles.json'), hookProfiles);
   }
+  writeJsonAtomic(join(REGISTRY_DIR, 'native-inventory.json'), native);
   writeJsonAtomic(join(REGISTRY_DIR, 'harness-skills.json'), harness.skills);
   writeJsonAtomic(join(REGISTRY_DIR, 'harness-mcps.json'), harness.mcps);
   writeJsonAtomic(join(REGISTRY_DIR, 'harness-builtins.json'), harness.builtins);
@@ -74,6 +85,9 @@ async function main() {
       ...(HARNESS_ONLY ? (existsSync(join(REGISTRY_DIR, 'ecc-mcps.json')) ? JSON.parse(readFileSync(join(REGISTRY_DIR, 'ecc-mcps.json'), 'utf8')) : []) : eccResult.mcps),
       ...harness.mcps,
     ],
+    builtins: harness.builtins,
+    native,
+    hookProfiles,
     rules: HARNESS_ONLY
       ? (existsSync(join(REGISTRY_DIR, 'ecc-language-rules.json')) ? JSON.parse(readFileSync(join(REGISTRY_DIR, 'ecc-language-rules.json'), 'utf8')) : [])
       : eccResult.rules,
@@ -94,6 +108,9 @@ async function main() {
       console.warn(`[rebuild-registry] ${file}: dangling references: ${dangling.join(', ')}`);
       totalDangling += dangling.length;
     }
+  }
+  if (totalDangling > 0) {
+    throw new Error(`routing validation failed with ${totalDangling} dangling reference(s)`);
   }
   if (totalDangling === 0 && filesToValidate.length > 0) {
     console.log(`[rebuild-registry] All ${filesToValidate.length} routing files validated cleanly.`);

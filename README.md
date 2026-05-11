@@ -8,12 +8,12 @@ An agent-native scaffold for software development with [Claude Code](https://git
 - **Four workspaces** mapped to phases of dev work: `spec/` (RFCs, ADRs, briefs), `lab/` (exploratory iterations), `build/` (production pipeline), `ship/` (release artifacts)
 - **A four-agent loop** for the build pipeline: planner (one-shot) → implementer ↔ reviewer ↔ adversary (cycle, max 5)
 - **`.claude/` infrastructure:**
-  - 5 rules (always loaded, <40KB total) enforcing TDD, conventional commits, review gates, portability
+  - 7 native rules enforcing TDD, conventional commits, review gates, portability, and engineering constraints
   - 10 skills (6 project-specific, 4 vendored from `anthropics/skills`)
   - 4 subagent specs
   - 4 bash hooks enforcing rules by construction (TDD, cycle cap, output sign-off, portability)
   - 4 configured MCP servers (`filesystem`, `git`, `fetch`, `github`)
-  - 2 enabled plugins (`obra/superpowers`, `affaan-m/everything-claude-code`)
+  - Recommended plugins documented in `.claude/MCP-SETUP.md`; installed harness content is snapshotted in `.claude/registry/`
 
 ## Inspiration
 

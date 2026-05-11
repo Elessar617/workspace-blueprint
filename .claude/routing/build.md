@@ -6,7 +6,7 @@
 
 - Agents: `planner`, `implementer`, `reviewer`, `adversary`
 - Skills: `tdd-loop`
-- Rules: all 5 (portability, TDD, commit, review, code-quality)
+- Rules: all native rules
 - Hook profile: `standard`
 - MCPs (advisory): `filesystem`, `git`
 
@@ -15,10 +15,8 @@
 | Files match            | Add from ECC                                          |
 |------------------------|-------------------------------------------------------|
 | `*.py`                 | `python-reviewer`, `python-patterns`                  |
-| `*.py` + ML libs       | + `pytorch-patterns`, `pytorch-build-resolver`        |
 | `*.go`                 | `go-reviewer`, `go-build-resolver`, `golang-patterns` |
 | `*.ts`, `*.tsx`        | `typescript-reviewer`                                 |
-| `*.ts` + `bun.lockb`   | + `bun-runtime`                                       |
 | `*.java`               | `java-reviewer`, `java-build-resolver`                |
 | `*.kt`                 | `kotlin-reviewer`, `kotlin-build-resolver`            |
 | `*.cpp`, `*.cc`, `*.h` | `cpp-reviewer`, `cpp-build-resolver`                  |

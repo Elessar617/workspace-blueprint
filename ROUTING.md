@@ -29,7 +29,7 @@ If no row in Step 1 matches, load only:
 
 - Native agents: `planner`, `implementer`, `reviewer`, `adversary`
 - Native skills: `tdd-loop`
-- All 5 rules
+- All native rules
 - Hook profile: `standard`
 - No ECC content
 

@@ -29,7 +29,6 @@ export function getEccSha(eccPath) {
 }
 
 export function scrapeEcc(eccPath) {
-  const indexedAt = new Date().toISOString();
   const eccSha = getEccSha(eccPath);
   const skipped = [];
   const out = { agents: [], skills: [], commands: [], rules: [], mcps: [] };
@@ -48,7 +47,6 @@ export function scrapeEcc(eccPath) {
         source: 'ecc',
       });
       record.path = relative(eccPath, file);
-      record.indexed_at = indexedAt;
       record.ecc_sha = eccSha;
       const bucket =
         kind === 'agent' ? 'agents'
@@ -70,12 +68,11 @@ export function scrapeEcc(eccPath) {
           source: 'ecc',
           path: relative(eccPath, p),
           description: '',
-          indexed_at: indexedAt,
           ecc_sha: eccSha,
         });
       }
     }
   }
 
-  return { ...out, skipped, eccSha, indexedAt };
+  return { ...out, skipped, eccSha };
 }

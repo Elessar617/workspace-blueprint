@@ -4,7 +4,7 @@
 
 - Agents: `planner`, `implementer`, `reviewer`, `adversary`, `refactor-cleaner`, `code-simplifier`
 - Skills: `tdd-loop`, `karpathy-guidelines`
-- Rules: all 5
+- Rules: all native rules
 - Hook profile: `standard`
 - MCPs (advisory): `filesystem`, `git`
 

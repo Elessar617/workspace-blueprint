@@ -8,7 +8,6 @@
     "tools": [],
     "model": null,
     "path": "skills/accessibility/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -18,11 +17,15 @@
     "description": "Head-to-head comparison of coding agents (Claude Code, Aider, Codex, etc.) on custom tasks with pass rate, cost, time, and consistency metrics",
     "languages": [],
     "tools": [
-      "Read, Write, Edit, Bash, Grep, Glob"
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
     ],
     "model": null,
     "path": "skills/agent-eval/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -34,7 +37,6 @@
     "tools": [],
     "model": null,
     "path": "skills/agent-harness-construction/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -46,7 +48,6 @@
     "tools": [],
     "model": null,
     "path": "skills/agent-introspection-debugging/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -58,7 +59,6 @@
     "tools": [],
     "model": null,
     "path": "skills/agent-payment-x402/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -70,7 +70,6 @@
     "tools": [],
     "model": null,
     "path": "skills/agent-sort/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -82,7 +81,6 @@
     "tools": [],
     "model": null,
     "path": "skills/agentic-engineering/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -94,7 +92,6 @@
     "tools": [],
     "model": null,
     "path": "skills/ai-first-engineering/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -106,7 +103,6 @@
     "tools": [],
     "model": null,
     "path": "skills/ai-regression-testing/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -118,7 +114,6 @@
     "tools": [],
     "model": null,
     "path": "skills/android-clean-architecture/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -130,7 +125,6 @@
     "tools": [],
     "model": null,
     "path": "skills/api-connector-builder/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -142,7 +136,6 @@
     "tools": [],
     "model": null,
     "path": "skills/api-design/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -154,7 +147,6 @@
     "tools": [],
     "model": null,
     "path": "skills/architecture-decision-records/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -166,7 +158,6 @@
     "tools": [],
     "model": null,
     "path": "skills/article-writing/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -178,7 +169,6 @@
     "tools": [],
     "model": null,
     "path": "skills/automation-audit-ops/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -190,7 +180,6 @@
     "tools": [],
     "model": null,
     "path": "skills/autonomous-agent-harness/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -202,7 +191,6 @@
     "tools": [],
     "model": null,
     "path": "skills/autonomous-loops/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -214,7 +202,6 @@
     "tools": [],
     "model": null,
     "path": "skills/backend-patterns/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -226,7 +213,6 @@
     "tools": [],
     "model": null,
     "path": "skills/benchmark/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -238,7 +224,6 @@
     "tools": [],
     "model": null,
     "path": "skills/blueprint/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -250,7 +235,6 @@
     "tools": [],
     "model": null,
     "path": "skills/brand-voice/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -262,7 +246,6 @@
     "tools": [],
     "model": null,
     "path": "skills/brand-voice/references/voice-profile-schema.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -274,7 +257,6 @@
     "tools": [],
     "model": null,
     "path": "skills/browser-qa/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -286,7 +268,6 @@
     "tools": [],
     "model": null,
     "path": "skills/bun-runtime/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -298,7 +279,6 @@
     "tools": [],
     "model": null,
     "path": "skills/canary-watch/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -310,7 +290,6 @@
     "tools": [],
     "model": null,
     "path": "skills/carrier-relationship-management/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -322,7 +301,6 @@
     "tools": [],
     "model": null,
     "path": "skills/ck/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -334,7 +312,6 @@
     "tools": [],
     "model": null,
     "path": "skills/claude-devfleet/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -346,7 +323,6 @@
     "tools": [],
     "model": null,
     "path": "skills/click-path-audit/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -358,7 +334,6 @@
     "tools": [],
     "model": null,
     "path": "skills/clickhouse-io/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -370,7 +345,6 @@
     "tools": [],
     "model": null,
     "path": "skills/code-tour/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -382,7 +356,6 @@
     "tools": [],
     "model": null,
     "path": "skills/codebase-onboarding/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -394,7 +367,6 @@
     "tools": [],
     "model": null,
     "path": "skills/coding-standards/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -406,7 +378,6 @@
     "tools": [],
     "model": null,
     "path": "skills/compose-multiplatform-patterns/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -418,7 +389,6 @@
     "tools": [],
     "model": null,
     "path": "skills/configure-ecc/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -430,7 +400,6 @@
     "tools": [],
     "model": null,
     "path": "skills/connections-optimizer/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -442,7 +411,6 @@
     "tools": [],
     "model": null,
     "path": "skills/content-engine/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -454,7 +422,6 @@
     "tools": [],
     "model": null,
     "path": "skills/content-hash-cache-pattern/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -466,7 +433,6 @@
     "tools": [],
     "model": null,
     "path": "skills/context-budget/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -478,7 +444,6 @@
     "tools": [],
     "model": null,
     "path": "skills/continuous-agent-loop/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -490,7 +455,6 @@
     "tools": [],
     "model": null,
     "path": "skills/continuous-learning/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -502,7 +466,6 @@
     "tools": [],
     "model": null,
     "path": "skills/continuous-learning-v2/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -514,7 +477,6 @@
     "tools": [],
     "model": "haiku",
     "path": "skills/continuous-learning-v2/agents/observer.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -526,7 +488,6 @@
     "tools": [],
     "model": null,
     "path": "skills/cost-aware-llm-pipeline/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -538,7 +499,6 @@
     "tools": [],
     "model": null,
     "path": "skills/council/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -550,7 +510,6 @@
     "tools": [],
     "model": null,
     "path": "skills/cpp-coding-standards/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -562,7 +521,6 @@
     "tools": [],
     "model": null,
     "path": "skills/cpp-testing/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -574,7 +532,6 @@
     "tools": [],
     "model": null,
     "path": "skills/crosspost/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -586,7 +543,6 @@
     "tools": [],
     "model": null,
     "path": "skills/csharp-testing/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -598,7 +554,6 @@
     "tools": [],
     "model": null,
     "path": "skills/customer-billing-ops/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -610,7 +565,6 @@
     "tools": [],
     "model": null,
     "path": "skills/customs-trade-compliance/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -622,7 +576,6 @@
     "tools": [],
     "model": null,
     "path": "skills/dart-flutter-patterns/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -634,7 +587,6 @@
     "tools": [],
     "model": null,
     "path": "skills/dashboard-builder/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -646,7 +598,6 @@
     "tools": [],
     "model": null,
     "path": "skills/data-scraper-agent/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -658,7 +609,6 @@
     "tools": [],
     "model": null,
     "path": "skills/database-migrations/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -670,7 +620,6 @@
     "tools": [],
     "model": null,
     "path": "skills/deep-research/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -682,7 +631,6 @@
     "tools": [],
     "model": null,
     "path": "skills/defi-amm-security/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -694,7 +642,6 @@
     "tools": [],
     "model": null,
     "path": "skills/deployment-patterns/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -706,7 +653,6 @@
     "tools": [],
     "model": null,
     "path": "skills/design-system/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -718,7 +664,6 @@
     "tools": [],
     "model": null,
     "path": "skills/django-patterns/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -730,7 +675,6 @@
     "tools": [],
     "model": null,
     "path": "skills/django-security/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -742,7 +686,6 @@
     "tools": [],
     "model": null,
     "path": "skills/django-tdd/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -754,7 +697,6 @@
     "tools": [],
     "model": null,
     "path": "skills/django-verification/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -766,7 +708,6 @@
     "tools": [],
     "model": null,
     "path": "skills/dmux-workflows/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -778,7 +719,6 @@
     "tools": [],
     "model": null,
     "path": "skills/docker-patterns/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -790,7 +730,6 @@
     "tools": [],
     "model": null,
     "path": "skills/documentation-lookup/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -802,7 +741,6 @@
     "tools": [],
     "model": null,
     "path": "skills/dotnet-patterns/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -814,7 +752,6 @@
     "tools": [],
     "model": null,
     "path": "skills/e2e-testing/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -826,7 +763,6 @@
     "tools": [],
     "model": null,
     "path": "skills/ecc-tools-cost-audit/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -838,7 +774,6 @@
     "tools": [],
     "model": null,
     "path": "skills/email-ops/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -850,7 +785,6 @@
     "tools": [],
     "model": null,
     "path": "skills/energy-procurement/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -862,7 +796,6 @@
     "tools": [],
     "model": null,
     "path": "skills/enterprise-agent-ops/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -872,11 +805,15 @@
     "description": "Formal evaluation framework for Claude Code sessions implementing eval-driven development (EDD) principles",
     "languages": [],
     "tools": [
-      "Read, Write, Edit, Bash, Grep, Glob"
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
     ],
     "model": null,
     "path": "skills/eval-harness/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -888,7 +825,6 @@
     "tools": [],
     "model": null,
     "path": "skills/evm-token-decimals/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -900,7 +836,6 @@
     "tools": [],
     "model": null,
     "path": "skills/exa-search/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -912,7 +847,6 @@
     "tools": [],
     "model": null,
     "path": "skills/fal-ai-media/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -924,7 +858,6 @@
     "tools": [],
     "model": null,
     "path": "skills/finance-billing-ops/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -936,7 +869,6 @@
     "tools": [],
     "model": null,
     "path": "skills/flox-environments/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -948,7 +880,6 @@
     "tools": [],
     "model": null,
     "path": "skills/flutter-dart-code-review/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -960,7 +891,6 @@
     "tools": [],
     "model": null,
     "path": "skills/foundation-models-on-device/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -972,7 +902,6 @@
     "tools": [],
     "model": null,
     "path": "skills/frontend-patterns/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -984,7 +913,6 @@
     "tools": [],
     "model": null,
     "path": "skills/frontend-slides/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -996,7 +924,6 @@
     "tools": [],
     "model": null,
     "path": "skills/frontend-slides/STYLE_PRESETS.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1006,11 +933,16 @@
     "description": "GAN-inspired Generator-Evaluator agent harness for building high-quality applications autonomously. Based on Anthropic's March 2026 harness design paper.",
     "languages": [],
     "tools": [
-      "Read, Write, Edit, Bash, Grep, Glob, Task"
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob",
+      "Task"
     ],
     "model": null,
     "path": "skills/gan-style-harness/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1022,7 +954,6 @@
     "tools": [],
     "model": null,
     "path": "skills/gateguard/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1034,7 +965,6 @@
     "tools": [],
     "model": null,
     "path": "skills/git-workflow/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1046,7 +976,6 @@
     "tools": [],
     "model": null,
     "path": "skills/github-ops/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1058,7 +987,6 @@
     "tools": [],
     "model": null,
     "path": "skills/golang-patterns/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1070,7 +998,6 @@
     "tools": [],
     "model": null,
     "path": "skills/golang-testing/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1082,7 +1009,6 @@
     "tools": [],
     "model": null,
     "path": "skills/google-workspace-ops/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1094,7 +1020,6 @@
     "tools": [],
     "model": null,
     "path": "skills/healthcare-cdss-patterns/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1106,7 +1031,6 @@
     "tools": [],
     "model": null,
     "path": "skills/healthcare-emr-patterns/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1118,7 +1042,6 @@
     "tools": [],
     "model": null,
     "path": "skills/healthcare-eval-harness/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1130,7 +1053,6 @@
     "tools": [],
     "model": null,
     "path": "skills/healthcare-phi-compliance/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1142,7 +1064,6 @@
     "tools": [],
     "model": null,
     "path": "skills/hermes-imports/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1154,7 +1075,6 @@
     "tools": [],
     "model": null,
     "path": "skills/hexagonal-architecture/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1166,7 +1086,6 @@
     "tools": [],
     "model": null,
     "path": "skills/hipaa-compliance/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1178,7 +1097,6 @@
     "tools": [],
     "model": null,
     "path": "skills/hookify-rules/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1190,7 +1108,6 @@
     "tools": [],
     "model": null,
     "path": "skills/inventory-demand-planning/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1202,7 +1119,6 @@
     "tools": [],
     "model": null,
     "path": "skills/investor-materials/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1214,7 +1130,6 @@
     "tools": [],
     "model": null,
     "path": "skills/investor-outreach/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1226,7 +1141,6 @@
     "tools": [],
     "model": null,
     "path": "skills/ios-icon-gen/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1238,7 +1152,6 @@
     "tools": [],
     "model": null,
     "path": "skills/iterative-retrieval/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1250,7 +1163,6 @@
     "tools": [],
     "model": null,
     "path": "skills/java-coding-standards/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1262,7 +1174,6 @@
     "tools": [],
     "model": null,
     "path": "skills/jira-integration/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1274,7 +1185,6 @@
     "tools": [],
     "model": null,
     "path": "skills/jpa-patterns/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1286,7 +1196,6 @@
     "tools": [],
     "model": null,
     "path": "skills/knowledge-ops/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1298,7 +1207,6 @@
     "tools": [],
     "model": null,
     "path": "skills/kotlin-coroutines-flows/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1310,7 +1218,6 @@
     "tools": [],
     "model": null,
     "path": "skills/kotlin-exposed-patterns/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1322,7 +1229,6 @@
     "tools": [],
     "model": null,
     "path": "skills/kotlin-ktor-patterns/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1334,7 +1240,6 @@
     "tools": [],
     "model": null,
     "path": "skills/kotlin-patterns/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1346,7 +1251,6 @@
     "tools": [],
     "model": null,
     "path": "skills/kotlin-testing/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1358,7 +1262,6 @@
     "tools": [],
     "model": null,
     "path": "skills/laravel-patterns/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1370,7 +1273,6 @@
     "tools": [],
     "model": null,
     "path": "skills/laravel-plugin-discovery/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1382,7 +1284,6 @@
     "tools": [],
     "model": null,
     "path": "skills/laravel-security/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1394,7 +1295,6 @@
     "tools": [],
     "model": null,
     "path": "skills/laravel-tdd/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1406,7 +1306,6 @@
     "tools": [],
     "model": null,
     "path": "skills/laravel-verification/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1418,7 +1317,6 @@
     "tools": [],
     "model": null,
     "path": "skills/lead-intelligence/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1435,7 +1333,6 @@
     ],
     "model": "sonnet",
     "path": "skills/lead-intelligence/agents/enrichment-agent.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1453,7 +1350,6 @@
     ],
     "model": "sonnet",
     "path": "skills/lead-intelligence/agents/mutual-mapper.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1468,7 +1364,6 @@
     ],
     "model": "sonnet",
     "path": "skills/lead-intelligence/agents/outreach-drafter.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1487,7 +1382,6 @@
     ],
     "model": "sonnet",
     "path": "skills/lead-intelligence/agents/signal-scorer.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1499,7 +1393,6 @@
     "tools": [],
     "model": null,
     "path": "skills/liquid-glass-design/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1511,7 +1404,6 @@
     "tools": [],
     "model": null,
     "path": "skills/llm-trading-agent-security/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1523,7 +1415,6 @@
     "tools": [],
     "model": null,
     "path": "skills/logistics-exception-management/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1535,7 +1426,6 @@
     "tools": [],
     "model": null,
     "path": "skills/manim-video/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1547,7 +1437,6 @@
     "tools": [],
     "model": null,
     "path": "skills/market-research/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1559,7 +1448,6 @@
     "tools": [],
     "model": null,
     "path": "skills/mcp-server-patterns/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1571,7 +1459,6 @@
     "tools": [],
     "model": null,
     "path": "skills/messages-ops/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1583,7 +1470,6 @@
     "tools": [],
     "model": null,
     "path": "skills/nanoclaw-repl/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1595,7 +1481,6 @@
     "tools": [],
     "model": null,
     "path": "skills/nestjs-patterns/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1607,7 +1492,6 @@
     "tools": [],
     "model": null,
     "path": "skills/nextjs-turbopack/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1619,7 +1503,6 @@
     "tools": [],
     "model": null,
     "path": "skills/nodejs-keccak256/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1631,7 +1514,6 @@
     "tools": [],
     "model": null,
     "path": "skills/nutrient-document-processing/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1643,7 +1525,6 @@
     "tools": [],
     "model": null,
     "path": "skills/nuxt4-patterns/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1655,7 +1536,6 @@
     "tools": [],
     "model": null,
     "path": "skills/openclaw-persona-forge/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1667,7 +1547,6 @@
     "tools": [],
     "model": null,
     "path": "skills/openclaw-persona-forge/references/avatar-style.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1679,7 +1558,6 @@
     "tools": [],
     "model": null,
     "path": "skills/openclaw-persona-forge/references/boundary-rules.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1691,7 +1569,6 @@
     "tools": [],
     "model": null,
     "path": "skills/openclaw-persona-forge/references/error-handling.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1703,7 +1580,6 @@
     "tools": [],
     "model": null,
     "path": "skills/openclaw-persona-forge/references/identity-tension.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1715,7 +1591,6 @@
     "tools": [],
     "model": null,
     "path": "skills/openclaw-persona-forge/references/naming-system.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1727,7 +1602,6 @@
     "tools": [],
     "model": null,
     "path": "skills/openclaw-persona-forge/references/output-template.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1739,7 +1613,6 @@
     "tools": [],
     "model": null,
     "path": "skills/opensource-pipeline/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1751,7 +1624,6 @@
     "tools": [],
     "model": null,
     "path": "skills/perl-patterns/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1763,7 +1635,6 @@
     "tools": [],
     "model": null,
     "path": "skills/perl-security/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1775,7 +1646,6 @@
     "tools": [],
     "model": null,
     "path": "skills/perl-testing/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1787,7 +1657,6 @@
     "tools": [],
     "model": null,
     "path": "skills/plankton-code-quality/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1799,7 +1668,6 @@
     "tools": [],
     "model": null,
     "path": "skills/postgres-patterns/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1811,7 +1679,6 @@
     "tools": [],
     "model": null,
     "path": "skills/product-capability/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1823,7 +1690,6 @@
     "tools": [],
     "model": null,
     "path": "skills/product-lens/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1835,7 +1701,6 @@
     "tools": [],
     "model": null,
     "path": "skills/production-scheduling/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1847,7 +1712,6 @@
     "tools": [],
     "model": null,
     "path": "skills/project-flow-ops/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1859,7 +1723,6 @@
     "tools": [],
     "model": null,
     "path": "skills/prompt-optimizer/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1871,7 +1734,6 @@
     "tools": [],
     "model": null,
     "path": "skills/python-patterns/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1883,7 +1745,6 @@
     "tools": [],
     "model": null,
     "path": "skills/python-testing/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1895,7 +1756,6 @@
     "tools": [],
     "model": null,
     "path": "skills/pytorch-patterns/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1907,7 +1767,6 @@
     "tools": [],
     "model": null,
     "path": "skills/quality-nonconformance/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1919,7 +1778,6 @@
     "tools": [],
     "model": null,
     "path": "skills/ralphinho-rfc-pipeline/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1931,7 +1789,6 @@
     "tools": [],
     "model": null,
     "path": "skills/regex-vs-llm-structured-text/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1943,7 +1800,6 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1955,7 +1811,6 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/3d.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1967,7 +1822,6 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/animations.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1979,7 +1833,6 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/assets.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -1991,7 +1844,6 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/audio.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2003,7 +1855,6 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/calculate-metadata.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2015,7 +1866,6 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/can-decode.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2027,7 +1877,6 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/charts.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2039,7 +1888,6 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/compositions.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2051,7 +1899,6 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/display-captions.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2063,7 +1910,6 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/extract-frames.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2075,7 +1921,6 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/fonts.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2087,7 +1932,6 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/get-audio-duration.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2099,7 +1943,6 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/get-video-dimensions.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2111,7 +1954,6 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/get-video-duration.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2123,7 +1965,6 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/gifs.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2135,7 +1976,6 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/images.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2147,7 +1987,6 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/import-srt-captions.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2159,7 +1998,6 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/lottie.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2171,7 +2009,6 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/measuring-dom-nodes.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2183,7 +2020,6 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/measuring-text.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2195,7 +2031,6 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/sequencing.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2207,7 +2042,6 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/tailwind.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2219,7 +2053,6 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/text-animations.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2231,7 +2064,6 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/timing.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2243,7 +2075,6 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/transcribe-captions.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2255,7 +2086,6 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/transitions.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2267,7 +2097,6 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/trimming.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2279,7 +2108,6 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/videos.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2291,7 +2119,6 @@
     "tools": [],
     "model": null,
     "path": "skills/repo-scan/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2303,7 +2130,6 @@
     "tools": [],
     "model": null,
     "path": "skills/research-ops/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2315,7 +2141,6 @@
     "tools": [],
     "model": null,
     "path": "skills/returns-reverse-logistics/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2327,7 +2152,6 @@
     "tools": [],
     "model": null,
     "path": "skills/rules-distill/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2339,7 +2163,6 @@
     "tools": [],
     "model": null,
     "path": "skills/rust-patterns/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2351,7 +2174,6 @@
     "tools": [],
     "model": null,
     "path": "skills/rust-testing/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2363,7 +2185,6 @@
     "tools": [],
     "model": null,
     "path": "skills/safety-guard/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2375,7 +2196,6 @@
     "tools": [],
     "model": null,
     "path": "skills/santa-method/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2387,7 +2207,6 @@
     "tools": [],
     "model": null,
     "path": "skills/search-first/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2399,7 +2218,6 @@
     "tools": [],
     "model": null,
     "path": "skills/security-bounty-hunter/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2411,7 +2229,6 @@
     "tools": [],
     "model": null,
     "path": "skills/security-review/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2423,7 +2240,6 @@
     "tools": [],
     "model": null,
     "path": "skills/security-review/cloud-infrastructure-security.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2435,7 +2251,6 @@
     "tools": [],
     "model": null,
     "path": "skills/security-scan/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2447,7 +2262,6 @@
     "tools": [],
     "model": null,
     "path": "skills/seo/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2457,11 +2271,11 @@
     "description": "Visualize whether skills, rules, and agent definitions are actually followed — auto-generates scenarios at 3 prompt strictness levels, runs agents, classifies behavioral sequences, and reports compliance rates with full tool call timelines",
     "languages": [],
     "tools": [
-      "Read, Bash"
+      "Read",
+      "Bash"
     ],
     "model": null,
     "path": "skills/skill-comply/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2473,7 +2287,6 @@
     "tools": [],
     "model": null,
     "path": "skills/skill-comply/prompts/classifier.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2485,7 +2298,6 @@
     "tools": [],
     "model": null,
     "path": "skills/skill-comply/prompts/scenario_generator.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2497,7 +2309,6 @@
     "tools": [],
     "model": null,
     "path": "skills/skill-comply/prompts/spec_generator.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2509,7 +2320,6 @@
     "tools": [],
     "model": null,
     "path": "skills/skill-stocktake/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2521,7 +2331,6 @@
     "tools": [],
     "model": null,
     "path": "skills/social-graph-ranker/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2533,7 +2342,6 @@
     "tools": [],
     "model": null,
     "path": "skills/springboot-patterns/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2545,7 +2353,6 @@
     "tools": [],
     "model": null,
     "path": "skills/springboot-security/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2557,7 +2364,6 @@
     "tools": [],
     "model": null,
     "path": "skills/springboot-tdd/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2569,7 +2375,6 @@
     "tools": [],
     "model": null,
     "path": "skills/springboot-verification/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2581,7 +2386,6 @@
     "tools": [],
     "model": null,
     "path": "skills/strategic-compact/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2593,7 +2397,6 @@
     "tools": [],
     "model": null,
     "path": "skills/swift-actor-persistence/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2605,7 +2408,6 @@
     "tools": [],
     "model": null,
     "path": "skills/swift-concurrency-6-2/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2617,7 +2419,6 @@
     "tools": [],
     "model": null,
     "path": "skills/swift-protocol-di-testing/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2629,7 +2430,6 @@
     "tools": [],
     "model": null,
     "path": "skills/swiftui-patterns/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2641,7 +2441,6 @@
     "tools": [],
     "model": null,
     "path": "skills/tdd-workflow/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2653,7 +2452,6 @@
     "tools": [],
     "model": null,
     "path": "skills/team-builder/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2665,7 +2463,6 @@
     "tools": [],
     "model": null,
     "path": "skills/terminal-ops/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2677,7 +2474,6 @@
     "tools": [],
     "model": null,
     "path": "skills/tinystruct-patterns/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2689,7 +2485,6 @@
     "tools": [],
     "model": null,
     "path": "skills/tinystruct-patterns/references/architecture.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2701,7 +2496,6 @@
     "tools": [],
     "model": null,
     "path": "skills/tinystruct-patterns/references/data-handling.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2713,7 +2507,6 @@
     "tools": [],
     "model": null,
     "path": "skills/tinystruct-patterns/references/routing.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2725,7 +2518,6 @@
     "tools": [],
     "model": null,
     "path": "skills/tinystruct-patterns/references/system-usage.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2737,7 +2529,6 @@
     "tools": [],
     "model": null,
     "path": "skills/tinystruct-patterns/references/testing.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2749,7 +2540,6 @@
     "tools": [],
     "model": null,
     "path": "skills/token-budget-advisor/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2761,7 +2551,6 @@
     "tools": [],
     "model": null,
     "path": "skills/ui-demo/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2773,7 +2562,6 @@
     "tools": [],
     "model": null,
     "path": "skills/unified-notifications-ops/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2785,7 +2573,6 @@
     "tools": [],
     "model": null,
     "path": "skills/verification-loop/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2797,7 +2584,6 @@
     "tools": [],
     "model": null,
     "path": "skills/video-editing/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2809,7 +2595,6 @@
     "tools": [],
     "model": null,
     "path": "skills/videodb/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2821,7 +2606,6 @@
     "tools": [],
     "model": null,
     "path": "skills/videodb/reference/api-reference.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2833,7 +2617,6 @@
     "tools": [],
     "model": null,
     "path": "skills/videodb/reference/capture-reference.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2845,7 +2628,6 @@
     "tools": [],
     "model": null,
     "path": "skills/videodb/reference/capture.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2857,7 +2639,6 @@
     "tools": [],
     "model": null,
     "path": "skills/videodb/reference/editor.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2869,7 +2650,6 @@
     "tools": [],
     "model": null,
     "path": "skills/videodb/reference/generative.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2881,7 +2661,6 @@
     "tools": [],
     "model": null,
     "path": "skills/videodb/reference/rtstream-reference.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2893,7 +2672,6 @@
     "tools": [],
     "model": null,
     "path": "skills/videodb/reference/rtstream.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2905,7 +2683,6 @@
     "tools": [],
     "model": null,
     "path": "skills/videodb/reference/search.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2917,7 +2694,6 @@
     "tools": [],
     "model": null,
     "path": "skills/videodb/reference/streaming.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2929,7 +2705,6 @@
     "tools": [],
     "model": null,
     "path": "skills/videodb/reference/use-cases.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2941,7 +2716,6 @@
     "tools": [],
     "model": null,
     "path": "skills/visa-doc-translate/README.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2953,7 +2727,6 @@
     "tools": [],
     "model": null,
     "path": "skills/visa-doc-translate/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2965,7 +2738,6 @@
     "tools": [],
     "model": null,
     "path": "skills/workspace-surface-audit/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -2977,7 +2749,6 @@
     "tools": [],
     "model": null,
     "path": "skills/x-api/SKILL.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   }
 ]

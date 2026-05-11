@@ -16,9 +16,11 @@ const loadRegistry = () => {
   };
   return {
     agents: read('ecc-agents.json'),
+    native: read('native-inventory.json'),
     skills: [...read('ecc-skills.json'), ...read('harness-skills.json')],
     commands: read('ecc-commands.json'),
     mcps: [...read('ecc-mcps.json'), ...read('harness-mcps.json')],
+    builtins: read('harness-builtins.json'),
   };
 };
 
@@ -48,6 +50,20 @@ for (const file of readdirSync(CASES_DIR)) {
       for (const s of tc.expected.skills_must_include) {
         assert.ok(r.skills.includes(s), `skill missing: ${s}`);
       }
+    }
+
+    const registryNames = new Set(Object.values(registry)
+      .flat()
+      .filter(Boolean)
+      .map((item) => item.name));
+    const routedNames = [
+      ...r.agents,
+      ...r.skills,
+      ...(r.commands || []).map((cmd) => cmd.replace(/^\//, '')),
+      ...r.mcps,
+    ];
+    for (const name of routedNames) {
+      assert.ok(registryNames.has(name), `routed item does not resolve: ${name}`);
     }
   });
 }

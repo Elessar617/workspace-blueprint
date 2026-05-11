@@ -23,6 +23,9 @@ export function parseMarkdown(filePath) {
 const toArray = (v) => {
   if (v == null) return [];
   if (Array.isArray(v)) return v;
+  if (typeof v === 'string' && v.includes(',')) {
+    return v.split(',').map((item) => item.trim()).filter(Boolean);
+  }
   return [v];
 };
 

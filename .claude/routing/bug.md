@@ -4,7 +4,7 @@
 
 - Agents: `implementer`, `reviewer` (no planner for bugs)
 - Skills: `bug-investigation`, `tdd-loop`, `systematic-debugging`
-- Rules: all 5
+- Rules: all native rules
 - Hook profile: `standard`
 - Slash commands (advisory): `/build-fix`
 - MCPs (advisory): `filesystem`, `git`
