@@ -142,6 +142,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const __dirname = dirname(fileURLToPath(import.meta.url));
   const REPO_ROOT = join(__dirname, '..');
   const REG = join(REPO_ROOT, '.claude', 'registry');
+  const CACHE = join(REPO_ROOT, '.claude', 'routing', '.current.json');
 
   const safe = (f) => {
     try { return JSON.parse(fs.readFileSync(join(REG, f), 'utf8')); }
@@ -154,14 +155,24 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     mcps: [...safe('ecc-mcps.json'), ...safe('harness-mcps.json')],
   };
 
-  const r = route({ prompt, files_in_scope: [], registry });
+  let cache = null;
+  try { cache = JSON.parse(fs.readFileSync(CACHE, 'utf8')); } catch {}
+  const transition = detectTransition(prompt);
+  const fresh = route({ prompt, files_in_scope: [], registry });
+  const final = mergeWithCache(cache, fresh, transition);
 
+  try {
+    fs.mkdirSync(dirname(CACHE), { recursive: true });
+    fs.writeFileSync(CACHE, JSON.stringify(final, null, 2));
+  } catch {}
+
+  const tag = transition ? ' [transition]' : (cache ? ' [cached]' : '');
   const out = [
-    `ROUTING: branch=${r.branch} profile=${r.hook_profile} langs=${r.languages_detected.join(',') || 'none'}`,
-    `agents: ${r.agents.join(', ')}`,
-    `skills: ${r.skills.join(', ')}`,
-    r.commands.length ? `commands: ${r.commands.join(', ')}` : '',
-    `mcps: ${r.mcps.join(', ')}`,
+    `ROUTING: branch=${final.branch} profile=${final.hook_profile} langs=${(final.languages_detected || []).join(',') || 'none'}${tag}`,
+    `agents: ${final.agents.join(', ')}`,
+    `skills: ${final.skills.join(', ')}`,
+    final.commands?.length ? `commands: ${final.commands.join(', ')}` : '',
+    `mcps: ${final.mcps.join(', ')}`,
   ].filter(Boolean).join('\n');
   console.log(out);
 }
