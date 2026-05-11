@@ -12,5 +12,8 @@ yarn-error.log
 # Per-prompt routing cache (regenerated; per-machine)
 .claude/routing/.current.json
 
+# Serena MCP project state (per-user IDE metadata, like .vscode/ or .idea/)
+.serena/
+
 # Local env overrides
 .env.local
