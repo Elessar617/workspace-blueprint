@@ -1,0 +1,11 @@
+{
+  "minimal": {
+    "description": "Hooks no-op; exit 0 immediately."
+  },
+  "standard": {
+    "description": "Current hook behavior (default)."
+  },
+  "strict": {
+    "description": "Current behavior plus future stricter variants."
+  }
+}
