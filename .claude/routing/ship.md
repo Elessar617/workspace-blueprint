@@ -3,8 +3,8 @@
 ## Always load
 
 - Agents: `reviewer`, `adversary`, `doc-updater`, `opensource-packager`
-- Skills: `docx`, `pptx`, `xlsx`, `pdf` (whichever applies based on output format)
-- Rules: all 5 (maximum strictness)
+- Skills: none by default; add `docx`, `pptx`, `xlsx`, or `pdf` when the scoped output path has that extension
+- Rules: all native rules (maximum strictness)
 - Hook profile: `strict`
 - MCPs (advisory): `filesystem`, `git`, `github`
 

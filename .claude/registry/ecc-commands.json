@@ -8,7 +8,6 @@
     "tools": [],
     "model": null,
     "path": "commands/aside.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -20,7 +19,6 @@
     "tools": [],
     "model": null,
     "path": "commands/auto-update.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -32,7 +30,6 @@
     "tools": [],
     "model": null,
     "path": "commands/build-fix.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -44,7 +41,6 @@
     "tools": [],
     "model": null,
     "path": "commands/checkpoint.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -56,7 +52,6 @@
     "tools": [],
     "model": null,
     "path": "commands/code-review.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -68,7 +63,6 @@
     "tools": [],
     "model": null,
     "path": "commands/cpp-build.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -80,7 +74,6 @@
     "tools": [],
     "model": null,
     "path": "commands/cpp-review.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -92,7 +85,6 @@
     "tools": [],
     "model": null,
     "path": "commands/cpp-test.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -104,7 +96,6 @@
     "tools": [],
     "model": null,
     "path": "commands/evolve.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -116,7 +107,6 @@
     "tools": [],
     "model": null,
     "path": "commands/feature-dev.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -128,7 +118,6 @@
     "tools": [],
     "model": null,
     "path": "commands/flutter-build.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -140,7 +129,6 @@
     "tools": [],
     "model": null,
     "path": "commands/flutter-review.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -152,7 +140,6 @@
     "tools": [],
     "model": null,
     "path": "commands/flutter-test.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -164,7 +151,6 @@
     "tools": [],
     "model": null,
     "path": "commands/gan-build.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -176,7 +162,6 @@
     "tools": [],
     "model": null,
     "path": "commands/gan-design.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -188,7 +173,6 @@
     "tools": [],
     "model": null,
     "path": "commands/go-build.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -200,7 +184,6 @@
     "tools": [],
     "model": null,
     "path": "commands/go-review.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -212,7 +195,6 @@
     "tools": [],
     "model": null,
     "path": "commands/go-test.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -224,7 +206,6 @@
     "tools": [],
     "model": null,
     "path": "commands/gradle-build.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -236,7 +217,6 @@
     "tools": [],
     "model": null,
     "path": "commands/harness-audit.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -248,7 +228,6 @@
     "tools": [],
     "model": null,
     "path": "commands/hookify-configure.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -260,7 +239,6 @@
     "tools": [],
     "model": null,
     "path": "commands/hookify-help.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -272,7 +250,6 @@
     "tools": [],
     "model": null,
     "path": "commands/hookify-list.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -284,7 +261,6 @@
     "tools": [],
     "model": null,
     "path": "commands/hookify.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -296,7 +272,6 @@
     "tools": [],
     "model": null,
     "path": "commands/instinct-export.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -308,7 +283,6 @@
     "tools": [],
     "model": null,
     "path": "commands/instinct-import.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -320,7 +294,6 @@
     "tools": [],
     "model": null,
     "path": "commands/instinct-status.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -332,7 +305,6 @@
     "tools": [],
     "model": null,
     "path": "commands/jira.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -344,7 +316,6 @@
     "tools": [],
     "model": null,
     "path": "commands/kotlin-build.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -356,7 +327,6 @@
     "tools": [],
     "model": null,
     "path": "commands/kotlin-review.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -368,7 +338,6 @@
     "tools": [],
     "model": null,
     "path": "commands/kotlin-test.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -380,7 +349,6 @@
     "tools": [],
     "model": null,
     "path": "commands/learn-eval.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -392,7 +360,6 @@
     "tools": [],
     "model": null,
     "path": "commands/learn.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -404,7 +371,6 @@
     "tools": [],
     "model": null,
     "path": "commands/loop-start.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -416,7 +382,6 @@
     "tools": [],
     "model": null,
     "path": "commands/loop-status.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -428,7 +393,6 @@
     "tools": [],
     "model": null,
     "path": "commands/model-route.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -440,7 +404,6 @@
     "tools": [],
     "model": null,
     "path": "commands/multi-backend.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -452,7 +415,6 @@
     "tools": [],
     "model": null,
     "path": "commands/multi-execute.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -464,7 +426,6 @@
     "tools": [],
     "model": null,
     "path": "commands/multi-frontend.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -476,7 +437,6 @@
     "tools": [],
     "model": null,
     "path": "commands/multi-plan.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -488,7 +448,6 @@
     "tools": [],
     "model": null,
     "path": "commands/multi-workflow.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -500,7 +459,6 @@
     "tools": [],
     "model": null,
     "path": "commands/plan.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -512,7 +470,6 @@
     "tools": [],
     "model": null,
     "path": "commands/pm2.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -524,7 +481,6 @@
     "tools": [],
     "model": null,
     "path": "commands/projects.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -536,7 +492,6 @@
     "tools": [],
     "model": null,
     "path": "commands/promote.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -548,7 +503,6 @@
     "tools": [],
     "model": null,
     "path": "commands/prp-commit.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -560,7 +514,6 @@
     "tools": [],
     "model": null,
     "path": "commands/prp-implement.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -572,7 +525,6 @@
     "tools": [],
     "model": null,
     "path": "commands/prp-plan.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -584,7 +536,6 @@
     "tools": [],
     "model": null,
     "path": "commands/prp-pr.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -596,7 +547,6 @@
     "tools": [],
     "model": null,
     "path": "commands/prp-prd.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -608,7 +558,6 @@
     "tools": [],
     "model": null,
     "path": "commands/prune.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -620,7 +569,6 @@
     "tools": [],
     "model": null,
     "path": "commands/python-review.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -632,7 +580,6 @@
     "tools": [],
     "model": null,
     "path": "commands/quality-gate.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -644,7 +591,6 @@
     "tools": [],
     "model": null,
     "path": "commands/refactor-clean.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -656,7 +602,6 @@
     "tools": [],
     "model": null,
     "path": "commands/resume-session.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -668,7 +613,6 @@
     "tools": [],
     "model": null,
     "path": "commands/review-pr.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -680,7 +624,6 @@
     "tools": [],
     "model": null,
     "path": "commands/rust-build.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -692,7 +635,6 @@
     "tools": [],
     "model": null,
     "path": "commands/rust-review.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -704,7 +646,6 @@
     "tools": [],
     "model": null,
     "path": "commands/rust-test.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -716,7 +657,6 @@
     "tools": [],
     "model": null,
     "path": "commands/santa-loop.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -728,7 +668,6 @@
     "tools": [],
     "model": null,
     "path": "commands/save-session.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -740,7 +679,6 @@
     "tools": [],
     "model": null,
     "path": "commands/sessions.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -752,7 +690,6 @@
     "tools": [],
     "model": null,
     "path": "commands/setup-pm.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -764,7 +701,6 @@
     "tools": [],
     "model": null,
     "path": "commands/skill-create.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -776,7 +712,6 @@
     "tools": [],
     "model": null,
     "path": "commands/skill-health.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -788,7 +723,6 @@
     "tools": [],
     "model": null,
     "path": "commands/test-coverage.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -800,7 +734,6 @@
     "tools": [],
     "model": null,
     "path": "commands/update-codemaps.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -812,7 +745,6 @@
     "tools": [],
     "model": null,
     "path": "commands/update-docs.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   }
 ]

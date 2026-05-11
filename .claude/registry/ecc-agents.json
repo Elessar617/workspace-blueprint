@@ -12,7 +12,6 @@
     ],
     "model": "opus",
     "path": "agents/architect.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -31,7 +30,6 @@
     ],
     "model": "sonnet",
     "path": "agents/build-error-resolver.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -50,7 +48,6 @@
     ],
     "model": "opus",
     "path": "agents/chief-of-staff.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -67,7 +64,6 @@
     ],
     "model": "sonnet",
     "path": "agents/code-architect.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -84,7 +80,6 @@
     ],
     "model": "sonnet",
     "path": "agents/code-explorer.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -101,7 +96,6 @@
     ],
     "model": "sonnet",
     "path": "agents/code-reviewer.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -120,7 +114,6 @@
     ],
     "model": "sonnet",
     "path": "agents/code-simplifier.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -137,7 +130,6 @@
     ],
     "model": "sonnet",
     "path": "agents/comment-analyzer.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -152,7 +144,6 @@
     ],
     "model": "sonnet",
     "path": "agents/conversation-analyzer.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -171,7 +162,6 @@
     ],
     "model": "sonnet",
     "path": "agents/cpp-build-resolver.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -188,7 +178,6 @@
     ],
     "model": "sonnet",
     "path": "agents/cpp-reviewer.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -205,7 +194,6 @@
     ],
     "model": "sonnet",
     "path": "agents/csharp-reviewer.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -224,7 +212,6 @@
     ],
     "model": "sonnet",
     "path": "agents/dart-build-resolver.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -243,7 +230,6 @@
     ],
     "model": "sonnet",
     "path": "agents/database-reviewer.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -262,7 +248,6 @@
     ],
     "model": "haiku",
     "path": "agents/doc-updater.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -279,7 +264,6 @@
     ],
     "model": "sonnet",
     "path": "agents/docs-lookup.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -298,7 +282,6 @@
     ],
     "model": "sonnet",
     "path": "agents/e2e-runner.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -315,7 +298,6 @@
     ],
     "model": "sonnet",
     "path": "agents/flutter-reviewer.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -333,7 +315,6 @@
     ],
     "model": "opus",
     "path": "agents/gan-evaluator.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -352,7 +333,6 @@
     ],
     "model": "opus",
     "path": "agents/gan-generator.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -369,7 +349,6 @@
     ],
     "model": "opus",
     "path": "agents/gan-planner.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -388,7 +367,6 @@
     ],
     "model": "sonnet",
     "path": "agents/go-build-resolver.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -405,7 +383,6 @@
     ],
     "model": "sonnet",
     "path": "agents/go-reviewer.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -423,7 +400,6 @@
     ],
     "model": "sonnet",
     "path": "agents/harness-optimizer.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -439,7 +415,6 @@
     ],
     "model": "opus",
     "path": "agents/healthcare-reviewer.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -458,7 +433,6 @@
     ],
     "model": "sonnet",
     "path": "agents/java-build-resolver.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -475,7 +449,6 @@
     ],
     "model": "sonnet",
     "path": "agents/java-reviewer.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -494,7 +467,6 @@
     ],
     "model": "sonnet",
     "path": "agents/kotlin-build-resolver.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -511,7 +483,6 @@
     ],
     "model": "sonnet",
     "path": "agents/kotlin-reviewer.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -529,7 +500,6 @@
     ],
     "model": "sonnet",
     "path": "agents/loop-operator.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -548,7 +518,6 @@
     ],
     "model": "sonnet",
     "path": "agents/opensource-forker.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -567,7 +536,6 @@
     ],
     "model": "sonnet",
     "path": "agents/opensource-packager.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -584,7 +552,6 @@
     ],
     "model": "sonnet",
     "path": "agents/opensource-sanitizer.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -603,7 +570,6 @@
     ],
     "model": "sonnet",
     "path": "agents/performance-optimizer.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -619,7 +585,6 @@
     ],
     "model": "opus",
     "path": "agents/planner.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -636,7 +601,6 @@
     ],
     "model": "sonnet",
     "path": "agents/pr-test-analyzer.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -653,7 +617,6 @@
     ],
     "model": "sonnet",
     "path": "agents/python-reviewer.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -672,7 +635,6 @@
     ],
     "model": "sonnet",
     "path": "agents/pytorch-build-resolver.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -691,7 +653,6 @@
     ],
     "model": "sonnet",
     "path": "agents/refactor-cleaner.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -710,7 +671,6 @@
     ],
     "model": "sonnet",
     "path": "agents/rust-build-resolver.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -727,7 +687,6 @@
     ],
     "model": "sonnet",
     "path": "agents/rust-reviewer.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -746,7 +705,6 @@
     ],
     "model": "sonnet",
     "path": "agents/security-reviewer.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -765,7 +723,6 @@
     ],
     "model": "sonnet",
     "path": "agents/seo-specialist.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -782,7 +739,6 @@
     ],
     "model": "sonnet",
     "path": "agents/silent-failure-hunter.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -800,7 +756,6 @@
     ],
     "model": "sonnet",
     "path": "agents/tdd-guide.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -817,7 +772,6 @@
     ],
     "model": "sonnet",
     "path": "agents/type-design-analyzer.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   },
   {
@@ -834,7 +788,6 @@
     ],
     "model": "sonnet",
     "path": "agents/typescript-reviewer.md",
-    "indexed_at": "2026-05-11T09:35:33.985Z",
     "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
   }
 ]

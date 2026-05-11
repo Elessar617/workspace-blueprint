@@ -6,7 +6,7 @@
 - Skills: `spike-protocol`, `data-analysis`
 - Rules: portability only (other 4 relaxed during exploration)
 - Hook profile: `minimal` (lab/ work doesn't need TDD enforcement)
-- MCPs (advisory): `filesystem`, `fetch`, `brave-search`
+- MCPs (advisory): `filesystem`, `fetch`
 
 ## Language matrix
 

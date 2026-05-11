@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { detectTaskType, detectLanguages, route } from '../../scripts/route.mjs';
+import { detectTaskType, detectLanguages, detectOutputSkills, route } from '../../scripts/route.mjs';
 
 test('detectTaskType matches "add" -> build', () => {
   assert.equal(detectTaskType('add a rate limiter to the gateway'), 'build');
@@ -40,6 +40,11 @@ test('detectLanguages from mixed files', () => {
   assert.ok(langs.includes('typescript'));
 });
 
+test('detectOutputSkills from release artifact files', () => {
+  const skills = detectOutputSkills(['ship/docs/report.pdf', 'ship/docs/report.docx']);
+  assert.deepEqual(skills.sort(), ['docx', 'pdf']);
+});
+
 test('route returns native-only fallback on no match', () => {
   const r = route({
     prompt: 'thanks!',
@@ -70,6 +75,16 @@ test('route recommends strict profile for ship', () => {
   });
   assert.equal(r.branch, 'ship');
   assert.equal(r.hook_profile, 'strict');
+});
+
+test('route adds output skills for ship files', () => {
+  const r = route({
+    prompt: 'release the report',
+    files_in_scope: ['ship/docs/report.pdf'],
+    registry: { agents: [], skills: [], commands: [], mcps: [] },
+  });
+  assert.equal(r.branch, 'ship');
+  assert.ok(r.skills.includes('pdf'));
 });
 
 test('route adds Go language items for go-feature task', () => {
