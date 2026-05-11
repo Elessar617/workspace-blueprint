@@ -12,6 +12,10 @@ The instruction layer (`CLAUDE.md`, `CONTEXT.md`, `.claude/`, all workspace `CON
 
 ---
 
+## Auto-routing
+
+Before starting any task, agents consult `ROUTING.md` (the markdown decision tree) and the matching branch file under `.claude/routing/`. The tree narrows which agents, skills, commands, MCPs, and hook profile apply. Names resolve via `.claude/registry/*.json`. See spec at `docs/superpowers/specs/2026-05-11-ecc-bridge-and-routing-design.md`.
+
 ## Folder Structure
 
 ```
