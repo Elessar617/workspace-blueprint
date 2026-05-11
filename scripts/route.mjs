@@ -113,3 +113,39 @@ export function route({ prompt, files_in_scope = [], registry = {} }) {
     transition_detected: false,
   };
 }
+
+if (import.meta.url === `file://${process.argv[1]}`) {
+  const args = process.argv.slice(2);
+  const promptIdx = args.indexOf('--prompt');
+  const prompt = promptIdx >= 0 ? args[promptIdx + 1] : '';
+  if (!prompt) process.exit(0);
+
+  const fs = await import('node:fs');
+  const { join, dirname } = await import('node:path');
+  const { fileURLToPath } = await import('node:url');
+  const __dirname = dirname(fileURLToPath(import.meta.url));
+  const REPO_ROOT = join(__dirname, '..');
+  const REG = join(REPO_ROOT, '.claude', 'registry');
+
+  const safe = (f) => {
+    try { return JSON.parse(fs.readFileSync(join(REG, f), 'utf8')); }
+    catch { return []; }
+  };
+  const registry = {
+    agents: safe('ecc-agents.json'),
+    skills: [...safe('ecc-skills.json'), ...safe('harness-skills.json')],
+    commands: safe('ecc-commands.json'),
+    mcps: [...safe('ecc-mcps.json'), ...safe('harness-mcps.json')],
+  };
+
+  const r = route({ prompt, files_in_scope: [], registry });
+
+  const out = [
+    `ROUTING: branch=${r.branch} profile=${r.hook_profile} langs=${r.languages_detected.join(',') || 'none'}`,
+    `agents: ${r.agents.join(', ')}`,
+    `skills: ${r.skills.join(', ')}`,
+    r.commands.length ? `commands: ${r.commands.join(', ')}` : '',
+    `mcps: ${r.mcps.join(', ')}`,
+  ].filter(Boolean).join('\n');
+  console.log(out);
+}
