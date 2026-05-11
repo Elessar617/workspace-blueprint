@@ -18,7 +18,7 @@ If a small cache exists at `.claude/routing/.current.json`, prefer it for mid-ta
 
 ## Fallback
 
-If ROUTING.md or `.claude/registry/` is missing, fall back to CONTEXT.md for workspace routing and use only the workspace-blueprint native inventory (4 agents, 10 skills, 5 rules).
+If ROUTING.md or `.claude/registry/` is missing, fall back to CONTEXT.md for workspace routing and use only the workspace-blueprint native inventory (4 agents, 10 skills, native rules).
 
 ## Repo chassis
 

@@ -2,370 +2,271 @@
   {
     "name": "claude-automation-recommender",
     "namespace": "claude-code-setup",
+    "marketplace": "claude-plugins-official",
+    "version": "1.0.0",
     "kind": "skill",
     "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/claude-code-setup/1.0.0/skills/claude-automation-recommender",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
+    "plugin_path": "claude-plugins-official/claude-code-setup/1.0.0/skills/claude-automation-recommender",
+    "description": ""
   },
   {
     "name": "firecrawl-agent",
     "namespace": "firecrawl",
+    "marketplace": "claude-plugins-official",
+    "version": "1.0.8",
     "kind": "skill",
     "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/firecrawl/1.0.8/skills/firecrawl-agent",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
+    "plugin_path": "claude-plugins-official/firecrawl/1.0.8/skills/firecrawl-agent",
+    "description": ""
   },
   {
     "name": "firecrawl-cli",
     "namespace": "firecrawl",
+    "marketplace": "claude-plugins-official",
+    "version": "1.0.8",
     "kind": "skill",
     "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/firecrawl/1.0.8/skills/firecrawl-cli",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
+    "plugin_path": "claude-plugins-official/firecrawl/1.0.8/skills/firecrawl-cli",
+    "description": ""
   },
   {
     "name": "firecrawl-crawl",
     "namespace": "firecrawl",
+    "marketplace": "claude-plugins-official",
+    "version": "1.0.8",
     "kind": "skill",
     "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/firecrawl/1.0.8/skills/firecrawl-crawl",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
+    "plugin_path": "claude-plugins-official/firecrawl/1.0.8/skills/firecrawl-crawl",
+    "description": ""
   },
   {
     "name": "firecrawl-download",
     "namespace": "firecrawl",
+    "marketplace": "claude-plugins-official",
+    "version": "1.0.8",
     "kind": "skill",
     "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/firecrawl/1.0.8/skills/firecrawl-download",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
+    "plugin_path": "claude-plugins-official/firecrawl/1.0.8/skills/firecrawl-download",
+    "description": ""
   },
   {
     "name": "firecrawl-instruct",
     "namespace": "firecrawl",
+    "marketplace": "claude-plugins-official",
+    "version": "1.0.8",
     "kind": "skill",
     "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/firecrawl/1.0.8/skills/firecrawl-instruct",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
+    "plugin_path": "claude-plugins-official/firecrawl/1.0.8/skills/firecrawl-instruct",
+    "description": ""
   },
   {
     "name": "firecrawl-map",
     "namespace": "firecrawl",
+    "marketplace": "claude-plugins-official",
+    "version": "1.0.8",
     "kind": "skill",
     "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/firecrawl/1.0.8/skills/firecrawl-map",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
+    "plugin_path": "claude-plugins-official/firecrawl/1.0.8/skills/firecrawl-map",
+    "description": ""
   },
   {
     "name": "firecrawl-scrape",
     "namespace": "firecrawl",
+    "marketplace": "claude-plugins-official",
+    "version": "1.0.8",
     "kind": "skill",
     "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/firecrawl/1.0.8/skills/firecrawl-scrape",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
+    "plugin_path": "claude-plugins-official/firecrawl/1.0.8/skills/firecrawl-scrape",
+    "description": ""
   },
   {
     "name": "firecrawl-search",
     "namespace": "firecrawl",
+    "marketplace": "claude-plugins-official",
+    "version": "1.0.8",
     "kind": "skill",
     "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/firecrawl/1.0.8/skills/firecrawl-search",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
+    "plugin_path": "claude-plugins-official/firecrawl/1.0.8/skills/firecrawl-search",
+    "description": ""
   },
   {
     "name": "remember",
     "namespace": "remember",
+    "marketplace": "claude-plugins-official",
+    "version": "0.5.0",
     "kind": "skill",
     "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/remember/0.5.0/skills/remember",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
+    "plugin_path": "claude-plugins-official/remember/0.5.0/skills/remember",
+    "description": ""
   },
   {
     "name": "brainstorming",
     "namespace": "superpowers",
+    "marketplace": "claude-plugins-official",
+    "version": "5.1.0",
     "kind": "skill",
     "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.7/skills/brainstorming",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
+    "plugin_path": "claude-plugins-official/superpowers/5.1.0/skills/brainstorming",
+    "description": ""
   },
   {
     "name": "dispatching-parallel-agents",
     "namespace": "superpowers",
+    "marketplace": "claude-plugins-official",
+    "version": "5.1.0",
     "kind": "skill",
     "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.7/skills/dispatching-parallel-agents",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
+    "plugin_path": "claude-plugins-official/superpowers/5.1.0/skills/dispatching-parallel-agents",
+    "description": ""
   },
   {
     "name": "executing-plans",
     "namespace": "superpowers",
+    "marketplace": "claude-plugins-official",
+    "version": "5.1.0",
     "kind": "skill",
     "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.7/skills/executing-plans",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
+    "plugin_path": "claude-plugins-official/superpowers/5.1.0/skills/executing-plans",
+    "description": ""
   },
   {
     "name": "finishing-a-development-branch",
     "namespace": "superpowers",
+    "marketplace": "claude-plugins-official",
+    "version": "5.1.0",
     "kind": "skill",
     "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.7/skills/finishing-a-development-branch",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
+    "plugin_path": "claude-plugins-official/superpowers/5.1.0/skills/finishing-a-development-branch",
+    "description": ""
   },
   {
     "name": "receiving-code-review",
     "namespace": "superpowers",
+    "marketplace": "claude-plugins-official",
+    "version": "5.1.0",
     "kind": "skill",
     "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.7/skills/receiving-code-review",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
+    "plugin_path": "claude-plugins-official/superpowers/5.1.0/skills/receiving-code-review",
+    "description": ""
   },
   {
     "name": "requesting-code-review",
     "namespace": "superpowers",
+    "marketplace": "claude-plugins-official",
+    "version": "5.1.0",
     "kind": "skill",
     "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.7/skills/requesting-code-review",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
+    "plugin_path": "claude-plugins-official/superpowers/5.1.0/skills/requesting-code-review",
+    "description": ""
   },
   {
     "name": "subagent-driven-development",
     "namespace": "superpowers",
+    "marketplace": "claude-plugins-official",
+    "version": "5.1.0",
     "kind": "skill",
     "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.7/skills/subagent-driven-development",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
+    "plugin_path": "claude-plugins-official/superpowers/5.1.0/skills/subagent-driven-development",
+    "description": ""
   },
   {
     "name": "systematic-debugging",
     "namespace": "superpowers",
+    "marketplace": "claude-plugins-official",
+    "version": "5.1.0",
     "kind": "skill",
     "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.7/skills/systematic-debugging",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
+    "plugin_path": "claude-plugins-official/superpowers/5.1.0/skills/systematic-debugging",
+    "description": ""
   },
   {
     "name": "test-driven-development",
     "namespace": "superpowers",
+    "marketplace": "claude-plugins-official",
+    "version": "5.1.0",
     "kind": "skill",
     "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.7/skills/test-driven-development",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
+    "plugin_path": "claude-plugins-official/superpowers/5.1.0/skills/test-driven-development",
+    "description": ""
   },
   {
     "name": "using-git-worktrees",
     "namespace": "superpowers",
+    "marketplace": "claude-plugins-official",
+    "version": "5.1.0",
     "kind": "skill",
     "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.7/skills/using-git-worktrees",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
+    "plugin_path": "claude-plugins-official/superpowers/5.1.0/skills/using-git-worktrees",
+    "description": ""
   },
   {
     "name": "using-superpowers",
     "namespace": "superpowers",
+    "marketplace": "claude-plugins-official",
+    "version": "5.1.0",
     "kind": "skill",
     "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.7/skills/using-superpowers",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
+    "plugin_path": "claude-plugins-official/superpowers/5.1.0/skills/using-superpowers",
+    "description": ""
   },
   {
     "name": "verification-before-completion",
     "namespace": "superpowers",
+    "marketplace": "claude-plugins-official",
+    "version": "5.1.0",
     "kind": "skill",
     "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.7/skills/verification-before-completion",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
+    "plugin_path": "claude-plugins-official/superpowers/5.1.0/skills/verification-before-completion",
+    "description": ""
   },
   {
     "name": "writing-plans",
     "namespace": "superpowers",
+    "marketplace": "claude-plugins-official",
+    "version": "5.1.0",
     "kind": "skill",
     "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.7/skills/writing-plans",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
+    "plugin_path": "claude-plugins-official/superpowers/5.1.0/skills/writing-plans",
+    "description": ""
   },
   {
     "name": "writing-skills",
     "namespace": "superpowers",
+    "marketplace": "claude-plugins-official",
+    "version": "5.1.0",
     "kind": "skill",
     "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.7/skills/writing-skills",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
-  },
-  {
-    "name": "brainstorming",
-    "namespace": "superpowers",
-    "kind": "skill",
-    "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/superpowers/5.1.0/skills/brainstorming",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
-  },
-  {
-    "name": "dispatching-parallel-agents",
-    "namespace": "superpowers",
-    "kind": "skill",
-    "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/superpowers/5.1.0/skills/dispatching-parallel-agents",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
-  },
-  {
-    "name": "executing-plans",
-    "namespace": "superpowers",
-    "kind": "skill",
-    "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/superpowers/5.1.0/skills/executing-plans",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
-  },
-  {
-    "name": "finishing-a-development-branch",
-    "namespace": "superpowers",
-    "kind": "skill",
-    "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/superpowers/5.1.0/skills/finishing-a-development-branch",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
-  },
-  {
-    "name": "receiving-code-review",
-    "namespace": "superpowers",
-    "kind": "skill",
-    "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/superpowers/5.1.0/skills/receiving-code-review",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
-  },
-  {
-    "name": "requesting-code-review",
-    "namespace": "superpowers",
-    "kind": "skill",
-    "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/superpowers/5.1.0/skills/requesting-code-review",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
-  },
-  {
-    "name": "subagent-driven-development",
-    "namespace": "superpowers",
-    "kind": "skill",
-    "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/superpowers/5.1.0/skills/subagent-driven-development",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
-  },
-  {
-    "name": "systematic-debugging",
-    "namespace": "superpowers",
-    "kind": "skill",
-    "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/superpowers/5.1.0/skills/systematic-debugging",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
-  },
-  {
-    "name": "test-driven-development",
-    "namespace": "superpowers",
-    "kind": "skill",
-    "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/superpowers/5.1.0/skills/test-driven-development",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
-  },
-  {
-    "name": "using-git-worktrees",
-    "namespace": "superpowers",
-    "kind": "skill",
-    "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/superpowers/5.1.0/skills/using-git-worktrees",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
-  },
-  {
-    "name": "using-superpowers",
-    "namespace": "superpowers",
-    "kind": "skill",
-    "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/superpowers/5.1.0/skills/using-superpowers",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
-  },
-  {
-    "name": "verification-before-completion",
-    "namespace": "superpowers",
-    "kind": "skill",
-    "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/superpowers/5.1.0/skills/verification-before-completion",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
-  },
-  {
-    "name": "writing-plans",
-    "namespace": "superpowers",
-    "kind": "skill",
-    "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/superpowers/5.1.0/skills/writing-plans",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
-  },
-  {
-    "name": "writing-skills",
-    "namespace": "superpowers",
-    "kind": "skill",
-    "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/claude-plugins-official/superpowers/5.1.0/skills/writing-skills",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
+    "plugin_path": "claude-plugins-official/superpowers/5.1.0/skills/writing-skills",
+    "description": ""
   },
   {
     "name": "karpathy-guidelines",
     "namespace": "andrej-karpathy-skills",
+    "marketplace": "karpathy-skills",
+    "version": "1.0.0",
     "kind": "skill",
     "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/karpathy-skills/andrej-karpathy-skills/1.0.0/skills/karpathy-guidelines",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
+    "plugin_path": "karpathy-skills/andrej-karpathy-skills/1.0.0/skills/karpathy-guidelines",
+    "description": ""
   },
   {
     "name": "mempalace",
     "namespace": "mempalace",
+    "marketplace": "mempalace",
+    "version": "3.3.3",
     "kind": "skill",
     "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/mempalace/mempalace/3.3.3/skills/mempalace",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
+    "plugin_path": "mempalace/mempalace/3.3.3/skills/mempalace",
+    "description": ""
   },
   {
     "name": "building-pydantic-ai-agents",
     "namespace": "ai",
+    "marketplace": "pydantic-skills",
+    "version": "0.1.0",
     "kind": "skill",
     "source": "harness",
-    "plugin_path": "/Users/gardnerwilson/.claude/plugins/cache/pydantic-skills/ai/0.1.0/skills/building-pydantic-ai-agents",
-    "description": "",
-    "indexed_at": "2026-05-11T09:35:39.732Z"
+    "plugin_path": "pydantic-skills/ai/0.1.0/skills/building-pydantic-ai-agents",
+    "description": ""
   }
 ]

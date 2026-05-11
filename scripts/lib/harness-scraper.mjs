@@ -1,15 +1,23 @@
 import { readdirSync, statSync, existsSync, readFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { join, relative } from 'node:path';
 import { homedir } from 'node:os';
+
+const BUILTINS = [
+  { name: 'general-purpose', kind: 'agent', source: 'harness-builtin', description: 'Generic Claude Code subagent type.' },
+  { name: 'Explore', kind: 'agent', source: 'harness-builtin', description: 'Claude Code exploration subagent.' },
+  { name: 'Plan', kind: 'agent', source: 'harness-builtin', description: 'Claude Code planning subagent.' },
+];
+
+const compareVersion = (a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
 
 export function scrapeHarness({
   pluginsDir = join(homedir(), '.claude', 'plugins', 'cache'),
   settingsPath = join(homedir(), '.claude', 'settings.json'),
+  settingsPaths,
 } = {}) {
-  const indexedAt = new Date().toISOString();
-  const skills = [];
+  const skillsByKey = new Map();
   const mcps = [];
-  const builtins = [];
+  const builtins = BUILTINS.map((item) => ({ ...item }));
 
   if (existsSync(pluginsDir)) {
     for (const marketplace of readdirSync(pluginsDir)) {
@@ -26,14 +34,18 @@ export function scrapeHarness({
             for (const skillEntry of readdirSync(skillsDir)) {
               const skillPath = join(skillsDir, skillEntry);
               if (statSync(skillPath).isDirectory()) {
-                skills.push({
+                const key = `${marketplace}/${pluginName}/${skillEntry}`;
+                const existing = skillsByKey.get(key);
+                if (existing && compareVersion(existing.version, versionDir) >= 0) continue;
+                skillsByKey.set(key, {
                   name: skillEntry,
                   namespace: pluginName,
+                  marketplace,
+                  version: versionDir,
                   kind: 'skill',
                   source: 'harness',
-                  plugin_path: skillPath,
+                  plugin_path: relative(pluginsDir, skillPath).replaceAll('\\', '/'),
                   description: '',
-                  indexed_at: indexedAt,
                 });
               }
             }
@@ -43,25 +55,29 @@ export function scrapeHarness({
     }
   }
 
-  if (existsSync(settingsPath)) {
+  const paths = settingsPaths || [settingsPath];
+  const seenMcps = new Set();
+  for (const path of paths) {
+    if (!existsSync(path)) continue;
     try {
-      const settings = JSON.parse(readFileSync(settingsPath, 'utf8'));
+      const settings = JSON.parse(readFileSync(path, 'utf8'));
       if (settings.mcpServers) {
         for (const [name, config] of Object.entries(settings.mcpServers)) {
+          if (seenMcps.has(name)) continue;
+          seenMcps.add(name);
           mcps.push({
             name,
             kind: 'mcp',
             source: 'harness',
             command: config.command || '',
             description: '',
-            indexed_at: indexedAt,
           });
         }
       }
     } catch (e) {
-      console.warn(`[harness-scraper] could not parse ${settingsPath}: ${e.message}`);
+      console.warn(`[harness-scraper] could not parse ${path}: ${e.message}`);
     }
   }
 
-  return { skills, mcps, builtins, indexedAt };
+  return { skills: [...skillsByKey.values()], mcps, builtins };
 }

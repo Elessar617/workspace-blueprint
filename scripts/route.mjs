@@ -14,6 +14,13 @@ const LANGUAGE_BY_EXT = {
   '.dart': 'dart', '.rs': 'rust', '.rb': 'ruby', '.php': 'php', '.swift': 'swift',
 };
 
+const OUTPUT_SKILL_BY_EXT = {
+  '.docx': 'docx',
+  '.pptx': 'pptx',
+  '.xlsx': 'xlsx',
+  '.pdf': 'pdf',
+};
+
 export function detectTaskType(prompt) {
   const lower = prompt.toLowerCase();
   for (const rule of TASK_RULES) {
@@ -33,11 +40,20 @@ export function detectLanguages(files) {
   return [...langs];
 }
 
+export function detectOutputSkills(files) {
+  const skills = new Set();
+  for (const f of files) {
+    const ext = '.' + f.split('.').pop();
+    if (OUTPUT_SKILL_BY_EXT[ext]) skills.add(OUTPUT_SKILL_BY_EXT[ext]);
+  }
+  return [...skills];
+}
+
 const BRANCH_BASE = {
   build: { agents: ['planner', 'implementer', 'reviewer', 'adversary'], skills: ['tdd-loop'], rules: ['all'], mcps: ['filesystem', 'git'] },
   bug: { agents: ['implementer', 'reviewer'], skills: ['bug-investigation', 'tdd-loop', 'systematic-debugging'], commands: ['/build-fix'], rules: ['all'], mcps: ['filesystem', 'git'] },
-  refactor: { agents: ['planner', 'implementer', 'reviewer', 'adversary', 'refactor-cleaner'], skills: ['tdd-loop', 'karpathy-guidelines'], rules: ['all'], mcps: ['filesystem', 'git'] },
-  spike: { agents: ['general-purpose', 'Explore', 'code-explorer'], skills: ['spike-protocol', 'data-analysis'], rules: ['portability-discipline'], mcps: ['filesystem', 'fetch', 'brave-search'] },
+  refactor: { agents: ['planner', 'implementer', 'reviewer', 'adversary', 'refactor-cleaner', 'code-simplifier'], skills: ['tdd-loop', 'karpathy-guidelines'], rules: ['all'], mcps: ['filesystem', 'git'] },
+  spike: { agents: ['general-purpose', 'Explore', 'code-explorer'], skills: ['spike-protocol', 'data-analysis'], rules: ['portability-discipline'], mcps: ['filesystem', 'fetch'] },
   'spec-author': { agents: ['planner', 'architect', 'Plan'], skills: ['spec-authoring', 'writing-plans', 'brainstorming'], rules: ['portability-discipline', 'commit-discipline'], mcps: ['filesystem', 'fetch'] },
   ship: { agents: ['reviewer', 'adversary', 'doc-updater'], skills: [], rules: ['all'], mcps: ['filesystem', 'git', 'github'] },
   fallback: { agents: ['planner', 'implementer', 'reviewer', 'adversary'], skills: ['tdd-loop'], rules: ['all'], mcps: ['filesystem', 'git'] },
@@ -52,7 +68,7 @@ const LANGUAGE_ADDITIONS = {
     kotlin: { agents: ['kotlin-reviewer', 'kotlin-build-resolver'], skills: [] },
     cpp: { agents: ['cpp-reviewer', 'cpp-build-resolver'], skills: [] },
     csharp: { agents: ['csharp-reviewer'], skills: [] },
-    dart: { agents: ['dart-build-resolver'], skills: [] },
+    dart: { agents: ['dart-build-resolver', 'flutter-reviewer'], skills: [] },
   },
   bug: {
     python: { agents: ['python-reviewer'] },
@@ -80,6 +96,7 @@ const BRANCH_TO_PROFILE = {
 export function route({ prompt, files_in_scope = [], registry = {} }) {
   const detected = detectTaskType(prompt) || 'fallback';
   const langs = detectLanguages(files_in_scope);
+  const outputSkills = detected === 'ship' ? detectOutputSkills(files_in_scope) : [];
 
   const base = BRANCH_BASE[detected] || BRANCH_BASE.fallback;
   let agents = [...base.agents];
@@ -95,6 +112,7 @@ export function route({ prompt, files_in_scope = [], registry = {} }) {
       if (langAdds[lang].skills) skills.push(...langAdds[lang].skills);
     }
   }
+  skills.push(...outputSkills);
 
   agents = [...new Set(agents)];
   skills = [...new Set(skills)];
@@ -125,9 +143,19 @@ export function detectTransition(prompt) {
   return TRANSITION_PHRASES.some((re) => re.test(prompt));
 }
 
-export function mergeWithCache(cache, fresh, transitionDetected) {
+const CHATTER_RE = /^(yes|yep|yeah|ok|okay|sure|do that|continue|go ahead|sounds good|explain more|tell me more|thanks|thank you)\b/i;
+
+export function isMidTaskChatter(prompt) {
+  const trimmed = prompt.trim();
+  if (!trimmed) return false;
+  if (trimmed.length > 80) return false;
+  return CHATTER_RE.test(trimmed);
+}
+
+export function mergeWithCache(cache, fresh, transitionDetected, prompt = '') {
   if (transitionDetected || !cache) return fresh;
-  return cache;
+  if (fresh.branch === 'fallback' && isMidTaskChatter(prompt)) return cache;
+  return fresh;
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
@@ -159,14 +187,15 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   try { cache = JSON.parse(fs.readFileSync(CACHE, 'utf8')); } catch {}
   const transition = detectTransition(prompt);
   const fresh = route({ prompt, files_in_scope: [], registry });
-  const final = mergeWithCache(cache, fresh, transition);
+  const final = mergeWithCache(cache, fresh, transition, prompt);
 
   try {
     fs.mkdirSync(dirname(CACHE), { recursive: true });
     fs.writeFileSync(CACHE, JSON.stringify(final, null, 2));
   } catch {}
 
-  const tag = transition ? ' [transition]' : (cache ? ' [cached]' : '');
+  const usedCache = final === cache;
+  const tag = transition ? ' [transition]' : (usedCache ? ' [cached]' : '');
   const out = [
     `ROUTING: branch=${final.branch} profile=${final.hook_profile} langs=${(final.languages_detected || []).join(',') || 'none'}${tag}`,
     `agents: ${final.agents.join(', ')}`,

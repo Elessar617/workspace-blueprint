@@ -8,17 +8,13 @@
 
 ## 1. Acknowledged limitations in v1
 
-### 1.1 Validator emits "dangling references" warnings
+### 1.1 Registry validation is strict
 
-`scripts/rebuild-registry.mjs` validates that every backticked name in `ROUTING.md` and `.claude/routing/*.md` resolves to an entry in some `.claude/registry/*.json`. It currently warns on:
+`scripts/rebuild-registry.mjs` validates that every backticked name in `ROUTING.md` and `.claude/routing/*.md` resolves to an entry in some `.claude/registry/*.json`. Native workspace-blueprint agents/skills/rules/MCPs are indexed into `native-inventory.json`; hook profile keys are indexed as hook-profile records; project MCPs are read from `.claude/settings.json`.
 
-- **Native workspace-blueprint names** (`planner`, `implementer`, `reviewer`, `adversary`, `tdd-loop`, `bug-investigation`, `spike-protocol`, `data-analysis`, `spec-authoring`, `docx`, `pptx`, `xlsx`, `pdf`). These live in `.claude/agents/` and `.claude/skills/` but aren't indexed into a registry JSON yet. The plan made `native-inventory.json` optional; T8 skipped it.
-- **Hook profile keys** (`minimal`, `standard`, `strict`). These are values, not catalog items, but the regex picks them up as backticked tokens.
-- **Harness MCP server names** (`filesystem`, `git`, `fetch`, `github`, `brave-search`). Indexed by `scripts/lib/harness-scraper.mjs` from `~/.claude/settings.json`, but on this machine that file's `mcpServers` is empty (the user's MCPs are registered via the plugin manifest path, which the scraper doesn't walk).
+**Status:** Resolved after the post-merge audit. New dangling references fail the rebuild instead of being logged as informational warnings.
 
-**Status:** Working as designed (fail-open at runtime; warn loud at rebuild time, per spec §8). No agent behavior is affected — these warnings are informational. Routing itself uses `route.mjs`'s in-code constants, not name resolution.
-
-**Resolution path:** Implement the optional `native-inventory.json` scraper (plan §6.4 step 5) and extend `harness-scraper.mjs` to walk plugin manifests, not just `~/.claude/settings.json`. Filter hook-profile keys from `extractNames` in `scripts/lib/validate.mjs`.
+**Remaining caveat:** Harness plugin entries still describe the local operator's installed plugin set. Paths are now portable relative to the plugin cache, but another machine must install matching plugins or refresh the harness registry after setup.
 
 ### 1.2 `BLUEPRINT_HOOK_PROFILE` is manual
 
@@ -44,11 +40,11 @@ The ECC scraper reports `skipped: 1` on the current pin (SHA `7fa1e5b6`). One ma
 
 **Resolution path:** Inspect the skipped file when convenient. If it's a legitimate ECC item, file an upstream issue; otherwise leave the skip in place.
 
-### 1.5 No cross-IDE alignment check
+### 1.5 Partial cross-IDE alignment check
 
-The spec promises that `route.mjs`'s output and an agent's inline-routing traversal (in non-CC harnesses) should match. v1 does NOT verify this.
+The unit snapshot suite now verifies that `route.mjs` emits only registry-resolvable names for the routing cases. It does not yet run each non-CC harness through the inline Markdown traversal and compare the agent's chosen inventory.
 
-**Status:** Trust-based for non-CC IDEs. Claude Code has the hook for hard enforcement; other IDEs rely on agent compliance with the preamble's instructions.
+**Status:** Deterministic selector coverage exists; real cross-IDE agent-compliance testing is still trust-based.
 
 **Resolution path:** Spec §12 F1 (CI alignment check). Run the agent against the snapshot test cases periodically; diff against `route.mjs` output; surface drift.
 
@@ -58,7 +54,7 @@ The spec promises that `route.mjs`'s output and an agent's inline-routing traver
 
 | # | Item | Rationale for deferring | When to revisit |
 |---|------|-------------------------|-----------------|
-| F1 | Periodic alignment check (CI) | Needs CI infra; nice-to-have | If we observe non-CC routing drift |
+| F1 | Periodic cross-IDE alignment check (CI) | Needs CI infra and harness drivers; nice-to-have | If we observe non-CC routing drift |
 | F2 | Custom MCP routing server (Option B) | Only justified if Option A preamble proves unreliable | If LLM compliance is consistently poor in Cursor/Codex/Gemini |
 | F3 (auto-activation) | Shell-launcher wrapper for `BLUEPRINT_HOOK_PROFILE` | The manual `export` is fine for solo use | If multiple operators or many task transitions per day |
 | F4 | `/refresh-routing` slash command | Cache invalidation works via transition phrases; explicit refresh is UX nice-to-have | If we observe cache staleness in real use |
@@ -86,7 +82,7 @@ These were operational choices made by the implementer during the 39-task run; t
 
 - **`scripts/lib/ecc-scraper.mjs` path bug.** Plan's `.slice(eccPath.length)` was buggy when `eccPath` was relative (e.g., `./external/ecc`); fixed to `path.relative(eccPath, file)` in commit `8af6b20`.
 - **`package.json` `test:unit` script.** Plan used `node --test tests/unit/`; Node 25's `--test` doesn't auto-discover `.test.mjs` files in directory mode. Fixed to explicit glob `node --test tests/unit/*.test.mjs` in commit `9a9e972`.
-- **`go-patterns` / `nextjs-patterns` name drift.** Final code reviewer caught these as real dangling references (vs. the acknowledged-noise ones in §1.1). Renamed to `golang-patterns`; removed `nextjs-patterns` entirely (no ECC equivalent). Commit `7a47ebe`.
+- **`go-patterns` / `nextjs-patterns` name drift.** Final code reviewer caught these as real dangling references in the original validator. Renamed to `golang-patterns`; removed `nextjs-patterns` entirely (no ECC equivalent). Commit `7a47ebe`.
 
 ---
 
