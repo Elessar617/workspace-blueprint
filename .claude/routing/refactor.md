@@ -13,7 +13,7 @@
 | Files match            | Add from ECC                          |
 |------------------------|---------------------------------------|
 | `*.py`                 | `python-reviewer`, `python-patterns`  |
-| `*.go`                 | `go-reviewer`, `go-patterns`          |
+| `*.go`                 | `go-reviewer`, `golang-patterns`      |
 | `*.ts`, `*.tsx`        | `typescript-reviewer`                 |
 | `*.java`               | `java-reviewer`                       |
 | `*.kt`                 | `kotlin-reviewer`                     |

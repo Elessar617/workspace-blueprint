@@ -80,5 +80,5 @@ test('route adds Go language items for go-feature task', () => {
   });
   assert.equal(r.branch, 'build');
   assert.ok(r.agents.includes('go-reviewer'));
-  assert.ok(r.skills.includes('go-patterns'));
+  assert.ok(r.skills.includes('golang-patterns'));
 });
