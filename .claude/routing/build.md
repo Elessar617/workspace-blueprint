@@ -16,8 +16,8 @@
 |------------------------|-------------------------------------------------------|
 | `*.py`                 | `python-reviewer`, `python-patterns`                  |
 | `*.py` + ML libs       | + `pytorch-patterns`, `pytorch-build-resolver`        |
-| `*.go`                 | `go-reviewer`, `go-build-resolver`, `go-patterns`     |
-| `*.ts`, `*.tsx`        | `typescript-reviewer`, `nextjs-patterns`              |
+| `*.go`                 | `go-reviewer`, `go-build-resolver`, `golang-patterns` |
+| `*.ts`, `*.tsx`        | `typescript-reviewer`                                 |
 | `*.ts` + `bun.lockb`   | + `bun-runtime`                                       |
 | `*.java`               | `java-reviewer`, `java-build-resolver`                |
 | `*.kt`                 | `kotlin-reviewer`, `kotlin-build-resolver`            |

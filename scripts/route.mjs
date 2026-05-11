@@ -46,8 +46,8 @@ const BRANCH_BASE = {
 const LANGUAGE_ADDITIONS = {
   build: {
     python: { agents: ['python-reviewer'], skills: ['python-patterns'] },
-    go: { agents: ['go-reviewer', 'go-build-resolver'], skills: ['go-patterns'] },
-    typescript: { agents: ['typescript-reviewer'], skills: ['nextjs-patterns'] },
+    go: { agents: ['go-reviewer', 'go-build-resolver'], skills: ['golang-patterns'] },
+    typescript: { agents: ['typescript-reviewer'], skills: [] },
     java: { agents: ['java-reviewer', 'java-build-resolver'], skills: [] },
     kotlin: { agents: ['kotlin-reviewer', 'kotlin-build-resolver'], skills: [] },
     cpp: { agents: ['cpp-reviewer', 'cpp-build-resolver'], skills: [] },
@@ -64,7 +64,7 @@ const LANGUAGE_ADDITIONS = {
   },
   refactor: {
     python: { agents: ['python-reviewer'], skills: ['python-patterns'] },
-    go: { agents: ['go-reviewer'], skills: ['go-patterns'] },
+    go: { agents: ['go-reviewer'], skills: ['golang-patterns'] },
     typescript: { agents: ['typescript-reviewer'] },
     java: { agents: ['java-reviewer'] },
     kotlin: { agents: ['kotlin-reviewer'] },
