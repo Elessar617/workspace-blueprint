@@ -114,6 +114,22 @@ export function route({ prompt, files_in_scope = [], registry = {} }) {
   };
 }
 
+const TRANSITION_PHRASES = [
+  /\bnow\s+let'?s\b/i,
+  /\bswitch\s+to\b/i,
+  /\bactually[,\s]/i,
+  /\bpivot\s+to\b/i,
+];
+
+export function detectTransition(prompt) {
+  return TRANSITION_PHRASES.some((re) => re.test(prompt));
+}
+
+export function mergeWithCache(cache, fresh, transitionDetected) {
+  if (transitionDetected || !cache) return fresh;
+  return cache;
+}
+
 if (import.meta.url === `file://${process.argv[1]}`) {
   const args = process.argv.slice(2);
   const promptIdx = args.indexOf('--prompt');
