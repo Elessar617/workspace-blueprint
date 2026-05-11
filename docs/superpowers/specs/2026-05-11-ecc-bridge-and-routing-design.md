@@ -203,6 +203,8 @@ Prompt: "add a rate limiter to the Go gateway service"
 - `harness-builtins.json` — built-in subagent types and slash commands.
 - `native-inventory.json` — workspace-blueprint's own agents/skills/rules (optional).
 
+**Note on MCP entries:** `ecc-mcps.json`, `harness-mcps.json`, and references to MCPs in routing files are *advisory only*. The auto-selector recommends which MCPs are likely needed for a task; the agent uses them when relevant. The bridge does NOT enable/disable MCPs dynamically — all configured MCPs remain available throughout the session.
+
 ### 6.3 Record format
 
 ```json
@@ -224,6 +226,8 @@ For harness-sourced entries, `source: "harness"`, no `ecc_sha`, and `plugin_path
 
 ### 6.4 Scrape strategy (`scripts/rebuild-registry.mjs`)
 
+**Runtime:** ESM `.mjs` (Node 18+ required). New scripts (`route.mjs`, `rebuild-registry.mjs`) use the `.mjs` extension explicitly rather than setting `"type": "module"` in `package.json` — this avoids forcing the entire repo into ESM. Single external dependency: `gray-matter` for YAML frontmatter parsing.
+
 1. Read `ecc-config.json`, resolve ECC path (env override applied if present).
 2. For each ECC subdir (`agents/`, `skills/`, `commands/`, `mcp-configs/`, `hooks/`, `rules/`):
    - Walk files. For `.md` files, parse YAML frontmatter using `gray-matter` (or equivalent).
@@ -243,6 +247,23 @@ For harness-sourced entries, `source: "harness"`, no `ecc_sha`, and `plugin_path
 ### 6.5 Validation step
 
 After every rebuild, `rebuild-registry.mjs` grep-scans `ROUTING.md` and `.claude/routing/*.md` for item-name tokens. Each token must resolve to a registry entry; otherwise a warning is logged. This catches name drift after ECC upstream renames an item.
+
+### 6.6 Frontmatter normalization
+
+ECC's items have inconsistent frontmatter (some omit `languages`, some use scalar instead of array values, some include `model`, some don't). The scraper applies a defensive schema:
+
+- **Required fields:**
+  - `name` — defaults to filename stem if frontmatter omits it.
+  - `kind` — always set by the scraper based on parent directory (`agents/` → `agent`, `skills/` → `skill`, `commands/` → `command`, `mcp-configs/` → `mcp`, etc.).
+  - `source` — always set by the scraper (`ecc`, `harness`, or `native`).
+- **Optional fields with defaults:**
+  - `description` — fallback chain: frontmatter value → first non-frontmatter paragraph (≤ 200 chars) → empty string.
+  - `languages` — default `[]` (language-agnostic).
+  - `tools` — default `[]`.
+  - `model` — default `null` (meaning "harness default").
+- **Type coercion:** scalar → array for `languages` and `tools`. Example: `languages: python` becomes `["python"]`.
+- **Parse failure handling:** YAML parse errors are caught; the offending file is skipped with a warning to stderr. The rebuild continues. A summary at end of rebuild reports total files skipped.
+- **Slash command resolution:** commands in `commands/` typically have sparser frontmatter than agents/skills. Resolution order: (1) frontmatter `description`; (2) first non-frontmatter paragraph (≤ 200 chars); (3) filename derivation (e.g., `tdd-workflow.md` → `"TDD Workflow"`).
 
 ---
 
@@ -324,6 +345,35 @@ Run after `/plugin install`, `/plugin remove`, or any change to `~/.claude/setti
 - Explicit `/refresh-routing` slash command (optional, low priority for v1).
 
 Mid-task chatter ("yes", "explain more", "do that") preserves the cache.
+
+### 7.6 Hook profile mechanism
+
+Three profiles control whether the workspace-blueprint hooks fire and at what strictness:
+
+- **`minimal`** — hooks no-op (exit 0 immediately). Useful for spikes in `lab/` where TDD enforcement and review-gate checks would be premature.
+- **`standard`** — current behavior (default). All 4 hooks run their normal checks.
+- **`strict`** — current behavior plus any future stricter variants. Reserved for `ship/` workflows; currently identical to `standard`.
+
+**Activation:** the operator sets `BLUEPRINT_HOOK_PROFILE=<profile>` in the shell environment before launching the IDE. Each of the 4 existing hooks (`pre-commit-tdd.sh`, `block-cycle-overrun.sh`, `block-output-without-signoff.sh`, `enforce-portability.sh`) gets a 3-line gate at the top:
+
+```bash
+PROFILE="${BLUEPRINT_HOOK_PROFILE:-standard}"
+[ "$PROFILE" = "minimal" ] && exit 0
+# rest of hook unchanged
+```
+
+**Recommendation flow:** the auto-selector outputs the recommended profile in its routing injection (CC) or branch file (non-CC). The operator activates manually via `export BLUEPRINT_HOOK_PROFILE=<profile>`. v1 does NOT auto-activate (would require shell-launcher integration; deferred to future work).
+
+**Per-branch default recommendations** (encoded in `.claude/routing/<branch>.md`):
+
+| Branch | Recommended profile |
+|--------|---------------------|
+| `build.md` (feature) | `standard` |
+| `bug.md` | `standard` |
+| `refactor.md` | `standard` |
+| `spike.md` (exploration) | `minimal` |
+| `spec-author.md` | `minimal` |
+| `ship.md` (release) | `strict` |
 
 ---
 
@@ -422,13 +472,15 @@ Each routing case under `tests/routing-cases/`:
 
 ---
 
-## 10. Open Questions
+## 10. Resolved Design Decisions
 
-1. **Frontmatter format normalization.** ECC's items have inconsistent frontmatter (some omit `languages`, some use `tools` arrays, some include `model`). The scraper needs robust defaults and clear behavior for missing fields. Resolved in the implementation plan.
-2. **Slash command resolution.** ECC's slash commands live under `commands/` with sparser frontmatter than agents/skills. The scraper may need a heuristic (first paragraph as description) — to be confirmed against actual ECC content during implementation.
-3. **`scripts/route.mjs` runtime.** Pure Node.js (CommonJS to match ECC, or ESM to use modern tooling). Decision deferred to the implementation plan; affects `.mjs` vs `.js` extensions and `package.json` setup.
-4. **Hook profile mechanism in CC.** ECC's `ECC_HOOK_PROFILE` env var is consumed by ECC's own hooks. To use it in workspace-blueprint requires either copying ECC's hook scripts (defeats the bridge philosophy) or implementing equivalent gating in the 4 existing workspace-blueprint hooks. Deferred.
-5. **MCP server activation per task.** The selector picks "use brave-search for this task" but Claude Code MCP servers are session-scoped, not task-scoped. The selector can *recommend* which MCPs are relevant; the agent uses them when needed. Activation/deactivation is not in v1.
+Questions raised during brainstorming, resolved before implementation:
+
+1. **Frontmatter format normalization.** Resolved in §6.6: defensive schema with required/optional fields, default values, type coercion, and parse-failure handling.
+2. **Slash command description fallback.** Resolved in §6.6 (last bullet): three-tier resolution order (frontmatter → paragraph → filename).
+3. **`scripts/route.mjs` runtime.** Resolved in §6.4: ESM `.mjs` (Node 18+); `.mjs` extension per-file rather than `package.json "type": "module"` to avoid forcing the whole repo into ESM.
+4. **Hook profile mechanism.** Resolved in §7.6 (pulled from former §12 future work). Three profiles (`minimal`/`standard`/`strict`) gated by `BLUEPRINT_HOOK_PROFILE` env var. Implementation modifies the 4 existing hook scripts with a 3-line gate; recommendations flow from the selector but activation is manual in v1.
+5. **MCP server activation per task.** Resolved in §6.2: MCPs are recommendation-only. The selector advises which MCPs are likely needed; the agent uses them when relevant. No dynamic enable/disable.
 
 ## 11. Non-Goals
 
@@ -445,7 +497,7 @@ Each routing case under `tests/routing-cases/`:
 
 - **Periodic alignment check** between `route.mjs` output and the agent's inline routing in non-CC harnesses (a CI job that runs the agent against the same cases and diffs).
 - **Custom MCP routing server (Option B)** if LLM compliance with the preamble proves unreliable in non-CC IDEs.
-- **Hook profile mechanism** modeled on ECC's `ECC_HOOK_PROFILE` env var.
+- **Auto-activation of `BLUEPRINT_HOOK_PROFILE`** via a shell-launcher wrapper (e.g., `./scripts/with-profile.sh minimal claude`) that sets the env var before launching the IDE, eliminating the manual `export` step.
 - **`/refresh-routing` slash command** for manual mid-session re-narrowing.
 - **Multi-repo support:** if the operator wants to extend the bridge pattern to additional sources (e.g., `obra/superpowers` as a second submodule), the registry mechanism generalizes — `external/superpowers/` + `scripts/rebuild-registry.mjs` walks an additional source.
 
