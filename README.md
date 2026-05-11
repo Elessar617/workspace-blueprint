@@ -33,6 +33,28 @@ See [`.claude/MCP-SETUP.md`](.claude/MCP-SETUP.md) for plugin installation and t
 
 See the "If you're using this scaffold to bootstrap a NEW repo" section in [`START-HERE.md`](START-HERE.md).
 
+## Cloning on a new machine
+
+```bash
+git clone --recursive git@github.com:Elessar617/workspace-blueprint.git
+cd workspace-blueprint
+./scripts/bootstrap.sh
+```
+
+This:
+1. Clones the repo and the ECC submodule under `external/ecc/`.
+2. Installs npm dependencies (`gray-matter`).
+3. Builds registry JSONs under `.claude/registry/` from ECC + your Claude Code harness.
+4. Validates that every name referenced in `ROUTING.md` resolves to a registry entry.
+
+After bootstrap, open the repo in Claude Code, Codex, Cursor, OpenCode, or Gemini CLI — each IDE's preamble points the agent at `ROUTING.md` for auto-narrowing.
+
+## Maintaining the bridge
+
+- **Bump ECC:** `./scripts/update-ecc.sh` (review diff, then commit).
+- **After installing/removing a Claude Code plugin:** `./scripts/refresh-harness.sh`.
+- **Override hook strictness for a task:** `export BLUEPRINT_HOOK_PROFILE=minimal` (or `standard`, `strict`).
+
 ## Project status
 
 This scaffold is itself the first iteration. Use it, evolve it, file issues for friction.
