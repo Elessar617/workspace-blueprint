@@ -1,5 +1,5 @@
 import { readdirSync, statSync, existsSync } from 'node:fs';
-import { join, extname } from 'node:path';
+import { join, extname, relative } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { parseMarkdown, normalizeRecord, filenameStem } from './frontmatter.mjs';
 
@@ -47,7 +47,7 @@ export function scrapeEcc(eccPath) {
         kind,
         source: 'ecc',
       });
-      record.path = file.slice(eccPath.length).replace(/^\//, '');
+      record.path = relative(eccPath, file);
       record.indexed_at = indexedAt;
       record.ecc_sha = eccSha;
       const bucket =
@@ -68,7 +68,7 @@ export function scrapeEcc(eccPath) {
           name: filenameStem(p),
           kind: 'mcp',
           source: 'ecc',
-          path: p.slice(eccPath.length).replace(/^\//, ''),
+          path: relative(eccPath, p),
           description: '',
           indexed_at: indexedAt,
           ecc_sha: eccSha,
