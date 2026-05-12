@@ -2,7 +2,7 @@
 
 > Running log of where `workspace-blueprint` is, what it's trying to be, and how it got from A to B. Update at each meaningful milestone. Source-of-truth for "what's the state of the project?" without having to read the whole git log.
 >
-> **Last updated:** 2026-05-12.
+> **Last updated:** 2026-05-12 (afternoon update — architecture pause and tracked-items refresh).
 
 ---
 
@@ -67,6 +67,7 @@ Most of what happened on day 2 was *correctness work* — closing gaps the day-1
 4. **Local-vs-origin divergence resolved** — a force-push to `origin/main` at some earlier point left local main with same-content-different-SHA commits. Reconciled via backup-then-reset (`backup/local-main-before-reset` retained for safety).
 5. **F3 shipped** (`80fc73f` + `2519b59`) — `scripts/with-profile.sh <profile> <command>` closes the one operationally-felt v1 gap. The auto-router had been recommending hook profiles but the operator still had to `export BLUEPRINT_HOOK_PROFILE=...` by hand. Now `./scripts/with-profile.sh minimal claude` is a one-liner. 8 integration tests cover usage gates, profile validation, env-var flow for all three profiles, exit-code propagation, and arg pass-through.
 6. **Cleanroom bootstrap validation** — first end-to-end proof of the "clone to any PC and it works" promise. Cloned the local repo to `/tmp/wb-cleanroom` *without* `--recursive` (the harsh test), ran `./scripts/bootstrap.sh`, verified the submodule self-initialized from upstream at the pinned SHA, `npm install` succeeded, all 11 registries built cleanly, the strict validator resolved all 7 routing files with zero dangling references, and `npm test` (41 unit + hook + bootstrap + 8 new with-profile tests) passed with 0 failures. A second `rebuild-registry` produced no git diff — the lockfile property held.
+7. **Architecture pause + scope refresh.** With F3 shipped and cleanroom validation passing, the implementer/architect roles re-examined the v1 deferred-items framing. Findings: F3 shipped; F1's literal scope (cross-IDE agent compliance) hit practical blockers (Cursor has no headless mode; recurring API spend; natural-language output parsing); F4 and F5 remained trigger-gated. New items emerged from the conversation: **SKILLS.md consolidation** (shape pending design discussion), **Cleanroom CI** (the deterministic half of former F1 — `npm test` + fresh-clone bootstrap on every push), and **ECC parse-skipped file investigation**. The tracked-items list in [`docs/limitations-and-deferred.md §2`](limitations-and-deferred.md) restructured into Active / Deferred / Shipped sub-tables to reflect the new shape.
 
 ---
 
@@ -90,22 +91,23 @@ Most of what happened on day 2 was *correctness work* — closing gaps the day-1
 
 ---
 
-## 4. What's deferred (v1 limitations)
+## 4. Tracked items (active, deferred, shipped)
 
-See [`docs/limitations-and-deferred.md`](limitations-and-deferred.md) for the full record. Summary:
+The full tracked-items list lives in [`docs/limitations-and-deferred.md §2`](limitations-and-deferred.md). Restructured 2026-05-12 from the old "F1–F5 deferred" framing because reality moved on. Summary at a glance:
 
-| ID | Item | Status | Trigger to revisit |
-|----|------|--------|--------------------|
-| F1 | Periodic cross-IDE alignment CI check | Deferred | Observing non-CC routing drift |
-| F2 | Custom MCP routing server (Option B) | Deferred — YAGNI for v1 | If LLM compliance with preamble proves unreliable |
-| F3 | `BLUEPRINT_HOOK_PROFILE` auto-activation wrapper | **Shipped 2026-05-12** as `scripts/with-profile.sh` | — |
-| F4 | `/refresh-routing` slash command | Deferred — UX nice-to-have | If cache staleness shows up in real use |
-| F5 | Multi-repo support (additional submodules) | Deferred | When bringing in `obra/superpowers` or similar as a second source |
+**Active or planned:**
+- **Cleanroom CI** (formerly F1 Tier A) — GitHub Actions workflow for `npm test` + fresh-clone bootstrap on push/PR. Converts the manual cleanroom validation done on 2026-05-12 into permanent automation. Free, no API spend.
+- **SKILLS.md consolidation** — collapse the routing-referenced subset (~46 items across 6 branch files) into a single surface. Shape pending design discussion (replacement vs. narrative doc vs. structured index vs. hybrid).
+- **ECC parse-skipped file investigation** — one ECC file `gray-matter` rejects on pin SHA `7fa1e5b6`. Now a tracked item rather than a footnote.
 
-Operational gaps that aren't strictly "F items":
+**Deferred (trigger-gated; do not implement until trigger fires):**
+- **Cross-IDE agent compliance check** (formerly full F1) — needs observed non-CC routing drift. Practical blockers documented in limitations §1.5.
+- **F2** Custom MCP routing server — needs observed preamble unreliability.
+- **F4** `/refresh-routing` slash command — needs observed cache staleness.
+- **F5** Multi-repo support — needs a second source actually wanted.
 
-- **ECC submodule has one parse-skipped file.** `gray-matter` rejects its frontmatter; logged at rebuild time. Not blocking. Worth a future spot-check.
-- **Cross-IDE compliance is trust-based.** The 3 non-Claude-Code preambles tell agents to consult `ROUTING.md`, but no test verifies they actually do. F1 above would close this; no urgency until friction observed.
+**Shipped:**
+- **F3** `BLUEPRINT_HOOK_PROFILE` auto-activation — `scripts/with-profile.sh` (commit `80fc73f`, 2026-05-12).
 
 ---
 

@@ -42,23 +42,42 @@ The ECC scraper reports `skipped: 1` on the current pin (SHA `7fa1e5b6`). One ma
 
 ### 1.5 Partial cross-IDE alignment check
 
-The unit snapshot suite now verifies that `route.mjs` emits only registry-resolvable names for the routing cases. It does not yet run each non-CC harness through the inline Markdown traversal and compare the agent's chosen inventory.
+The unit snapshot suite verifies that `route.mjs` emits only registry-resolvable names for the routing cases. It does not yet run each non-CC harness through the inline Markdown traversal and compare the agent's chosen inventory.
 
-**Status:** Deterministic selector coverage exists; real cross-IDE agent-compliance testing is still trust-based.
+**Status:** Deterministic selector coverage exists. Real cross-IDE agent-compliance testing remains trust-based, with practical blockers — Cursor has no headless mode for CI invocation; per-IDE auth + recurring API spend; natural-language output requires structured-prompt conventions.
 
-**Resolution path:** Spec §12 F1 (CI alignment check). Run the agent against the snapshot test cases periodically; diff against `route.mjs` output; surface drift.
+**Resolution paths:**
+- *Active:* "Cleanroom CI" in §2 hardens the deterministic half (`route.mjs` + registries + bootstrap) by running on every push/PR. Catches the part of F1 that can be verified without invoking agents.
+- *Deferred:* Full agent-compliance testing remains trigger-gated to observed non-CC routing drift (see §2 below).
 
 ---
 
-## 2. Deferred future-work items (from spec §12)
+## 2. Tracked items (active, deferred, shipped)
 
-| # | Item | Rationale for deferring | When to revisit |
-|---|------|-------------------------|-----------------|
-| F1 | Periodic cross-IDE alignment check (CI) | Needs CI infra and harness drivers; nice-to-have | If we observe non-CC routing drift |
-| F2 | Custom MCP routing server (Option B) | Only justified if Option A preamble proves unreliable | If LLM compliance is consistently poor in Cursor/Codex/Gemini |
-| F3 (auto-activation) | ~~Shell-launcher wrapper for `BLUEPRINT_HOOK_PROFILE`~~ | **Shipped 2026-05-12** as `scripts/with-profile.sh`. See §1.2 above. | — |
-| F4 | `/refresh-routing` slash command | Cache invalidation works via transition phrases; explicit refresh is UX nice-to-have | If we observe cache staleness in real use |
-| F5 | Multi-repo support (additional submodules) | YAGNI for v1; mechanism generalizes naturally | When we want to bring in `obra/superpowers` (or similar) as a second source |
+Reorganized 2026-05-12 from the original spec §12 single-list view because reality moved on: F3 shipped, F1's literal scope hit practical blockers, and new items had emerged in conversation. F-IDs preserved for backreference to commits and the original spec.
+
+### Active or planned
+
+| Item | Status | Notes |
+|------|--------|-------|
+| Cleanroom CI (formerly F1 Tier A) | Planned next | GitHub Actions workflow running `npm test` + a fresh-clone-style cleanroom bootstrap on push/PR. Converts the manual 2026-05-12 cleanroom validation into permanent automation. Catches deterministic-stack regressions (`route.mjs`, registry build, hook behavior, ECC name drift) without the cost of full cross-IDE checks. |
+| SKILLS.md consolidation | In design discussion | Consolidate the routing-referenced subset (~46 items currently scattered across the 6 `.claude/routing/*.md` branch files) into a single surface. Shape pending: replacement (option A), narrative doc (option B), structured index (option C), or hybrid. |
+| ECC parse-skipped file (§1.4) | Planned | Identify which file `gray-matter` rejects on pin SHA `7fa1e5b6`. Decide between upstream issue or accept-the-skip. One-off investigation. |
+
+### Deferred (trigger-gated; do not implement until trigger fires)
+
+| Item | Trigger | Notes |
+|------|---------|-------|
+| Cross-IDE agent compliance check (formerly full F1) | "Observed non-CC routing drift" | Spec §12 wanted CI invoking each non-CC harness on snapshot prompts and diffing the agent's narrowing against `route.mjs`. Practical blocker: Cursor has no headless mode. Cost: recurring API spend × N IDEs × M prompts per CI run. Cleanroom CI (above) covers the deterministic half; full agent-compliance remains deferred. |
+| F2: Custom MCP routing server (Option B) | "If LLM compliance with preamble proves unreliable in Cursor/Codex/Gemini" | Trigger unchanged. YAGNI per spec. |
+| F4: `/refresh-routing` slash command | "If we observe cache staleness in real use" | UX nice-to-have. Cache invalidation via transition phrases works; no observed problems. |
+| F5: Multi-repo support (additional submodules) | "When we want to bring in `obra/superpowers` (or similar) as a second source" | `rebuild-registry.mjs`'s source-list mechanism generalizes naturally. |
+
+### Shipped
+
+| Item | Shipped | Reference |
+|------|---------|-----------|
+| F3: BLUEPRINT_HOOK_PROFILE auto-activation | 2026-05-12 | `scripts/with-profile.sh` (commit `80fc73f`). See §1.2 above. |
 
 ---
 
@@ -97,4 +116,4 @@ So they're not re-investigated:
 
 ---
 
-*Last updated: post-merge to `main`. Maintain this file alongside the spec and plan when v1 limitations are addressed or new deferred work is identified.*
+*Last updated: 2026-05-12 — refreshed tracked-items list (§2 restructured into Active/Deferred/Shipped sub-tables; §1.5 updated to reflect Cleanroom CI as the active resolution path). Maintain alongside the spec, plan, and `docs/development-log.md` whenever items move between buckets.*
