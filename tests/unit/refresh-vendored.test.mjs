@@ -178,3 +178,41 @@ license: MIT
     rmSync(cache, { recursive: true, force: true });
   }
 });
+
+test('refreshVendoredSkills keeps third-party license version in sync on version bump', () => {
+  const repo = setupRepo();
+  const cache = setupCache();
+  try {
+    writeSkill(repo, 'licensed-skill',
+      `---
+name: licensed-skill
+description: test
+vendored_from: "test-org/test-plugin@1.0.0"
+license: MIT
+---
+
+# v1
+`);
+    mkdirSync(join(repo, '.claude', 'skills'), { recursive: true });
+    writeFileSync(join(repo, '.claude', 'skills', 'THIRD_PARTY_LICENSES.md'),
+      `# Third-Party Licenses
+
+## test-plugin -- Maintainer
+
+- **Version vendored:** 1.0.0
+- **Skills imported:** \`licensed-skill\`
+`);
+    writeUpstream(cache, 'test-org/test-plugin', '2.0.0', 'licensed-skill', `# v2\n`);
+
+    const results = refreshVendoredSkills(repo, cache);
+
+    const r = results.find((x) => x.name === 'licensed-skill');
+    assert.equal(r.status, 'version-bumped');
+    const licenses = readFileSync(join(repo, '.claude', 'skills', 'THIRD_PARTY_LICENSES.md'), 'utf8');
+    assert.ok(licenses.includes('- **Version vendored:** 2.0.0'));
+    assert.ok(!licenses.includes('- **Version vendored:** 1.0.0'));
+  } finally {
+    rmSync(repo, { recursive: true, force: true });
+    rmSync(cache, { recursive: true, force: true });
+  }
+});

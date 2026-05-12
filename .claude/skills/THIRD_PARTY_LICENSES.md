@@ -2,7 +2,7 @@
 
 Skills under this directory marked with `vendored_from:` in their frontmatter were copied from external Claude Code plugins. Per the upstream MIT license terms, copyright and permission notices are preserved below for each upstream source.
 
-Vendored content is refreshed from upstream by hand (no automatic update mechanism yet — tracked as future work). Each vendored file's `vendored_from:` frontmatter records the upstream plugin name and version it was copied from. Last refresh: 2026-05-12.
+Vendored content is refreshed with `npm run refresh-vendored`. Each vendored file's `vendored_from:` frontmatter records the upstream plugin name and version it was copied from; the refresh script also keeps the `Version vendored` lines below in sync for existing upstream sections. Last refresh: 2026-05-12.
 
 ---
 

@@ -50,6 +50,30 @@ function findLatestVersion(pluginDir) {
   return entries[entries.length - 1];
 }
 
+function updateThirdPartyLicenseVersion(skillsDir, pluginPath, version) {
+  const licenseFile = join(skillsDir, 'THIRD_PARTY_LICENSES.md');
+  if (!existsSync(licenseFile)) return false;
+
+  const pluginName = pluginPath.split('/').at(-1);
+  const lines = readFileSync(licenseFile, 'utf8').split('\n');
+  const headingIndex = lines.findIndex((line) => line.startsWith('## ') && line.includes(pluginName));
+  if (headingIndex === -1) return false;
+
+  const nextHeadingIndex = lines.findIndex((line, index) => index > headingIndex && line.startsWith('## '));
+  const endIndex = nextHeadingIndex === -1 ? lines.length : nextHeadingIndex;
+  for (let i = headingIndex + 1; i < endIndex; i++) {
+    if (lines[i].startsWith('- **Version vendored:**')) {
+      const nextLine = `- **Version vendored:** ${version}`;
+      if (lines[i] === nextLine) return false;
+      lines[i] = nextLine;
+      writeFileSync(licenseFile, lines.join('\n'));
+      return true;
+    }
+  }
+
+  return false;
+}
+
 export function refreshVendoredSkills(repoRoot, pluginCacheDir = DEFAULT_PLUGIN_CACHE) {
   const skillsDir = join(repoRoot, '.claude', 'skills');
   const results = [];
@@ -108,11 +132,16 @@ export function refreshVendoredSkills(repoRoot, pluginCacheDir = DEFAULT_PLUGIN_
     } else {
       const newContent = matter.stringify(upstreamParsed.content, newFm);
       writeFileSync(skillFile, newContent);
+      const status = !versionMatches ? 'version-bumped' : 'content-changed';
+      const licenseUpdated = status === 'version-bumped'
+        ? updateThirdPartyLicenseVersion(skillsDir, pluginPath, latest)
+        : false;
       results.push({
         name: entry,
-        status: !versionMatches ? 'version-bumped' : 'content-changed',
+        status,
         version: latest,
         previousVersion: currentVersion,
+        ...(licenseUpdated ? { licenseUpdated: true } : {}),
       });
     }
   }

@@ -86,15 +86,15 @@ Most of what happened on day 2 was *correctness work* — closing gaps the day-1
 |-----------|--------|
 | **3-layer chassis** (`CLAUDE.md` → `CONTEXT.md` → workspace `CONTEXT.md`) | Intact and unmodified by the ECC bridge. Five workspace CONTEXT.md files present. |
 | **ECC bridge** (parallel routing layer) | `ROUTING.md` + 6 branch files + 11 registries + 4 per-IDE preambles + Claude Code hook + lifecycle scripts — all present, audit-hardened. |
-| **Submodule** | `external/ecc/` pinned at `7fa1e5b6` (`v1.7.0-1126-g7fa1e5b6`) from `affaan-m/everything-claude-code`. |
-| **Registries** | 47 ECC agents + 246 skills + 68 commands + 1 MCP + 89 lang-rules + 3 hook-profiles + 27 harness skills + 4 harness MCPs + 3 built-ins + 25 native records. Byte-stable across rebuilds (lockfile property holds). |
-| **Tests** | 41 unit + 2 hook + 1 bootstrap-idempotency + 8 with-profile integration tests. 0 failures. |
+| **Submodule** | `external/ecc/` pinned at `894ee039` (`v1.10.0-617-g894ee039`) from `affaan-m/everything-claude-code`. |
+| **Registries** | 60 ECC agents + 323 skills + 75 commands + 1 MCP + 105 lang-rules + 3 hook-profiles + 27 harness skills + 4 harness MCPs + 3 built-ins + 29 native records. Byte-stable across rebuilds (lockfile property holds). |
+| **Tests** | 49 unit + 2 hook + 1 bootstrap-idempotency + 8 with-profile integration tests. 0 failures. |
 | **Rules** | 7 native, all generic (portability hook excludes nothing under `.claude/rules/`). |
 | **Hooks** | 4 enforcement hooks, each gated by `BLUEPRINT_HOOK_PROFILE`. |
-| **Skills** | 10 native (6 project + 4 vendored office). |
+| **Skills** | 14 local skills (6 project + 4 vendored office + 4 routing-vendored). |
 | **Bootstrap path** | Verified end-to-end via cleanroom test on 2026-05-12 (clone without `--recursive` → bootstrap self-recovers → all green). |
 | **Iteration workspaces** | `spec/`, `lab/`, `build/workflows/`, `ship/` exist but contain only templates and `.gitkeep`s — **by design**. The scaffold is the deliverable, not the iterations. |
-| **CI** | None configured. Tests run locally via `npm test`. |
+| **CI** | GitHub Actions cleanroom workflow configured in `.github/workflows/ci.yml`; tests also run locally via `npm test`. |
 | **Linter / formatter** | None configured. Project is plain Node 18+ ESM (`.mjs`) plus bash; the existing codebase style is consistent without formal enforcement. |
 | **Memory** (Claude Code persistent) | `feedback-no-prs-in-this-project` (solo project, commit-direct-to-main) and `feedback-scaffold-invariants` (never fill `.claude/reference/*` placeholders) saved at `~/.claude/projects/.../memory/`. |
 
@@ -105,7 +105,7 @@ Most of what happened on day 2 was *correctness work* — closing gaps the day-1
 The full tracked-items list lives in [`docs/limitations-and-deferred.md §2`](limitations-and-deferred.md). Restructured 2026-05-12 from the old "F1–F5 deferred" framing because reality moved on. Summary at a glance:
 
 **Active or planned:**
-- *(none currently planned — all three Day 2 items shipped)*
+- *(none currently planned — all four Day 2 items shipped)*
 
 **Deferred (trigger-gated; do not implement until trigger fires):**
 - **Cross-IDE agent compliance check** (formerly full F1) — needs observed non-CC routing drift. Practical blockers documented in limitations §1.5.
@@ -127,7 +127,7 @@ These aren't bugs — they're places where the design and the reality don't full
 
 - **CLAUDE.md says "active lab + canonical scaffolding source"** but no iterations have run in `spec/lab/build/ship`. The scaffold *is* the deliverable; calling itself an "active lab" may be aspirational rather than descriptive. Worth softening if the framing ever causes confusion in a fresh clone.
 - **The four-agent loop is unproven on a real task in this repo.** It's tested in isolation (snapshot tests, hook tests) but no full `01-spec → 02-implement → 03-validate → 04-output` cycle has been driven end-to-end here. Downstream consumers running the loop on their own projects will be the first real exercise. F3's `with-profile.sh` itself was small enough that running it through the four-agent loop would have been more ceremony than value — flagged here for visibility, not as a defect.
-- **Bootstrap-cleanroom test in `tests/integration/` only tests idempotency in-place.** The fresh-clone validation on 2026-05-12 was manual. If we want it permanent, a CI job that does the same thing nightly would catch breakage.
+- **The local bootstrap-cleanroom test in `tests/integration/` only tests idempotency in-place.** The GitHub Actions workflow now covers fresh-checkout bootstrap on push/PR, so local `npm test` remains a quicker in-place guard while CI exercises the harsher clone path.
 
 ---
 

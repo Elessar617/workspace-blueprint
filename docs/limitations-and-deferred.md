@@ -49,7 +49,7 @@ The unit snapshot suite verifies that `route.mjs` emits only registry-resolvable
 **Status:** Deterministic selector coverage exists. Real cross-IDE agent-compliance testing remains trust-based, with practical blockers — Cursor has no headless mode for CI invocation; per-IDE auth + recurring API spend; natural-language output requires structured-prompt conventions.
 
 **Resolution paths:**
-- *Active:* "Cleanroom CI" in §2 hardens the deterministic half (`route.mjs` + registries + bootstrap) by running on every push/PR. Catches the part of F1 that can be verified without invoking agents.
+- *Shipped:* "Cleanroom CI" in §2 hardens the deterministic half (`route.mjs` + registries + bootstrap) by running on every push/PR. Catches the part of F1 that can be verified without invoking agents.
 - *Deferred:* Full agent-compliance testing remains trigger-gated to observed non-CC routing drift (see §2 below).
 
 ---
@@ -117,4 +117,4 @@ So they're not re-investigated:
 
 ---
 
-*Last updated: 2026-05-12 — refreshed tracked-items list (§2 restructured into Active/Deferred/Shipped sub-tables; §1.5 updated to reflect Cleanroom CI as the active resolution path). Maintain alongside the spec, plan, and `docs/development-log.md` whenever items move between buckets.*
+*Last updated: 2026-05-12 — refreshed tracked-items list (§2 restructured into Active/Deferred/Shipped sub-tables; §1.5 updated to reflect Cleanroom CI as the shipped deterministic guard). Maintain alongside the spec, plan, and `docs/development-log.md` whenever items move between buckets.*

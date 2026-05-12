@@ -131,7 +131,7 @@ Vendored-skill attribution and license text: `.claude/skills/THIRD_PARTY_LICENSE
 
 ### ECC — in `external/ecc/` submodule
 
-Submodule pinned at SHA `7fa1e5b6`. Items below are referenced by routing branch files; the strict validator (`scripts/rebuild-registry.mjs`) fails the rebuild if any of these don't resolve.
+Submodule pinned at SHA `894ee039`. Items below are referenced by routing branch files; the strict validator (`scripts/rebuild-registry.mjs`) fails the rebuild if any of these don't resolve.
 
 **Agents:** `python-reviewer`, `go-reviewer`, `typescript-reviewer`, `java-reviewer`, `kotlin-reviewer`, `cpp-reviewer`, `csharp-reviewer`, `flutter-reviewer`, `go-build-resolver`, `java-build-resolver`, `kotlin-build-resolver`, `cpp-build-resolver`, `dart-build-resolver`, `refactor-cleaner`, `code-simplifier`, `doc-updater`, `opensource-packager`, `architect`, `code-explorer`.
 
@@ -139,7 +139,7 @@ Submodule pinned at SHA `7fa1e5b6`. Items below are referenced by routing branch
 
 **Commands:** `/build-fix`.
 
-The other ~340 items in the ECC submodule are discoverable through the registry (`jq '.[].name' .claude/registry/ecc-*.json`) but not currently routed. To add a new routing reference, name the item in the relevant branch file under `.claude/routing/` and run `npm run rebuild-registry` to validate.
+The other ~540 items in the ECC submodule are discoverable through the registry (`jq '.[].name' .claude/registry/ecc-*.json`) but not currently routed. To add a new routing reference, name the item in the relevant branch file under `.claude/routing/` and run `npm run rebuild-registry` to validate.
 
 ### Harness built-in subagents
 
