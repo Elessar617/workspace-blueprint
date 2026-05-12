@@ -8,7 +8,25 @@
     "tools": [],
     "model": null,
     "path": "skills/accessibility/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "agent-architecture-audit",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "Full-stack diagnostic for agent and LLM applications. Audits the 12-layer agent stack for wrapper regression, memory pollution, tool discipline failures, hidden repair loops, and rendering corruption. Produces severity-ranked findings with code-first fixes. Essential for developers building agent applications, autonomous loops, or any LLM-powered feature.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "model": null,
+    "path": "skills/agent-architecture-audit/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "agent-eval",
@@ -26,7 +44,7 @@
     ],
     "model": null,
     "path": "skills/agent-eval/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "agent-harness-construction",
@@ -37,7 +55,7 @@
     "tools": [],
     "model": null,
     "path": "skills/agent-harness-construction/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "agent-introspection-debugging",
@@ -48,18 +66,18 @@
     "tools": [],
     "model": null,
     "path": "skills/agent-introspection-debugging/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "agent-payment-x402",
     "kind": "skill",
     "source": "ecc",
-    "description": "Add x402 payment execution to AI agents — per-task budgets, spending controls, and non-custodial wallets via MCP tools. Use when agents need to pay for APIs, services, or other agents.",
+    "description": "Add x402 payment execution to AI agents with per-task budgets, spending controls, and non-custodial wallets. Supports Base through agentwallet-sdk and X Layer through OKX Payments / OKX Agent Payments Protocol.",
     "languages": [],
     "tools": [],
     "model": null,
     "path": "skills/agent-payment-x402/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "agent-sort",
@@ -70,7 +88,7 @@
     "tools": [],
     "model": null,
     "path": "skills/agent-sort/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "agentic-engineering",
@@ -81,7 +99,18 @@
     "tools": [],
     "model": null,
     "path": "skills/agentic-engineering/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "agentic-os",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "Build persistent multi-agent operating systems on Claude Code. Covers kernel architecture, specialist agents, slash commands, file-based memory, scheduled automation, and state management without external databases.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/agentic-os/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "ai-first-engineering",
@@ -92,7 +121,7 @@
     "tools": [],
     "model": null,
     "path": "skills/ai-first-engineering/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "ai-regression-testing",
@@ -103,7 +132,7 @@
     "tools": [],
     "model": null,
     "path": "skills/ai-regression-testing/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "android-clean-architecture",
@@ -114,7 +143,403 @@
     "tools": [],
     "model": null,
     "path": "skills/android-clean-architecture/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "angular-developer",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "Generates Angular code and provides architectural guidance. Trigger when creating projects, components, or services, or for best practices on reactivity (signals, linkedSignal, resource), forms, dependency injection, routing, SSR, accessibility (ARIA), animations, styling (component styles, Tailwind CSS), testing, or CLI tooling.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/angular-developer/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "angular-animations",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "# Angular Animations",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/angular-developer/references/angular-animations.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "angular-aria",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "# Angular Aria",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/angular-developer/references/angular-aria.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "cli",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "# Angular CLI Guide for Agents",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/angular-developer/references/cli.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "component-harnesses",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "# Testing with Component Harnesses",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/angular-developer/references/component-harnesses.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "component-styling",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "# Component Styling",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/angular-developer/references/component-styling.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "components",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "# Components",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/angular-developer/references/components.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "creating-services",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "# Creating and Using Services",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/angular-developer/references/creating-services.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "data-resolvers",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "# Data Resolvers",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/angular-developer/references/data-resolvers.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "define-routes",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "# Define Routes",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/angular-developer/references/define-routes.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "defining-providers",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "# Defining Dependency Providers",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/angular-developer/references/defining-providers.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "di-fundamentals",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "# Dependency Injection (DI) Fundamentals",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/angular-developer/references/di-fundamentals.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "e2e-testing",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "# End-to-End (E2E) Testing",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/angular-developer/references/e2e-testing.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "effects",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "# Side Effects with `effect` and `afterRenderEffect`",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/angular-developer/references/effects.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "hierarchical-injectors",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "# Hierarchical Injectors",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/angular-developer/references/hierarchical-injectors.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "host-elements",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "# Component Host Elements",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/angular-developer/references/host-elements.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "injection-context",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "# Injection Context",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/angular-developer/references/injection-context.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "inputs",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "# Inputs",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/angular-developer/references/inputs.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "linked-signal",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "# Dependent State with `linkedSignal`",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/angular-developer/references/linked-signal.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "loading-strategies",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "# Route Loading Strategies",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/angular-developer/references/loading-strategies.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "mcp",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "# Angular CLI MCP Server",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/angular-developer/references/mcp.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "navigate-to-routes",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "# Navigate to Routes",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/angular-developer/references/navigate-to-routes.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "outputs",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "# Outputs (Custom Events)",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/angular-developer/references/outputs.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "reactive-forms",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "# Reactive Forms",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/angular-developer/references/reactive-forms.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "rendering-strategies",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "# Rendering Strategies",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/angular-developer/references/rendering-strategies.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "resource",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "# Async Reactivity with `resource`",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/angular-developer/references/resource.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "route-animations",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "# Route Transition Animations",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/angular-developer/references/route-animations.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "route-guards",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "# Route Guards",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/angular-developer/references/route-guards.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "router-lifecycle",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "# Router Lifecycle and Events",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/angular-developer/references/router-lifecycle.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "router-testing",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "# Testing with the RouterTestingHarness",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/angular-developer/references/router-testing.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "show-routes-with-outlets",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "# Show Routes with Outlets",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/angular-developer/references/show-routes-with-outlets.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "signal-forms",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "# Signal Forms",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/angular-developer/references/signal-forms.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "signals-overview",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "# Angular Signals Overview",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/angular-developer/references/signals-overview.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "tailwind-css",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "# Using Tailwind CSS with Angular",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/angular-developer/references/tailwind-css.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "template-driven-forms",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "# Template-Driven Forms",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/angular-developer/references/template-driven-forms.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "testing-fundamentals",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "# Testing Fundamentals",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/angular-developer/references/testing-fundamentals.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "api-connector-builder",
@@ -125,7 +550,7 @@
     "tools": [],
     "model": null,
     "path": "skills/api-connector-builder/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "api-design",
@@ -136,7 +561,7 @@
     "tools": [],
     "model": null,
     "path": "skills/api-design/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "architecture-decision-records",
@@ -147,7 +572,7 @@
     "tools": [],
     "model": null,
     "path": "skills/architecture-decision-records/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "article-writing",
@@ -158,7 +583,7 @@
     "tools": [],
     "model": null,
     "path": "skills/article-writing/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "automation-audit-ops",
@@ -169,7 +594,7 @@
     "tools": [],
     "model": null,
     "path": "skills/automation-audit-ops/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "autonomous-agent-harness",
@@ -180,7 +605,7 @@
     "tools": [],
     "model": null,
     "path": "skills/autonomous-agent-harness/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "autonomous-loops",
@@ -191,7 +616,7 @@
     "tools": [],
     "model": null,
     "path": "skills/autonomous-loops/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "backend-patterns",
@@ -202,7 +627,7 @@
     "tools": [],
     "model": null,
     "path": "skills/backend-patterns/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "benchmark",
@@ -213,7 +638,7 @@
     "tools": [],
     "model": null,
     "path": "skills/benchmark/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "blueprint",
@@ -224,7 +649,7 @@
     "tools": [],
     "model": null,
     "path": "skills/blueprint/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "brand-voice",
@@ -235,7 +660,7 @@
     "tools": [],
     "model": null,
     "path": "skills/brand-voice/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "voice-profile-schema",
@@ -246,7 +671,7 @@
     "tools": [],
     "model": null,
     "path": "skills/brand-voice/references/voice-profile-schema.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "browser-qa",
@@ -257,7 +682,7 @@
     "tools": [],
     "model": null,
     "path": "skills/browser-qa/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "bun-runtime",
@@ -268,7 +693,7 @@
     "tools": [],
     "model": null,
     "path": "skills/bun-runtime/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "canary-watch",
@@ -279,7 +704,7 @@
     "tools": [],
     "model": null,
     "path": "skills/canary-watch/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "carrier-relationship-management",
@@ -290,7 +715,18 @@
     "tools": [],
     "model": null,
     "path": "skills/carrier-relationship-management/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "cisco-ios-patterns",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "Cisco IOS and IOS-XE review patterns for show commands, config hierarchy, wildcard masks, ACL placement, interface hygiene, and safe change-window verification.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/cisco-ios-patterns/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "ck",
@@ -301,7 +737,7 @@
     "tools": [],
     "model": null,
     "path": "skills/ck/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "claude-devfleet",
@@ -312,7 +748,7 @@
     "tools": [],
     "model": null,
     "path": "skills/claude-devfleet/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "click-path-audit",
@@ -323,7 +759,7 @@
     "tools": [],
     "model": null,
     "path": "skills/click-path-audit/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "clickhouse-io",
@@ -334,7 +770,7 @@
     "tools": [],
     "model": null,
     "path": "skills/clickhouse-io/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "code-tour",
@@ -345,7 +781,7 @@
     "tools": [],
     "model": null,
     "path": "skills/code-tour/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "codebase-onboarding",
@@ -356,7 +792,7 @@
     "tools": [],
     "model": null,
     "path": "skills/codebase-onboarding/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "coding-standards",
@@ -367,7 +803,7 @@
     "tools": [],
     "model": null,
     "path": "skills/coding-standards/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "compose-multiplatform-patterns",
@@ -378,7 +814,7 @@
     "tools": [],
     "model": null,
     "path": "skills/compose-multiplatform-patterns/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "configure-ecc",
@@ -389,7 +825,7 @@
     "tools": [],
     "model": null,
     "path": "skills/configure-ecc/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "connections-optimizer",
@@ -400,7 +836,7 @@
     "tools": [],
     "model": null,
     "path": "skills/connections-optimizer/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "content-engine",
@@ -411,7 +847,7 @@
     "tools": [],
     "model": null,
     "path": "skills/content-engine/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "content-hash-cache-pattern",
@@ -422,7 +858,7 @@
     "tools": [],
     "model": null,
     "path": "skills/content-hash-cache-pattern/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "context-budget",
@@ -433,7 +869,7 @@
     "tools": [],
     "model": null,
     "path": "skills/context-budget/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "continuous-agent-loop",
@@ -444,7 +880,7 @@
     "tools": [],
     "model": null,
     "path": "skills/continuous-agent-loop/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "continuous-learning",
@@ -455,7 +891,7 @@
     "tools": [],
     "model": null,
     "path": "skills/continuous-learning/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "continuous-learning-v2",
@@ -466,7 +902,7 @@
     "tools": [],
     "model": null,
     "path": "skills/continuous-learning-v2/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "observer",
@@ -477,7 +913,7 @@
     "tools": [],
     "model": "haiku",
     "path": "skills/continuous-learning-v2/agents/observer.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "cost-aware-llm-pipeline",
@@ -488,7 +924,18 @@
     "tools": [],
     "model": null,
     "path": "skills/cost-aware-llm-pipeline/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "cost-tracking",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "Track and report Claude Code token usage, spending, and budgets from a local cost-tracking database. Use when the user asks about costs, spending, usage, tokens, budgets, or cost breakdowns by project, tool, session, or date.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/cost-tracking/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "council",
@@ -499,7 +946,7 @@
     "tools": [],
     "model": null,
     "path": "skills/council/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "cpp-coding-standards",
@@ -510,7 +957,7 @@
     "tools": [],
     "model": null,
     "path": "skills/cpp-coding-standards/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "cpp-testing",
@@ -521,7 +968,7 @@
     "tools": [],
     "model": null,
     "path": "skills/cpp-testing/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "crosspost",
@@ -532,7 +979,7 @@
     "tools": [],
     "model": null,
     "path": "skills/crosspost/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "csharp-testing",
@@ -543,7 +990,7 @@
     "tools": [],
     "model": null,
     "path": "skills/csharp-testing/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "customer-billing-ops",
@@ -554,7 +1001,7 @@
     "tools": [],
     "model": null,
     "path": "skills/customer-billing-ops/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "customs-trade-compliance",
@@ -565,7 +1012,7 @@
     "tools": [],
     "model": null,
     "path": "skills/customs-trade-compliance/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "dart-flutter-patterns",
@@ -576,7 +1023,7 @@
     "tools": [],
     "model": null,
     "path": "skills/dart-flutter-patterns/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "dashboard-builder",
@@ -587,7 +1034,7 @@
     "tools": [],
     "model": null,
     "path": "skills/dashboard-builder/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "data-scraper-agent",
@@ -598,7 +1045,7 @@
     "tools": [],
     "model": null,
     "path": "skills/data-scraper-agent/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "database-migrations",
@@ -609,7 +1056,7 @@
     "tools": [],
     "model": null,
     "path": "skills/database-migrations/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "deep-research",
@@ -620,7 +1067,7 @@
     "tools": [],
     "model": null,
     "path": "skills/deep-research/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "defi-amm-security",
@@ -631,7 +1078,7 @@
     "tools": [],
     "model": null,
     "path": "skills/defi-amm-security/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "deployment-patterns",
@@ -642,7 +1089,7 @@
     "tools": [],
     "model": null,
     "path": "skills/deployment-patterns/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "design-system",
@@ -653,7 +1100,18 @@
     "tools": [],
     "model": null,
     "path": "skills/design-system/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "django-celery",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "Django + Celery async task patterns — configuration, task design, beat scheduling, retries, canvas workflows, monitoring, and testing. Use when adding background jobs, scheduled tasks, or async processing to a Django app.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/django-celery/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "django-patterns",
@@ -664,7 +1122,7 @@
     "tools": [],
     "model": null,
     "path": "skills/django-patterns/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "django-security",
@@ -675,7 +1133,7 @@
     "tools": [],
     "model": null,
     "path": "skills/django-security/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "django-tdd",
@@ -686,7 +1144,7 @@
     "tools": [],
     "model": null,
     "path": "skills/django-tdd/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "django-verification",
@@ -697,7 +1155,7 @@
     "tools": [],
     "model": null,
     "path": "skills/django-verification/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "dmux-workflows",
@@ -708,7 +1166,7 @@
     "tools": [],
     "model": null,
     "path": "skills/dmux-workflows/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "docker-patterns",
@@ -719,7 +1177,7 @@
     "tools": [],
     "model": null,
     "path": "skills/docker-patterns/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "documentation-lookup",
@@ -730,7 +1188,7 @@
     "tools": [],
     "model": null,
     "path": "skills/documentation-lookup/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "dotnet-patterns",
@@ -741,7 +1199,7 @@
     "tools": [],
     "model": null,
     "path": "skills/dotnet-patterns/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "e2e-testing",
@@ -752,7 +1210,18 @@
     "tools": [],
     "model": null,
     "path": "skills/e2e-testing/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "ecc-guide",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "Guide users through ECC's current agents, skills, commands, hooks, rules, install profiles, and project onboarding by reading the live repository surface before answering.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/ecc-guide/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "ecc-tools-cost-audit",
@@ -763,7 +1232,7 @@
     "tools": [],
     "model": null,
     "path": "skills/ecc-tools-cost-audit/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "email-ops",
@@ -774,7 +1243,7 @@
     "tools": [],
     "model": null,
     "path": "skills/email-ops/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "energy-procurement",
@@ -785,7 +1254,7 @@
     "tools": [],
     "model": null,
     "path": "skills/energy-procurement/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "enterprise-agent-ops",
@@ -796,7 +1265,18 @@
     "tools": [],
     "model": null,
     "path": "skills/enterprise-agent-ops/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "error-handling",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "Patterns for robust error handling across TypeScript, Python, and Go. Covers typed errors, error boundaries, retries, circuit breakers, and user-facing error messages.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/error-handling/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "eval-harness",
@@ -814,7 +1294,7 @@
     ],
     "model": null,
     "path": "skills/eval-harness/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "evm-token-decimals",
@@ -825,7 +1305,7 @@
     "tools": [],
     "model": null,
     "path": "skills/evm-token-decimals/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "exa-search",
@@ -836,7 +1316,7 @@
     "tools": [],
     "model": null,
     "path": "skills/exa-search/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "fal-ai-media",
@@ -847,7 +1327,18 @@
     "tools": [],
     "model": null,
     "path": "skills/fal-ai-media/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "fastapi-patterns",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "FastAPI patterns for async APIs, dependency injection, Pydantic request and response models, OpenAPI docs, tests, security, and production readiness.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/fastapi-patterns/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "finance-billing-ops",
@@ -858,7 +1349,7 @@
     "tools": [],
     "model": null,
     "path": "skills/finance-billing-ops/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "flox-environments",
@@ -869,7 +1360,7 @@
     "tools": [],
     "model": null,
     "path": "skills/flox-environments/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "flutter-dart-code-review",
@@ -880,7 +1371,7 @@
     "tools": [],
     "model": null,
     "path": "skills/flutter-dart-code-review/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "foundation-models-on-device",
@@ -891,7 +1382,18 @@
     "tools": [],
     "model": null,
     "path": "skills/foundation-models-on-device/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "frontend-design-direction",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "Set an ECC-specific frontend design direction for production UI work. Use when building or improving websites, dashboards, applications, components, landing pages, visual tools, or any web UI that needs stronger product-specific design judgment.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/frontend-design-direction/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "frontend-patterns",
@@ -902,7 +1404,7 @@
     "tools": [],
     "model": null,
     "path": "skills/frontend-patterns/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "frontend-slides",
@@ -913,7 +1415,7 @@
     "tools": [],
     "model": null,
     "path": "skills/frontend-slides/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "STYLE_PRESETS",
@@ -924,7 +1426,40 @@
     "tools": [],
     "model": null,
     "path": "skills/frontend-slides/STYLE_PRESETS.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "animation-patterns",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "# Animation Patterns Reference",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/frontend-slides/animation-patterns.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "html-template",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "# HTML Presentation Template",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/frontend-slides/html-template.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "fsharp-testing",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "F# testing patterns with xUnit, FsUnit, Unquote, FsCheck property-based testing, integration tests, and test organization best practices.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/fsharp-testing/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "gan-style-harness",
@@ -943,7 +1478,7 @@
     ],
     "model": null,
     "path": "skills/gan-style-harness/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "gateguard",
@@ -954,7 +1489,7 @@
     "tools": [],
     "model": null,
     "path": "skills/gateguard/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "git-workflow",
@@ -965,7 +1500,7 @@
     "tools": [],
     "model": null,
     "path": "skills/git-workflow/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "github-ops",
@@ -976,7 +1511,7 @@
     "tools": [],
     "model": null,
     "path": "skills/github-ops/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "golang-patterns",
@@ -987,7 +1522,7 @@
     "tools": [],
     "model": null,
     "path": "skills/golang-patterns/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "golang-testing",
@@ -998,7 +1533,7 @@
     "tools": [],
     "model": null,
     "path": "skills/golang-testing/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "google-workspace-ops",
@@ -1009,7 +1544,7 @@
     "tools": [],
     "model": null,
     "path": "skills/google-workspace-ops/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "healthcare-cdss-patterns",
@@ -1020,7 +1555,7 @@
     "tools": [],
     "model": null,
     "path": "skills/healthcare-cdss-patterns/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "healthcare-emr-patterns",
@@ -1031,7 +1566,7 @@
     "tools": [],
     "model": null,
     "path": "skills/healthcare-emr-patterns/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "healthcare-eval-harness",
@@ -1042,7 +1577,7 @@
     "tools": [],
     "model": null,
     "path": "skills/healthcare-eval-harness/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "healthcare-phi-compliance",
@@ -1053,7 +1588,7 @@
     "tools": [],
     "model": null,
     "path": "skills/healthcare-phi-compliance/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "hermes-imports",
@@ -1064,7 +1599,7 @@
     "tools": [],
     "model": null,
     "path": "skills/hermes-imports/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "hexagonal-architecture",
@@ -1075,7 +1610,7 @@
     "tools": [],
     "model": null,
     "path": "skills/hexagonal-architecture/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "hipaa-compliance",
@@ -1086,7 +1621,29 @@
     "tools": [],
     "model": null,
     "path": "skills/hipaa-compliance/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "homelab-network-readiness",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "Readiness checklist for homelab VLAN segmentation, local DNS filtering, and WireGuard-style remote access before changing router, firewall, DHCP, or VPN configuration.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/homelab-network-readiness/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "homelab-network-setup",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "Practical home and homelab network planning for gateways, switches, access points, IP ranges, DHCP reservations, DNS, cabling, and common beginner mistakes.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/homelab-network-setup/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "hookify-rules",
@@ -1097,7 +1654,7 @@
     "tools": [],
     "model": null,
     "path": "skills/hookify-rules/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "inventory-demand-planning",
@@ -1108,7 +1665,7 @@
     "tools": [],
     "model": null,
     "path": "skills/inventory-demand-planning/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "investor-materials",
@@ -1119,7 +1676,7 @@
     "tools": [],
     "model": null,
     "path": "skills/investor-materials/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "investor-outreach",
@@ -1130,7 +1687,7 @@
     "tools": [],
     "model": null,
     "path": "skills/investor-outreach/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "ios-icon-gen",
@@ -1141,7 +1698,7 @@
     "tools": [],
     "model": null,
     "path": "skills/ios-icon-gen/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "iterative-retrieval",
@@ -1152,18 +1709,18 @@
     "tools": [],
     "model": null,
     "path": "skills/iterative-retrieval/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "java-coding-standards",
     "kind": "skill",
     "source": "ecc",
-    "description": "Java coding standards for Spring Boot services: naming, immutability, Optional usage, streams, exceptions, generics, and project layout.",
+    "description": "Java coding standards for Spring Boot and Quarkus services: naming, immutability, Optional usage, streams, exceptions, generics, CDI, reactive patterns, and project layout. Automatically applies framework-specific conventions.",
     "languages": [],
     "tools": [],
     "model": null,
     "path": "skills/java-coding-standards/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "jira-integration",
@@ -1174,7 +1731,7 @@
     "tools": [],
     "model": null,
     "path": "skills/jira-integration/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "jpa-patterns",
@@ -1185,7 +1742,7 @@
     "tools": [],
     "model": null,
     "path": "skills/jpa-patterns/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "knowledge-ops",
@@ -1196,7 +1753,7 @@
     "tools": [],
     "model": null,
     "path": "skills/knowledge-ops/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "kotlin-coroutines-flows",
@@ -1207,7 +1764,7 @@
     "tools": [],
     "model": null,
     "path": "skills/kotlin-coroutines-flows/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "kotlin-exposed-patterns",
@@ -1218,7 +1775,7 @@
     "tools": [],
     "model": null,
     "path": "skills/kotlin-exposed-patterns/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "kotlin-ktor-patterns",
@@ -1229,7 +1786,7 @@
     "tools": [],
     "model": null,
     "path": "skills/kotlin-ktor-patterns/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "kotlin-patterns",
@@ -1240,7 +1797,7 @@
     "tools": [],
     "model": null,
     "path": "skills/kotlin-patterns/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "kotlin-testing",
@@ -1251,7 +1808,7 @@
     "tools": [],
     "model": null,
     "path": "skills/kotlin-testing/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "laravel-patterns",
@@ -1262,7 +1819,7 @@
     "tools": [],
     "model": null,
     "path": "skills/laravel-patterns/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "laravel-plugin-discovery",
@@ -1273,7 +1830,7 @@
     "tools": [],
     "model": null,
     "path": "skills/laravel-plugin-discovery/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "laravel-security",
@@ -1284,7 +1841,7 @@
     "tools": [],
     "model": null,
     "path": "skills/laravel-security/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "laravel-tdd",
@@ -1295,7 +1852,7 @@
     "tools": [],
     "model": null,
     "path": "skills/laravel-tdd/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "laravel-verification",
@@ -1306,7 +1863,7 @@
     "tools": [],
     "model": null,
     "path": "skills/laravel-verification/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "lead-intelligence",
@@ -1317,7 +1874,7 @@
     "tools": [],
     "model": null,
     "path": "skills/lead-intelligence/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "enrichment-agent",
@@ -1333,7 +1890,7 @@
     ],
     "model": "sonnet",
     "path": "skills/lead-intelligence/agents/enrichment-agent.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "mutual-mapper",
@@ -1350,7 +1907,7 @@
     ],
     "model": "sonnet",
     "path": "skills/lead-intelligence/agents/mutual-mapper.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "outreach-drafter",
@@ -1364,7 +1921,7 @@
     ],
     "model": "sonnet",
     "path": "skills/lead-intelligence/agents/outreach-drafter.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "signal-scorer",
@@ -1382,7 +1939,7 @@
     ],
     "model": "sonnet",
     "path": "skills/lead-intelligence/agents/signal-scorer.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "liquid-glass-design",
@@ -1393,7 +1950,7 @@
     "tools": [],
     "model": null,
     "path": "skills/liquid-glass-design/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "llm-trading-agent-security",
@@ -1404,7 +1961,7 @@
     "tools": [],
     "model": null,
     "path": "skills/llm-trading-agent-security/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "logistics-exception-management",
@@ -1415,7 +1972,18 @@
     "tools": [],
     "model": null,
     "path": "skills/logistics-exception-management/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "make-interfaces-feel-better",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "Apply concrete design-engineering details that make interfaces feel polished. Use when reviewing or improving UI spacing, typography, borders, shadows, motion, hit areas, icons, text wrapping, and interaction states.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/make-interfaces-feel-better/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "manim-video",
@@ -1426,7 +1994,7 @@
     "tools": [],
     "model": null,
     "path": "skills/manim-video/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "market-research",
@@ -1437,7 +2005,7 @@
     "tools": [],
     "model": null,
     "path": "skills/market-research/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "mcp-server-patterns",
@@ -1448,7 +2016,7 @@
     "tools": [],
     "model": null,
     "path": "skills/mcp-server-patterns/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "messages-ops",
@@ -1459,7 +2027,73 @@
     "tools": [],
     "model": null,
     "path": "skills/messages-ops/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "mle-workflow",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "Production machine-learning engineering workflow for data contracts, reproducible training, model evaluation, deployment, monitoring, and rollback. Use when building, reviewing, or hardening ML systems beyond one-off notebooks.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/mle-workflow/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "motion-advanced",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "Advanced motion patterns for React / Next.js — drag & drop, gestures, text animations, SVG path drawing, custom hooks, imperative sequences (useAnimate), loaders, and the full API decision tree. Requires motion-foundations.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/motion-advanced/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "motion-foundations",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "Motion tokens, spring presets, performance rules, device adaptation, accessibility enforcement, and SSR safety for React / Next.js using motion/react. Foundation layer — all other motion skills depend on this.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/motion-foundations/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "motion-patterns",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "Production-ready animation patterns for React / Next.js — button, modal, toast, stagger, page transitions, exit animations, scroll, and layout — built on motion-foundations tokens and springs.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/motion-patterns/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "motion-ui",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "Production-ready UI motion system for React/Next.js. Use when implementing animations, transitions, or motion patterns.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/motion-ui/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "mysql-patterns",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "MySQL and MariaDB schema, query, indexing, transaction, replication, and connection-pool patterns for production backends.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/mysql-patterns/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "nanoclaw-repl",
@@ -1470,7 +2104,7 @@
     "tools": [],
     "model": null,
     "path": "skills/nanoclaw-repl/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "nestjs-patterns",
@@ -1481,7 +2115,51 @@
     "tools": [],
     "model": null,
     "path": "skills/nestjs-patterns/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "netmiko-ssh-automation",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "Safe Python Netmiko patterns for read-only collection, bounded batch SSH, TextFSM parsing, guarded config changes, timeouts, and network automation error handling.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/netmiko-ssh-automation/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "network-bgp-diagnostics",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "Diagnostics-only BGP troubleshooting patterns for neighbor state, route exchange, prefix policy, AS path inspection, and safe evidence collection.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/network-bgp-diagnostics/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "network-config-validation",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "Pre-deployment checks for router and switch configuration, including dangerous commands, duplicate addresses, subnet overlaps, stale references, management-plane risk, and IOS-style security hygiene.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/network-config-validation/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "network-interface-health",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "Diagnose interface errors, drops, CRCs, duplex mismatches, flapping, speed negotiation issues, and counter trends on routers, switches, and Linux hosts.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/network-interface-health/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "nextjs-turbopack",
@@ -1492,7 +2170,7 @@
     "tools": [],
     "model": null,
     "path": "skills/nextjs-turbopack/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "nodejs-keccak256",
@@ -1503,7 +2181,7 @@
     "tools": [],
     "model": null,
     "path": "skills/nodejs-keccak256/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "nutrient-document-processing",
@@ -1514,7 +2192,7 @@
     "tools": [],
     "model": null,
     "path": "skills/nutrient-document-processing/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "nuxt4-patterns",
@@ -1525,7 +2203,7 @@
     "tools": [],
     "model": null,
     "path": "skills/nuxt4-patterns/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "openclaw-persona-forge",
@@ -1536,7 +2214,7 @@
     "tools": [],
     "model": null,
     "path": "skills/openclaw-persona-forge/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "avatar-style",
@@ -1547,7 +2225,7 @@
     "tools": [],
     "model": null,
     "path": "skills/openclaw-persona-forge/references/avatar-style.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "boundary-rules",
@@ -1558,7 +2236,7 @@
     "tools": [],
     "model": null,
     "path": "skills/openclaw-persona-forge/references/boundary-rules.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "error-handling",
@@ -1569,7 +2247,7 @@
     "tools": [],
     "model": null,
     "path": "skills/openclaw-persona-forge/references/error-handling.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "identity-tension",
@@ -1580,7 +2258,7 @@
     "tools": [],
     "model": null,
     "path": "skills/openclaw-persona-forge/references/identity-tension.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "naming-system",
@@ -1591,7 +2269,7 @@
     "tools": [],
     "model": null,
     "path": "skills/openclaw-persona-forge/references/naming-system.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "output-template",
@@ -1602,7 +2280,7 @@
     "tools": [],
     "model": null,
     "path": "skills/openclaw-persona-forge/references/output-template.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "opensource-pipeline",
@@ -1613,7 +2291,7 @@
     "tools": [],
     "model": null,
     "path": "skills/opensource-pipeline/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "perl-patterns",
@@ -1624,7 +2302,7 @@
     "tools": [],
     "model": null,
     "path": "skills/perl-patterns/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "perl-security",
@@ -1635,7 +2313,7 @@
     "tools": [],
     "model": null,
     "path": "skills/perl-security/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "perl-testing",
@@ -1646,7 +2324,18 @@
     "tools": [],
     "model": null,
     "path": "skills/perl-testing/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "plan-orchestrate",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "Read a plan document, decompose it into steps, design a per-step agent chain from the ECC catalogue, and emit ready-to-paste /orchestrate custom prompts. Generative only — never invokes /orchestrate itself. Use when the user has a multi-step plan and wants to drive it through orchestrate without composing chains by hand.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/plan-orchestrate/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "plankton-code-quality",
@@ -1657,7 +2346,7 @@
     "tools": [],
     "model": null,
     "path": "skills/plankton-code-quality/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "postgres-patterns",
@@ -1668,7 +2357,7 @@
     "tools": [],
     "model": null,
     "path": "skills/postgres-patterns/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "product-capability",
@@ -1679,7 +2368,7 @@
     "tools": [],
     "model": null,
     "path": "skills/product-capability/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "product-lens",
@@ -1690,7 +2379,18 @@
     "tools": [],
     "model": null,
     "path": "skills/product-lens/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "production-audit",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "Local-evidence production readiness audit for shipped apps, pre-launch reviews, post-merge checks, and \"what breaks in prod?\" questions without sending repo data to an external audit service.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/production-audit/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "production-scheduling",
@@ -1701,7 +2401,7 @@
     "tools": [],
     "model": null,
     "path": "skills/production-scheduling/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "project-flow-ops",
@@ -1712,7 +2412,7 @@
     "tools": [],
     "model": null,
     "path": "skills/project-flow-ops/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "prompt-optimizer",
@@ -1723,7 +2423,7 @@
     "tools": [],
     "model": null,
     "path": "skills/prompt-optimizer/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "python-patterns",
@@ -1734,7 +2434,7 @@
     "tools": [],
     "model": null,
     "path": "skills/python-patterns/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "python-testing",
@@ -1745,7 +2445,7 @@
     "tools": [],
     "model": null,
     "path": "skills/python-testing/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "pytorch-patterns",
@@ -1756,7 +2456,7 @@
     "tools": [],
     "model": null,
     "path": "skills/pytorch-patterns/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "quality-nonconformance",
@@ -1767,7 +2467,51 @@
     "tools": [],
     "model": null,
     "path": "skills/quality-nonconformance/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "quarkus-patterns",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "Quarkus 3.x LTS architecture patterns with Camel for messaging, RESTful API design, CDI services, data access with Panache, and async processing. Use for Java Quarkus backend work with event-driven architectures.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/quarkus-patterns/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "quarkus-security",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "Quarkus Security best practices for authentication, authorization, JWT/OIDC, RBAC, input validation, CSRF, secrets management, and dependency security.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/quarkus-security/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "quarkus-tdd",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "Test-driven development for Quarkus 3.x LTS using JUnit 5, Mockito, REST Assured, Camel testing, and JaCoCo. Use when adding features, fixing bugs, or refactoring event-driven services.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/quarkus-tdd/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "quarkus-verification",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "Verification loop for Quarkus projects: build, static analysis, tests with coverage, security scans, native compilation, and diff review before release or PR.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/quarkus-verification/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "ralphinho-rfc-pipeline",
@@ -1778,7 +2522,18 @@
     "tools": [],
     "model": null,
     "path": "skills/ralphinho-rfc-pipeline/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "redis-patterns",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "Redis data structure patterns, caching strategies, distributed locks, rate limiting, pub/sub, and connection management for production applications.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/redis-patterns/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "regex-vs-llm-structured-text",
@@ -1789,7 +2544,7 @@
     "tools": [],
     "model": null,
     "path": "skills/regex-vs-llm-structured-text/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "remotion-video-creation",
@@ -1800,7 +2555,7 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "3d",
@@ -1811,7 +2566,7 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/3d.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "animations",
@@ -1822,7 +2577,7 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/animations.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "assets",
@@ -1833,7 +2588,7 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/assets.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "audio",
@@ -1844,7 +2599,7 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/audio.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "calculate-metadata",
@@ -1855,7 +2610,7 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/calculate-metadata.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "can-decode",
@@ -1866,7 +2621,7 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/can-decode.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "charts",
@@ -1877,7 +2632,7 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/charts.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "compositions",
@@ -1888,7 +2643,7 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/compositions.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "display-captions",
@@ -1899,7 +2654,7 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/display-captions.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "extract-frames",
@@ -1910,7 +2665,7 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/extract-frames.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "fonts",
@@ -1921,7 +2676,7 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/fonts.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "get-audio-duration",
@@ -1932,7 +2687,7 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/get-audio-duration.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "get-video-dimensions",
@@ -1943,7 +2698,7 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/get-video-dimensions.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "get-video-duration",
@@ -1954,7 +2709,7 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/get-video-duration.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "gif",
@@ -1965,7 +2720,7 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/gifs.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "images",
@@ -1976,7 +2731,7 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/images.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "import-srt-captions",
@@ -1987,7 +2742,7 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/import-srt-captions.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "lottie",
@@ -1998,7 +2753,7 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/lottie.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "measuring-dom-nodes",
@@ -2009,7 +2764,7 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/measuring-dom-nodes.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "measuring-text",
@@ -2020,7 +2775,7 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/measuring-text.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "sequencing",
@@ -2031,7 +2786,7 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/sequencing.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "tailwind",
@@ -2042,7 +2797,7 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/tailwind.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "text-animations",
@@ -2053,7 +2808,7 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/text-animations.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "timing",
@@ -2064,7 +2819,7 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/timing.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "transcribe-captions",
@@ -2075,7 +2830,7 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/transcribe-captions.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "transitions",
@@ -2086,7 +2841,7 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/transitions.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "trimming",
@@ -2097,7 +2852,7 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/trimming.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "videos",
@@ -2108,7 +2863,7 @@
     "tools": [],
     "model": null,
     "path": "skills/remotion-video-creation/rules/videos.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "repo-scan",
@@ -2119,7 +2874,7 @@
     "tools": [],
     "model": null,
     "path": "skills/repo-scan/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "research-ops",
@@ -2130,7 +2885,7 @@
     "tools": [],
     "model": null,
     "path": "skills/research-ops/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "returns-reverse-logistics",
@@ -2141,7 +2896,7 @@
     "tools": [],
     "model": null,
     "path": "skills/returns-reverse-logistics/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "rules-distill",
@@ -2152,7 +2907,7 @@
     "tools": [],
     "model": null,
     "path": "skills/rules-distill/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "rust-patterns",
@@ -2163,7 +2918,7 @@
     "tools": [],
     "model": null,
     "path": "skills/rust-patterns/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "rust-testing",
@@ -2174,7 +2929,7 @@
     "tools": [],
     "model": null,
     "path": "skills/rust-testing/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "safety-guard",
@@ -2185,7 +2940,7 @@
     "tools": [],
     "model": null,
     "path": "skills/safety-guard/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "santa-method",
@@ -2196,7 +2951,62 @@
     "tools": [],
     "model": null,
     "path": "skills/santa-method/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "pubmed-database",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "Direct PubMed and NCBI E-utilities search workflows for biomedical literature, MeSH queries, PMID lookup, citation retrieval, and API-backed literature monitoring.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/scientific-db-pubmed-database/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "uspto-database",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "USPTO patent and trademark data workflow for official record lookup, PatentSearch queries, TSDR checks, assignment data, and reproducible IP research logs.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/scientific-db-uspto-database/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "gget",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "gget CLI and Python workflow for quick genomic database queries, sequence lookup, BLAST-style searches, enrichment checks, and reproducible bioinformatics evidence logs.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/scientific-pkg-gget/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "literature-review",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "Systematic literature-review workflow for academic, biomedical, technical, and scientific topics, including search planning, source screening, synthesis, citation checks, and evidence logging.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/scientific-thinking-literature-review/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "scholar-evaluation",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "Structured scholarly-work evaluation for papers, proposals, literature reviews, methods sections, evidence quality, citation support, and research-writing feedback.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/scientific-thinking-scholar-evaluation/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "search-first",
@@ -2207,7 +3017,7 @@
     "tools": [],
     "model": null,
     "path": "skills/search-first/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "security-bounty-hunter",
@@ -2218,7 +3028,7 @@
     "tools": [],
     "model": null,
     "path": "skills/security-bounty-hunter/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "security-review",
@@ -2229,7 +3039,7 @@
     "tools": [],
     "model": null,
     "path": "skills/security-review/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "cloud-infrastructure-security",
@@ -2240,7 +3050,7 @@
     "tools": [],
     "model": null,
     "path": "skills/security-review/cloud-infrastructure-security.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "security-scan",
@@ -2251,7 +3061,7 @@
     "tools": [],
     "model": null,
     "path": "skills/security-scan/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "seo",
@@ -2262,7 +3072,7 @@
     "tools": [],
     "model": null,
     "path": "skills/seo/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "skill-comply",
@@ -2276,7 +3086,7 @@
     ],
     "model": null,
     "path": "skills/skill-comply/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "classifier",
@@ -2287,7 +3097,7 @@
     "tools": [],
     "model": null,
     "path": "skills/skill-comply/prompts/classifier.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "scenario_generator",
@@ -2298,7 +3108,7 @@
     "tools": [],
     "model": null,
     "path": "skills/skill-comply/prompts/scenario_generator.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "spec_generator",
@@ -2309,7 +3119,18 @@
     "tools": [],
     "model": null,
     "path": "skills/skill-comply/prompts/spec_generator.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "skill-scout",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "Search existing local, marketplace, GitHub, and web skill sources before creating a new skill. Use when the user wants to create, build, fork, or find a skill for a workflow.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/skill-scout/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "skill-stocktake",
@@ -2320,7 +3141,7 @@
     "tools": [],
     "model": null,
     "path": "skills/skill-stocktake/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "social-graph-ranker",
@@ -2331,7 +3152,7 @@
     "tools": [],
     "model": null,
     "path": "skills/social-graph-ranker/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "springboot-patterns",
@@ -2342,7 +3163,7 @@
     "tools": [],
     "model": null,
     "path": "skills/springboot-patterns/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "springboot-security",
@@ -2353,7 +3174,7 @@
     "tools": [],
     "model": null,
     "path": "skills/springboot-security/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "springboot-tdd",
@@ -2364,7 +3185,7 @@
     "tools": [],
     "model": null,
     "path": "skills/springboot-tdd/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "springboot-verification",
@@ -2375,7 +3196,7 @@
     "tools": [],
     "model": null,
     "path": "skills/springboot-verification/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "strategic-compact",
@@ -2386,7 +3207,7 @@
     "tools": [],
     "model": null,
     "path": "skills/strategic-compact/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "swift-actor-persistence",
@@ -2397,7 +3218,7 @@
     "tools": [],
     "model": null,
     "path": "skills/swift-actor-persistence/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "swift-concurrency-6-2",
@@ -2408,7 +3229,7 @@
     "tools": [],
     "model": null,
     "path": "skills/swift-concurrency-6-2/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "swift-protocol-di-testing",
@@ -2419,7 +3240,7 @@
     "tools": [],
     "model": null,
     "path": "skills/swift-protocol-di-testing/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "swiftui-patterns",
@@ -2430,7 +3251,7 @@
     "tools": [],
     "model": null,
     "path": "skills/swiftui-patterns/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "tdd-workflow",
@@ -2441,7 +3262,7 @@
     "tools": [],
     "model": null,
     "path": "skills/tdd-workflow/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "team-builder",
@@ -2452,7 +3273,7 @@
     "tools": [],
     "model": null,
     "path": "skills/team-builder/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "terminal-ops",
@@ -2463,7 +3284,7 @@
     "tools": [],
     "model": null,
     "path": "skills/terminal-ops/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "tinystruct-patterns",
@@ -2474,7 +3295,7 @@
     "tools": [],
     "model": null,
     "path": "skills/tinystruct-patterns/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "architecture",
@@ -2485,7 +3306,7 @@
     "tools": [],
     "model": null,
     "path": "skills/tinystruct-patterns/references/architecture.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "data-handling",
@@ -2496,7 +3317,7 @@
     "tools": [],
     "model": null,
     "path": "skills/tinystruct-patterns/references/data-handling.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "routing",
@@ -2507,7 +3328,7 @@
     "tools": [],
     "model": null,
     "path": "skills/tinystruct-patterns/references/routing.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "system-usage",
@@ -2518,7 +3339,7 @@
     "tools": [],
     "model": null,
     "path": "skills/tinystruct-patterns/references/system-usage.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "testing",
@@ -2529,7 +3350,7 @@
     "tools": [],
     "model": null,
     "path": "skills/tinystruct-patterns/references/testing.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "token-budget-advisor",
@@ -2540,7 +3361,7 @@
     "tools": [],
     "model": null,
     "path": "skills/token-budget-advisor/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "ui-demo",
@@ -2551,7 +3372,18 @@
     "tools": [],
     "model": null,
     "path": "skills/ui-demo/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "ui-to-vue",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "Use when the user has UI screenshots or design exports that need batch conversion into Vue 3 components, especially with Vant, Element Plus, or Ant Design Vue.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/ui-to-vue/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "unified-notifications-ops",
@@ -2562,7 +3394,7 @@
     "tools": [],
     "model": null,
     "path": "skills/unified-notifications-ops/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "verification-loop",
@@ -2573,7 +3405,7 @@
     "tools": [],
     "model": null,
     "path": "skills/verification-loop/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "video-editing",
@@ -2584,7 +3416,7 @@
     "tools": [],
     "model": null,
     "path": "skills/video-editing/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "videodb",
@@ -2595,7 +3427,7 @@
     "tools": [],
     "model": null,
     "path": "skills/videodb/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "api-reference",
@@ -2606,7 +3438,7 @@
     "tools": [],
     "model": null,
     "path": "skills/videodb/reference/api-reference.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "capture-reference",
@@ -2617,7 +3449,7 @@
     "tools": [],
     "model": null,
     "path": "skills/videodb/reference/capture-reference.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "capture",
@@ -2628,7 +3460,7 @@
     "tools": [],
     "model": null,
     "path": "skills/videodb/reference/capture.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "editor",
@@ -2639,7 +3471,7 @@
     "tools": [],
     "model": null,
     "path": "skills/videodb/reference/editor.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "generative",
@@ -2650,7 +3482,7 @@
     "tools": [],
     "model": null,
     "path": "skills/videodb/reference/generative.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "rtstream-reference",
@@ -2661,7 +3493,7 @@
     "tools": [],
     "model": null,
     "path": "skills/videodb/reference/rtstream-reference.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "rtstream",
@@ -2672,7 +3504,7 @@
     "tools": [],
     "model": null,
     "path": "skills/videodb/reference/rtstream.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "search",
@@ -2683,7 +3515,7 @@
     "tools": [],
     "model": null,
     "path": "skills/videodb/reference/search.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "streaming",
@@ -2694,7 +3526,7 @@
     "tools": [],
     "model": null,
     "path": "skills/videodb/reference/streaming.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "use-cases",
@@ -2705,7 +3537,7 @@
     "tools": [],
     "model": null,
     "path": "skills/videodb/reference/use-cases.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "README",
@@ -2716,7 +3548,7 @@
     "tools": [],
     "model": null,
     "path": "skills/visa-doc-translate/README.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "visa-doc-translate",
@@ -2727,7 +3559,29 @@
     "tools": [],
     "model": null,
     "path": "skills/visa-doc-translate/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "vite-patterns",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "Vite build tool patterns including config, plugins, HMR, env variables, proxy setup, SSR, library mode, dependency pre-bundling, and build optimization. Activate when working with vite.config.ts, Vite plugins, or Vite-based projects.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/vite-patterns/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "windows-desktop-e2e",
+    "kind": "skill",
+    "source": "ecc",
+    "description": "E2E testing for Windows native desktop apps (WPF, WinForms, Win32/MFC, Qt) using pywinauto and Windows UI Automation.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "skills/windows-desktop-e2e/SKILL.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "workspace-surface-audit",
@@ -2738,7 +3592,7 @@
     "tools": [],
     "model": null,
     "path": "skills/workspace-surface-audit/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "x-api",
@@ -2749,6 +3603,6 @@
     "tools": [],
     "model": null,
     "path": "skills/x-api/SKILL.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   }
 ]

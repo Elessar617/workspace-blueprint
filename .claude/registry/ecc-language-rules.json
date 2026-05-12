@@ -8,7 +8,117 @@
     "tools": [],
     "model": null,
     "path": "rules/README.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "coding-style",
+    "kind": "rule",
+    "source": "ecc",
+    "description": "# Angular Coding Style",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "rules/angular/coding-style.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "hooks",
+    "kind": "rule",
+    "source": "ecc",
+    "description": "# Angular Hooks",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "rules/angular/hooks.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "patterns",
+    "kind": "rule",
+    "source": "ecc",
+    "description": "# Angular Patterns",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "rules/angular/patterns.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "security",
+    "kind": "rule",
+    "source": "ecc",
+    "description": "# Angular Security",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "rules/angular/security.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "testing",
+    "kind": "rule",
+    "source": "ecc",
+    "description": "# Angular Testing",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "rules/angular/testing.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "coding-style",
+    "kind": "rule",
+    "source": "ecc",
+    "description": "# HarmonyOS / ArkTS Coding Style",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "rules/arkts/coding-style.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "hooks",
+    "kind": "rule",
+    "source": "ecc",
+    "description": "# HarmonyOS / ArkTS Hooks",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "rules/arkts/hooks.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "patterns",
+    "kind": "rule",
+    "source": "ecc",
+    "description": "# HarmonyOS / ArkTS Patterns",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "rules/arkts/patterns.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "security",
+    "kind": "rule",
+    "source": "ecc",
+    "description": "# HarmonyOS / ArkTS Security",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "rules/arkts/security.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "testing",
+    "kind": "rule",
+    "source": "ecc",
+    "description": "# HarmonyOS / ArkTS Testing",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "rules/arkts/testing.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "agents",
@@ -19,7 +129,7 @@
     "tools": [],
     "model": null,
     "path": "rules/common/agents.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "code-review",
@@ -30,7 +140,7 @@
     "tools": [],
     "model": null,
     "path": "rules/common/code-review.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "coding-style",
@@ -41,7 +151,7 @@
     "tools": [],
     "model": null,
     "path": "rules/common/coding-style.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "development-workflow",
@@ -52,7 +162,7 @@
     "tools": [],
     "model": null,
     "path": "rules/common/development-workflow.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "git-workflow",
@@ -63,7 +173,7 @@
     "tools": [],
     "model": null,
     "path": "rules/common/git-workflow.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "hooks",
@@ -74,7 +184,7 @@
     "tools": [],
     "model": null,
     "path": "rules/common/hooks.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "patterns",
@@ -85,7 +195,7 @@
     "tools": [],
     "model": null,
     "path": "rules/common/patterns.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "performance",
@@ -96,7 +206,7 @@
     "tools": [],
     "model": null,
     "path": "rules/common/performance.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "security",
@@ -107,7 +217,7 @@
     "tools": [],
     "model": null,
     "path": "rules/common/security.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "testing",
@@ -118,7 +228,7 @@
     "tools": [],
     "model": null,
     "path": "rules/common/testing.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "coding-style",
@@ -129,7 +239,7 @@
     "tools": [],
     "model": null,
     "path": "rules/cpp/coding-style.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "hooks",
@@ -140,7 +250,7 @@
     "tools": [],
     "model": null,
     "path": "rules/cpp/hooks.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "patterns",
@@ -151,7 +261,7 @@
     "tools": [],
     "model": null,
     "path": "rules/cpp/patterns.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "security",
@@ -162,7 +272,7 @@
     "tools": [],
     "model": null,
     "path": "rules/cpp/security.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "testing",
@@ -173,7 +283,7 @@
     "tools": [],
     "model": null,
     "path": "rules/cpp/testing.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "coding-style",
@@ -184,7 +294,7 @@
     "tools": [],
     "model": null,
     "path": "rules/csharp/coding-style.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "hooks",
@@ -195,7 +305,7 @@
     "tools": [],
     "model": null,
     "path": "rules/csharp/hooks.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "patterns",
@@ -206,7 +316,7 @@
     "tools": [],
     "model": null,
     "path": "rules/csharp/patterns.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "security",
@@ -217,7 +327,7 @@
     "tools": [],
     "model": null,
     "path": "rules/csharp/security.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "testing",
@@ -228,7 +338,7 @@
     "tools": [],
     "model": null,
     "path": "rules/csharp/testing.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "coding-style",
@@ -239,7 +349,7 @@
     "tools": [],
     "model": null,
     "path": "rules/dart/coding-style.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "hooks",
@@ -250,7 +360,7 @@
     "tools": [],
     "model": null,
     "path": "rules/dart/hooks.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "patterns",
@@ -261,7 +371,7 @@
     "tools": [],
     "model": null,
     "path": "rules/dart/patterns.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "security",
@@ -272,7 +382,7 @@
     "tools": [],
     "model": null,
     "path": "rules/dart/security.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "testing",
@@ -283,7 +393,62 @@
     "tools": [],
     "model": null,
     "path": "rules/dart/testing.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "coding-style",
+    "kind": "rule",
+    "source": "ecc",
+    "description": "# F# Coding Style",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "rules/fsharp/coding-style.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "hooks",
+    "kind": "rule",
+    "source": "ecc",
+    "description": "# F# Hooks",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "rules/fsharp/hooks.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "patterns",
+    "kind": "rule",
+    "source": "ecc",
+    "description": "# F# Patterns",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "rules/fsharp/patterns.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "security",
+    "kind": "rule",
+    "source": "ecc",
+    "description": "# F# Security",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "rules/fsharp/security.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "testing",
+    "kind": "rule",
+    "source": "ecc",
+    "description": "# F# Testing",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "rules/fsharp/testing.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "coding-style",
@@ -294,7 +459,7 @@
     "tools": [],
     "model": null,
     "path": "rules/golang/coding-style.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "hooks",
@@ -305,7 +470,7 @@
     "tools": [],
     "model": null,
     "path": "rules/golang/hooks.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "patterns",
@@ -316,7 +481,7 @@
     "tools": [],
     "model": null,
     "path": "rules/golang/patterns.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "security",
@@ -327,7 +492,7 @@
     "tools": [],
     "model": null,
     "path": "rules/golang/security.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "testing",
@@ -338,7 +503,7 @@
     "tools": [],
     "model": null,
     "path": "rules/golang/testing.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "coding-style",
@@ -349,7 +514,7 @@
     "tools": [],
     "model": null,
     "path": "rules/java/coding-style.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "hooks",
@@ -360,7 +525,7 @@
     "tools": [],
     "model": null,
     "path": "rules/java/hooks.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "patterns",
@@ -371,7 +536,7 @@
     "tools": [],
     "model": null,
     "path": "rules/java/patterns.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "security",
@@ -382,7 +547,7 @@
     "tools": [],
     "model": null,
     "path": "rules/java/security.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "testing",
@@ -393,7 +558,7 @@
     "tools": [],
     "model": null,
     "path": "rules/java/testing.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "coding-style",
@@ -404,7 +569,7 @@
     "tools": [],
     "model": null,
     "path": "rules/kotlin/coding-style.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "hooks",
@@ -415,7 +580,7 @@
     "tools": [],
     "model": null,
     "path": "rules/kotlin/hooks.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "patterns",
@@ -426,7 +591,7 @@
     "tools": [],
     "model": null,
     "path": "rules/kotlin/patterns.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "security",
@@ -437,7 +602,7 @@
     "tools": [],
     "model": null,
     "path": "rules/kotlin/security.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "testing",
@@ -448,7 +613,7 @@
     "tools": [],
     "model": null,
     "path": "rules/kotlin/testing.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "coding-style",
@@ -459,7 +624,7 @@
     "tools": [],
     "model": null,
     "path": "rules/perl/coding-style.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "hooks",
@@ -470,7 +635,7 @@
     "tools": [],
     "model": null,
     "path": "rules/perl/hooks.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "patterns",
@@ -481,7 +646,7 @@
     "tools": [],
     "model": null,
     "path": "rules/perl/patterns.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "security",
@@ -492,7 +657,7 @@
     "tools": [],
     "model": null,
     "path": "rules/perl/security.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "testing",
@@ -503,7 +668,7 @@
     "tools": [],
     "model": null,
     "path": "rules/perl/testing.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "coding-style",
@@ -514,7 +679,7 @@
     "tools": [],
     "model": null,
     "path": "rules/php/coding-style.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "hooks",
@@ -525,7 +690,7 @@
     "tools": [],
     "model": null,
     "path": "rules/php/hooks.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "patterns",
@@ -536,7 +701,7 @@
     "tools": [],
     "model": null,
     "path": "rules/php/patterns.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "security",
@@ -547,7 +712,7 @@
     "tools": [],
     "model": null,
     "path": "rules/php/security.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "testing",
@@ -558,7 +723,7 @@
     "tools": [],
     "model": null,
     "path": "rules/php/testing.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "coding-style",
@@ -569,7 +734,18 @@
     "tools": [],
     "model": null,
     "path": "rules/python/coding-style.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "fastapi",
+    "kind": "rule",
+    "source": "ecc",
+    "description": "# FastAPI Rules",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "rules/python/fastapi.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "hooks",
@@ -580,7 +756,7 @@
     "tools": [],
     "model": null,
     "path": "rules/python/hooks.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "patterns",
@@ -591,7 +767,7 @@
     "tools": [],
     "model": null,
     "path": "rules/python/patterns.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "security",
@@ -602,7 +778,7 @@
     "tools": [],
     "model": null,
     "path": "rules/python/security.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "testing",
@@ -613,7 +789,7 @@
     "tools": [],
     "model": null,
     "path": "rules/python/testing.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "coding-style",
@@ -624,7 +800,7 @@
     "tools": [],
     "model": null,
     "path": "rules/rust/coding-style.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "hooks",
@@ -635,7 +811,7 @@
     "tools": [],
     "model": null,
     "path": "rules/rust/hooks.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "patterns",
@@ -646,7 +822,7 @@
     "tools": [],
     "model": null,
     "path": "rules/rust/patterns.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "security",
@@ -657,7 +833,7 @@
     "tools": [],
     "model": null,
     "path": "rules/rust/security.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "testing",
@@ -668,7 +844,7 @@
     "tools": [],
     "model": null,
     "path": "rules/rust/testing.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "coding-style",
@@ -679,7 +855,7 @@
     "tools": [],
     "model": null,
     "path": "rules/swift/coding-style.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "hooks",
@@ -690,7 +866,7 @@
     "tools": [],
     "model": null,
     "path": "rules/swift/hooks.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "patterns",
@@ -701,7 +877,7 @@
     "tools": [],
     "model": null,
     "path": "rules/swift/patterns.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "security",
@@ -712,7 +888,7 @@
     "tools": [],
     "model": null,
     "path": "rules/swift/security.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "testing",
@@ -723,7 +899,7 @@
     "tools": [],
     "model": null,
     "path": "rules/swift/testing.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "coding-style",
@@ -734,7 +910,7 @@
     "tools": [],
     "model": null,
     "path": "rules/typescript/coding-style.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "hooks",
@@ -745,7 +921,7 @@
     "tools": [],
     "model": null,
     "path": "rules/typescript/hooks.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "patterns",
@@ -756,7 +932,7 @@
     "tools": [],
     "model": null,
     "path": "rules/typescript/patterns.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "security",
@@ -767,7 +943,7 @@
     "tools": [],
     "model": null,
     "path": "rules/typescript/security.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "testing",
@@ -778,7 +954,7 @@
     "tools": [],
     "model": null,
     "path": "rules/typescript/testing.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "coding-style",
@@ -789,7 +965,7 @@
     "tools": [],
     "model": null,
     "path": "rules/web/coding-style.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "design-quality",
@@ -800,7 +976,7 @@
     "tools": [],
     "model": null,
     "path": "rules/web/design-quality.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "hooks",
@@ -811,7 +987,7 @@
     "tools": [],
     "model": null,
     "path": "rules/web/hooks.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "patterns",
@@ -822,7 +998,7 @@
     "tools": [],
     "model": null,
     "path": "rules/web/patterns.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "performance",
@@ -833,7 +1009,7 @@
     "tools": [],
     "model": null,
     "path": "rules/web/performance.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "security",
@@ -844,7 +1020,7 @@
     "tools": [],
     "model": null,
     "path": "rules/web/security.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "testing",
@@ -855,7 +1031,7 @@
     "tools": [],
     "model": null,
     "path": "rules/web/testing.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "README",
@@ -866,7 +1042,7 @@
     "tools": [],
     "model": null,
     "path": "rules/zh/README.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "agents",
@@ -877,7 +1053,7 @@
     "tools": [],
     "model": null,
     "path": "rules/zh/agents.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "code-review",
@@ -888,7 +1064,7 @@
     "tools": [],
     "model": null,
     "path": "rules/zh/code-review.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "coding-style",
@@ -899,7 +1075,7 @@
     "tools": [],
     "model": null,
     "path": "rules/zh/coding-style.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "development-workflow",
@@ -910,7 +1086,7 @@
     "tools": [],
     "model": null,
     "path": "rules/zh/development-workflow.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "git-workflow",
@@ -921,7 +1097,7 @@
     "tools": [],
     "model": null,
     "path": "rules/zh/git-workflow.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "hooks",
@@ -932,7 +1108,7 @@
     "tools": [],
     "model": null,
     "path": "rules/zh/hooks.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "patterns",
@@ -943,7 +1119,7 @@
     "tools": [],
     "model": null,
     "path": "rules/zh/patterns.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "performance",
@@ -954,7 +1130,7 @@
     "tools": [],
     "model": null,
     "path": "rules/zh/performance.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "security",
@@ -965,7 +1141,7 @@
     "tools": [],
     "model": null,
     "path": "rules/zh/security.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "testing",
@@ -976,6 +1152,6 @@
     "tools": [],
     "model": null,
     "path": "rules/zh/testing.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   }
 ]

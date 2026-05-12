@@ -8,7 +8,7 @@
     "tools": [],
     "model": null,
     "path": "commands/aside.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "auto-update",
@@ -19,7 +19,7 @@
     "tools": [],
     "model": null,
     "path": "commands/auto-update.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "build-fix",
@@ -30,7 +30,7 @@
     "tools": [],
     "model": null,
     "path": "commands/build-fix.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "checkpoint",
@@ -41,7 +41,7 @@
     "tools": [],
     "model": null,
     "path": "commands/checkpoint.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "code-review",
@@ -52,7 +52,18 @@
     "tools": [],
     "model": null,
     "path": "commands/code-review.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "cost-report",
+    "kind": "command",
+    "source": "ecc",
+    "description": "Generate a local Claude Code cost report from a cost-tracker SQLite database.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "commands/cost-report.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "cpp-build",
@@ -63,7 +74,7 @@
     "tools": [],
     "model": null,
     "path": "commands/cpp-build.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "cpp-review",
@@ -74,7 +85,7 @@
     "tools": [],
     "model": null,
     "path": "commands/cpp-review.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "cpp-test",
@@ -85,7 +96,18 @@
     "tools": [],
     "model": null,
     "path": "commands/cpp-test.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "ecc-guide",
+    "kind": "command",
+    "source": "ecc",
+    "description": "Navigate ECC's current agents, skills, commands, hooks, install profiles, and docs from the live repository surface.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "commands/ecc-guide.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "evolve",
@@ -96,7 +118,18 @@
     "tools": [],
     "model": null,
     "path": "commands/evolve.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "fastapi-review",
+    "kind": "command",
+    "source": "ecc",
+    "description": "Review a FastAPI application for architecture, async correctness, dependency injection, Pydantic schemas, security, performance, and testability.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "commands/fastapi-review.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "feature-dev",
@@ -107,7 +140,7 @@
     "tools": [],
     "model": null,
     "path": "commands/feature-dev.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "flutter-build",
@@ -118,7 +151,7 @@
     "tools": [],
     "model": null,
     "path": "commands/flutter-build.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "flutter-review",
@@ -129,7 +162,7 @@
     "tools": [],
     "model": null,
     "path": "commands/flutter-review.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "flutter-test",
@@ -140,7 +173,7 @@
     "tools": [],
     "model": null,
     "path": "commands/flutter-test.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "gan-build",
@@ -151,7 +184,7 @@
     "tools": [],
     "model": null,
     "path": "commands/gan-build.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "gan-design",
@@ -162,7 +195,7 @@
     "tools": [],
     "model": null,
     "path": "commands/gan-design.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "go-build",
@@ -173,7 +206,7 @@
     "tools": [],
     "model": null,
     "path": "commands/go-build.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "go-review",
@@ -184,7 +217,7 @@
     "tools": [],
     "model": null,
     "path": "commands/go-review.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "go-test",
@@ -195,7 +228,7 @@
     "tools": [],
     "model": null,
     "path": "commands/go-test.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "gradle-build",
@@ -206,7 +239,7 @@
     "tools": [],
     "model": null,
     "path": "commands/gradle-build.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "harness-audit",
@@ -217,7 +250,7 @@
     "tools": [],
     "model": null,
     "path": "commands/harness-audit.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "hookify-configure",
@@ -228,7 +261,7 @@
     "tools": [],
     "model": null,
     "path": "commands/hookify-configure.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "hookify-help",
@@ -239,7 +272,7 @@
     "tools": [],
     "model": null,
     "path": "commands/hookify-help.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "hookify-list",
@@ -250,7 +283,7 @@
     "tools": [],
     "model": null,
     "path": "commands/hookify-list.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "hookify",
@@ -261,7 +294,7 @@
     "tools": [],
     "model": null,
     "path": "commands/hookify.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "instinct-export",
@@ -272,7 +305,7 @@
     "tools": [],
     "model": null,
     "path": "commands/instinct-export.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "instinct-import",
@@ -283,7 +316,7 @@
     "tools": [],
     "model": null,
     "path": "commands/instinct-import.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "instinct-status",
@@ -294,7 +327,7 @@
     "tools": [],
     "model": null,
     "path": "commands/instinct-status.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "jira",
@@ -305,7 +338,7 @@
     "tools": [],
     "model": null,
     "path": "commands/jira.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "kotlin-build",
@@ -316,7 +349,7 @@
     "tools": [],
     "model": null,
     "path": "commands/kotlin-build.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "kotlin-review",
@@ -327,7 +360,7 @@
     "tools": [],
     "model": null,
     "path": "commands/kotlin-review.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "kotlin-test",
@@ -338,7 +371,7 @@
     "tools": [],
     "model": null,
     "path": "commands/kotlin-test.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "learn-eval",
@@ -349,7 +382,7 @@
     "tools": [],
     "model": null,
     "path": "commands/learn-eval.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "learn",
@@ -360,7 +393,7 @@
     "tools": [],
     "model": null,
     "path": "commands/learn.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "loop-start",
@@ -371,7 +404,7 @@
     "tools": [],
     "model": null,
     "path": "commands/loop-start.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "loop-status",
@@ -382,7 +415,7 @@
     "tools": [],
     "model": null,
     "path": "commands/loop-status.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "model-route",
@@ -393,7 +426,7 @@
     "tools": [],
     "model": null,
     "path": "commands/model-route.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "multi-backend",
@@ -404,7 +437,7 @@
     "tools": [],
     "model": null,
     "path": "commands/multi-backend.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "multi-execute",
@@ -415,7 +448,7 @@
     "tools": [],
     "model": null,
     "path": "commands/multi-execute.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "multi-frontend",
@@ -426,7 +459,7 @@
     "tools": [],
     "model": null,
     "path": "commands/multi-frontend.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "multi-plan",
@@ -437,7 +470,7 @@
     "tools": [],
     "model": null,
     "path": "commands/multi-plan.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "multi-workflow",
@@ -448,7 +481,18 @@
     "tools": [],
     "model": null,
     "path": "commands/multi-workflow.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "plan-prd",
+    "kind": "command",
+    "source": "ecc",
+    "description": "Generate a lean, problem-first PRD and hand off to /plan for implementation planning.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "commands/plan-prd.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "plan",
@@ -459,7 +503,7 @@
     "tools": [],
     "model": null,
     "path": "commands/plan.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "pm2",
@@ -470,7 +514,29 @@
     "tools": [],
     "model": null,
     "path": "commands/pm2.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "pr",
+    "kind": "command",
+    "source": "ecc",
+    "description": "Create a GitHub PR from current branch with unpushed commits — discovers templates, analyzes changes, pushes",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "commands/pr.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "project-init",
+    "kind": "command",
+    "source": "ecc",
+    "description": "Detect a project's stack and produce a dry-run ECC onboarding plan using the repository's install manifests and stack mappings.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "commands/project-init.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "projects",
@@ -481,7 +547,7 @@
     "tools": [],
     "model": null,
     "path": "commands/projects.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "promote",
@@ -492,7 +558,7 @@
     "tools": [],
     "model": null,
     "path": "commands/promote.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "prp-commit",
@@ -503,7 +569,7 @@
     "tools": [],
     "model": null,
     "path": "commands/prp-commit.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "prp-implement",
@@ -514,7 +580,7 @@
     "tools": [],
     "model": null,
     "path": "commands/prp-implement.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "prp-plan",
@@ -525,7 +591,7 @@
     "tools": [],
     "model": null,
     "path": "commands/prp-plan.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "prp-pr",
@@ -536,7 +602,7 @@
     "tools": [],
     "model": null,
     "path": "commands/prp-pr.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "prp-prd",
@@ -547,7 +613,7 @@
     "tools": [],
     "model": null,
     "path": "commands/prp-prd.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "prune",
@@ -558,7 +624,7 @@
     "tools": [],
     "model": null,
     "path": "commands/prune.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "python-review",
@@ -569,7 +635,7 @@
     "tools": [],
     "model": null,
     "path": "commands/python-review.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "quality-gate",
@@ -580,7 +646,7 @@
     "tools": [],
     "model": null,
     "path": "commands/quality-gate.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "refactor-clean",
@@ -591,7 +657,7 @@
     "tools": [],
     "model": null,
     "path": "commands/refactor-clean.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "resume-session",
@@ -602,7 +668,7 @@
     "tools": [],
     "model": null,
     "path": "commands/resume-session.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "review-pr",
@@ -613,7 +679,7 @@
     "tools": [],
     "model": null,
     "path": "commands/review-pr.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "rust-build",
@@ -624,7 +690,7 @@
     "tools": [],
     "model": null,
     "path": "commands/rust-build.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "rust-review",
@@ -635,7 +701,7 @@
     "tools": [],
     "model": null,
     "path": "commands/rust-review.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "rust-test",
@@ -646,7 +712,7 @@
     "tools": [],
     "model": null,
     "path": "commands/rust-test.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "santa-loop",
@@ -657,7 +723,7 @@
     "tools": [],
     "model": null,
     "path": "commands/santa-loop.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "save-session",
@@ -668,7 +734,18 @@
     "tools": [],
     "model": null,
     "path": "commands/save-session.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "security-scan",
+    "kind": "command",
+    "source": "ecc",
+    "description": "Run AgentShield against agent, hook, MCP, permission, and secret surfaces.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": "commands/security-scan.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "sessions",
@@ -679,7 +756,7 @@
     "tools": [],
     "model": null,
     "path": "commands/sessions.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "setup-pm",
@@ -690,7 +767,7 @@
     "tools": [],
     "model": null,
     "path": "commands/setup-pm.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "skill-create",
@@ -701,7 +778,7 @@
     "tools": [],
     "model": null,
     "path": "commands/skill-create.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "skill-health",
@@ -712,7 +789,7 @@
     "tools": [],
     "model": null,
     "path": "commands/skill-health.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "test-coverage",
@@ -723,7 +800,7 @@
     "tools": [],
     "model": null,
     "path": "commands/test-coverage.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "update-codemaps",
@@ -734,7 +811,7 @@
     "tools": [],
     "model": null,
     "path": "commands/update-codemaps.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "update-docs",
@@ -745,6 +822,6 @@
     "tools": [],
     "model": null,
     "path": "commands/update-docs.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   }
 ]

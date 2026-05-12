@@ -1,5 +1,23 @@
 [
   {
+    "name": "a11y-architect",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Accessibility Architect specializing in WCAG 2.2 compliance for Web and Native platforms. Use PROACTIVELY when designing UI components, establishing design systems, or auditing code for inclusive user experiences.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "model": "sonnet",
+    "path": "agents/a11y-architect.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
     "name": "architect",
     "kind": "agent",
     "source": "ecc",
@@ -12,7 +30,7 @@
     ],
     "model": "opus",
     "path": "agents/architect.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "build-error-resolver",
@@ -30,7 +48,7 @@
     ],
     "model": "sonnet",
     "path": "agents/build-error-resolver.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "chief-of-staff",
@@ -48,7 +66,7 @@
     ],
     "model": "opus",
     "path": "agents/chief-of-staff.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "code-architect",
@@ -64,7 +82,7 @@
     ],
     "model": "sonnet",
     "path": "agents/code-architect.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "code-explorer",
@@ -80,7 +98,7 @@
     ],
     "model": "sonnet",
     "path": "agents/code-explorer.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "code-reviewer",
@@ -96,7 +114,7 @@
     ],
     "model": "sonnet",
     "path": "agents/code-reviewer.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "code-simplifier",
@@ -114,7 +132,7 @@
     ],
     "model": "sonnet",
     "path": "agents/code-simplifier.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "comment-analyzer",
@@ -130,7 +148,7 @@
     ],
     "model": "sonnet",
     "path": "agents/comment-analyzer.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "conversation-analyzer",
@@ -144,7 +162,7 @@
     ],
     "model": "sonnet",
     "path": "agents/conversation-analyzer.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "cpp-build-resolver",
@@ -162,7 +180,7 @@
     ],
     "model": "sonnet",
     "path": "agents/cpp-build-resolver.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "cpp-reviewer",
@@ -178,7 +196,7 @@
     ],
     "model": "sonnet",
     "path": "agents/cpp-reviewer.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "csharp-reviewer",
@@ -194,7 +212,7 @@
     ],
     "model": "sonnet",
     "path": "agents/csharp-reviewer.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "dart-build-resolver",
@@ -212,7 +230,7 @@
     ],
     "model": "sonnet",
     "path": "agents/dart-build-resolver.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "database-reviewer",
@@ -230,7 +248,41 @@
     ],
     "model": "sonnet",
     "path": "agents/database-reviewer.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "django-build-resolver",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Django/Python build, migration, and dependency error resolution specialist. Fixes pip/Poetry errors, migration conflicts, import errors, Django configuration issues, and collectstatic failures with minimal changes. Use when Django setup or startup fails.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "model": "sonnet",
+    "path": "agents/django-build-resolver.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "django-reviewer",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Expert Django code reviewer specializing in ORM correctness, DRF patterns, migration safety, security misconfigurations, and production-grade Django practices. Use for all Django code changes. MUST BE USED for Django projects.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "model": "sonnet",
+    "path": "agents/django-reviewer.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "doc-updater",
@@ -248,7 +300,7 @@
     ],
     "model": "haiku",
     "path": "agents/doc-updater.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "docs-lookup",
@@ -264,7 +316,7 @@
     ],
     "model": "sonnet",
     "path": "agents/docs-lookup.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "e2e-runner",
@@ -282,7 +334,23 @@
     ],
     "model": "sonnet",
     "path": "agents/e2e-runner.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "fastapi-reviewer",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Reviews FastAPI applications for async correctness, dependency injection, Pydantic schemas, security, OpenAPI quality, testing, and production readiness.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "model": "sonnet",
+    "path": "agents/fastapi-reviewer.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "flutter-reviewer",
@@ -298,7 +366,23 @@
     ],
     "model": "sonnet",
     "path": "agents/flutter-reviewer.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "fsharp-reviewer",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Expert F# code reviewer specializing in functional idioms, type safety, pattern matching, computation expressions, and performance. Use for all F# code changes. MUST BE USED for F# projects.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "model": "sonnet",
+    "path": "agents/fsharp-reviewer.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "gan-evaluator",
@@ -315,7 +399,7 @@
     ],
     "model": "opus",
     "path": "agents/gan-evaluator.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "gan-generator",
@@ -333,7 +417,7 @@
     ],
     "model": "opus",
     "path": "agents/gan-generator.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "gan-planner",
@@ -349,7 +433,7 @@
     ],
     "model": "opus",
     "path": "agents/gan-planner.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "go-build-resolver",
@@ -367,7 +451,7 @@
     ],
     "model": "sonnet",
     "path": "agents/go-build-resolver.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "go-reviewer",
@@ -383,7 +467,25 @@
     ],
     "model": "sonnet",
     "path": "agents/go-reviewer.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "harmonyos-app-resolver",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "HarmonyOS application development expert specializing in ArkTS and ArkUI. Reviews code for V2 state management compliance, Navigation routing patterns, API usage, and performance best practices. Use for HarmonyOS/OpenHarmony projects.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "model": "sonnet",
+    "path": "agents/harmonyos-app-resolver.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "harness-optimizer",
@@ -400,7 +502,7 @@
     ],
     "model": "sonnet",
     "path": "agents/harness-optimizer.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "healthcare-reviewer",
@@ -415,13 +517,27 @@
     ],
     "model": "opus",
     "path": "agents/healthcare-reviewer.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "homelab-architect",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Designs home and small-lab network plans from hardware inventory, goals, and operator experience level, with safe staged changes and rollback guidance.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Grep"
+    ],
+    "model": "sonnet",
+    "path": "agents/homelab-architect.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "java-build-resolver",
     "kind": "agent",
     "source": "ecc",
-    "description": "Java/Maven/Gradle build, compilation, and dependency error resolution specialist. Fixes build errors, Java compiler errors, and Maven/Gradle issues with minimal changes. Use when Java or Spring Boot builds fail.",
+    "description": "Java/Maven/Gradle build, compilation, and dependency error resolution specialist. Automatically detects Spring Boot or Quarkus and applies framework-specific fixes. Fixes build errors, Java compiler errors, and Maven/Gradle issues with minimal changes. Use when Java builds fail.",
     "languages": [],
     "tools": [
       "Read",
@@ -433,13 +549,13 @@
     ],
     "model": "sonnet",
     "path": "agents/java-build-resolver.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "java-reviewer",
     "kind": "agent",
     "source": "ecc",
-    "description": "Expert Java and Spring Boot code reviewer specializing in layered architecture, JPA patterns, security, and concurrency. Use for all Java code changes. MUST BE USED for Spring Boot projects.",
+    "description": "Expert Java code reviewer for Spring Boot and Quarkus projects. Automatically detects the framework and applies the appropriate review rules. Covers layered architecture, JPA/Panache, MongoDB, security, and concurrency. MUST BE USED for all Java code changes.",
     "languages": [],
     "tools": [
       "Read",
@@ -449,7 +565,7 @@
     ],
     "model": "sonnet",
     "path": "agents/java-reviewer.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "kotlin-build-resolver",
@@ -467,7 +583,7 @@
     ],
     "model": "sonnet",
     "path": "agents/kotlin-build-resolver.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "kotlin-reviewer",
@@ -483,7 +599,7 @@
     ],
     "model": "sonnet",
     "path": "agents/kotlin-reviewer.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "loop-operator",
@@ -500,7 +616,66 @@
     ],
     "model": "sonnet",
     "path": "agents/loop-operator.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "mle-reviewer",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Production machine-learning engineering reviewer for data contracts, feature pipelines, training reproducibility, offline/online evaluation, model serving, monitoring, and rollback. Use when ML, MLOps, model training, inference, feature store, or evaluation code changes.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "model": "sonnet",
+    "path": "agents/mle-reviewer.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "network-architect",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Designs enterprise or multi-site network architecture from requirements, using existing network skills for focused routing, validation, automation, and troubleshooting detail.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Grep"
+    ],
+    "model": "sonnet",
+    "path": "agents/network-architect.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "network-config-reviewer",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Reviews router and switch configurations for security, correctness, stale references, risky change-window commands, and missing operational guardrails.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Grep"
+    ],
+    "model": "sonnet",
+    "path": "agents/network-config-reviewer.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "network-troubleshooter",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Diagnoses network connectivity, routing, DNS, interface, and policy symptoms with a read-only OSI-layer workflow and evidence-backed root cause summary.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Bash",
+      "Grep"
+    ],
+    "model": "sonnet",
+    "path": "agents/network-troubleshooter.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "opensource-forker",
@@ -518,7 +693,7 @@
     ],
     "model": "sonnet",
     "path": "agents/opensource-forker.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "opensource-packager",
@@ -536,7 +711,7 @@
     ],
     "model": "sonnet",
     "path": "agents/opensource-packager.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "opensource-sanitizer",
@@ -552,7 +727,7 @@
     ],
     "model": "sonnet",
     "path": "agents/opensource-sanitizer.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "performance-optimizer",
@@ -570,7 +745,7 @@
     ],
     "model": "sonnet",
     "path": "agents/performance-optimizer.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "planner",
@@ -585,7 +760,7 @@
     ],
     "model": "opus",
     "path": "agents/planner.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "pr-test-analyzer",
@@ -601,7 +776,7 @@
     ],
     "model": "sonnet",
     "path": "agents/pr-test-analyzer.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "python-reviewer",
@@ -617,7 +792,7 @@
     ],
     "model": "sonnet",
     "path": "agents/python-reviewer.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "pytorch-build-resolver",
@@ -635,7 +810,7 @@
     ],
     "model": "sonnet",
     "path": "agents/pytorch-build-resolver.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "refactor-cleaner",
@@ -653,7 +828,7 @@
     ],
     "model": "sonnet",
     "path": "agents/refactor-cleaner.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "rust-build-resolver",
@@ -671,7 +846,7 @@
     ],
     "model": "sonnet",
     "path": "agents/rust-build-resolver.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "rust-reviewer",
@@ -687,7 +862,7 @@
     ],
     "model": "sonnet",
     "path": "agents/rust-reviewer.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "security-reviewer",
@@ -705,7 +880,7 @@
     ],
     "model": "sonnet",
     "path": "agents/security-reviewer.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "seo-specialist",
@@ -723,7 +898,7 @@
     ],
     "model": "sonnet",
     "path": "agents/seo-specialist.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "silent-failure-hunter",
@@ -739,7 +914,41 @@
     ],
     "model": "sonnet",
     "path": "agents/silent-failure-hunter.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "swift-build-resolver",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Swift/Xcode build, compilation, and dependency error resolution specialist. Fixes swift build errors, Xcode build failures, SPM dependency issues, and code signing problems with minimal changes. Use when Swift builds fail.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "model": "sonnet",
+    "path": "agents/swift-build-resolver.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
+  },
+  {
+    "name": "swift-reviewer",
+    "kind": "agent",
+    "source": "ecc",
+    "description": "Expert Swift code reviewer specializing in protocol-oriented design, value semantics, ARC memory management, Swift Concurrency, and idiomatic patterns. Use for all Swift code changes. MUST BE USED for Swift projects.",
+    "languages": [],
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "model": "sonnet",
+    "path": "agents/swift-reviewer.md",
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "tdd-guide",
@@ -756,7 +965,7 @@
     ],
     "model": "sonnet",
     "path": "agents/tdd-guide.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "type-design-analyzer",
@@ -772,7 +981,7 @@
     ],
     "model": "sonnet",
     "path": "agents/type-design-analyzer.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   },
   {
     "name": "typescript-reviewer",
@@ -788,6 +997,6 @@
     ],
     "model": "sonnet",
     "path": "agents/typescript-reviewer.md",
-    "ecc_sha": "7fa1e5b6db87313f87fbfff91da91f448d75aca9"
+    "ecc_sha": "894ee03930f0e0233b84320ff4af802ec650d706"
   }
 ]
