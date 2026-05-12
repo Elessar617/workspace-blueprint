@@ -58,3 +58,5 @@ After bootstrap, open the repo in Claude Code, Codex, Cursor, OpenCode, or Gemin
 ## Project status
 
 This scaffold is itself the first iteration. Use it, evolve it, file issues for friction.
+
+See [`docs/development-log.md`](docs/development-log.md) for project goal, journey, current state, and what's deferred.
