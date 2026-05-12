@@ -66,9 +66,7 @@ Reorganized 2026-05-12 from the original spec §12 single-list view because real
 
 | Item | Status | Notes |
 |------|--------|-------|
-| Cleanroom CI (formerly F1 Tier A) | Planned next | GitHub Actions workflow running `npm test` + a fresh-clone-style cleanroom bootstrap on push/PR. Converts the manual 2026-05-12 cleanroom validation into permanent automation. Catches deterministic-stack regressions (`route.mjs`, registry build, hook behavior, ECC name drift) without the cost of full cross-IDE checks. |
-| SKILLS.md consolidation | In design discussion | Consolidate the routing-referenced subset (~46 items currently scattered across the 6 `.claude/routing/*.md` branch files) into a single surface. Shape pending: replacement (option A), narrative doc (option B), structured index (option C), or hybrid. |
-| ECC parse-skipped file (§1.4) | Investigated 2026-05-12 — awaiting decision | Identified as `external/ecc/agents/a11y-architect.md` (duplicate `model:` key in frontmatter). Action item: file upstream PR against `affaan-m/everything-claude-code` or accept the skip permanently. See §1.4 for the fix. Zero current routing impact (agent not referenced by any branch file). |
+| ECC parse-skipped file (§1.4) | Resolved upstream 2026-05-12 — pin bump deferred | Identified as `external/ecc/agents/a11y-architect.md` (duplicate `model:` key in frontmatter). Fix already in `affaan-m/everything-claude-code` HEAD (108 commits ahead of our pin); no upstream PR needed. Pin bump flows the fix in when a routine submodule update happens. See §1.4. |
 
 ### Deferred (trigger-gated; do not implement until trigger fires)
 
@@ -84,6 +82,8 @@ Reorganized 2026-05-12 from the original spec §12 single-list view because real
 | Item | Shipped | Reference |
 |------|---------|-----------|
 | F3: BLUEPRINT_HOOK_PROFILE auto-activation | 2026-05-12 | `scripts/with-profile.sh` (commit `80fc73f`). See §1.2 above. |
+| Cleanroom CI (formerly F1 Tier A) | 2026-05-12 | `.github/workflows/ci.yml` (commit `353e72f`); first real catch was the dangling-references-on-empty-harness bug, fixed in `103893e`. |
+| SKILLS.md consolidation (vendoring + refresh + discovery surface) | 2026-05-12 | Three slices: 4 harness skills vendored under `.claude/skills/<name>/` with MIT attribution in `THIRD_PARTY_LICENSES.md` (`103893e`); `scripts/refresh-vendored.mjs` lifecycle (`a63dc04`); repo-root `SKILLS.md` as human-readable inventory (`913179a`). |
 
 ---
 
