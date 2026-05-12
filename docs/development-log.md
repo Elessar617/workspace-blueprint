@@ -98,7 +98,7 @@ The full tracked-items list lives in [`docs/limitations-and-deferred.md §2`](li
 **Active or planned:**
 - **Cleanroom CI** (formerly F1 Tier A) — GitHub Actions workflow for `npm test` + fresh-clone bootstrap on push/PR. Converts the manual cleanroom validation done on 2026-05-12 into permanent automation. Free, no API spend.
 - **SKILLS.md consolidation** — collapse the routing-referenced subset (~46 items across 6 branch files) into a single surface. Shape pending design discussion (replacement vs. narrative doc vs. structured index vs. hybrid).
-- **ECC parse-skipped file investigation** — one ECC file `gray-matter` rejects on pin SHA `7fa1e5b6`. Now a tracked item rather than a footnote.
+- **ECC parse-skipped file** — investigated 2026-05-12 as `external/ecc/agents/a11y-architect.md` (duplicate `model:` YAML key on lines 4 and 6). Action item: file upstream PR against `affaan-m/everything-claude-code` or accept the skip. Zero current routing impact. See limitations §1.4.
 
 **Deferred (trigger-gated; do not implement until trigger fires):**
 - **Cross-IDE agent compliance check** (formerly full F1) — needs observed non-CC routing drift. Practical blockers documented in limitations §1.5.

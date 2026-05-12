@@ -34,11 +34,17 @@ The 4 native hooks honor the env var (`minimal` → exit 0; `standard`/`strict` 
 
 ### 1.4 ECC submodule has one parse-skipped file
 
-The ECC scraper reports `skipped: 1` on the current pin (SHA `7fa1e5b6`). One markdown file in ECC has frontmatter that `gray-matter` rejects.
+The ECC scraper reports `skipped: 1` on the current pin (SHA `7fa1e5b6`).
 
-**Status:** Working as designed (defensive schema in spec §6.6). The file is logged to stderr at rebuild time so the operator can investigate; it doesn't block the rest of the scrape.
+**File:** `external/ecc/agents/a11y-architect.md`
 
-**Resolution path:** Inspect the skipped file when convenient. If it's a legitimate ECC item, file an upstream issue; otherwise leave the skip in place.
+**Reason:** Duplicate YAML key `model:` in frontmatter — declared as `model: sonnet` on line 4 AND `model: opus` on line 6. YAML 1.2 forbids duplicate mapping keys; `gray-matter` correctly throws and the scraper marks the file skipped (defensive schema, spec §6.6).
+
+**Status:** Investigated 2026-05-12. Working as designed in our scraper. The agent is currently **not referenced** by any `.claude/routing/*.md` branch file, so the skip has **zero impact** on routing today — `a11y-architect` simply doesn't appear in our registry.
+
+**Resolution path (upstream — preferred):** Open a PR against `affaan-m/everything-claude-code` removing one of the two `model:` lines. The agent's content (Accessibility Architect, WCAG 2.2 compliance) suggests `opus` is the intended model, but either choice fixes the parse error.
+
+**Resolution path (local):** None recommended — modifying `external/ecc/` violates spec §11 ("ECC's clone is treated as read-only"). If we ever want `a11y-architect` available before upstream merges, the right move is to either bump the submodule pin past the upstream fix or live without the agent.
 
 ### 1.5 Partial cross-IDE alignment check
 
@@ -62,7 +68,7 @@ Reorganized 2026-05-12 from the original spec §12 single-list view because real
 |------|--------|-------|
 | Cleanroom CI (formerly F1 Tier A) | Planned next | GitHub Actions workflow running `npm test` + a fresh-clone-style cleanroom bootstrap on push/PR. Converts the manual 2026-05-12 cleanroom validation into permanent automation. Catches deterministic-stack regressions (`route.mjs`, registry build, hook behavior, ECC name drift) without the cost of full cross-IDE checks. |
 | SKILLS.md consolidation | In design discussion | Consolidate the routing-referenced subset (~46 items currently scattered across the 6 `.claude/routing/*.md` branch files) into a single surface. Shape pending: replacement (option A), narrative doc (option B), structured index (option C), or hybrid. |
-| ECC parse-skipped file (§1.4) | Planned | Identify which file `gray-matter` rejects on pin SHA `7fa1e5b6`. Decide between upstream issue or accept-the-skip. One-off investigation. |
+| ECC parse-skipped file (§1.4) | Investigated 2026-05-12 — awaiting decision | Identified as `external/ecc/agents/a11y-architect.md` (duplicate `model:` key in frontmatter). Action item: file upstream PR against `affaan-m/everything-claude-code` or accept the skip permanently. See §1.4 for the fix. Zero current routing impact (agent not referenced by any branch file). |
 
 ### Deferred (trigger-gated; do not implement until trigger fires)
 
