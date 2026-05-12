@@ -16,13 +16,13 @@
 
 **Remaining caveat:** Harness plugin entries still describe the local operator's installed plugin set. Paths are now portable relative to the plugin cache, but another machine must install matching plugins or refresh the harness registry after setup.
 
-### 1.2 `BLUEPRINT_HOOK_PROFILE` is manual
+### 1.2 `BLUEPRINT_HOOK_PROFILE` activation
 
-The 4 native hooks honor the env var (`minimal` → exit 0; `standard`/`strict` → run). But there's no shell-launcher wrapper that sets the var per-task.
+The 4 native hooks honor the env var (`minimal` → exit 0; `standard`/`strict` → run). Activation flows two ways: `./scripts/with-profile.sh <profile> <command>` (per-task, since 2026-05-12) or `export BLUEPRINT_HOOK_PROFILE=<profile>` (shell-wide).
 
-**Status:** Operator runs `export BLUEPRINT_HOOK_PROFILE=minimal` manually (e.g., before starting a spike). The auto-selector recommends a profile in its injected context, but does not activate it.
+**Status:** Resolved. The `with-profile.sh` wrapper closes the auto-activation gap from spec §12 (F3). The auto-selector still recommends a profile in its injected context; the operator now has a one-liner to adopt it instead of typing `export`.
 
-**Resolution path:** Spec §12 future-work item ("Auto-activation"). Add `scripts/with-profile.sh <profile> <command>` that sets the env var and execs the command. Selector output references this wrapper as the recommended way to activate.
+**Remaining caveat:** The wrapper does not currently update `.current.json`'s recommended profile from `route.mjs` output automatically; the operator chooses the profile at invocation time. If you want truly hands-off activation, that's an additional follow-up (e.g., a shell alias that reads the cache before exec'ing).
 
 ### 1.3 MCP routing is recommendation-only
 
@@ -56,7 +56,7 @@ The unit snapshot suite now verifies that `route.mjs` emits only registry-resolv
 |---|------|-------------------------|-----------------|
 | F1 | Periodic cross-IDE alignment check (CI) | Needs CI infra and harness drivers; nice-to-have | If we observe non-CC routing drift |
 | F2 | Custom MCP routing server (Option B) | Only justified if Option A preamble proves unreliable | If LLM compliance is consistently poor in Cursor/Codex/Gemini |
-| F3 (auto-activation) | Shell-launcher wrapper for `BLUEPRINT_HOOK_PROFILE` | The manual `export` is fine for solo use | If multiple operators or many task transitions per day |
+| F3 (auto-activation) | ~~Shell-launcher wrapper for `BLUEPRINT_HOOK_PROFILE`~~ | **Shipped 2026-05-12** as `scripts/with-profile.sh`. See §1.2 above. | — |
 | F4 | `/refresh-routing` slash command | Cache invalidation works via transition phrases; explicit refresh is UX nice-to-have | If we observe cache staleness in real use |
 | F5 | Multi-repo support (additional submodules) | YAGNI for v1; mechanism generalizes naturally | When we want to bring in `obra/superpowers` (or similar) as a second source |
 
