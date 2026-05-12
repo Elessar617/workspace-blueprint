@@ -32,19 +32,15 @@ The 4 native hooks honor the env var (`minimal` → exit 0; `standard`/`strict` 
 
 **Resolution path:** Build the Option B MCP routing server (spec §12 F2) if LLM compliance with preamble-driven routing proves unreliable.
 
-### 1.4 ECC submodule has one parse-skipped file
+### 1.4 ECC submodule has one parse-skipped file — RESOLVED
 
-The ECC scraper reports `skipped: 1` on the current pin (SHA `7fa1e5b6`).
+**Status:** Resolved 2026-05-12 by bumping the ECC submodule pin from `7fa1e5b6` to `894ee039` (commit `b6695c3`). The scraper now reports `skipped: 0`.
 
-**File:** `external/ecc/agents/a11y-architect.md`
+**Original issue:** `external/ecc/agents/a11y-architect.md` at SHA `7fa1e5b6` had a duplicate YAML key — `model: sonnet` on line 4 AND `model: opus` on line 6. YAML 1.2 forbids duplicate mapping keys; `gray-matter` rejected the file and the scraper marked it skipped (defensive schema, spec §6.6).
 
-**Reason:** Duplicate YAML key `model:` in frontmatter — declared as `model: sonnet` on line 4 AND `model: opus` on line 6. YAML 1.2 forbids duplicate mapping keys; `gray-matter` correctly throws and the scraper marks the file skipped (defensive schema, spec §6.6).
+**Upstream fix:** Already in `affaan-m/everything-claude-code` HEAD before we investigated. The maintainer removed the `model: opus` line, keeping `model: sonnet`. No upstream PR needed; the pin bump flowed the fix in.
 
-**Status:** Investigated 2026-05-12. Working as designed in our scraper. The agent is currently **not referenced** by any `.claude/routing/*.md` branch file, so the skip has **zero impact** on routing today — `a11y-architect` simply doesn't appear in our registry.
-
-**Upstream status (checked 2026-05-12):** Already fixed at `affaan-m/everything-claude-code` HEAD. The duplicate `model:` line was removed in a commit after our pin. Upstream kept `model: sonnet` (line 4) and dropped `model: opus` (line 6) — opposite of what I initially guessed, which is why "verify upstream before opening a PR" is worth a habit. **No upstream PR needed.**
-
-**Resolution path (local):** None urgent. The skip has zero current routing impact (a11y-architect isn't referenced by any branch file). When the next routine ECC submodule bump happens (108+ commits behind upstream as of 2026-05-12), the fix flows in automatically and the skip goes away. Modifying `external/ecc/` locally still violates spec §11; the only legitimate paths are "bump submodule pin" or "live with the skip."
+**Lesson worth keeping:** Always check upstream `main` before opening a PR — costs ~30 seconds, prevents wrong-direction or duplicate work. My initial guess that "line 6 was the deliberate update" was wrong (upstream actually removed line 6).
 
 ### 1.5 Partial cross-IDE alignment check
 
@@ -64,9 +60,7 @@ Reorganized 2026-05-12 from the original spec §12 single-list view because real
 
 ### Active or planned
 
-| Item | Status | Notes |
-|------|--------|-------|
-| ECC parse-skipped file (§1.4) | Resolved upstream 2026-05-12 — pin bump deferred | Identified as `external/ecc/agents/a11y-architect.md` (duplicate `model:` key in frontmatter). Fix already in `affaan-m/everything-claude-code` HEAD (108 commits ahead of our pin); no upstream PR needed. Pin bump flows the fix in when a routine submodule update happens. See §1.4. |
+*(none currently planned — all items shipped or trigger-gated; see below)*
 
 ### Deferred (trigger-gated; do not implement until trigger fires)
 
@@ -84,6 +78,7 @@ Reorganized 2026-05-12 from the original spec §12 single-list view because real
 | F3: BLUEPRINT_HOOK_PROFILE auto-activation | 2026-05-12 | `scripts/with-profile.sh` (commit `80fc73f`). See §1.2 above. |
 | Cleanroom CI (formerly F1 Tier A) | 2026-05-12 | `.github/workflows/ci.yml` (commit `353e72f`); first real catch was the dangling-references-on-empty-harness bug, fixed in `103893e`. |
 | SKILLS.md consolidation (vendoring + refresh + discovery surface) | 2026-05-12 | Three slices: 4 harness skills vendored under `.claude/skills/<name>/` with MIT attribution in `THIRD_PARTY_LICENSES.md` (`103893e`); `scripts/refresh-vendored.mjs` lifecycle (`a63dc04`); repo-root `SKILLS.md` as human-readable inventory (`913179a`). |
+| ECC submodule pin bump | 2026-05-12 | Bumped pin from `7fa1e5b6` to `894ee039` (108 commits ahead). Inventory diff: +13 agents, +77 skills, +7 commands, 1→0 skipped (a11y-architect resolved). All 7 routing files validate cleanly against the new registry. Commit `b6695c3`. Resolves the §1.4 limitation. |
 
 ---
 

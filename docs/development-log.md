@@ -2,7 +2,7 @@
 
 > Running log of where `workspace-blueprint` is, what it's trying to be, and how it got from A to B. Update at each meaningful milestone. Source-of-truth for "what's the state of the project?" without having to read the whole git log.
 >
-> **Last updated:** 2026-05-12 (late evening — SKILLS.md consolidation completed: vendoring + refresh lifecycle + discovery surface all shipped).
+> **Last updated:** 2026-05-12 (late evening — ECC submodule pin bumped to upstream HEAD; all Day 2 deferred items resolved or trigger-gated).
 
 ---
 
@@ -76,6 +76,7 @@ Most of what happened on day 2 was *correctness work* — closing gaps the day-1
 10. **SKILLS.md as discovery surface, and ECC parse-skipped resolved upstream.** Two related closes:
     - **Item #1 substitute (commit `4590616`):** the parse-skipped `a11y-architect.md` bug is already fixed in upstream `affaan-m/everything-claude-code` HEAD (108 commits ahead of our pin). No PR needed. Updated `docs/limitations-and-deferred.md §1.4` to record. Lesson worth keeping: always check upstream `main` before opening a PR — costs ~30 seconds, prevents wrong-direction or duplicate work. (My initial guess that "line 6 was the deliberate update" was wrong; upstream actually removed line 6, not line 4.)
     - **SKILLS.md discovery surface (commit `913179a`):** repo-root `SKILLS.md` written as a human-readable inventory of the ~46 routing-referenced items, organized by task type and by source. **Not loaded by agents** — agents still use `ROUTING.md` + branch files + registries. **Not validated** by the strict validator. **Zero per-prompt token cost.** Discoverability links added from `CLAUDE.md` "Skills, Plugins, MCPs" (updated skill count 10 → 14), `README.md`, and `START-HERE.md`. The earlier SKILLS.md framing — "vendor markdown into the routing pathway and hook it into the auto selector" — ends up implemented as three coordinated slices: (a) vendoring in step 8, (b) refresh lifecycle in step 9, (c) human-readable index here.
+11. **ECC submodule pin bump (commit `b6695c3`).** Bumped `external/ecc` from `7fa1e5b6` to `894ee039` (108 commits ahead) via the documented `./scripts/update-ecc.sh` lifecycle. Inventory diff: +13 agents, +77 skills, +7 commands, 1→0 skipped (the a11y-architect duplicate-`model:` fix flowed in). All 7 routing files validated cleanly against the bumped registry — no rename or restructure casualties despite 108 commits of churn. Cleanroom CI green on the push, exercising the pin under fresh-clone bootstrap conditions. Resolves limitations §1.4. With this in, **all four Day 2 tracked items are shipped** and the "Active or planned" list is genuinely empty.
 
 ---
 
@@ -111,13 +112,12 @@ The full tracked-items list lives in [`docs/limitations-and-deferred.md §2`](li
 - **F2** Custom MCP routing server — needs observed preamble unreliability.
 - **F4** `/refresh-routing` slash command — needs observed cache staleness.
 - **F5** Multi-repo support — needs a second source actually wanted.
-- **ECC submodule pin bump** — flows in the upstream a11y-architect fix + 107 other commits. Not urgent; defer until otherwise convenient.
 
 **Shipped 2026-05-12:**
 - **F3** `BLUEPRINT_HOOK_PROFILE` auto-activation — `scripts/with-profile.sh` (commit `80fc73f`).
 - **Cleanroom CI** (formerly F1 Tier A) — `.github/workflows/ci.yml` (commit `353e72f`); first catch fixed in `103893e`.
 - **SKILLS.md consolidation** — vendoring (`103893e`) + refresh lifecycle `npm run refresh-vendored` (`a63dc04`) + repo-root `SKILLS.md` discovery surface (`913179a`).
-- **ECC parse-skipped investigation** — fix already in upstream main; pin bump flows it in when convenient (`4590616`).
+- **ECC submodule pin bump** — bumped pin from `7fa1e5b6` to `894ee039`; a11y-architect skip resolved upstream. Commit `b6695c3`.
 
 ---
 
