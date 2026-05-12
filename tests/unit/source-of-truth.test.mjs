@@ -69,12 +69,11 @@ test('human source-of-truth docs reflect current generated inventory', () => {
     `${readJson('.claude/registry/ecc-mcps.json').length} MCP`,
     `${readJson('.claude/registry/ecc-language-rules.json').length} lang-rules`,
     `${readJson('.claude/registry/ecc-hook-profiles.json').length} hook-profiles`,
-    `${readJson('.claude/registry/harness-skills.json').length} harness skills`,
-    `${readJson('.claude/registry/harness-mcps.json').length} harness MCPs`,
     `${readJson('.claude/registry/harness-builtins.json').length} built-ins`,
     `${readJson('.claude/registry/native-inventory.json').length} native records`,
   ].join(' + ');
   assert.ok(tableRow(devLog, 'Registries').includes(registrySummary));
+  assert.ok(tableRow(devLog, 'Registries').toLowerCase().includes('harness plugin counts are machine-specific'));
 
   const skills = localSkillCount();
   assert.ok(readme.includes(`- ${skills} skills (`));

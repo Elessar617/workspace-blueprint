@@ -88,7 +88,7 @@ Most of what happened on day 2 was *correctness work* — closing gaps the day-1
 | **3-layer chassis** (`CLAUDE.md` → `CONTEXT.md` → workspace `CONTEXT.md`) | Intact and unmodified by the ECC bridge. Five workspace CONTEXT.md files present. |
 | **ECC bridge** (parallel routing layer) | `ROUTING.md` + 6 branch files + 11 registries + 4 per-IDE preambles + Claude Code hook + lifecycle scripts — all present, audit-hardened. |
 | **Submodule** | `external/ecc/` pinned at `894ee039` (`v1.10.0-617-g894ee039`) from `affaan-m/everything-claude-code`. |
-| **Registries** | 60 ECC agents + 323 skills + 75 commands + 1 MCP + 105 lang-rules + 3 hook-profiles + 27 harness skills + 4 harness MCPs + 3 built-ins + 29 native records. Byte-stable across rebuilds (lockfile property holds). |
+| **Registries** | 60 ECC agents + 323 skills + 75 commands + 1 MCP + 105 lang-rules + 3 hook-profiles + 3 built-ins + 29 native records. Harness plugin counts are machine-specific and refreshed from the local operator cache. Byte-stable across rebuilds for the portable sources. |
 | **Tests** | 49 unit + 2 hook + 1 bootstrap-idempotency + 8 with-profile integration tests. 0 failures. |
 | **Rules** | 7 native, all generic (portability hook excludes nothing under `.claude/rules/`). |
 | **Hooks** | 4 enforcement hooks, each gated by `BLUEPRINT_HOOK_PROFILE`. |
@@ -130,7 +130,7 @@ These aren't bugs — they're places where the design and the reality don't full
 - **CLAUDE.md says "active lab + canonical scaffolding source"** but no iterations have run in `spec/lab/build/ship`. The scaffold *is* the deliverable; calling itself an "active lab" may be aspirational rather than descriptive. Worth softening if the framing ever causes confusion in a fresh clone.
 - **The four-agent loop is unproven on a real task in this repo.** It's tested in isolation (snapshot tests, hook tests) but no full `01-spec → 02-implement → 03-validate → 04-output` cycle has been driven end-to-end here. Downstream consumers running the loop on their own projects will be the first real exercise. F3's `with-profile.sh` itself was small enough that running it through the four-agent loop would have been more ceremony than value — flagged here for visibility, not as a defect.
 - **The local bootstrap-cleanroom test in `tests/integration/` only tests idempotency in-place.** The GitHub Actions workflow now covers fresh-checkout bootstrap on push/PR, so local `npm test` remains a quicker in-place guard while CI exercises the harsher clone path.
-- **The dev log now has a mechanical guard for generated-state facts, not narrative completeness.** `tests/unit/source-of-truth.test.mjs` catches stale counts, pins, skill totals, and CI status; it deliberately does not require every commit to be narrated. Meaningful milestones still need human judgment.
+- **The dev log now has a mechanical guard for generated-state facts, not narrative completeness.** `tests/unit/source-of-truth.test.mjs` catches stale portable counts, pins, skill totals, and CI status; it deliberately avoids machine-local harness plugin counts and does not require every commit to be narrated. Meaningful milestones still need human judgment.
 
 ---
 
