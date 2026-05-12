@@ -54,6 +54,7 @@ test('human source-of-truth docs reflect current generated inventory', () => {
   const startHere = read('START-HERE.md');
   const readme = read('README.md');
   const claude = read('CLAUDE.md');
+  const mcpSetup = read('.claude/MCP-SETUP.md');
 
   const eccShort = git(['-C', 'external/ecc', 'rev-parse', '--short=8', 'HEAD']);
   const eccDescribe = git(['-C', 'external/ecc', 'describe', '--tags', '--always', '--dirty']);
@@ -79,6 +80,7 @@ test('human source-of-truth docs reflect current generated inventory', () => {
   assert.ok(readme.includes(`- ${skills} skills (`));
   assert.ok(claude.includes(`- **${skills} skills**`));
   assert.ok(startHere.includes(`— ${skills} procedures`));
+  assert.ok(mcpSetup.includes(`${skills} local skills`));
   assert.ok(tableRow(devLog, 'Skills').includes(`${skills} local skills`));
 
   assert.ok(tableRow(devLog, 'Tests').includes(`${unitTestCount()} unit`));
