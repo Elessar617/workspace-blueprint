@@ -104,18 +104,20 @@ Most of what happened on day 2 was *correctness work* — closing gaps the day-1
 The full tracked-items list lives in [`docs/limitations-and-deferred.md §2`](limitations-and-deferred.md). Restructured 2026-05-12 from the old "F1–F5 deferred" framing because reality moved on. Summary at a glance:
 
 **Active or planned:**
-- **Cleanroom CI** (formerly F1 Tier A) — GitHub Actions workflow for `npm test` + fresh-clone bootstrap on push/PR. Converts the manual cleanroom validation done on 2026-05-12 into permanent automation. Free, no API spend.
-- **SKILLS.md consolidation** — collapse the routing-referenced subset (~46 items across 6 branch files) into a single surface. Shape pending design discussion (replacement vs. narrative doc vs. structured index vs. hybrid).
-- **ECC parse-skipped file** — investigated 2026-05-12 as `external/ecc/agents/a11y-architect.md` (duplicate `model:` YAML key on lines 4 and 6). Action item: file upstream PR against `affaan-m/everything-claude-code` or accept the skip. Zero current routing impact. See limitations §1.4.
+- *(none currently planned — all three Day 2 items shipped)*
 
 **Deferred (trigger-gated; do not implement until trigger fires):**
 - **Cross-IDE agent compliance check** (formerly full F1) — needs observed non-CC routing drift. Practical blockers documented in limitations §1.5.
 - **F2** Custom MCP routing server — needs observed preamble unreliability.
 - **F4** `/refresh-routing` slash command — needs observed cache staleness.
 - **F5** Multi-repo support — needs a second source actually wanted.
+- **ECC submodule pin bump** — flows in the upstream a11y-architect fix + 107 other commits. Not urgent; defer until otherwise convenient.
 
-**Shipped:**
-- **F3** `BLUEPRINT_HOOK_PROFILE` auto-activation — `scripts/with-profile.sh` (commit `80fc73f`, 2026-05-12).
+**Shipped 2026-05-12:**
+- **F3** `BLUEPRINT_HOOK_PROFILE` auto-activation — `scripts/with-profile.sh` (commit `80fc73f`).
+- **Cleanroom CI** (formerly F1 Tier A) — `.github/workflows/ci.yml` (commit `353e72f`); first catch fixed in `103893e`.
+- **SKILLS.md consolidation** — vendoring (`103893e`) + refresh lifecycle `npm run refresh-vendored` (`a63dc04`) + repo-root `SKILLS.md` discovery surface (`913179a`).
+- **ECC parse-skipped investigation** — fix already in upstream main; pin bump flows it in when convenient (`4590616`).
 
 ---
 
