@@ -78,5 +78,4 @@ lab/  ──┘     │
 - **Project-specific reference (consumer fills in):** `.claude/reference/`
 - **External resource catalog:** `.claude/reference/{mcp-servers,external-resources}.md`
 - **End-to-end process:** `docs/iteration-process.md`, `docs/orchestrator-process.md`
-- **How to adapt this scaffold:** `docs/maintainer-notes/`
-- **The private-notes Notes source PDFs:** `docs/maintainer-notes/private-notes-notes/`
+- **Local-only maintainer-notes/reference material:** ignored under `docs/maintainer-notes/` when present

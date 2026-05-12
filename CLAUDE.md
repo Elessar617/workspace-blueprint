@@ -47,7 +47,6 @@ workspace-blueprint/
 └─ docs/                 ← meta docs about this repo's process
    ├─ explorations/      ← numbered post-mortems from completed iterations
    ├─ iteration-process.md, orchestrator-process.md
-   ├─ maintainer-notes/          ← how to adapt this scaffold (incl. legacy DevRel example)
    └─ superpowers/{specs,plans}/  ← design specs and implementation plans
 ```
 

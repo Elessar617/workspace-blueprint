@@ -82,12 +82,8 @@ git init
 
 - **Project state, journey, and current capabilities:** `docs/development-log.md`
 - **Inventory of skills, agents, commands, and MCPs (by task type):** `SKILLS.md` at repo root
-- **Claude Code basics:** `.claude/reference/claude-platform-capabilities.md` (and private-notes Notes PDFs in `docs/maintainer-notes/private-notes-notes/`)
-- **How to adapt this template:** `docs/maintainer-notes/how-to-adapt.md`
-- **Anatomy of a CONTEXT.md:** `docs/maintainer-notes/context-md-anatomy.md`
-- **Skill integration patterns:** `docs/maintainer-notes/skill-integration-patterns.md`
-- **Common mistakes:** `docs/maintainer-notes/common-mistakes.md`
-- **Legacy Acme DevRel example** (alternate-domain illustration): `docs/maintainer-notes/legacy-devrel-example/`
+- **Claude Code basics:** `.claude/reference/claude-platform-capabilities.md`
+- **Local-only maintainer maintainer-notes notes:** ignored under `docs/maintainer-notes/` when present
 
 ## Where to find things FAST
 

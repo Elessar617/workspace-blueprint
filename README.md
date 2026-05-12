@@ -17,9 +17,9 @@ An agent-native scaffold for software development with [Claude Code](https://git
 
 ## Inspiration
 
-Structurally inspired by [adam-s/alphadidactic](https://github.com/adam-s/alphadidactic). Adopts the multi-agent loop, numbered iterations, and `.claude/` instruction set patterns; preserves the existing 3-layer routing pattern from the original Acme DevRel template (which is preserved in `docs/maintainer-notes/legacy-devrel-example/` for reference).
+Structurally inspired by [adam-s/alphadidactic](https://github.com/adam-s/alphadidactic). Adopts the multi-agent loop, numbered iterations, and `.claude/` instruction set patterns; preserves the existing 3-layer routing pattern from the original Acme DevRel template.
 
-The 60/30/10 mental model and the §4.1 decision sequence in `CONTEXT.md` come from the [private-notes Notes Skills Field Manual](docs/maintainer-notes/private-notes-notes/skills_field_manual.pdf).
+The 60/30/10 mental model and the §4.1 decision sequence in `CONTEXT.md` come from the private-notes Notes Skills Field Manual. maintainer-notes/source materials that informed the design are local-only and intentionally ignored under `docs/maintainer-notes/`.
 
 ## Getting started
 

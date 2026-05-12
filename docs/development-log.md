@@ -25,9 +25,9 @@ The "one sentence" goal: **clone-to-any-PC and the Claude Code stack works**.
 
 Three external sources shaped the design before any code was written:
 
-- **Acme DevRel template** — the original 3-layer routing pattern (`CLAUDE.md` → `CONTEXT.md` → workspace `CONTEXT.md`). Preserved at `docs/maintainer-notes/legacy-devrel-example/` for reference.
+- **Acme DevRel template** — the original 3-layer routing pattern (`CLAUDE.md` → `CONTEXT.md` → workspace `CONTEXT.md`). Reference material is now kept only in local maintainer-notes notes.
 - **[`adam-s/alphadidactic`](https://github.com/adam-s/alphadidactic)** — donated the multi-agent loop, the numbered-iterations pattern, and the `.claude/` instruction-set shape.
-- **[private-notes Notes Skills Field Manual](docs/maintainer-notes/private-notes-notes/skills_field_manual.pdf)** — supplied the §4.1 decision-sequence pattern in `CONTEXT.md` and the 60/30/10 mental model for splitting always-loaded vs. on-demand vs. lookup content.
+- **private-notes Notes Skills Field Manual** — supplied the §4.1 decision-sequence pattern in `CONTEXT.md` and the 60/30/10 mental model for splitting always-loaded vs. on-demand vs. lookup content. Source PDFs are local-only maintainer-notes material.
 
 ### Day 1 — 2026-05-11 — the big build (49 commits)
 
