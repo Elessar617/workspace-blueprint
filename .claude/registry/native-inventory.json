@@ -66,6 +66,16 @@
     "path": ".claude/agents/reviewer-agent.md"
   },
   {
+    "name": "brainstorming",
+    "kind": "skill",
+    "source": "native",
+    "description": "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": ".claude/skills/brainstorming/SKILL.md"
+  },
+  {
     "name": "bug-investigation",
     "kind": "skill",
     "source": "native",
@@ -94,6 +104,16 @@
     "tools": [],
     "model": null,
     "path": ".claude/skills/docx/SKILL.md"
+  },
+  {
+    "name": "karpathy-guidelines",
+    "kind": "skill",
+    "source": "native",
+    "description": "Behavioral guidelines to reduce common LLM coding mistakes. Use when writing, reviewing, or refactoring code to avoid overcomplication, make surgical changes, surface assumptions, and define verifiable success criteria.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": ".claude/skills/karpathy-guidelines/SKILL.md"
   },
   {
     "name": "pdf",
@@ -146,6 +166,16 @@
     "path": ".claude/skills/spike-protocol/SKILL.md"
   },
   {
+    "name": "systematic-debugging",
+    "kind": "skill",
+    "source": "native",
+    "description": "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": ".claude/skills/systematic-debugging/SKILL.md"
+  },
+  {
     "name": "tdd-loop",
     "kind": "skill",
     "source": "native",
@@ -154,6 +184,16 @@
     "tools": [],
     "model": null,
     "path": ".claude/skills/tdd-loop/SKILL.md"
+  },
+  {
+    "name": "writing-plans",
+    "kind": "skill",
+    "source": "native",
+    "description": "Use when you have a spec or requirements for a multi-step task, before touching code",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": ".claude/skills/writing-plans/SKILL.md"
   },
   {
     "name": "xlsx",
