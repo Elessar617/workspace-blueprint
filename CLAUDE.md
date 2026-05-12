@@ -116,11 +116,11 @@ Cycle cap: 5 (hook-enforced). Sign-off required for `04-output/` (hook-enforced)
 
 ## Skills, Plugins, MCPs
 
-- **10 skills** in `.claude/skills/` — 6 project-specific (tdd-loop, bug-investigation, refactor-protocol, spike-protocol, spec-authoring, data-analysis) + 4 office (docx, pptx, xlsx, pdf vendored from `anthropics/skills`)
+- **14 skills** in `.claude/skills/` — 6 project-specific (tdd-loop, bug-investigation, refactor-protocol, spike-protocol, spec-authoring, data-analysis) + 4 office (docx, pptx, xlsx, pdf vendored from `anthropics/skills`) + 4 routing-vendored (systematic-debugging, writing-plans, brainstorming, karpathy-guidelines — MIT-attributed in `.claude/skills/THIRD_PARTY_LICENSES.md`, refreshed via `npm run refresh-vendored`)
 - **2 plugins** enabled: `obra/superpowers` and `affaan-m/everything-claude-code`
 - **4 MCP servers** configured: `filesystem`, `git`, `fetch` (credential-free), `github` (placeholder env var)
 
-Setup details: `.claude/MCP-SETUP.md`. Catalogs: `.claude/reference/{mcp-servers,external-resources}.md`.
+Setup details: `.claude/MCP-SETUP.md`. Catalogs: `.claude/reference/{mcp-servers,external-resources}.md`. **Human-readable inventory of routing-referenced items**: `SKILLS.md` at repo root.
 
 ---
 
