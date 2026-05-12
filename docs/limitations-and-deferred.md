@@ -42,9 +42,9 @@ The ECC scraper reports `skipped: 1` on the current pin (SHA `7fa1e5b6`).
 
 **Status:** Investigated 2026-05-12. Working as designed in our scraper. The agent is currently **not referenced** by any `.claude/routing/*.md` branch file, so the skip has **zero impact** on routing today — `a11y-architect` simply doesn't appear in our registry.
 
-**Resolution path (upstream — preferred):** Open a PR against `affaan-m/everything-claude-code` removing one of the two `model:` lines. The agent's content (Accessibility Architect, WCAG 2.2 compliance) suggests `opus` is the intended model, but either choice fixes the parse error.
+**Upstream status (checked 2026-05-12):** Already fixed at `affaan-m/everything-claude-code` HEAD. The duplicate `model:` line was removed in a commit after our pin. Upstream kept `model: sonnet` (line 4) and dropped `model: opus` (line 6) — opposite of what I initially guessed, which is why "verify upstream before opening a PR" is worth a habit. **No upstream PR needed.**
 
-**Resolution path (local):** None recommended — modifying `external/ecc/` violates spec §11 ("ECC's clone is treated as read-only"). If we ever want `a11y-architect` available before upstream merges, the right move is to either bump the submodule pin past the upstream fix or live without the agent.
+**Resolution path (local):** None urgent. The skip has zero current routing impact (a11y-architect isn't referenced by any branch file). When the next routine ECC submodule bump happens (108+ commits behind upstream as of 2026-05-12), the fix flows in automatically and the skip goes away. Modifying `external/ecc/` locally still violates spec §11; the only legitimate paths are "bump submodule pin" or "live with the skip."
 
 ### 1.5 Partial cross-IDE alignment check
 
