@@ -1,6 +1,6 @@
 # External Resources
 
-Curated resources for working with Claude (Code, API, plugins). Sourced from the private-notes Resource Index (`docs/maintainer-notes/private-notes-notes/resource_index.pdf`).
+Curated resources for working with Claude (Code, API, plugins).
 
 ## Official Anthropic
 

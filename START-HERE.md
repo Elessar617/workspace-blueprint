@@ -83,7 +83,7 @@ git init
 - **Project state, journey, and current capabilities:** `docs/development-log.md`
 - **Inventory of skills, agents, commands, and MCPs (by task type):** `SKILLS.md` at repo root
 - **Claude Code basics:** `.claude/reference/claude-platform-capabilities.md`
-- **Local-only maintainer maintainer-notes notes:** ignored under `docs/maintainer-notes/` when present
+- **Local-only maintainer reference notes:** ignored when present
 
 ## Where to find things FAST
 

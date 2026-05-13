@@ -1,8 +1,7 @@
 # Frontend Stack
 
 <!-- REPLACE if your project does NOT have a frontend, OR if your stack differs.
-The defaults below are sourced from private-notes Resource Index §2.5 (Frontend, UI, and Design)
-and represent the libraries Claude knows best out of the box. -->
+The defaults below represent libraries Claude knows well out of the box. -->
 
 ## Component library
 

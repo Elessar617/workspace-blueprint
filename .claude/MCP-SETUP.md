@@ -52,14 +52,14 @@ Set the env var in your shell profile so Claude Code can read it:
 
 ```bash
 # In ~/.zshrc or ~/.bash_profile (whichever you use)
-export GITHUB_TOKEN="TOKEN_EXAMPLE"
+export GITHUB_TOKEN="<your-token-value>"
 ```
 
 Reload your shell or source the file. Verify:
 ```bash
-echo "${GITHUB_TOKEN:0:7}..."
+test -n "$GITHUB_TOKEN" && echo "GITHUB_TOKEN is set"
 ```
-Expected: a prefix like `TOKEN_EXAMPLE` (do not echo the full token).
+Expected: `GITHUB_TOKEN is set` (do not echo the token value).
 
 ### 2.3 Restart Claude Code so it picks up the env var
 
