@@ -13,6 +13,10 @@
 | "RFC", "ADR", "design", "spec", "brief"  | `spec/`   | `.claude/routing/spec-author.md`     |
 | "release", "ship", "changelog"           | `ship/`   | `.claude/routing/ship.md`            |
 
+## Global code-writing rule overlay
+
+When the selected branch loads `all native rules`, that includes `nasa-power-of-10`. Any comments added while editing code must use NASA style: explain invariants, loop bounds, assumptions, failure modes, units/ranges, ownership/lifetime, concurrency expectations, or non-obvious safety tradeoffs. Do not add comments that merely narrate obvious code.
+
 ## Task-transition signals (cache invalidation)
 
 Re-traverse this tree (don't reuse cache) when ANY of these apply:

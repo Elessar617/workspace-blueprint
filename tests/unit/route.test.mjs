@@ -97,3 +97,23 @@ test('route adds Go language items for go-feature task', () => {
   assert.ok(r.agents.includes('go-reviewer'));
   assert.ok(r.skills.includes('golang-patterns'));
 });
+
+test('code-changing routes carry NASA-style comment discipline', () => {
+  for (const prompt of [
+    'add a rate limiter to the gateway service',
+    'fix the broken JSON parser',
+    'refactor the auth middleware',
+    'ship the release notes',
+  ]) {
+    const r = route({
+      prompt,
+      files_in_scope: [],
+      registry: { agents: [], skills: [], commands: [], mcps: [] },
+    });
+    assert.ok(r.rules.includes('all'), `${r.branch} should load all native rules`);
+    assert.ok(
+      r.rule_notes.some((note) => note.includes('NASA-style comments') && note.includes('failure modes')),
+      `${r.branch} should inject NASA-style comment discipline`,
+    );
+  }
+});

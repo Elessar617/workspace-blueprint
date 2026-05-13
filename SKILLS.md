@@ -118,7 +118,7 @@ Vendored-skill attribution and license text: `.claude/skills/THIRD_PARTY_LICENSE
 | `review-discipline` | Reviewer + adversary both run per cycle; 5-cycle cap. Enforced by `block-cycle-overrun.sh`. |
 | `portability-discipline` | `.claude/rules/` and `.claude/skills/` stay domain-agnostic. Enforced by `enforce-portability.sh`. |
 | `unix-philosophy` | One responsibility per unit, plain-text contracts (applicability-driven). |
-| `nasa-power-of-10` | Subset of JPL Power-of-10 rules (loops with bounds, return-value checking, short functions, strict warnings) — applicability-driven. |
+| `nasa-power-of-10` | Subset of JPL Power-of-10 rules plus NASA-style comment discipline: document invariants, bounds, failure modes, and non-obvious safety tradeoffs. |
 
 **MCPs** declared in `.claude/settings.json`:
 

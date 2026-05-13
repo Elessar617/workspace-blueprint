@@ -93,6 +93,8 @@ const BRANCH_TO_PROFILE = {
   fallback: 'standard',
 };
 
+const NASA_COMMENT_RULE_NOTE = 'NASA-style comments: explain invariants, bounds, assumptions, failure modes, and non-obvious safety tradeoffs; do not narrate obvious code.';
+
 export function route({ prompt, files_in_scope = [], registry = {} }) {
   const detected = detectTaskType(prompt) || 'fallback';
   const langs = detectLanguages(files_in_scope);
@@ -104,6 +106,7 @@ export function route({ prompt, files_in_scope = [], registry = {} }) {
   let commands = [...(base.commands || [])];
   let mcps = [...(base.mcps || [])];
   const rules = [...(base.rules || [])];
+  const rule_notes = rules.includes('all') ? [NASA_COMMENT_RULE_NOTE] : [];
 
   const langAdds = LANGUAGE_ADDITIONS[detected] || {};
   for (const lang of langs) {
@@ -126,6 +129,7 @@ export function route({ prompt, files_in_scope = [], registry = {} }) {
     commands,
     mcps,
     rules,
+    rule_notes,
     hook_profile: BRANCH_TO_PROFILE[detected],
     languages_detected: langs,
     transition_detected: false,
@@ -201,6 +205,8 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     `agents: ${final.agents.join(', ')}`,
     `skills: ${final.skills.join(', ')}`,
     final.commands?.length ? `commands: ${final.commands.join(', ')}` : '',
+    `rules: ${final.rules.join(', ')}`,
+    final.rule_notes?.length ? `rule notes: ${final.rule_notes.join(' ')}` : '',
     `mcps: ${final.mcps.join(', ')}`,
   ].filter(Boolean).join('\n');
   console.log(out);

@@ -31,6 +31,17 @@
 - **Domain-dependent:**
   - **#5** — assertion density matters for safety-critical code, less so for application code. Use judgment; a 5-line helper does not need 2 assertions. Aim for assertion *where it would catch the bug you fear*.
 
+**NASA-style comments (always use this style when writing comments):**
+
+Comments are part of the safety case for the code. When a comment is needed, write it in NASA style: explain the invariant, bound, assumption, failure mode, unit/range, ownership/lifetime rule, concurrency expectation, or non-obvious tradeoff that makes the code safe to change.
+
+- **Before loops:** state the bound or termination condition when it is not obvious from the loop header.
+- **Before retries, fallbacks, caches, or guards:** state what failure is being contained and why the chosen behavior is safe.
+- **Before assertions or validations:** state the invariant being protected when the code alone does not make it obvious.
+- **When intentionally ignoring a return value or error:** state why it is safe to ignore.
+- **Do not narrate obvious code.** If a comment would only restate the next line, make the code clearer or omit the comment.
+- **Keep comments current.** A stale safety comment is worse than no comment because it misleads reviewers.
+
 **When to apply the FULL set:**
 
 - Firmware, drivers, kernel modules.
