@@ -21,6 +21,27 @@
     "description": ""
   },
   {
+    "name": "sequential-thinking",
+    "kind": "mcp",
+    "source": "harness",
+    "command": "npx",
+    "description": ""
+  },
+  {
+    "name": "memory",
+    "kind": "mcp",
+    "source": "harness",
+    "command": "npx",
+    "description": ""
+  },
+  {
+    "name": "puppeteer",
+    "kind": "mcp",
+    "source": "harness",
+    "command": "npx",
+    "description": ""
+  },
+  {
     "name": "github",
     "kind": "mcp",
     "source": "harness",

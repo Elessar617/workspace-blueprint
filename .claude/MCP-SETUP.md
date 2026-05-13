@@ -2,7 +2,7 @@
 
 This document covers post-clone setup for the agent infrastructure: installing the recommended Claude Code plugins, providing credentials for the GitHub MCP, and verifying everything works.
 
-The four hooks in `.claude/hooks/` and the credential-free MCP servers (`filesystem`, `git`, `fetch`) work out of the box once the repo is cloned. The GitHub MCP and the two recommended plugins require setup.
+The four hooks in `.claude/hooks/` and the credential-free MCP servers (`filesystem`, `git`, `fetch`, `sequential-thinking`, `memory`, `puppeteer`) work out of the box once the repo is cloned. The `memory` MCP stores its graph in ignored local file `.claude/.mcp-memory.json`. The GitHub MCP and the two recommended plugins require setup.
 
 ---
 
@@ -84,7 +84,9 @@ Or run from the CLI:
 claude mcp list
 ```
 
-Expected output includes `filesystem`, `git`, `fetch`, `github`. If `github` is missing or shows an auth error, recheck `GITHUB_TOKEN`.
+Expected output includes `filesystem`, `git`, `fetch`, `sequential-thinking`, `memory`, `puppeteer`, `github`. If `github` is missing or shows an auth error, recheck `GITHUB_TOKEN`.
+
+Privacy note: `memory` is intentionally project-local and ignored by Git via `.claude/.mcp-memory.json`. Do not remove that ignore rule unless you deliberately want to publish the memory graph.
 
 ---
 
@@ -120,7 +122,7 @@ jq '.hooks' .claude/settings.json
 
 ## 6. Adding more MCP servers
 
-The four configured MCP servers (filesystem, git, fetch, github) are the recommended baseline. For more:
+The seven configured MCP servers (filesystem, git, fetch, sequential-thinking, memory, puppeteer, github) are the recommended baseline. For more:
 
 - **Browse the catalog:** see `.claude/reference/mcp-servers.md` for curated lists (Stripe, Slack, Notion, Postgres, Puppeteer, etc.)
 - **Add a new server:** edit `.claude/settings.json` → `mcpServers` and append a new entry. Restart Claude Code.

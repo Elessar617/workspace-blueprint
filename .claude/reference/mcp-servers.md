@@ -1,6 +1,6 @@
 # MCP Server Catalog
 
-The four MCP servers configured in `.claude/settings.json` (`filesystem`, `git`, `fetch`, `github`) are the baseline. This file catalogs additional MCP servers available from the community and how to find more.
+The seven MCP servers configured in `.claude/settings.json` (`filesystem`, `git`, `fetch`, `sequential-thinking`, `memory`, `puppeteer`, `github`) are the baseline. This file catalogs additional MCP servers available from the community and how to find more.
 
 ## How to add a server
 
@@ -16,6 +16,9 @@ The four MCP servers configured in `.claude/settings.json` (`filesystem`, `git`,
 |---|---|---|
 | Reference servers | github.com/modelcontextprotocol/servers | Filesystem, GitHub, Google Drive, Slack, Postgres, Puppeteer, etc. The canonical examples. |
 | GitHub MCP (official) | github.com/github/github-mcp-server | Already configured in this repo (`github` server). Repo management, issue/PR automation, CI/CD intelligence, code analysis, Dependabot. |
+| Sequential Thinking MCP | `@modelcontextprotocol/server-sequential-thinking` | Already configured. Structured decomposition for complex reasoning tasks. |
+| Memory MCP | `@modelcontextprotocol/server-memory` | Already configured. Persists a local knowledge graph to ignored `.claude/.mcp-memory.json`. |
+| Puppeteer MCP | `@modelcontextprotocol/server-puppeteer` | Already configured. Browser automation and screenshot-driven UI checks. |
 | Stripe Agent Toolkit | github.com/stripe/agent-toolkit | Payments: products, customers, payment links, invoices, subscriptions. By Stripe. |
 
 ## Curated lists (for discovery)

@@ -12,7 +12,7 @@ An agent-native scaffold for software development with [Claude Code](https://git
   - 14 skills (6 project-specific, 4 office vendored from `anthropics/skills`, 4 routing-vendored from harness plugins under MIT — see `SKILLS.md`)
   - 4 subagent specs
   - 4 bash hooks enforcing rules by construction (TDD, cycle cap, output sign-off, portability)
-  - 4 configured MCP servers (`filesystem`, `git`, `fetch`, `github`)
+  - 7 configured MCP servers (`filesystem`, `git`, `fetch`, `sequential-thinking`, `memory`, `puppeteer`, `github`)
   - Recommended plugins documented in `.claude/MCP-SETUP.md`; installed harness content is snapshotted in `.claude/registry/`
 
 ## Inspiration

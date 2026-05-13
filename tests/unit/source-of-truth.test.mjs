@@ -115,3 +115,35 @@ test('published surface omits local-only source markers', () => {
 
   assert.equal(result.status, 1, result.stdout);
 });
+
+test('configured MCP baseline includes local privacy guardrails', () => {
+  const settings = readJson('.claude/settings.json');
+  const mcpNames = Object.keys(settings.mcpServers || {}).sort();
+
+  assert.deepEqual(mcpNames, [
+    'fetch',
+    'filesystem',
+    'git',
+    'github',
+    'memory',
+    'puppeteer',
+    'sequential-thinking',
+  ]);
+  assert.deepEqual(settings.mcpServers['sequential-thinking'].args, [
+    '-y',
+    '@modelcontextprotocol/server-sequential-thinking',
+  ]);
+  assert.deepEqual(settings.mcpServers.memory.args, [
+    '-y',
+    '@modelcontextprotocol/server-memory',
+  ]);
+  assert.equal(
+    settings.mcpServers.memory.env.MEMORY_FILE_PATH,
+    '${CLAUDE_PROJECT_DIR}/.claude/.mcp-memory.json',
+  );
+  assert.deepEqual(settings.mcpServers.puppeteer.args, [
+    '-y',
+    '@modelcontextprotocol/server-puppeteer',
+  ]);
+  assert.ok(read('.gitignore').includes('.claude/.mcp-memory.json'));
+});

@@ -127,6 +127,9 @@ Vendored-skill attribution and license text: `.claude/skills/THIRD_PARTY_LICENSE
 | `filesystem` | `@modelcontextprotocol/server-filesystem` | Repo-rooted filesystem access. |
 | `git` | `@modelcontextprotocol/server-git` | Git read/write against this repo. |
 | `fetch` | `@modelcontextprotocol/server-fetch` | HTTP fetch (no auth, credential-free). |
+| `sequential-thinking` | `@modelcontextprotocol/server-sequential-thinking` | Structured multi-step reasoning for complex tasks. |
+| `memory` | `@modelcontextprotocol/server-memory` | Local knowledge graph persisted to ignored `.claude/.mcp-memory.json`. |
+| `puppeteer` | `@modelcontextprotocol/server-puppeteer` | Browser automation for local/UI verification. |
 | `github` | `@modelcontextprotocol/server-github` | GitHub API (requires `GITHUB_PERSONAL_ACCESS_TOKEN` env var). |
 
 ### ECC — in `external/ecc/` submodule
