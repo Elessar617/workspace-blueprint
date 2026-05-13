@@ -27,7 +27,7 @@ workspace-blueprint/
 │
 ├─ .claude/              ← cross-cutting agent infrastructure
 │  ├─ rules/             ← always-loaded constraints (LEAN, <40KB)
-│  ├─ skills/            ← on-demand procedures (10 skills: 6 project + 4 office)
+│  ├─ skills/            ← on-demand procedures (10 skills: 6 project + 4 routing-vendored)
 │  ├─ agents/            ← planner, implementer, reviewer, adversary specs
 │  ├─ reference/         ← looked up on demand (project + portable references)
 │  ├─ hooks/             ← four bash hooks enforcing rules by construction
@@ -115,7 +115,7 @@ Cycle cap: 5 (hook-enforced). Sign-off required for `04-output/` (hook-enforced)
 
 ## Skills, Plugins, MCPs
 
-- **14 skills** in `.claude/skills/` — 6 project-specific (tdd-loop, bug-investigation, refactor-protocol, spike-protocol, spec-authoring, data-analysis) + 4 office (docx, pptx, xlsx, pdf vendored from `anthropics/skills`) + 4 routing-vendored (systematic-debugging, writing-plans, brainstorming, karpathy-guidelines — MIT-attributed in `.claude/skills/THIRD_PARTY_LICENSES.md`, refreshed via `npm run refresh-vendored`)
+- **10 skills** in `.claude/skills/` — 6 project-specific (tdd-loop, bug-investigation, refactor-protocol, spike-protocol, spec-authoring, data-analysis) + 4 routing-vendored (systematic-debugging, writing-plans, brainstorming, karpathy-guidelines — MIT-attributed in `.claude/skills/THIRD_PARTY_LICENSES.md`, refreshed via `npm run refresh-vendored`)
 - **2 plugins** enabled: `obra/superpowers` and `affaan-m/everything-claude-code`
 - **7 MCP servers** configured: `filesystem`, `git`, `fetch`, `sequential-thinking`, `memory`, `puppeteer` (credential-free), `github` (placeholder env var)
 
@@ -125,7 +125,7 @@ Setup details: `.claude/MCP-SETUP.md`. Catalogs: `.claude/reference/{mcp-servers
 
 ## Portability Discipline
 
-This repo is the canonical scaffold for OTHER repos. Files in `.claude/rules/` and `.claude/skills/` (except vendored office skills) MUST stay domain-agnostic. Project-specific facts live ONLY in `.claude/reference/` (which the consumer rewrites). The `enforce-portability.sh` hook + `.claude/.portability-deny.txt` enforce this mechanically.
+This repo is the canonical scaffold for OTHER repos. Files in `.claude/rules/` and `.claude/skills/` MUST stay domain-agnostic. Project-specific facts live ONLY in `.claude/reference/` (which the consumer rewrites). The `enforce-portability.sh` hook + `.claude/.portability-deny.txt` enforce this mechanically.
 
 Bootstrap procedure for using this scaffold in another repo: see `START-HERE.md`.
 

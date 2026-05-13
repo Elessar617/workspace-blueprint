@@ -6,7 +6,7 @@ Curated resources for working with Claude (Code, API, plugins).
 
 | Resource | URL | What it's for |
 |---|---|---|
-| Anthropic Skills repo | github.com/anthropics/skills | Production skills (docx, pptx, xlsx, pdf), examples for creative/enterprise/dev workflows. The 4 office skills in this repo's `.claude/skills/` come from here. |
+| Anthropic Skills repo | github.com/anthropics/skills | Examples for creative/enterprise/dev workflows, plus document skills that are source-available for reference. Do not vendor source-available document skills into this public scaffold unless licensing is cleared. |
 | Claude Code | github.com/anthropics/claude-code | The CLI agent. Plugin system, subagent architecture, example plugins. |
 | Official plugin marketplace | github.com/anthropics/claude-plugins-official | Browse via `/plugin marketplace`. |
 | Knowledge work plugins | github.com/anthropics/knowledge-work-plugins | Open-source plugins for Claude Cowork (desktop automation). |

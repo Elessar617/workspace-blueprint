@@ -9,7 +9,7 @@ An agent-native scaffold for software development with [Claude Code](https://git
 - **A four-agent loop** for the build pipeline: planner (one-shot) → implementer ↔ reviewer ↔ adversary (cycle, max 5)
 - **`.claude/` infrastructure:**
   - 7 native rules enforcing TDD, conventional commits, review gates, portability, and engineering constraints
-  - 14 skills (6 project-specific, 4 office vendored from `anthropics/skills`, 4 routing-vendored from harness plugins under MIT — see `SKILLS.md`)
+  - 10 skills (6 project-specific, 4 routing-vendored from harness plugins under MIT — see `SKILLS.md`)
   - 4 subagent specs
   - 4 bash hooks enforcing rules by construction (TDD, cycle cap, output sign-off, portability)
   - 7 configured MCP servers (`filesystem`, `git`, `fetch`, `sequential-thinking`, `memory`, `puppeteer`, `github`)
@@ -28,6 +28,10 @@ See [`START-HERE.md`](START-HERE.md).
 ## Setup after cloning
 
 See [`.claude/MCP-SETUP.md`](.claude/MCP-SETUP.md) for plugin installation and the GitHub MCP token setup.
+
+## Public release posture
+
+The tracked tree intentionally excludes local memories, env files, maintainer notes, and source-available document skill bundles. See [`SECURITY.md`](SECURITY.md), [`NOTICE.md`](NOTICE.md), and [`.gitignore`](.gitignore) for the guardrails.
 
 ## Bootstrapping a new repo from this scaffold
 

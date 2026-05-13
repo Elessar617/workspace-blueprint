@@ -30,7 +30,7 @@ When starting any task on any Claude surface, run through these in order:
 2. **Need external data?** → enable MCP connectors / upload files. No → proceed.
 3. **Repeatable process?** → build or use a skill. No → prompt directly.
 4. **Output format?**
-   - File → file creation skill (`.claude/skills/{docx,pptx,xlsx,pdf}/`)
+   - File → project-approved file creation skill or local tool
    - Interactive → artifact (Claude.ai)
    - Data → code execution (Claude.ai sandbox or local)
    - Text → just talk

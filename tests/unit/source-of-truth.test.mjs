@@ -116,6 +116,48 @@ test('published surface omits local-only source markers', () => {
   assert.equal(result.status, 1, result.stdout);
 });
 
+test('public tracked tree omits private state and source-available local bundles', () => {
+  assert.ok(existsSync(join(REPO_ROOT, 'LICENSE')));
+  assert.ok(existsSync(join(REPO_ROOT, 'NOTICE.md')));
+  assert.ok(existsSync(join(REPO_ROOT, 'SECURITY.md')));
+
+  const tracked = git(['ls-files']).split('\n').filter(Boolean);
+  const localDocPrefix = ['docs', 't' + 'eaching', ''].join('/');
+  for (const prefix of [
+    localDocPrefix,
+    '.claude/skills/docx/',
+    '.claude/skills/pptx/',
+    '.claude/skills/xlsx/',
+    '.claude/skills/pdf/',
+    '.claude/reference/skills-system.md',
+    '.claude/.mcp-memory.json',
+    '.remember/',
+    '.serena/',
+    '.agents/',
+    '.codex/',
+  ]) {
+    assert.equal(
+      tracked.some((path) => path === prefix || path.startsWith(prefix)),
+      false,
+      `${prefix} should not be tracked`,
+    );
+  }
+
+  const sensitivePattern = [
+    '/' + 'Users' + '/',
+    ['gardner', 'wilson'].join(''),
+    'BEGIN (RSA|OPENSSH|PRIVATE) KEY',
+    ['github', 'pat_[A-Za-z0-9_]{20,}'].join('_'),
+    ['ghp', '[A-Za-z0-9]{20,}'].join('_'),
+    'sk-[A-Za-z0-9_-]{20,}',
+    'ANTHROPIC_API_KEY\\s*=',
+    'OPENAI_API_KEY\\s*=',
+  ].join('|');
+  const result = gitMaybe(['grep', '-n', '-I', '-i', '-E', sensitivePattern, '--', '.']);
+
+  assert.equal(result.status, 1, result.stdout);
+});
+
 test('configured MCP baseline includes local privacy guardrails', () => {
   const settings = readJson('.claude/settings.json');
   const mcpNames = Object.keys(settings.mcpServers || {}).sort();

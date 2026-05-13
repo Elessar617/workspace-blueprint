@@ -10,4 +10,4 @@
 - When writing a rule or skill, reach for generic phrasing: "the project's lint command" not "`npm run lint`"; "the typed-language coverage threshold" not "70% line coverage".
 - If you need a project-specific example to illustrate a rule, link to a file under `.claude/reference/` or `docs/` rather than inlining it.
 - The deny list is a per-consumer artifact: each repo using this scaffold edits `.portability-deny.txt` to add its own terms. The base list shipped from this repo contains only generic placeholders the consumer should replace.
-- Office skills under `.claude/skills/{docx,pptx,xlsx,pdf}/` are vendored from `anthropics/skills` and are exempt from portability scanning by path (the hook excludes them) — they're already generic.
+- Optional document-generation skills may be installed locally, but source-available bundles stay gitignored unless their license is cleared for redistribution.

@@ -2,6 +2,10 @@ import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { join, relative, extname } from 'node:path';
 import { parseMarkdown, normalizeRecord, filenameStem } from './frontmatter.mjs';
 
+// Source-available document bundles may exist locally, but must not flow into
+// the public native registry unless their redistribution license is cleared.
+const LOCAL_ONLY_SKILLS = new Set(['docx', 'pptx', 'xlsx', 'pdf']);
+
 function readMarkdownRecord(file, repoRoot, { kind, name }) {
   const parsed = parseMarkdown(file);
   const record = normalizeRecord(parsed, {
@@ -33,6 +37,7 @@ export function scrapeNative(repoRoot) {
   const skillsDir = join(repoRoot, '.claude', 'skills');
   if (existsSync(skillsDir)) {
     for (const entry of readdirSync(skillsDir)) {
+      if (LOCAL_ONLY_SKILLS.has(entry)) continue;
       const file = join(skillsDir, entry, 'SKILL.md');
       pushIfMarkdown(out, file, repoRoot, { kind: 'skill', name: entry });
     }

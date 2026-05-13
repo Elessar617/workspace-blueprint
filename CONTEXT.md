@@ -16,7 +16,7 @@ When starting a task, ask in order:
 2. **Need external data?** Yes → use the configured MCP servers (`filesystem`, `git`, `fetch`, `github`); see `.claude/reference/mcp-servers.md` for more. No → proceed.
 3. **Repeatable process?** Yes → use a skill from `.claude/skills/`. No → prompt directly.
 4. **What's the output format?**
-   - File (`.docx`, `.pptx`, `.xlsx`, `.pdf`) → `.claude/skills/{docx,pptx,xlsx,pdf}/`
+   - File → project-approved local tool or skill
    - Code → goes in `src/` (work flows through `build/`)
    - Learning / decision → goes in `lab/REPORT.md` or `spec/`
    - Release artifact → `ship/`
@@ -37,7 +37,7 @@ When starting a task, ask in order:
 | **Fix a bug** | `build/CONTEXT.md` | + `.claude/skills/bug-investigation/SKILL.md` |
 | **Refactor / migrate** | `build/CONTEXT.md` | + `.claude/skills/refactor-protocol/SKILL.md` |
 | **Write user-facing docs** | `ship/CONTEXT.md` | `.claude/reference/tech-stack.md`, the relevant `04-output/OUTPUT.md` |
-| **Generate a release artifact** (`.docx`, `.pdf`, etc.) | `ship/CONTEXT.md` | `.claude/skills/{docx,pdf,pptx,xlsx}/SKILL.md` (whichever applies) |
+| **Generate a release artifact** | `ship/CONTEXT.md` | project-approved local tool or skill for the target format |
 | **Author release notes** | `ship/CONTEXT.md` | `ship/changelog/`, recent `04-output/OUTPUT.md` files |
 | **Bootstrap THIS scaffold into another repo** | `START-HERE.md` | `.claude/MCP-SETUP.md` |
 

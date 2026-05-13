@@ -40,9 +40,9 @@ test('detectLanguages from mixed files', () => {
   assert.ok(langs.includes('typescript'));
 });
 
-test('detectOutputSkills from release artifact files', () => {
+test('detectOutputSkills does not reference unbundled document skills', () => {
   const skills = detectOutputSkills(['ship/docs/report.pdf', 'ship/docs/report.docx']);
-  assert.deepEqual(skills.sort(), ['docx', 'pdf']);
+  assert.deepEqual(skills, []);
 });
 
 test('route returns native-only fallback on no match', () => {
@@ -77,14 +77,14 @@ test('route recommends strict profile for ship', () => {
   assert.equal(r.hook_profile, 'strict');
 });
 
-test('route adds output skills for ship files', () => {
+test('route omits unbundled output skills for ship files', () => {
   const r = route({
     prompt: 'release the report',
     files_in_scope: ['ship/docs/report.pdf'],
     registry: { agents: [], skills: [], commands: [], mcps: [] },
   });
   assert.equal(r.branch, 'ship');
-  assert.ok(r.skills.includes('pdf'));
+  assert.deepEqual(r.skills, []);
 });
 
 test('route adds Go language items for go-feature task', () => {

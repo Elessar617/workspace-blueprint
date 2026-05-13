@@ -14,13 +14,6 @@ const LANGUAGE_BY_EXT = {
   '.dart': 'dart', '.rs': 'rust', '.rb': 'ruby', '.php': 'php', '.swift': 'swift',
 };
 
-const OUTPUT_SKILL_BY_EXT = {
-  '.docx': 'docx',
-  '.pptx': 'pptx',
-  '.xlsx': 'xlsx',
-  '.pdf': 'pdf',
-};
-
 export function detectTaskType(prompt) {
   const lower = prompt.toLowerCase();
   for (const rule of TASK_RULES) {
@@ -41,12 +34,9 @@ export function detectLanguages(files) {
 }
 
 export function detectOutputSkills(files) {
-  const skills = new Set();
-  for (const f of files) {
-    const ext = '.' + f.split('.').pop();
-    if (OUTPUT_SKILL_BY_EXT[ext]) skills.add(OUTPUT_SKILL_BY_EXT[ext]);
-  }
-  return [...skills];
+  // Public scaffold invariant: source-available document bundles stay local-only
+  // until their redistribution license is cleared, so routing must not auto-load them.
+  return [];
 }
 
 const BRANCH_BASE = {

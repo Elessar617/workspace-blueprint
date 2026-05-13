@@ -2,7 +2,7 @@
 
 > Human-readable inventory of what this scaffold offers, organized by task. **Not loaded by agents** — the source of truth for routing is `ROUTING.md` + `.claude/routing/*.md` + `.claude/registry/*.json`. This doc orients humans so they know what to expect when a task starts, where each item lives, and how to add a new one.
 >
-> **Scope:** the ~46 items actively referenced by routing branch files. The full registry universe (~421 items across ECC + harness + native) is much larger; this is the curated subset that actually loads.
+> **Scope:** the ~42 items actively referenced by routing branch files. The full registry universe across ECC + harness + native is much larger; this is the curated subset that actually loads.
 >
 > **Token-cost note:** this file is not auto-loaded by any IDE preamble. It exists for discovery, not for routing. The strict validator in `scripts/rebuild-registry.mjs` does NOT scan this file; references here can drift from the routing files without breaking the build. **Routing files / registry / `npm run rebuild-registry` are authoritative — this doc is orientation.**
 
@@ -67,10 +67,12 @@ Always-load:
 
 Always-load:
 - Agents: `reviewer`, `adversary`, `doc-updater`, `opensource-packager`
-- Skills: none by default. The office skills (`docx` / `pptx` / `xlsx` / `pdf`) auto-load when the output path has the matching extension.
+- Skills: none by default.
 - Rules: all 7 native (maximum strictness)
 - Hook profile: `strict`
 - MCPs (advisory): `filesystem`, `git`, `github`
+
+Binary document-generation skills are optional local add-ons. The public scaffold does not bundle source-available document skill implementations.
 
 ---
 
@@ -97,10 +99,6 @@ Always-load:
 | `data-analysis` | `data-analysis/SKILL.md` | Native — guidance for analysis spikes. |
 | `spec-authoring` | `spec-authoring/SKILL.md` | Native — RFC / ADR / brief shapes for the planner agent. |
 | `refactor-protocol` | `refactor-protocol/SKILL.md` | Native — blast-radius + behavior-equivalence discipline. |
-| `docx` | `docx/SKILL.md` | Vendored from `anthropics/skills`. |
-| `pptx` | `pptx/SKILL.md` | Vendored from `anthropics/skills`. |
-| `xlsx` | `xlsx/SKILL.md` | Vendored from `anthropics/skills`. |
-| `pdf` | `pdf/SKILL.md` | Vendored from `anthropics/skills`. |
 | `systematic-debugging` | `systematic-debugging/SKILL.md` | Vendored from `superpowers@5.1.0` (MIT). |
 | `karpathy-guidelines` | `karpathy-guidelines/SKILL.md` | Vendored from `andrej-karpathy-skills@1.0.0` (MIT). |
 | `writing-plans` | `writing-plans/SKILL.md` | Vendored from `superpowers@5.1.0` (MIT). |
@@ -142,7 +140,7 @@ Submodule pinned at SHA `894ee039`. Items below are referenced by routing branch
 
 **Commands:** `/build-fix`.
 
-The other ~540 items in the ECC submodule are discoverable through the registry (`jq '.[].name' .claude/registry/ecc-*.json`) but not currently routed. To add a new routing reference, name the item in the relevant branch file under `.claude/routing/` and run `npm run rebuild-registry` to validate.
+The other registry items in the ECC submodule are discoverable through the registry (`jq '.[].name' .claude/registry/ecc-*.json`) but not currently routed. To add a new routing reference, name the item in the relevant branch file under `.claude/routing/` and run `npm run rebuild-registry` to validate.
 
 ### Harness built-in subagents
 
@@ -196,5 +194,5 @@ The `scripts/lib/harness-scraper.mjs` script reads `~/.claude/plugins/cache/` on
 
 - **Not loaded by agents.** Agents use `ROUTING.md` + `.claude/routing/*.md` + `.claude/registry/*.json`.
 - **Not the routing source of truth.** When this doc drifts from the routing files / registry, the routing files / registry are correct.
-- **Not exhaustive.** Only the items actively referenced by routing branch files. The full ECC catalog is ~421 items; this curated subset is ~46.
+- **Not exhaustive.** Only the items actively referenced by routing branch files. The full ECC catalog is much larger; this curated subset is ~42.
 - **Not validated.** The strict validator does not scan this file. References here can fall out of date silently; cross-reference with `npm run rebuild-registry` output before relying on a claim made here.

@@ -5,7 +5,6 @@ PROFILE="${BLUEPRINT_HOOK_PROFILE:-standard}"
 # Trigger: PostToolUse on Edit | Write when target path is .claude/rules/ or .claude/skills/
 # Behavior: Grep the file content against .claude/.portability-deny.txt; fail if any
 #           denied term is found (case-insensitive, word-ish boundaries).
-# Exempt path: .claude/skills/{docx,pptx,xlsx,pdf}/ — vendored from anthropics/skills.
 
 set -euo pipefail
 
@@ -22,9 +21,6 @@ if [[ -z "$target" ]]; then exit 0; fi
 
 # Only fire on .claude/rules/ or .claude/skills/
 if [[ ! "$target" =~ /\.claude/(rules|skills)/ ]]; then exit 0; fi
-
-# Exempt vendored office skills
-if [[ "$target" =~ /\.claude/skills/(docx|pptx|xlsx|pdf)/ ]]; then exit 0; fi
 
 # Locate the deny list relative to the .claude/ root
 claude_root=$(echo "$target" | sed 's|\(.*/\.claude\)/.*|\1|')

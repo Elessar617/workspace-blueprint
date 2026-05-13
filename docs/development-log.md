@@ -2,7 +2,7 @@
 
 > Running log of where `workspace-blueprint` is, what it's trying to be, and how it got from A to B. Update at each meaningful milestone. Source-of-truth for "what's the state of the project?" without having to read the whole git log.
 >
-> **Last updated:** 2026-05-12 (late evening — source-of-truth drift guard added after ECC pin bump; all Day 2 deferred items resolved or trigger-gated).
+> **Last updated:** 2026-05-13 (public-release hardening — source-available document skill bundles removed from the tracked scaffold, privacy/legal guardrails added).
 
 ---
 
@@ -38,7 +38,7 @@ What shipped in a single day, roughly in build order:
 2. **The four-agent specs** — `planner`, `implementer`, `reviewer`, `adversary` under `.claude/agents/`. Each agent's role, inputs, outputs, and cycle semantics are documented; the orchestrator process (`docs/orchestrator-process.md`) wires them together.
 3. **Rules** — started at 5 native rules (TDD, commit discipline, review gates, code quality, portability) and grew to **7** later that day with `feat(rules): add Unix philosophy and NASA Power of 10` (`f3ac393`) — both with explicit applicability guidance so they apply where they help and skip where they'd be over-engineering.
 4. **Hooks** — four bash hooks under `.claude/hooks/` (`pre-commit-tdd.sh`, `block-cycle-overrun.sh`, `block-output-without-signoff.sh`, `enforce-portability.sh`). Each enforces a corresponding rule by construction. A `BLUEPRINT_HOOK_PROFILE` env-var gate was added to every hook in four separate commits, allowing operator-controlled strictness (`minimal` no-ops everything; `standard` and `strict` run the hook).
-5. **Skills** — 10 total: 6 project-specific (`tdd-loop`, `bug-investigation`, `refactor-protocol`, `spike-protocol`, `spec-authoring`, `data-analysis`) plus 4 office skills vendored from `anthropics/skills` (`docx`, `pptx`, `xlsx`, `pdf`).
+5. **Skills** — 10 total in the public scaffold: 6 project-specific (`tdd-loop`, `bug-investigation`, `refactor-protocol`, `spike-protocol`, `spec-authoring`, `data-analysis`) plus 4 routing-vendored skills under MIT attribution (`systematic-debugging`, `writing-plans`, `brainstorming`, `karpathy-guidelines`). Source-available document skill bundles are kept out of the tracked scaffold unless their license is cleared for redistribution.
 6. **The ECC bridge** — the day's headline feature. Added `external/ecc/` as a git submodule pinned at SHA `7fa1e5b6` (`affaan-m/everything-claude-code` upstream). Built `scripts/lib/{ecc-scraper,harness-scraper,frontmatter,validate}.mjs` to scrape three sources (ECC, harness, native) into JSON registries under `.claude/registry/`. Wrote `scripts/route.mjs` as the deterministic routing module, then `.claude/hooks/route-inject.sh` to call it from Claude Code's `UserPromptSubmit` hook.
 7. **The parallel routing layer** — `ROUTING.md` at repo root as the entry-level decision tree, plus six branch files under `.claude/routing/`: `build`, `bug`, `refactor`, `spike`, `spec-author`, `ship`. Each branch declares its always-load inventory + language matrix.
 8. **Per-IDE preambles** — `AGENTS.md` (Codex / OpenCode), `.cursorrules` (Cursor), `GEMINI.md` (Gemini CLI). All four (including `CLAUDE.md` itself) point at the same `ROUTING.md` so cross-IDE routing converges on one source of truth.
@@ -57,9 +57,9 @@ Most of what happened on day 2 was *correctness work* — closing gaps the day-1
    - **Validator goes strict** — dangling references in `ROUTING.md` now hard-fail the rebuild instead of logging warnings.
    - **Native inventory becomes a first-class source** — new `.claude/registry/native-inventory.json` (25 items) so the validator can resolve `planner`, `implementer`, `tdd-loop`, etc. without depending on coincidental ECC overlap.
    - **Registry becomes a true lockfile** — removed `indexed_at` timestamps so `rebuild-registry` produces byte-identical output on identical input. This is what makes "clone + bootstrap → committed state" deterministic.
-   - **Plugin paths become portable** — relative to the plugin cache, not absolute under `/local-path/.../`.
+   - **Plugin paths become portable** — relative to the plugin cache, not absolute per-machine paths.
    - **Multi-settings.json MCP scan** — the repo's own `.claude/settings.json` MCPs (`filesystem`, `git`, `fetch`, `github`) are now inventoried alongside `~/.claude/settings.json` ones.
-   - **Routing UX fixes** — mid-task chatter ("yes", "ok") no longer clobbers cached routing; `mergeWithCache` precedence inverted so fresh routing wins by default; `ship/` auto-adds office skills when output files are in scope.
+   - **Routing UX fixes** — mid-task chatter ("yes", "ok") no longer clobbers cached routing; `mergeWithCache` precedence inverted so fresh routing wins by default.
    - 6 more findings (built-ins inventoried, codex `.agents/` ignored, etc.) — see audit doc for the full table.
 2. **Settings schema URL fix** (`860a203`) — `/doctor` flagged the previous `raw.githubusercontent.com` `$schema` URL; switched to the schemastore canonical.
 3. **Workspace structural cleanup** (`58e53df`) — the four `.gitkeep`-only directories at `build/workflows/` root contradicted the documented layout (stages live INSIDE `NN-<slug>/` iterations, not at the workflows root). Removed.
@@ -87,11 +87,11 @@ Most of what happened on day 2 was *correctness work* — closing gaps the day-1
 | **3-layer chassis** (`CLAUDE.md` → `CONTEXT.md` → workspace `CONTEXT.md`) | Intact and unmodified by the ECC bridge. Five workspace CONTEXT.md files present. |
 | **ECC bridge** (parallel routing layer) | `ROUTING.md` + 6 branch files + 11 registries + 4 per-IDE preambles + Claude Code hook + lifecycle scripts — all present, audit-hardened. |
 | **Submodule** | `external/ecc/` pinned at `894ee039` (`v1.10.0-617-g894ee039`) from `affaan-m/everything-claude-code`. |
-| **Registries** | 60 ECC agents + 323 skills + 75 commands + 1 MCP + 105 lang-rules + 3 hook-profiles + 3 built-ins + 32 native records. Harness plugin counts are machine-specific and refreshed from the local operator cache. Byte-stable across rebuilds for the portable sources. |
-| **Tests** | 52 unit + 2 hook + 1 bootstrap-idempotency + 8 with-profile integration tests. 0 failures. |
+| **Registries** | 60 ECC agents + 323 skills + 75 commands + 1 MCP + 105 lang-rules + 3 hook-profiles + 3 built-ins + 28 native records. Harness plugin counts are machine-specific and refreshed from the local operator cache. Byte-stable across rebuilds for the portable sources. |
+| **Tests** | 53 unit + 2 hook + 1 bootstrap-idempotency + 8 with-profile integration tests. 0 failures. |
 | **Rules** | 7 native, all generic (portability hook excludes nothing under `.claude/rules/`). |
 | **Hooks** | 4 enforcement hooks, each gated by `BLUEPRINT_HOOK_PROFILE`. |
-| **Skills** | 14 local skills (6 project + 4 vendored office + 4 routing-vendored). |
+| **Skills** | 10 local skills (6 project + 4 routing-vendored). Source-available document skill bundles are intentionally not tracked in the public scaffold. |
 | **Bootstrap path** | Verified end-to-end via cleanroom test on 2026-05-12 (clone without `--recursive` → bootstrap self-recovers → all green). |
 | **Iteration workspaces** | `spec/`, `lab/`, `build/workflows/`, `ship/` exist but contain only templates and `.gitkeep`s — **by design**. The scaffold is the deliverable, not the iterations. |
 | **CI** | GitHub Actions cleanroom workflow configured in `.github/workflows/ci.yml`; tests also run locally via `npm test`. |

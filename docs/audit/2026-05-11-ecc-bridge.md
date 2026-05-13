@@ -45,7 +45,7 @@ Five routing files + three top-level docs had name references that didn't resolv
 
 ### F2.1 — Harness plugin paths were absolute
 
-`plugin_path` in `harness-skills.json` contained the operator's home directory: `/local-path/.../plugins/cache/...`. Re-running `rebuild-registry` on a different machine produced a diff in the registry.
+`plugin_path` in `harness-skills.json` contained an operator-specific plugin-cache path. Re-running `rebuild-registry` on a different machine produced a diff in the registry.
 
 **Fix:** `scripts/lib/harness-scraper.mjs:48` — `relative(pluginsDir, skillPath).replaceAll('\\', '/')`.
 
@@ -83,11 +83,11 @@ A follow-up like "yes" / "ok" / "continue" routed as `fallback` (no detected tas
 
 **Fix:** `route.mjs:155-159` — inverted. Fresh wins by default; cache only wins when (a) no transition phrase AND (b) the prompt is mid-task chatter.
 
-### F3.3 — Office skills never auto-added to `ship` routing
+### F3.3 — Output-format skills were not yet modeled for `ship` routing
 
-The `ship` branch's spec calls for `.docx` / `.pptx` / `.xlsx` / `.pdf` skills to be added when the corresponding file extensions appear in scope. Logic was missing.
+The `ship` branch originally modeled extension-based document skills for release artifacts. Logic was added during this audit, then later removed from the public scaffold when source-available document skill bundles were taken out of the tracked tree.
 
-**Fix:** `route.mjs:17-22, 43-50, 115` — `OUTPUT_SKILL_BY_EXT` map + `detectOutputSkills(files)` triggered only on `detected === 'ship'`.
+**Fix at the time:** `route.mjs` gained output-skill detection for `ship`; current public-release hardening keeps `ship` skills empty by default unless a consumer installs and routes approved local tooling.
 
 ---
 
