@@ -12,7 +12,7 @@ A spike is a time-boxed experiment whose output is a *decision*, not a deliverab
 Every spike iteration is a folder under `lab/NN-<slug>/` (copy from `lab/00-template/`). It contains, in order:
 
 1. **`PREFLIGHT.md`** — written before any code. Hypothesis + prior art + success/failure criteria + time box.
-2. **`prototype/`** — the code. Throwaway. No production patterns required (no tests, no error handling, no logging) unless they're part of what you're testing.
+2. **`prototype/`** — the code. Throwaway. No production patterns required (no tests, no error handling, no logging) unless they're part of what you're testing. See [PROTOTYPE-SHAPES.md](PROTOTYPE-SHAPES.md) for the two prototype shapes (logic vs UI) and the rules that apply to both.
 3. **`VERIFY.md`** — written after running the prototype. Tests performed, findings, surprises, limitations.
 4. **`REPORT.md`** — the decision. Pursue, modify, or abandon.
 
@@ -36,3 +36,7 @@ If REPORT outcome is "Abandon," write a `docs/explorations/NN-<slug>.md` so the 
 - The work is a bug investigation — use `bug-investigation` skill, drives `build/`.
 - The work is a refactor — use `refactor-protocol` skill, drives `build/`.
 - You already know the answer — that's a spec, not a spike.
+
+---
+
+> `PROTOTYPE-SHAPES.md` is adapted in part from mattpocock/skills@e74f0061 (MIT). See `THIRD_PARTY_LICENSES.md`.
