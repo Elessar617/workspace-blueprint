@@ -88,6 +88,8 @@ Expected output includes `filesystem`, `git`, `fetch`, `sequential-thinking`, `m
 
 Privacy note: `memory` is intentionally project-local and ignored by Git via `.claude/.mcp-memory.json`. Do not remove that ignore rule unless you deliberately want to publish the memory graph.
 
+Context budget note: this scaffold keeps the committed MCP baseline at 7 servers, below the ECC rule of thumb of fewer than 10 enabled MCPs. If you add more project MCPs, prefer CLI-backed skills for services with strong CLIs and run `npm run audit:agent-surface` to catch budget creep.
+
 ---
 
 ## 4. Verifying skills
@@ -118,6 +120,11 @@ If you see the hook message on stderr (or the script exits non-zero), it's wired
 To check the hook config that Claude Code is using:
 ```bash
 jq '.hooks' .claude/settings.json
+```
+
+To check the broader agent instruction surface:
+```bash
+npm run audit:agent-surface
 ```
 
 ---

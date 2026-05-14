@@ -1,7 +1,8 @@
 # Frontend Stack
 
-<!-- REPLACE if your project does NOT have a frontend, OR if your stack differs.
-The defaults below represent libraries Claude knows well out of the box. -->
+Replace this note if your project does not have a frontend, or if your stack
+differs. The defaults below represent libraries Claude knows well out of the
+box.
 
 ## Component library
 
@@ -35,5 +36,6 @@ When building a new UI component:
 
 ## NOT defaults (consumer overrides)
 
-<!-- REPLACE: list anything you've chosen DIFFERENTLY from the above.
-Examples: Mantine instead of shadcn, Chakra instead of Tailwind, Heroicons instead of Lucide. -->
+Replace with anything you have chosen differently from the defaults above.
+Examples: Mantine instead of shadcn, Chakra instead of Tailwind, Heroicons
+instead of Lucide.

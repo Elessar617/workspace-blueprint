@@ -1,45 +1,44 @@
 # Tech Stack
 
-<!-- REPLACE: This file lists the languages, frameworks, libraries, and
-project-specific commands that .claude/skills/ and agents reference.
-Without this filled in, the implementer agent will guess at conventions.
--->
+Replace this note with the languages, frameworks, libraries, and
+project-specific commands that `.claude/skills/` and agents reference. Without
+this filled in, the implementer agent will guess at conventions.
 
 ## Languages
 
-<!-- REPLACE: e.g., Python 3.12, TypeScript 5.x, Rust stable -->
+Replace with examples like Python 3.12, TypeScript 5.x, or Rust stable.
 
 ## Frameworks
 
-<!-- REPLACE: e.g., FastAPI, Next.js 14 (app router), Tokio -->
+Replace with examples like FastAPI, Next.js app router, or Tokio.
 
 ## Test framework
 
-<!-- REPLACE: e.g., pytest with pytest-asyncio; jest; cargo test -->
+Replace with examples like pytest with pytest-asyncio, Jest, or cargo test.
 
-**Test command:** <!-- REPLACE: e.g., `pytest` or `npm test` or `cargo test` -->
-**Test naming convention:** <!-- REPLACE: e.g., `test_*.py`, `*.test.ts`, `*_test.rs` -->
-**Coverage tool + floor:** <!-- REPLACE: e.g., `coverage` with 80% on changed files -->
+**Test command:** Replace with `pytest`, `npm test`, `cargo test`, or equivalent.
+**Test naming convention:** Replace with `test_*.py`, `*.test.ts`, `*_test.rs`, or equivalent.
+**Coverage tool + floor:** Replace with coverage expectations for changed files.
 
 ## Linter / formatter
 
-**Lint command:** <!-- REPLACE: e.g., `ruff check .` or `npm run lint` -->
-**Format command:** <!-- REPLACE: e.g., `ruff format .` or `npm run format` -->
+**Lint command:** Replace with `ruff check .`, `npm run lint`, or equivalent.
+**Format command:** Replace with `ruff format .`, `npm run format`, or equivalent.
 
 ## Type checker (if applicable)
 
-**Type-check command:** <!-- REPLACE: e.g., `mypy` or `tsc --noEmit` -->
+**Type-check command:** Replace with `mypy`, `tsc --noEmit`, or equivalent.
 
 ## Package management
 
-**Add a dependency:** <!-- REPLACE: e.g., `uv add <pkg>` or `npm install <pkg>` -->
-**Lockfile:** <!-- REPLACE: e.g., `uv.lock`, `package-lock.json` -->
+**Add a dependency:** Replace with `uv add <pkg>`, `npm install <pkg>`, or equivalent.
+**Lockfile:** Replace with `uv.lock`, `package-lock.json`, or equivalent.
 
 ## Build / run
 
-**Local dev:** <!-- REPLACE: e.g., `uv run python -m app` or `npm run dev` -->
-**Production build:** <!-- REPLACE: e.g., `docker build .` or `npm run build` -->
+**Local dev:** Replace with `uv run python -m app`, `npm run dev`, or equivalent.
+**Production build:** Replace with `docker build .`, `npm run build`, or equivalent.
 
 ## CI
 
-<!-- REPLACE: where CI lives (GitHub Actions, etc.) and what jobs run -->
+Replace with where CI lives and what jobs run.

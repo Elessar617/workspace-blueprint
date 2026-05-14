@@ -13,7 +13,9 @@
 #   3. rebuild-registry produces clean output (no dangling references in
 #      ROUTING.md / .claude/routing/*.md — the strict validator from
 #      audit-fix 1bbb3b3 hard-fails the rebuild if any reference dangles)
-#   4. npm test passes: unit + hook + integration tiers
+#   4. agent-surface audit passes: no hidden prompt payloads, raw secrets,
+#      missing permission denies, or MCP budget creep
+#   5. npm test passes: unit + hook + integration tiers
 #
 # What this does NOT verify (intentional v1 scope):
 #   - Cross-IDE agent compliance (full F1, still trigger-gated)
@@ -47,6 +49,9 @@ jobs:
 
       - name: Bootstrap (submodule init + npm install + rebuild registries)
         run: ./scripts/bootstrap.sh
+
+      - name: Audit agent instruction surface
+        run: npm run audit:agent-surface
 
       - name: Run full test suite (unit + hook + integration)
         run: npm test

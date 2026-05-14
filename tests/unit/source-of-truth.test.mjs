@@ -160,8 +160,10 @@ test('public tracked tree omits private state and source-available local bundles
 
 test('configured MCP baseline includes local privacy guardrails', () => {
   const settings = readJson('.claude/settings.json');
+  const packageJson = readJson('package.json');
   const mcpNames = Object.keys(settings.mcpServers || {}).sort();
 
+  assert.equal(packageJson.scripts['audit:agent-surface'], 'node scripts/agent-surface-audit.mjs');
   assert.deepEqual(mcpNames, [
     'fetch',
     'filesystem',
@@ -187,5 +189,19 @@ test('configured MCP baseline includes local privacy guardrails', () => {
     '-y',
     '@modelcontextprotocol/server-puppeteer',
   ]);
+  for (const denied of [
+    'Read(~/.ssh/**)',
+    'Read(~/.aws/**)',
+    'Read(**/.env*)',
+    'Write(~/.ssh/**)',
+    'Write(~/.aws/**)',
+    'Write(**/.env*)',
+    'Bash(curl * | bash)',
+    'Bash(ssh *)',
+    'Bash(scp *)',
+    'Bash(nc *)',
+  ]) {
+    assert.ok(settings.permissions.deny.includes(denied), `${denied} should be denied`);
+  }
   assert.ok(read('.gitignore').includes('.claude/.mcp-memory.json'));
 });

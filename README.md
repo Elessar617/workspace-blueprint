@@ -58,6 +58,7 @@ After bootstrap, open the repo in Claude Code, Codex, Cursor, OpenCode, or Gemin
 - **Bump ECC:** `./scripts/update-ecc.sh` (review diff, then commit).
 - **After installing/removing a Claude Code plugin:** `./scripts/refresh-harness.sh`.
 - **Override hook strictness for a task:** `./scripts/with-profile.sh <profile> <command>` runs the command with `BLUEPRINT_HOOK_PROFILE` set in env. E.g. `./scripts/with-profile.sh minimal claude` for a spike-friendly Claude Code session. Or `export BLUEPRINT_HOOK_PROFILE=minimal` to set it for the rest of the shell. Profiles: `minimal` | `standard` | `strict`.
+- **Audit agent-facing config:** `npm run audit:agent-surface` checks hidden prompt payloads, secret-looking values, permission-deny coverage, and MCP budget. See [`docs/ecc-agent-harness.md`](docs/ecc-agent-harness.md) for how the ECC bridge maps to a harness.
 
 ## Project status
 

@@ -24,6 +24,21 @@
       "Read(*)",
       "Glob(*)",
       "Grep(*)"
+    ],
+    "deny": [
+      "Read(~/.ssh/**)",
+      "Read(~/.aws/**)",
+      "Read(~/.config/gh/hosts.yml)",
+      "Read(**/.env*)",
+      "Read(**/.mcp-memory.json)",
+      "Write(~/.ssh/**)",
+      "Write(~/.aws/**)",
+      "Write(**/.env*)",
+      "Bash(curl * | bash)",
+      "Bash(wget * | sh)",
+      "Bash(ssh *)",
+      "Bash(scp *)",
+      "Bash(nc *)"
     ]
   },
   "hooks": {

@@ -1,8 +1,8 @@
 # Project Architecture
 
-<!-- REPLACE: This file is loaded on demand by the planner and reviewer agents
-when they need to understand how the project is structured. Replace this
-content with a description of YOUR project's architecture.
+This file is loaded on demand by the planner and reviewer agents when they need
+to understand how the project is structured. Replace this content with a
+description of your project's architecture.
 
 Suggested sections:
 - High-level diagram (ASCII or Mermaid)
@@ -11,24 +11,23 @@ Suggested sections:
 - External dependencies (databases, queues, third-party APIs)
 - Deployment topology
 - Where to find what (folder map within src/ and shared/)
--->
 
 ## Overview
 
-<!-- REPLACE: 2-3 sentences. What does this project do, at the highest level? -->
+Replace with 2-3 sentences describing what this project does at the highest level.
 
 ## Components
 
-<!-- REPLACE: list the major modules / services / packages. One paragraph each. -->
+Replace with the major modules, services, or packages. One paragraph each.
 
 ## Data flow
 
-<!-- REPLACE: how does a request / event traverse the system? -->
+Replace with how a request or event traverses the system.
 
 ## External dependencies
 
-<!-- REPLACE: databases, message brokers, external APIs, third-party services. -->
+Replace with databases, message brokers, external APIs, and third-party services.
 
 ## Folder layout
 
-<!-- REPLACE: a tree view of src/ and shared/ with a one-liner per major directory. -->
+Replace with a tree view of `src/` and `shared/` with a one-liner per major directory.

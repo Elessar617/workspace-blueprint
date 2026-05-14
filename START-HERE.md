@@ -53,7 +53,7 @@ If you're using this repo AS your project (not just as a scaffold):
    - `glossary.md` — domain terms agents need to know
    - `frontend-stack.md` — only if you have a frontend (defaults provided)
 3. **Edit `.claude/.portability-deny.txt`** — add project-specific terms (vendor names, internal endpoints) so the portability hook catches drift.
-4. **Replace `<!-- REPLACE -->` markers** in `CLAUDE.md`, `CONTEXT.md`, `START-HERE.md`, `README.md`.
+4. **Replace scaffold placeholder markers** in `CLAUDE.md`, `CONTEXT.md`, `START-HERE.md`, `README.md`.
 
 If you're using this scaffold to bootstrap a NEW repo:
 
@@ -81,6 +81,7 @@ git init
 ## Where to learn more
 
 - **Project state, journey, and current capabilities:** `docs/development-log.md`
+- **ECC bridge as an agent harness:** `docs/ecc-agent-harness.md`
 - **Inventory of skills, agents, commands, and MCPs (by task type):** `SKILLS.md` at repo root
 - **Claude Code basics:** `.claude/reference/claude-platform-capabilities.md`
 - **Local-only maintainer reference notes:** ignored when present
