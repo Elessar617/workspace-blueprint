@@ -22,6 +22,28 @@ The unit of TDD work is a single behavior, not a single function. One behavior =
 - **Green:** if making the test pass requires touching files outside the obvious scope, the spec or design is wrong. Stop and revisit.
 - **Refactor:** if a refactor breaks a different test, the refactor changed behavior. Revert the refactor; either keep the duplication or update the test (separately).
 
+## What you're testing
+
+Tests should verify behavior through public interfaces, not implementation details. Code can change entirely; tests shouldn't. A good test reads like a specification — `test_user_can_log_in_with_valid_credentials` tells you exactly what capability exists. These tests survive refactors because they don't care about internal structure. The warning sign of an implementation-coupled test: it breaks when you refactor but behavior hasn't changed.
+
+## Vertical vs horizontal slicing
+
+**DO NOT write all tests first, then all implementation.** That is "horizontal slicing" — treating Red as "write all tests" and Green as "write all code." It produces crap tests: they verify imagined behavior, lock you into the shape of things before you understand the implementation, and pass when behavior breaks because they were written without seeing what mattered.
+
+Correct shape is **vertical slices via tracer bullets**: one test → one implementation → next test responds to what you just learned.
+
+```
+WRONG (horizontal):
+  RED:   test1, test2, test3, test4, test5
+  GREEN: impl1, impl2, impl3, impl4, impl5
+
+RIGHT (vertical):
+  RED→GREEN: test1→impl1
+  RED→GREEN: test2→impl2
+  RED→GREEN: test3→impl3
+  ...
+```
+
 ## When to break the cycle
 
 - **Spike work** (lab/): TDD often unhelpful for throwaway prototypes. Use the spike-protocol skill instead.
@@ -34,3 +56,7 @@ The unit of TDD work is a single behavior, not a single function. One behavior =
 - Mocking the layer under test. Mock external boundaries; real-implement what you're verifying.
 - "Add tests later" — no. The pre-commit-tdd.sh hook enforces test files in the same diff as code files.
 - Commenting out a failing test to "fix later." Delete it or fix it; do not leave it as silent debt.
+
+---
+
+> Vertical-vs-horizontal slicing and the public-interface principle are adapted in part from mattpocock/skills@e74f0061 (MIT). See `THIRD_PARTY_LICENSES.md`.
