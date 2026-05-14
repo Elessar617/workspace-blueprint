@@ -6,10 +6,16 @@ function fmtList(items) {
   return (items && items.length) ? items.join(', ') : '(none)';
 }
 
+const INSTINCT_ACTION_MAX = 120;
+
+function truncate(s, max) {
+  return s.length <= max ? s : `${s.slice(0, max - 1)}…`;
+}
+
 function fmtInstincts(instincts) {
   if (!instincts || !instincts.length) return '    (none)';
   return instincts
-    .map(i => `    - [${i._scope} ${i.confidence.toFixed(2)}] ${i.action}`)
+    .map(i => `    - [${i._scope} ${i.confidence.toFixed(2)}] ${truncate(i.action, INSTINCT_ACTION_MAX)}`)
     .join('\n');
 }
 
