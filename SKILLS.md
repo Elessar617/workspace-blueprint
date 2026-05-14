@@ -36,7 +36,7 @@ Plus language-specific reviewers as above.
 
 Always-load:
 - Agents: `planner`, `implementer`, `reviewer`, `adversary`, `refactor-cleaner`, `code-simplifier`
-- Skills: `tdd-loop`, `karpathy-guidelines`
+- Skills: `tdd-loop`, `karpathy-guidelines`, `architecture-audit`
 - Rules: all 7 native
 - Hook profile: `standard`
 - MCPs (advisory): `filesystem`, `git`
