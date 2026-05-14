@@ -32,7 +32,7 @@ Mid-task chatter ("yes", "explain more", "do that", "ok") preserves the cache.
 If no row in Step 1 matches, load only:
 
 - Native agents: `planner`, `implementer`, `reviewer`, `adversary`
-- Native skills: `caveman`, `tdd-loop`
+- Native skills: `caveman`
 - All native rules
 - Hook profile: `standard`
 - No ECC content

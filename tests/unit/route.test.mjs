@@ -96,25 +96,27 @@ test('route recommends strict profile for ship', () => {
   assert.equal(r.hook_profile, 'strict');
 });
 
-test('route omits unbundled output skills for ship files but keeps base skills', () => {
+test('route omits unbundled output skills for ship files but keeps caveman + ship mandatories', () => {
   const r = route({
     prompt: 'release the report',
     files_in_scope: ['ship/docs/report.pdf'],
     registry: { agents: [], skills: [], commands: [], mcps: [] },
   });
   assert.equal(r.branch, 'ship');
-  assert.deepEqual(r.skills, ['caveman']);
+  assert.ok(r.skills.includes('caveman'));
+  assert.ok(r.skills.includes('superpowers:verification-before-completion'));
 });
 
-test('route adds Go language items for go-feature task', () => {
+test('route surfaces Go language items as hints for go-feature task', () => {
   const r = route({
     prompt: 'add a rate limiter to the gateway service',
     files_in_scope: ['gateway/handler.go'],
     registry: { agents: [], skills: [], commands: [], mcps: [] },
   });
   assert.equal(r.branch, 'build');
-  assert.ok(r.agents.includes('go-reviewer'));
-  assert.ok(r.skills.includes('golang-patterns'));
+  const hintNames = r.hints.map((h) => h.name);
+  assert.ok(hintNames.includes('go-reviewer'));
+  assert.ok(hintNames.includes('golang-patterns'));
 });
 
 test('route includes every branch always-load agent and skill listed in routing docs', () => {
@@ -170,4 +172,110 @@ test('code-changing routes carry NASA-style comment discipline', () => {
       `${r.branch} should inject NASA-style comment discipline`,
     );
   }
+});
+
+// ──────────────────────────────────────────────────────────────────────
+// New-shape assertions: mandatories / signals / hints / instinct cap.
+// ──────────────────────────────────────────────────────────────────────
+
+test('detectTaskType matches "review" -> review', () => {
+  assert.equal(detectTaskType('act as reviewer and adversary on this diff'), 'review');
+});
+
+test('detectTaskType matches "audit" -> review', () => {
+  assert.equal(detectTaskType('audit the routing system'), 'review');
+});
+
+test('route returns mandatories for build branch', () => {
+  const r = route({ prompt: 'add a rate limiter', files_in_scope: [], registry: {} });
+  assert.ok(r.mandatories.includes('tdd-loop'));
+  assert.ok(r.mandatories.includes('karpathy-guidelines'));
+  assert.ok(r.mandatories.includes('superpowers:verification-before-completion'));
+});
+
+test('route returns mandatories for bug branch', () => {
+  const r = route({ prompt: 'fix the broken login', files_in_scope: [], registry: {} });
+  assert.ok(r.mandatories.includes('bug-investigation'));
+  assert.ok(r.mandatories.includes('systematic-debugging'));
+});
+
+test('route returns mandatories for review branch', () => {
+  const r = route({ prompt: 'act as reviewer', files_in_scope: [], registry: {} });
+  assert.ok(r.mandatories.includes('karpathy-guidelines'));
+  assert.ok(r.mandatories.includes('superpowers:requesting-code-review'));
+});
+
+test('route fallback mandatories only contains always-loaded caveman', () => {
+  const r = route({ prompt: 'hello world', files_in_scope: [], registry: {} });
+  assert.equal(r.branch, 'fallback');
+  assert.deepEqual(r.mandatories, ['caveman']);
+});
+
+test('route derives hints from go language signal', () => {
+  const r = route({
+    prompt: 'add rate limiter',
+    files_in_scope: ['src/gateway/x.go'],
+    registry: {},
+  });
+  const hintNames = r.hints.map((h) => h.name);
+  assert.ok(hintNames.includes('golang-patterns'));
+});
+
+test('route derives hints from python language signal', () => {
+  const r = route({
+    prompt: 'add validator',
+    files_in_scope: ['src/foo.py'],
+    registry: {},
+  });
+  const hintNames = r.hints.map((h) => h.name);
+  assert.ok(hintNames.includes('python-patterns'));
+});
+
+test('route returns mcps_project and mcps_plugin split for build', () => {
+  const r = route({ prompt: 'add feature', files_in_scope: [], registry: {} });
+  assert.deepEqual(r.mcps_project.sort(), ['filesystem', 'git']);
+  assert.ok(r.mcps_plugin.includes('serena'));
+});
+
+test('route applies instinct cap (build = 10)', () => {
+  const fakeInstincts = Array.from({ length: 12 }, (_, i) => ({
+    id: `i${i}`, confidence: 0.7 + i * 0.01, _scope: 'global', action: `Action ${i}`,
+  }));
+  const r = route({
+    prompt: 'add feature', files_in_scope: [], registry: {},
+    instincts: fakeInstincts,
+  });
+  assert.equal(r.instincts.length, 10);
+});
+
+test('route applies instinct cap (spike = 3)', () => {
+  const fakeInstincts = Array.from({ length: 10 }, (_, i) => ({
+    id: `i${i}`, confidence: 0.7 + i * 0.01, _scope: 'global', action: `Action ${i}`,
+  }));
+  const r = route({
+    prompt: 'investigate the latency regression', files_in_scope: [], registry: {},
+    instincts: fakeInstincts,
+  });
+  assert.equal(r.branch, 'spike');
+  assert.equal(r.instincts.length, 3);
+});
+
+test('route applies instinct cap (bug = 6)', () => {
+  const fakeInstincts = Array.from({ length: 10 }, (_, i) => ({
+    id: `i${i}`, confidence: 0.7 + i * 0.01, _scope: 'global', action: `Action ${i}`,
+  }));
+  const r = route({
+    prompt: 'fix the crash', files_in_scope: [], registry: {},
+    instincts: fakeInstincts,
+  });
+  assert.equal(r.instincts.length, 6);
+});
+
+test('route returns signals object', () => {
+  const r = route({
+    prompt: 'add feature', files_in_scope: ['src/x.go'], registry: {},
+  });
+  assert.ok(r.signals);
+  assert.deepEqual(r.signals.files, ['src/x.go']);
+  assert.deepEqual(r.signals.languages, ['go']);
 });

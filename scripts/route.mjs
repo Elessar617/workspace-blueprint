@@ -1,10 +1,11 @@
-const TASK_RULES = [
-  { branch: 'build', keywords: ['add ', 'implement', 'feature', 'build ', 'create '], profile: 'standard' },
-  { branch: 'bug', keywords: ['fix', 'bug', 'broken', 'crash'], profile: 'standard' },
-  { branch: 'refactor', keywords: ['refactor', 'migrate', 'rename', 'restructure', 'cleanup'], profile: 'standard' },
-  { branch: 'spike', keywords: ['investigate', 'spike', 'explore', 'prototype'], profile: 'minimal' },
+export const TASK_RULES = [
+  { branch: 'build',       keywords: ['add ', 'implement', 'feature', 'build ', 'create '], profile: 'standard' },
+  { branch: 'bug',         keywords: ['fix', 'bug', 'broken', 'crash'],                     profile: 'standard' },
+  { branch: 'refactor',    keywords: ['refactor', 'migrate', 'rename', 'restructure', 'cleanup'], profile: 'standard' },
+  { branch: 'spike',       keywords: ['investigate', 'spike', 'explore', 'prototype'],      profile: 'minimal' },
   { branch: 'spec-author', keywords: ['rfc', 'adr', 'design ', 'spec ', 'brief', 'propose'], profile: 'minimal' },
-  { branch: 'ship', keywords: ['release', 'ship', 'changelog', 'publish', 'cut a v'], profile: 'strict' },
+  { branch: 'ship',        keywords: ['release', 'ship', 'changelog', 'publish', 'cut a v'], profile: 'strict' },
+  { branch: 'review',      keywords: ['review', 'audit', 'evaluate', 'critique', 'act as reviewer'], profile: 'standard' },
 ];
 
 const LANGUAGE_BY_EXT = {
@@ -12,6 +13,78 @@ const LANGUAGE_BY_EXT = {
   '.js': 'javascript', '.jsx': 'javascript', '.java': 'java', '.kt': 'kotlin',
   '.cpp': 'cpp', '.cc': 'cpp', '.h': 'cpp', '.hpp': 'cpp', '.cs': 'csharp',
   '.dart': 'dart', '.rs': 'rust', '.rb': 'ruby', '.php': 'php', '.swift': 'swift',
+};
+
+export const AGENTS_BY_BRANCH = {
+  build:        ['planner', 'implementer', 'reviewer', 'adversary'],
+  bug:          ['implementer', 'reviewer'],
+  refactor:     ['planner', 'implementer', 'reviewer', 'adversary', 'refactor-cleaner', 'code-simplifier'],
+  spike:        ['general-purpose', 'Explore', 'code-explorer'],
+  'spec-author': ['planner', 'architect', 'Plan'],
+  ship:         ['reviewer', 'adversary', 'doc-updater', 'opensource-packager'],
+  review:       ['reviewer', 'adversary'],
+  fallback:     ['planner', 'implementer', 'reviewer', 'adversary'],
+};
+
+// caveman stays mandatory per d91240e "always load caveman" — token-discipline utility.
+const ALWAYS_LOADED_SKILLS = ['caveman'];
+
+export const MANDATORIES_BY_BRANCH = {
+  build:        ['tdd-loop', 'karpathy-guidelines', 'superpowers:verification-before-completion'],
+  bug:          ['bug-investigation', 'systematic-debugging', 'tdd-loop', 'superpowers:verification-before-completion'],
+  refactor:     ['refactor-protocol', 'architecture-audit', 'karpathy-guidelines', 'tdd-loop', 'superpowers:verification-before-completion'],
+  spike:        ['spike-protocol', 'data-analysis'],
+  'spec-author': ['brainstorming', 'spec-authoring', 'writing-plans'],
+  ship:         ['superpowers:verification-before-completion', 'superpowers:finishing-a-development-branch'],
+  review:       ['karpathy-guidelines', 'superpowers:requesting-code-review'],
+  fallback:     [],
+};
+
+export const MCPS_BY_BRANCH = {
+  build:        { project: ['filesystem', 'git'], plugin: ['serena', 'context7', 'sequential-thinking', 'memory'] },
+  bug:          { project: ['filesystem', 'git'], plugin: ['serena', 'sequential-thinking', 'memory'] },
+  refactor:     { project: ['filesystem', 'git'], plugin: ['serena', 'context7', 'memory'] },
+  spike:        { project: ['filesystem', 'fetch'], plugin: ['exa', 'context7', 'brave-search', 'firecrawl', 'mempalace'] },
+  'spec-author': { project: ['filesystem', 'fetch'], plugin: ['exa', 'context7', 'brave-search', 'mempalace'] },
+  ship:         { project: ['filesystem', 'git', 'github'], plugin: ['sentry', 'puppeteer'] },
+  review:       { project: ['filesystem', 'git', 'github'], plugin: ['sequential-thinking', 'serena'] },
+  fallback:     { project: ['filesystem'], plugin: [] },
+};
+
+// Scales by branch complexity: build/refactor signal-rich -> 10; bug/ship/review medium -> 6;
+// spike/spec-author/fallback exploratory -> 3.
+const INSTINCT_CAP_BY_BRANCH = {
+  build: 10, refactor: 10,
+  bug: 6, ship: 6, review: 6,
+  spike: 3, 'spec-author': 3, fallback: 3,
+};
+
+const HINTS_BY_LANGUAGE = {
+  go:         [{ name: 'golang-patterns', reason: 'language=go' },
+               { name: 'go-reviewer', reason: 'language=go (agent)' },
+               { name: 'go-build-resolver', reason: 'language=go (build issues)' }],
+  python:     [{ name: 'python-patterns', reason: 'language=python' },
+               { name: 'python-reviewer', reason: 'language=python (agent)' }],
+  typescript: [{ name: 'typescript-reviewer', reason: 'language=typescript (agent)' }],
+  rust:       [{ name: 'rust-patterns', reason: 'language=rust' },
+               { name: 'rust-reviewer', reason: 'language=rust (agent)' }],
+  kotlin:     [{ name: 'kotlin-reviewer', reason: 'language=kotlin (agent)' },
+               { name: 'kotlin-build-resolver', reason: 'language=kotlin (build issues)' }],
+};
+
+const HINT_KEYWORD_PATTERNS = [
+  { re: /\b(docs|api|library|framework)\b/i, hint: { name: 'context7', reason: 'docs/API references' } },
+  { re: /\b(find|where is|explore the codebase)\b/i, hint: { name: 'zoom-out', reason: 'codebase exploration' } },
+  { re: /\b(serena|symbol|definition)\b/i, hint: { name: 'serena', reason: 'symbol-level navigation' } },
+  { re: /\b(search the web|research|look up)\b/i, hint: { name: 'exa', reason: 'web research' } },
+];
+
+const NASA_COMMENT_RULE_NOTE = 'NASA-style comments: explain invariants, bounds, assumptions, failure modes, and non-obvious safety tradeoffs; do not narrate obvious code.';
+
+export const BRANCH_TO_PROFILE = {
+  build: 'standard', bug: 'standard', refactor: 'standard',
+  spike: 'minimal', 'spec-author': 'minimal', ship: 'strict',
+  review: 'standard', fallback: 'standard',
 };
 
 export function detectTaskType(prompt) {
@@ -39,90 +112,71 @@ export function detectOutputSkills(files) {
   return [];
 }
 
-const BRANCH_BASE = {
-  build: { agents: ['planner', 'implementer', 'reviewer', 'adversary'], skills: ['caveman', 'tdd-loop'], rules: ['all'], mcps: ['filesystem', 'git'] },
-  bug: { agents: ['implementer', 'reviewer'], skills: ['caveman', 'bug-investigation', 'tdd-loop', 'systematic-debugging'], commands: ['/build-fix'], rules: ['all'], mcps: ['filesystem', 'git'] },
-  refactor: { agents: ['planner', 'implementer', 'reviewer', 'adversary', 'refactor-cleaner', 'code-simplifier'], skills: ['caveman', 'tdd-loop', 'karpathy-guidelines', 'architecture-audit'], rules: ['all'], mcps: ['filesystem', 'git'] },
-  spike: { agents: ['general-purpose', 'Explore', 'code-explorer'], skills: ['caveman', 'spike-protocol', 'data-analysis'], rules: ['portability-discipline'], mcps: ['filesystem', 'fetch'] },
-  'spec-author': { agents: ['planner', 'architect', 'Plan'], skills: ['caveman', 'spec-authoring', 'writing-plans', 'brainstorming'], rules: ['portability-discipline', 'commit-discipline'], mcps: ['filesystem', 'fetch'] },
-  ship: { agents: ['reviewer', 'adversary', 'doc-updater', 'opensource-packager'], skills: ['caveman'], rules: ['all'], mcps: ['filesystem', 'git', 'github'] },
-  fallback: { agents: ['planner', 'implementer', 'reviewer', 'adversary'], skills: ['caveman', 'tdd-loop'], rules: ['all'], mcps: ['filesystem', 'git'] },
-};
-
-const LANGUAGE_ADDITIONS = {
-  build: {
-    python: { agents: ['python-reviewer'], skills: ['python-patterns'] },
-    go: { agents: ['go-reviewer', 'go-build-resolver'], skills: ['golang-patterns'] },
-    typescript: { agents: ['typescript-reviewer'], skills: [] },
-    java: { agents: ['java-reviewer', 'java-build-resolver'], skills: [] },
-    kotlin: { agents: ['kotlin-reviewer', 'kotlin-build-resolver'], skills: [] },
-    cpp: { agents: ['cpp-reviewer', 'cpp-build-resolver'], skills: [] },
-    csharp: { agents: ['csharp-reviewer'], skills: [] },
-    dart: { agents: ['dart-build-resolver', 'flutter-reviewer'], skills: [] },
-  },
-  bug: {
-    python: { agents: ['python-reviewer'] },
-    go: { agents: ['go-reviewer', 'go-build-resolver'] },
-    typescript: { agents: ['typescript-reviewer'] },
-    java: { agents: ['java-reviewer', 'java-build-resolver'] },
-    kotlin: { agents: ['kotlin-reviewer', 'kotlin-build-resolver'] },
-    cpp: { agents: ['cpp-reviewer', 'cpp-build-resolver'] },
-  },
-  refactor: {
-    python: { agents: ['python-reviewer'], skills: ['python-patterns'] },
-    go: { agents: ['go-reviewer'], skills: ['golang-patterns'] },
-    typescript: { agents: ['typescript-reviewer'] },
-    java: { agents: ['java-reviewer'] },
-    kotlin: { agents: ['kotlin-reviewer'] },
-  },
-};
-
-const BRANCH_TO_PROFILE = {
-  build: 'standard', bug: 'standard', refactor: 'standard',
-  spike: 'minimal', 'spec-author': 'minimal', ship: 'strict',
-  fallback: 'standard',
-};
-
-const NASA_COMMENT_RULE_NOTE = 'NASA-style comments: explain invariants, bounds, assumptions, failure modes, and non-obvious safety tradeoffs; do not narrate obvious code.';
-
-export function route({ prompt, files_in_scope = [], registry = {} }) {
-  const detected = detectTaskType(prompt) || 'fallback';
-  const langs = detectLanguages(files_in_scope);
-  const outputSkills = detected === 'ship' ? detectOutputSkills(files_in_scope) : [];
-
-  const base = BRANCH_BASE[detected] || BRANCH_BASE.fallback;
-  let agents = [...base.agents];
-  let skills = [...(base.skills || [])];
-  let commands = [...(base.commands || [])];
-  let mcps = [...(base.mcps || [])];
-  const rules = [...(base.rules || [])];
-  const rule_notes = rules.includes('all') ? [NASA_COMMENT_RULE_NOTE] : [];
-
-  const langAdds = LANGUAGE_ADDITIONS[detected] || {};
-  for (const lang of langs) {
-    if (langAdds[lang]) {
-      if (langAdds[lang].agents) agents.push(...langAdds[lang].agents);
-      if (langAdds[lang].skills) skills.push(...langAdds[lang].skills);
+function detectWorkspace(files) {
+  const roots = ['spec', 'lab', 'build', 'ship', 'src', 'shared', 'docs'];
+  for (const f of files) {
+    for (const r of roots) {
+      if (f.startsWith(`${r}/`)) return `${r}/`;
     }
   }
-  skills.push(...outputSkills);
+  return '(unknown)';
+}
 
-  agents = [...new Set(agents)];
-  skills = [...new Set(skills)];
-  commands = [...new Set(commands)];
-  mcps = [...new Set(mcps)];
+export function route({ prompt, files_in_scope = [], registry = {}, instincts = [] }) {
+  const detected = detectTaskType(prompt) || 'fallback';
+  const langs = detectLanguages(files_in_scope);
+
+  const mandatories = [
+    ...ALWAYS_LOADED_SKILLS,
+    ...(MANDATORIES_BY_BRANCH[detected] || []),
+  ];
+  const agents = [...(AGENTS_BY_BRANCH[detected] || AGENTS_BY_BRANCH.fallback)];
+  const mcps = MCPS_BY_BRANCH[detected] || MCPS_BY_BRANCH.fallback;
+
+  const hints = [];
+  for (const lang of langs) {
+    if (HINTS_BY_LANGUAGE[lang]) hints.push(...HINTS_BY_LANGUAGE[lang]);
+  }
+  for (const { re, hint } of HINT_KEYWORD_PATTERNS) {
+    if (re.test(prompt) && !hints.some(h => h.name === hint.name)) {
+      hints.push(hint);
+    }
+  }
+  if (files_in_scope.length >= 5) {
+    hints.push({ name: 'superpowers:dispatching-parallel-agents', reason: `${files_in_scope.length} files in scope` });
+  }
+
+  const cap = INSTINCT_CAP_BY_BRANCH[detected] || 6;
+  const cappedInstincts = instincts.slice(0, cap);
+
+  const workspace = detectWorkspace(files_in_scope);
+  const rules = ['all'];
+  const rule_notes = rules.includes('all') ? [NASA_COMMENT_RULE_NOTE] : [];
 
   return {
     branch: detected,
-    agents,
-    skills,
-    commands,
-    mcps,
-    rules,
-    rule_notes,
     hook_profile: BRANCH_TO_PROFILE[detected],
+    workspace,
+    mandatories,
+    agents,
+    skills: mandatories,
+    mcps_project: mcps.project,
+    mcps_plugin: mcps.plugin,
+    mcps: [...mcps.project, ...mcps.plugin],
+    signals: {
+      files: files_in_scope,
+      languages: langs,
+      recent_edits: [],
+      workspace,
+      active_rules: rules,
+    },
+    instincts: cappedInstincts,
+    hints,
     languages_detected: langs,
     transition_detected: false,
+    rules,
+    rule_notes,
+    commands: [],
   };
 }
 
@@ -158,6 +212,10 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const prompt = promptIdx >= 0 ? args[promptIdx + 1] : '';
   if (!prompt) process.exit(0);
 
+  const filesIdx = args.indexOf('--files-in-scope');
+  const filesArg = filesIdx >= 0 ? args[filesIdx + 1] : '';
+  const filesInScope = filesArg ? filesArg.split(',').filter(Boolean) : [];
+
   const fs = await import('node:fs');
   const { join, dirname } = await import('node:path');
   const { fileURLToPath } = await import('node:url');
@@ -177,10 +235,25 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     mcps: [...safe('ecc-mcps.json'), ...safe('harness-mcps.json')],
   };
 
+  const { detectProjectDir } = await import('./lib/detect-project-dir.mjs');
+  const { readInstincts } = await import('./lib/instinct-reader.mjs');
+  const { formatOutput } = await import('./lib/format-output.mjs');
+
+  const xdgDataHome = process.env.XDG_DATA_HOME
+    || join(process.env.HOME || '', '.local', 'share');
+  const ecchomunculus = join(xdgDataHome, 'ecc-homunculus');
+  const { projectHash } = detectProjectDir({ cwd: process.cwd() });
+
+  const instincts = readInstincts({
+    xdgDataHome: ecchomunculus,
+    projectHash,
+    maxCount: 20,
+  });
+
   let cache = null;
   try { cache = JSON.parse(fs.readFileSync(CACHE, 'utf8')); } catch {}
   const transition = detectTransition(prompt);
-  const fresh = route({ prompt, files_in_scope: [], registry });
+  const fresh = route({ prompt, files_in_scope: filesInScope, registry, instincts });
   const final = mergeWithCache(cache, fresh, transition, prompt);
 
   try {
@@ -188,16 +261,5 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     fs.writeFileSync(CACHE, JSON.stringify(final, null, 2));
   } catch {}
 
-  const usedCache = final === cache;
-  const tag = transition ? ' [transition]' : (usedCache ? ' [cached]' : '');
-  const out = [
-    `ROUTING: branch=${final.branch} profile=${final.hook_profile} langs=${(final.languages_detected || []).join(',') || 'none'}${tag}`,
-    `agents: ${final.agents.join(', ')}`,
-    `skills: ${final.skills.join(', ')}`,
-    final.commands?.length ? `commands: ${final.commands.join(', ')}` : '',
-    `rules: ${final.rules.join(', ')}`,
-    final.rule_notes?.length ? `rule notes: ${final.rule_notes.join(' ')}` : '',
-    `mcps: ${final.mcps.join(', ')}`,
-  ].filter(Boolean).join('\n');
-  console.log(out);
+  console.log(formatOutput(final));
 }

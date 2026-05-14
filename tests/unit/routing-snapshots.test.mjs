@@ -41,26 +41,38 @@ for (const file of readdirSync(CASES_DIR)) {
         assert.ok(r.languages_detected.includes(lang), `language missing: ${lang}`);
       }
     }
+    // Under the new shape, language-specific items (e.g., go-reviewer, golang-patterns)
+    // surface in r.hints rather than r.agents / r.skills. Check both locations so
+    // existing routing-cases JSON files preserve their assertion intent.
     if (tc.expected.agents_must_include) {
+      const hintNames = (r.hints || []).map((h) => h.name);
+      const reachable = [...r.agents, ...hintNames];
       for (const a of tc.expected.agents_must_include) {
-        assert.ok(r.agents.includes(a), `agent missing: ${a}`);
+        assert.ok(reachable.includes(a), `agent missing: ${a}`);
       }
     }
     if (tc.expected.skills_must_include) {
+      const hintNames = (r.hints || []).map((h) => h.name);
+      const reachable = [...r.skills, ...hintNames];
       for (const s of tc.expected.skills_must_include) {
-        assert.ok(r.skills.includes(s), `skill missing: ${s}`);
+        assert.ok(reachable.includes(s), `skill missing: ${s}`);
       }
     }
 
+    // Only project-configured items need to resolve via the local registry.
+    // Plugin-discretionary items (e.g., exa, serena, context7 — surfaced as
+    // mcps_plugin or as plugin-prefixed skills like "superpowers:foo") are
+    // advisory hints and may be absent depending on which plugins are installed.
     const registryNames = new Set(Object.values(registry)
       .flat()
       .filter(Boolean)
       .map((item) => item.name));
+    const stripPlugin = (name) => name.includes(':') ? name.split(':').pop() : name;
     const routedNames = [
       ...r.agents,
-      ...r.skills,
+      ...r.skills.map(stripPlugin),
       ...(r.commands || []).map((cmd) => cmd.replace(/^\//, '')),
-      ...r.mcps,
+      ...(r.mcps_project || r.mcps),
     ];
     for (const name of routedNames) {
       assert.ok(registryNames.has(name), `routed item does not resolve: ${name}`);

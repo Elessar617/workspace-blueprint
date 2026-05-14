@@ -8,6 +8,6 @@
     "branch": "fallback",
     "hook_profile": "standard",
     "agents_must_include": ["planner", "implementer", "reviewer", "adversary"],
-    "skills_must_include": ["caveman", "tdd-loop"]
+    "skills_must_include": ["caveman"]
   }
 }
