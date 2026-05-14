@@ -12,6 +12,7 @@
 | "investigate", "spike", "explore"        | `lab/`    | `.claude/routing/spike.md`           |
 | "RFC", "ADR", "design", "spec", "brief"  | `spec/`   | `.claude/routing/spec-author.md`     |
 | "release", "ship", "changelog"           | `ship/`   | `.claude/routing/ship.md`            |
+| "review", "audit", "evaluate", "critique"| `build/`  | `.claude/routing/review.md`          |
 
 ## Global code-writing rule overlay
 

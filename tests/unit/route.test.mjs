@@ -279,3 +279,9 @@ test('route returns signals object', () => {
   assert.deepEqual(r.signals.files, ['src/x.go']);
   assert.deepEqual(r.signals.languages, ['go']);
 });
+
+test('ROUTING.md Step 1 table includes review branch row', () => {
+  const content = readFileSync(join(REPO_ROOT, 'ROUTING.md'), 'utf8');
+  assert.ok(content.includes('"review", "audit"'));
+  assert.ok(content.includes('.claude/routing/review.md'));
+});
