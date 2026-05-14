@@ -62,4 +62,4 @@ Once a candidate is fully shaped, hand off to `refactor-protocol` for safe execu
 
 ---
 
-> Adapted in part from mattpocock/skills@e74f0061 (MIT). Renamed; upstream-specific glossary and ADR-format references were replaced with this repo's conventions (`spec/adrs/` for decisions). See `THIRD_PARTY_LICENSES.md`.
+> Adapted in part from mattpocock/skills@e74f0061bb67222181640effa98c675bdb2fdaa7 (MIT). Renamed; upstream-specific glossary and ADR-format references were replaced with this repo's conventions (`spec/adrs/` for decisions). See `THIRD_PARTY_LICENSES.md`.

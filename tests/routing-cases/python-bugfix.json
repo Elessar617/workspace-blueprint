@@ -9,6 +9,6 @@
     "languages_detected": ["python"],
     "hook_profile": "standard",
     "agents_must_include": ["implementer", "reviewer", "python-reviewer"],
-    "skills_must_include": ["bug-investigation", "tdd-loop"]
+    "skills_must_include": ["caveman", "bug-investigation", "tdd-loop"]
   }
 }

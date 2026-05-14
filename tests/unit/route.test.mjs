@@ -1,6 +1,25 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { detectTaskType, detectLanguages, detectOutputSkills, route } from '../../scripts/route.mjs';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const REPO_ROOT = join(__dirname, '..', '..');
+
+function branchAlwaysLoadItems(branch, label) {
+  const content = readFileSync(join(REPO_ROOT, '.claude', 'routing', `${branch}.md`), 'utf8');
+  const line = content.split('\n').find((l) => l.startsWith(`- ${label}:`)) || '';
+  if (line.includes('none')) return [];
+  return [...line.matchAll(/`([^`]+)`/g)].map((m) => m[1]);
+}
+
+function fallbackSkills() {
+  const content = readFileSync(join(REPO_ROOT, 'ROUTING.md'), 'utf8');
+  const line = content.split('\n').find((l) => l.startsWith('- Native skills:')) || '';
+  return [...line.matchAll(/`([^`]+)`/g)].map((m) => m[1]);
+}
 
 test('detectTaskType matches "add" -> build', () => {
   assert.equal(detectTaskType('add a rate limiter to the gateway'), 'build');
@@ -77,14 +96,14 @@ test('route recommends strict profile for ship', () => {
   assert.equal(r.hook_profile, 'strict');
 });
 
-test('route omits unbundled output skills for ship files', () => {
+test('route omits unbundled output skills for ship files but keeps base skills', () => {
   const r = route({
     prompt: 'release the report',
     files_in_scope: ['ship/docs/report.pdf'],
     registry: { agents: [], skills: [], commands: [], mcps: [] },
   });
   assert.equal(r.branch, 'ship');
-  assert.deepEqual(r.skills, []);
+  assert.deepEqual(r.skills, ['caveman']);
 });
 
 test('route adds Go language items for go-feature task', () => {
@@ -96,6 +115,41 @@ test('route adds Go language items for go-feature task', () => {
   assert.equal(r.branch, 'build');
   assert.ok(r.agents.includes('go-reviewer'));
   assert.ok(r.skills.includes('golang-patterns'));
+});
+
+test('route includes every branch always-load agent and skill listed in routing docs', () => {
+  const prompts = {
+    build: 'add a rate limiter to the gateway service',
+    bug: 'fix the broken JSON parser',
+    refactor: 'refactor the auth middleware',
+    spike: 'investigate the GraphQL latency regression',
+    'spec-author': 'write an RFC for the new auth flow',
+    ship: 'ship the release notes',
+  };
+
+  for (const [branch, prompt] of Object.entries(prompts)) {
+    const r = route({
+      prompt,
+      files_in_scope: [],
+      registry: { agents: [], skills: [], commands: [], mcps: [] },
+    });
+
+    for (const agent of branchAlwaysLoadItems(branch, 'Agents')) {
+      assert.ok(r.agents.includes(agent), `${branch} route missing ${agent}`);
+    }
+    for (const skill of branchAlwaysLoadItems(branch, 'Skills')) {
+      assert.ok(r.skills.includes(skill), `${branch} route missing ${skill}`);
+    }
+  }
+
+  const fallback = route({
+    prompt: 'hello',
+    files_in_scope: [],
+    registry: { agents: [], skills: [], commands: [], mcps: [] },
+  });
+  for (const skill of fallbackSkills()) {
+    assert.ok(fallback.skills.includes(skill), `fallback route missing ${skill}`);
+  }
 });
 
 test('code-changing routes carry NASA-style comment discipline', () => {

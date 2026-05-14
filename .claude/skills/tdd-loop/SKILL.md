@@ -59,4 +59,4 @@ RIGHT (vertical):
 
 ---
 
-> Vertical-vs-horizontal slicing and the public-interface principle are adapted in part from mattpocock/skills@e74f0061 (MIT). See `THIRD_PARTY_LICENSES.md`.
+> Vertical-vs-horizontal slicing and the public-interface principle are adapted in part from mattpocock/skills@e74f0061bb67222181640effa98c675bdb2fdaa7 (MIT). See `THIRD_PARTY_LICENSES.md`.

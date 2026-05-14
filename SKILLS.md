@@ -2,7 +2,7 @@
 
 > Human-readable inventory of what this scaffold offers, organized by task. **Not loaded by agents** — the source of truth for routing is `ROUTING.md` + `.claude/routing/*.md` + `.claude/registry/*.json`. This doc orients humans so they know what to expect when a task starts, where each item lives, and how to add a new one.
 >
-> **Scope:** the ~42 items actively referenced by routing branch files. The full registry universe across ECC + harness + native is much larger; this is the curated subset that actually loads.
+> **Scope:** the curated subset actively referenced by routing branch files. The full registry universe across ECC + harness + native is much larger; this is the subset that actually loads.
 >
 > **Token-cost note:** this file is not auto-loaded by any IDE preamble. It exists for discovery, not for routing. The strict validator in `scripts/rebuild-registry.mjs` does NOT scan this file; references here can drift from the routing files without breaking the build. **Routing files / registry / `npm run rebuild-registry` are authoritative — this doc is orientation.**
 
@@ -14,7 +14,7 @@
 
 Always-load:
 - Agents: `planner`, `implementer`, `reviewer`, `adversary`
-- Skills: `tdd-loop`
+- Skills: `caveman`, `tdd-loop`
 - Rules: all 7 native
 - Hook profile: `standard`
 - MCPs (advisory): `filesystem`, `git`
@@ -25,7 +25,7 @@ Plus language-specific helpers when source files are in scope: `python-reviewer`
 
 Always-load:
 - Agents: `implementer`, `reviewer` (no planner — bugs have no design surface)
-- Skills: `bug-investigation`, `tdd-loop`, `systematic-debugging`
+- Skills: `caveman`, `bug-investigation`, `tdd-loop`, `systematic-debugging`
 - Rules: all 7 native
 - Hook profile: `standard`
 - MCPs (advisory): `filesystem`, `git`
@@ -36,7 +36,7 @@ Plus language-specific reviewers as above.
 
 Always-load:
 - Agents: `planner`, `implementer`, `reviewer`, `adversary`, `refactor-cleaner`, `code-simplifier`
-- Skills: `tdd-loop`, `karpathy-guidelines`, `architecture-audit`
+- Skills: `caveman`, `tdd-loop`, `karpathy-guidelines`, `architecture-audit`
 - Rules: all 7 native
 - Hook profile: `standard`
 - MCPs (advisory): `filesystem`, `git`
@@ -47,7 +47,7 @@ Both reviewer AND adversary because regressions are the dominant risk in refacto
 
 Always-load:
 - Agents: `general-purpose`, `Explore`, `code-explorer`
-- Skills: `spike-protocol`, `data-analysis`
+- Skills: `caveman`, `spike-protocol`, `data-analysis`
 - Rules: `portability-discipline` only (other rules relaxed during exploration)
 - Hook profile: `minimal` (lab/ work doesn't need TDD enforcement)
 - MCPs (advisory): `filesystem`, `fetch`
@@ -58,7 +58,7 @@ No language-specific agents by design — the spike's purpose is to discover con
 
 Always-load:
 - Agents: `planner`, `architect`, `Plan`
-- Skills: `spec-authoring`, `writing-plans`, `brainstorming`
+- Skills: `caveman`, `spec-authoring`, `writing-plans`, `brainstorming`
 - Rules: `portability-discipline`, `commit-discipline` (TDD / review / code-quality don't apply to docs)
 - Hook profile: `minimal`
 - MCPs (advisory): `filesystem`, `fetch`
@@ -67,7 +67,7 @@ Always-load:
 
 Always-load:
 - Agents: `reviewer`, `adversary`, `doc-updater`, `opensource-packager`
-- Skills: none by default.
+- Skills: `caveman`
 - Rules: all 7 native (maximum strictness)
 - Hook profile: `strict`
 - MCPs (advisory): `filesystem`, `git`, `github`
@@ -99,17 +99,17 @@ Binary document-generation skills are optional local add-ons. The public scaffol
 | `data-analysis` | `data-analysis/SKILL.md` | Native — guidance for analysis spikes. |
 | `spec-authoring` | `spec-authoring/SKILL.md` | Native — RFC / ADR / brief shapes for the planner agent. |
 | `refactor-protocol` | `refactor-protocol/SKILL.md` | Native — blast-radius + behavior-equivalence discipline. |
-| `architecture-audit` | `architecture-audit/SKILL.md` | Native — surface architectural friction; propose deepening-opportunity refactors. Pairs with refactor-protocol. Auto-routes in `.claude/routing/refactor.md`. Adapted from mattpocock@e74f0061. |
-| `caveman` | `caveman/SKILL.md` | Native — ultra-compressed response mode. Triggers when user says "caveman mode". Explicit invocation only. Adapted from mattpocock@e74f0061. |
-| `handoff` | `handoff/SKILL.md` | Native — compact the current conversation into a handoff markdown for another agent. Explicit invocation only. Adapted from mattpocock@e74f0061. |
-| `write-a-skill` | `write-a-skill/SKILL.md` | Native — walkthrough for authoring new skills with proper SKILL.md structure and trigger discipline. Explicit invocation only. Adapted from mattpocock@e74f0061. |
-| `zoom-out` | `zoom-out/SKILL.md` | Native — ask the agent to step up a layer of abstraction and map relevant modules/callers. Explicit invocation only. Adapted from mattpocock@e74f0061. |
+| `architecture-audit` | `architecture-audit/SKILL.md` | Native — surface architectural friction; propose deepening-opportunity refactors. Pairs with refactor-protocol. Auto-routes in `.claude/routing/refactor.md`. Adapted from mattpocock/skills@e74f0061bb67222181640effa98c675bdb2fdaa7. |
+| `caveman` | `caveman/SKILL.md` | Native — ultra-compressed response mode. Always loads in every routing branch for token discipline; explicit invocation activates persistent caveman mode. Adapted from mattpocock/skills@e74f0061bb67222181640effa98c675bdb2fdaa7. |
+| `handoff` | `handoff/SKILL.md` | Native — compact the current conversation into a handoff markdown for another agent. Explicit invocation only. Adapted from mattpocock/skills@e74f0061bb67222181640effa98c675bdb2fdaa7. |
+| `write-a-skill` | `write-a-skill/SKILL.md` | Native — walkthrough for authoring new skills with proper SKILL.md structure and trigger discipline. Explicit invocation only. Adapted from mattpocock/skills@e74f0061bb67222181640effa98c675bdb2fdaa7. |
+| `zoom-out` | `zoom-out/SKILL.md` | Native — ask the agent to step up a layer of abstraction and map relevant modules/callers. Explicit invocation only. Adapted from mattpocock/skills@e74f0061bb67222181640effa98c675bdb2fdaa7. |
 | `systematic-debugging` | `systematic-debugging/SKILL.md` | Vendored from `superpowers@5.1.0` (MIT). |
 | `karpathy-guidelines` | `karpathy-guidelines/SKILL.md` | Vendored from `andrej-karpathy-skills@1.0.0` (MIT). |
 | `writing-plans` | `writing-plans/SKILL.md` | Vendored from `superpowers@5.1.0` (MIT). |
 | `brainstorming` | `brainstorming/SKILL.md` | Vendored from `superpowers@5.1.0` (MIT). |
 
-> **Hybridized 2026-05-14:** `tdd-loop`, `bug-investigation`, and `spike-protocol` incorporate ideas from mattpocock@e74f0061. See each skill's footer and `THIRD_PARTY_LICENSES.md`.
+> **Hybridized 2026-05-14:** `tdd-loop`, `bug-investigation`, and `spike-protocol` incorporate ideas from mattpocock/skills@e74f0061bb67222181640effa98c675bdb2fdaa7. See each skill's footer and `THIRD_PARTY_LICENSES.md`.
 
 Vendored-skill attribution and license text: `.claude/skills/THIRD_PARTY_LICENSES.md`. Refresh from upstream when plugin cache has a newer version: `npm run refresh-vendored`.
 

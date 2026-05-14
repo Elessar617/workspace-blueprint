@@ -39,4 +39,4 @@ If REPORT outcome is "Abandon," write a `docs/explorations/NN-<slug>.md` so the 
 
 ---
 
-> `PROTOTYPE-SHAPES.md` is adapted in part from mattpocock/skills@e74f0061 (MIT). See `THIRD_PARTY_LICENSES.md`.
+> `PROTOTYPE-SHAPES.md` is adapted in part from mattpocock/skills@e74f0061bb67222181640effa98c675bdb2fdaa7 (MIT). See `THIRD_PARTY_LICENSES.md`.

@@ -3,7 +3,7 @@
 ## Always load
 
 - Agents: `reviewer`, `adversary`, `doc-updater`, `opensource-packager`
-- Skills: none by default
+- Skills: `caveman`
 - Rules: all native rules (maximum strictness)
 - Hook profile: `strict`
 - MCPs (advisory): `filesystem`, `git`, `github`

@@ -40,13 +40,13 @@ export function detectOutputSkills(files) {
 }
 
 const BRANCH_BASE = {
-  build: { agents: ['planner', 'implementer', 'reviewer', 'adversary'], skills: ['tdd-loop'], rules: ['all'], mcps: ['filesystem', 'git'] },
-  bug: { agents: ['implementer', 'reviewer'], skills: ['bug-investigation', 'tdd-loop', 'systematic-debugging'], commands: ['/build-fix'], rules: ['all'], mcps: ['filesystem', 'git'] },
-  refactor: { agents: ['planner', 'implementer', 'reviewer', 'adversary', 'refactor-cleaner', 'code-simplifier'], skills: ['tdd-loop', 'karpathy-guidelines'], rules: ['all'], mcps: ['filesystem', 'git'] },
-  spike: { agents: ['general-purpose', 'Explore', 'code-explorer'], skills: ['spike-protocol', 'data-analysis'], rules: ['portability-discipline'], mcps: ['filesystem', 'fetch'] },
-  'spec-author': { agents: ['planner', 'architect', 'Plan'], skills: ['spec-authoring', 'writing-plans', 'brainstorming'], rules: ['portability-discipline', 'commit-discipline'], mcps: ['filesystem', 'fetch'] },
-  ship: { agents: ['reviewer', 'adversary', 'doc-updater'], skills: [], rules: ['all'], mcps: ['filesystem', 'git', 'github'] },
-  fallback: { agents: ['planner', 'implementer', 'reviewer', 'adversary'], skills: ['tdd-loop'], rules: ['all'], mcps: ['filesystem', 'git'] },
+  build: { agents: ['planner', 'implementer', 'reviewer', 'adversary'], skills: ['caveman', 'tdd-loop'], rules: ['all'], mcps: ['filesystem', 'git'] },
+  bug: { agents: ['implementer', 'reviewer'], skills: ['caveman', 'bug-investigation', 'tdd-loop', 'systematic-debugging'], commands: ['/build-fix'], rules: ['all'], mcps: ['filesystem', 'git'] },
+  refactor: { agents: ['planner', 'implementer', 'reviewer', 'adversary', 'refactor-cleaner', 'code-simplifier'], skills: ['caveman', 'tdd-loop', 'karpathy-guidelines', 'architecture-audit'], rules: ['all'], mcps: ['filesystem', 'git'] },
+  spike: { agents: ['general-purpose', 'Explore', 'code-explorer'], skills: ['caveman', 'spike-protocol', 'data-analysis'], rules: ['portability-discipline'], mcps: ['filesystem', 'fetch'] },
+  'spec-author': { agents: ['planner', 'architect', 'Plan'], skills: ['caveman', 'spec-authoring', 'writing-plans', 'brainstorming'], rules: ['portability-discipline', 'commit-discipline'], mcps: ['filesystem', 'fetch'] },
+  ship: { agents: ['reviewer', 'adversary', 'doc-updater', 'opensource-packager'], skills: ['caveman'], rules: ['all'], mcps: ['filesystem', 'git', 'github'] },
+  fallback: { agents: ['planner', 'implementer', 'reviewer', 'adversary'], skills: ['caveman', 'tdd-loop'], rules: ['all'], mcps: ['filesystem', 'git'] },
 };
 
 const LANGUAGE_ADDITIONS = {

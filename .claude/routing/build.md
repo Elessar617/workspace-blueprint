@@ -5,7 +5,7 @@
 ## Always load
 
 - Agents: `planner`, `implementer`, `reviewer`, `adversary`
-- Skills: `tdd-loop`
+- Skills: `caveman`, `tdd-loop`
 - Rules: all native rules
 - Hook profile: `standard`
 - MCPs (advisory): `filesystem`, `git`

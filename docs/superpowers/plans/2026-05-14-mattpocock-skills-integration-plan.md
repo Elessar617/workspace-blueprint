@@ -10,6 +10,8 @@
 
 **Pinned upstream commit:** `e74f0061bb67222181640effa98c675bdb2fdaa7` (mattpocock/skills @ 2026-05-13).
 
+**Post-review follow-up (2026-05-14):** `caveman` moved from explicit-invocation-only to every routing branch and fallback as an always-loaded token-discipline skill. The executable router (`scripts/route.mjs`) must stay aligned with branch-file always-load agents/skills, and current attribution metadata uses the full upstream SHA above.
+
 ---
 
 ## Pre-flight check
@@ -567,7 +569,7 @@ Once a candidate is fully shaped, hand off to `refactor-protocol` for safe execu
 
 ---
 
-> Adapted in part from mattpocock/skills@e74f0061 (MIT). Renamed; CONTEXT.md/ADR-format references replaced with this repo's conventions. See `THIRD_PARTY_LICENSES.md`.
+> Adapted in part from mattpocock/skills@e74f0061bb67222181640effa98c675bdb2fdaa7 (MIT). Renamed; CONTEXT.md/ADR-format references replaced with this repo's conventions. See `THIRD_PARTY_LICENSES.md`.
 ```
 
 - [ ] **Step 6.4: Verify the adaptations**
@@ -681,7 +683,7 @@ Replace with:
 
 ---
 
-> Vertical-vs-horizontal slicing and the public-interface principle are adapted in part from mattpocock/skills@e74f0061 (MIT). See `THIRD_PARTY_LICENSES.md`.
+> Vertical-vs-horizontal slicing and the public-interface principle are adapted in part from mattpocock/skills@e74f0061bb67222181640effa98c675bdb2fdaa7 (MIT). See `THIRD_PARTY_LICENSES.md`.
 ```
 
 - [ ] **Step 7.4: Verify**
@@ -701,7 +703,7 @@ git add .claude/skills/tdd-loop/SKILL.md
 git commit -m "feat(skills): hybridize tdd-loop with vertical-slicing anti-pattern
 
 Lift 'vertical vs horizontal slicing' anti-pattern and 'test through
-public interfaces' principle from mattpocock@e74f0061. Native cycle
+public interfaces' principle from mattpocock/skills@e74f0061bb67222181640effa98c675bdb2fdaa7. Native cycle
 mechanic, hook integration, and existing anti-patterns unchanged."
 ```
 
@@ -829,7 +831,7 @@ Then ask: what would have prevented this bug? If the answer involves architectur
 
 ---
 
-> Phase structure, feedback-loop primacy, ranked-hypotheses discipline, and `[DEBUG-xxxx]` tagging are adapted in part from mattpocock/skills@e74f0061 (MIT). The build/-pipeline integration, `01-spec/SPEC.md` diagnosis format, and architecture-audit handoff are native. See `THIRD_PARTY_LICENSES.md`.
+> Phase structure, feedback-loop primacy, ranked-hypotheses discipline, and `[DEBUG-xxxx]` tagging are adapted in part from mattpocock/skills@e74f0061bb67222181640effa98c675bdb2fdaa7 (MIT). The build/-pipeline integration, `01-spec/SPEC.md` diagnosis format, and architecture-audit handoff are native. See `THIRD_PARTY_LICENSES.md`.
 ```
 
 - [ ] **Step 8.3: Verify the rewrite**
@@ -862,7 +864,7 @@ Expected: `PORTABILITY: PASS`.
 git add .claude/skills/bug-investigation/SKILL.md
 git commit -m "feat(skills): hybridize bug-investigation with 6-phase + feedback-loop primacy
 
-Restructure around mattpocock@e74f0061's six phases (build feedback
+Restructure around mattpocock/skills@e74f0061bb67222181640effa98c675bdb2fdaa7's six phases (build feedback
 loop, reproduce, hypothesise, instrument, fix+regression, cleanup).
 Preserve native 01-spec/SPEC.md diagnosis format (folded into Phase 5)
 and add architecture-audit handoff in Phase 6."
@@ -937,7 +939,7 @@ Replace with:
 
 ---
 
-> `PROTOTYPE-SHAPES.md` is adapted in part from mattpocock/skills@e74f0061 (MIT). See `THIRD_PARTY_LICENSES.md`.
+> `PROTOTYPE-SHAPES.md` is adapted in part from mattpocock/skills@e74f0061bb67222181640effa98c675bdb2fdaa7 (MIT). See `THIRD_PARTY_LICENSES.md`.
 ```
 
 - [ ] **Step 9.4: Verify**
@@ -957,7 +959,7 @@ git commit -m "feat(skills): hybridize spike-protocol with PROTOTYPE-SHAPES.md
 
 Add supporting file covering logic-vs-UI prototype branches and shared
 rules (throwaway, one command, no persistence, surface state). Adapted
-from mattpocock@e74f0061. Spike methodology, timebox discipline, and
+from mattpocock/skills@e74f0061bb67222181640effa98c675bdb2fdaa7. Spike methodology, timebox discipline, and
 docs/explorations/ outcome capture unchanged."
 ```
 
@@ -1012,11 +1014,11 @@ Use the line numbers to locate where native skill entries belong. Read 20 lines 
 Use the `Edit` tool to add these lines into the native-skills section of `SKILLS.md`. Match the existing list style — if the existing list uses `- **name** — description`, use the same shape:
 
 ```markdown
-- **architecture-audit** — Surface architectural friction; propose deepening-opportunity refactors. Pairs with refactor-protocol. Auto-routes in `.claude/routing/refactor.md`. Adapted from mattpocock@e74f0061.
-- **caveman** — Ultra-compressed response mode. Triggers when user says "caveman mode". Explicit invocation only. From mattpocock@e74f0061.
-- **handoff** — Compact the current conversation into a handoff markdown for another agent. Explicit invocation only. From mattpocock@e74f0061.
-- **write-a-skill** — Walkthrough for authoring new skills with proper SKILL.md structure and trigger discipline. Explicit invocation only. From mattpocock@e74f0061.
-- **zoom-out** — Ask the agent to step up a layer of abstraction and map relevant modules/callers. Explicit invocation only. From mattpocock@e74f0061.
+- **architecture-audit** — Surface architectural friction; propose deepening-opportunity refactors. Pairs with refactor-protocol. Auto-routes in `.claude/routing/refactor.md`. Adapted from mattpocock/skills@e74f0061bb67222181640effa98c675bdb2fdaa7.
+- **caveman** — Ultra-compressed response mode. Always loads in every routing branch for token discipline; explicit invocation activates persistent caveman mode. From mattpocock/skills@e74f0061bb67222181640effa98c675bdb2fdaa7.
+- **handoff** — Compact the current conversation into a handoff markdown for another agent. Explicit invocation only. From mattpocock/skills@e74f0061bb67222181640effa98c675bdb2fdaa7.
+- **write-a-skill** — Walkthrough for authoring new skills with proper SKILL.md structure and trigger discipline. Explicit invocation only. From mattpocock/skills@e74f0061bb67222181640effa98c675bdb2fdaa7.
+- **zoom-out** — Ask the agent to step up a layer of abstraction and map relevant modules/callers. Explicit invocation only. From mattpocock/skills@e74f0061bb67222181640effa98c675bdb2fdaa7.
 ```
 
 Place the entries to match the existing convention (alphabetical or grouped by category).
@@ -1026,7 +1028,7 @@ Place the entries to match the existing convention (alphabetical or grouped by c
 In the same section (after the new entries, or in the most natural location), add this one-line note. Match the existing format if the file uses block-quote notes elsewhere:
 
 ```markdown
-> **Hybridized 2026-05-14:** `tdd-loop`, `bug-investigation`, and `spike-protocol` incorporate ideas from mattpocock@e74f0061. See each skill's footer and `THIRD_PARTY_LICENSES.md`.
+> **Hybridized 2026-05-14:** `tdd-loop`, `bug-investigation`, and `spike-protocol` incorporate ideas from mattpocock/skills@e74f0061bb67222181640effa98c675bdb2fdaa7. See each skill's footer and `THIRD_PARTY_LICENSES.md`.
 ```
 
 - [ ] **Step 11.4: Verify**

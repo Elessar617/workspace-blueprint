@@ -9,6 +9,6 @@
     "languages_detected": [],
     "hook_profile": "minimal",
     "agents_must_include": ["general-purpose", "Explore", "code-explorer"],
-    "skills_must_include": ["spike-protocol"]
+    "skills_must_include": ["caveman", "spike-protocol"]
   }
 }

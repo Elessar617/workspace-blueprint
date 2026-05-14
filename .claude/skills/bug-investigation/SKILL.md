@@ -102,4 +102,4 @@ Then ask: what would have prevented this bug? If the answer involves architectur
 
 ---
 
-> Phase structure, feedback-loop primacy, ranked-hypotheses discipline, and `[DEBUG-xxxx]` tagging are adapted in part from mattpocock/skills@e74f0061 (MIT). The build/-pipeline integration, `01-spec/SPEC.md` diagnosis format, and architecture-audit handoff are native. See `THIRD_PARTY_LICENSES.md`.
+> Phase structure, feedback-loop primacy, ranked-hypotheses discipline, and `[DEBUG-xxxx]` tagging are adapted in part from mattpocock/skills@e74f0061bb67222181640effa98c675bdb2fdaa7 (MIT). The build/-pipeline integration, `01-spec/SPEC.md` diagnosis format, and architecture-audit handoff are native. See `THIRD_PARTY_LICENSES.md`.

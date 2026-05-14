@@ -3,7 +3,7 @@
 ## Always load
 
 - Agents: `general-purpose`, `Explore`, `code-explorer`
-- Skills: `spike-protocol`, `data-analysis`
+- Skills: `caveman`, `spike-protocol`, `data-analysis`
 - Rules: portability only (other 4 relaxed during exploration)
 - Hook profile: `minimal` (lab/ work doesn't need TDD enforcement)
 - MCPs (advisory): `filesystem`, `fetch`

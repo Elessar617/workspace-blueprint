@@ -3,7 +3,7 @@
 ## Always load
 
 - Agents: `implementer`, `reviewer` (no planner for bugs)
-- Skills: `bug-investigation`, `tdd-loop`, `systematic-debugging`
+- Skills: `caveman`, `bug-investigation`, `tdd-loop`, `systematic-debugging`
 - Rules: all native rules
 - Hook profile: `standard`
 - Slash commands (advisory): `/build-fix`

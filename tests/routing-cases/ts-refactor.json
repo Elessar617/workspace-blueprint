@@ -9,6 +9,6 @@
     "languages_detected": ["typescript"],
     "hook_profile": "standard",
     "agents_must_include": ["planner", "implementer", "reviewer", "adversary", "typescript-reviewer"],
-    "skills_must_include": ["tdd-loop"]
+    "skills_must_include": ["caveman", "tdd-loop", "karpathy-guidelines", "architecture-audit"]
   }
 }
