@@ -6,11 +6,11 @@
 ## Always load
 
 - Agents: `planner`, `implementer`, `reviewer`, `adversary`, `refactor-cleaner`, `code-simplifier`
-- Required skills (mandatories): `refactor-protocol`, `architecture-audit`, `karpathy-guidelines`, `tdd-loop`, `superpowers:verification-before-completion`
+- Required skills (mandatories): `caveman`, `refactor-protocol`, `architecture-audit`, `karpathy-guidelines`, `tdd-loop`, `superpowers:verification-before-completion`
 - Rules: all native rules
 - Hook profile: `standard`
 - MCPs (project-configured): `filesystem`, `git`
-- MCPs (plugin-available, discretionary): `serena`, `context7`, `memory`
+- MCPs (plugin-available, discretionary): serena, context7, memory
 
 ## Notes
 

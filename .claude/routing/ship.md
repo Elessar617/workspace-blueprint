@@ -6,11 +6,11 @@
 ## Always load
 
 - Agents: `reviewer`, `adversary`, `doc-updater`, `opensource-packager`
-- Required skills (mandatories): `superpowers:verification-before-completion`, `superpowers:finishing-a-development-branch`
+- Required skills (mandatories): `caveman`, `superpowers:verification-before-completion`, `superpowers:finishing-a-development-branch`
 - Rules: all native rules
 - Hook profile: `strict`
 - MCPs (project-configured): `filesystem`, `git`, `github`
-- MCPs (plugin-available, discretionary): `sentry`, `puppeteer`
+- MCPs (plugin-available, discretionary): sentry, puppeteer
 
 ## Notes
 

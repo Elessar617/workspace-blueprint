@@ -6,11 +6,11 @@
 ## Always load
 
 - Agents: `planner`, `architect`, `Plan`
-- Required skills (mandatories): `brainstorming`, `spec-authoring`, `writing-plans`
+- Required skills (mandatories): `caveman`, `brainstorming`, `spec-authoring`, `writing-plans`
 - Rules: all native rules
 - Hook profile: `minimal`
 - MCPs (project-configured): `filesystem`, `fetch`
-- MCPs (plugin-available, discretionary): `exa`, `context7`, `brave-search`, `mempalace`
+- MCPs (plugin-available, discretionary): exa, context7, brave-search, mempalace
 
 ## Notes
 

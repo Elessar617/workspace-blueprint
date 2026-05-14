@@ -12,21 +12,32 @@ if [ -z "$PROMPT" ]; then exit 0; fi
 
 # Collect file scope from git status + git diff. Fail-open if git unavailable.
 GIT_STATUS="$(git -C "$REPO_ROOT" status --porcelain 2>/dev/null || true)"
-GIT_DIFF="$(git -C "$REPO_ROOT" diff --name-only HEAD~3..HEAD 2>/dev/null || true)"
+DIFF_RANGE="$(printf '%s\n' "$PROMPT" | grep -oE '[A-Za-z0-9_./~^-]+\.{2,3}[A-Za-z0-9_./~^-]+' | head -1 || true)"
+if [ -n "$DIFF_RANGE" ]; then
+  GIT_DIFF="$(git -C "$REPO_ROOT" diff --name-only "$DIFF_RANGE" 2>/dev/null || true)"
+else
+  GIT_DIFF="$(git -C "$REPO_ROOT" diff --name-only HEAD~3..HEAD 2>/dev/null || true)"
+fi
 
-# Combine the file scope; cap to 20; comma-separate for CLI arg.
+# Combine the file scope via the tested JS helper; prompt paths stay ahead of
+# git-derived paths before the helper caps the list.
 FILES_IN_SCOPE="$(
-  {
-    printf '%s\n' "$PROMPT" \
-      | grep -oE '(src|lab|build|spec|ship|docs|shared|scripts|tests)/[A-Za-z0-9_./-]+' || true
-    printf '%s\n' "$PROMPT" \
-      | grep -oE '[A-Za-z0-9_./-]+\.(py|go|ts|tsx|js|jsx|mjs|cjs|java|kt|kts|rs|cpp|cc|h|hpp|cs|dart|rb|php|swift|md|json|yaml|yml|toml|sh)\b' || true
-    printf '%s\n' "$GIT_STATUS" | awk '{sub(/^.. /,""); print}' | grep -v '^$' || true
-    printf '%s\n' "$GIT_DIFF" | grep -v '^$' || true
-  } \
-  | sort -u \
-  | head -20 \
-  | paste -sd, -
+  ROUTING_PROMPT="$PROMPT" \
+  ROUTING_GIT_STATUS="$GIT_STATUS" \
+  ROUTING_GIT_DIFF="$GIT_DIFF" \
+  node --input-type=module - "$REPO_ROOT" <<'NODE' 2>/dev/null || true
+import { join } from 'node:path';
+import { pathToFileURL } from 'node:url';
+
+const repoRoot = process.argv[2];
+const { extractFileScope } = await import(pathToFileURL(join(repoRoot, 'scripts/lib/file-scope.mjs')));
+const files = extractFileScope({
+  prompt: process.env.ROUTING_PROMPT || '',
+  gitStatusOutput: process.env.ROUTING_GIT_STATUS || '',
+  gitDiffOutput: process.env.ROUTING_GIT_DIFF || '',
+});
+process.stdout.write(files.join(','));
+NODE
 )"
 
 # Run route.mjs; capture output; fail silent on error.
@@ -34,6 +45,7 @@ NARROWING="$(node "$REPO_ROOT/scripts/route.mjs" --prompt "$PROMPT" --files-in-s
 
 if [ -z "$NARROWING" ]; then exit 0; fi
 
-# Emit CC hook output as JSON, using python3 for safe string escaping.
-ESCAPED="$(printf '%s' "$NARROWING" | head -c 6000 | python3 -c 'import json,sys; print(json.dumps(sys.stdin.read()))' 2>/dev/null || printf '""')"
+# Emit CC hook output as JSON, using python3 for safe string escaping and
+# character-level truncation so UTF-8 is not cut mid-byte.
+ESCAPED="$(printf '%s' "$NARROWING" | python3 -c 'import json,sys; print(json.dumps(sys.stdin.read()[:6000]))' 2>/dev/null || printf '""')"
 printf '{"hookSpecificOutput":{"additionalContext":%s}}\n' "$ESCAPED"

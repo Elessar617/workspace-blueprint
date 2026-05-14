@@ -17,7 +17,9 @@ export function classifyNames(names, registry) {
   for (const list of Object.values(registry)) {
     if (!Array.isArray(list)) continue;
     for (const item of list) {
-      if (item && item.name) all.add(item.name);
+      if (!item || !item.name) continue;
+      all.add(item.name);
+      if (item.namespace) all.add(`${item.namespace}:${item.name}`);
     }
   }
   const resolved = [];

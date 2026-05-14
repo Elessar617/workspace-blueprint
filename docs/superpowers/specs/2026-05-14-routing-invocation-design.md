@@ -307,7 +307,7 @@ Four changes:
 1. **Memory write-back loop.** A `Stop` or `PostToolUse(Skill)` hook recording "for this signal-set, agent invoked these skills + outcome." Closes the learning loop in routing itself. *Deferred because:* the read-only instinct integration delivers most of the value; the write side is a larger surface.
 2. **Dynamic relevance scoring over the full registry.** Keyword/embedding scoring across all 6160+ skills. *Deferred because:* discretionary hints already cover the common cases; full scoring is premature optimization.
 3. **Instinct-to-mandate promotion.** High-confidence instincts auto-becoming mandatories. *Deferred because:* mandates trace to rules today; promotion needs governance design first.
-4. **Fixing the 2 failing `source-of-truth.test.mjs` tests** (`/Users/gardnerwilson` leak, source-marker check). *Deferred because:* unrelated sanitization concern; tracked separately.
+4. **Fixing the 2 failing `source-of-truth.test.mjs` tests** (local absolute-path leak, source-marker check). *Deferred because:* unrelated sanitization concern; tracked separately.
 5. **Resolving local `tdd-loop` vs `superpowers:test-driven-development` duplication.** *Deferred because:* style call; routing fix doesn't require it.
 
 ---

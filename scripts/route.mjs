@@ -1,16 +1,17 @@
 export const TASK_RULES = [
+  { branch: 'review',      keywords: ['review', 'audit', 'evaluate', 'critique', 'act as reviewer'], profile: 'standard' },
   { branch: 'build',       keywords: ['add ', 'implement', 'feature', 'build ', 'create '], profile: 'standard' },
   { branch: 'bug',         keywords: ['fix', 'bug', 'broken', 'crash'],                     profile: 'standard' },
   { branch: 'refactor',    keywords: ['refactor', 'migrate', 'rename', 'restructure', 'cleanup'], profile: 'standard' },
   { branch: 'spike',       keywords: ['investigate', 'spike', 'explore', 'prototype'],      profile: 'minimal' },
   { branch: 'spec-author', keywords: ['rfc', 'adr', 'design ', 'spec ', 'brief', 'propose'], profile: 'minimal' },
   { branch: 'ship',        keywords: ['release', 'ship', 'changelog', 'publish', 'cut a v'], profile: 'strict' },
-  { branch: 'review',      keywords: ['review', 'audit', 'evaluate', 'critique', 'act as reviewer'], profile: 'standard' },
 ];
 
 const LANGUAGE_BY_EXT = {
   '.py': 'python', '.go': 'go', '.ts': 'typescript', '.tsx': 'typescript',
-  '.js': 'javascript', '.jsx': 'javascript', '.java': 'java', '.kt': 'kotlin',
+  '.js': 'javascript', '.jsx': 'javascript', '.mjs': 'javascript', '.cjs': 'javascript',
+  '.java': 'java', '.kt': 'kotlin',
   '.cpp': 'cpp', '.cc': 'cpp', '.h': 'cpp', '.hpp': 'cpp', '.cs': 'csharp',
   '.dart': 'dart', '.rs': 'rust', '.rb': 'ruby', '.php': 'php', '.swift': 'swift',
 };
@@ -27,7 +28,15 @@ export const AGENTS_BY_BRANCH = {
 };
 
 // caveman stays mandatory per d91240e "always load caveman" — token-discipline utility.
-const ALWAYS_LOADED_SKILLS = ['caveman'];
+export const ALWAYS_LOADED_SKILLS = ['caveman'];
+
+const NATIVE_FALLBACK_NAMES = new Set([
+  'planner', 'implementer', 'reviewer', 'adversary',
+  'caveman', 'tdd-loop', 'bug-investigation', 'systematic-debugging',
+  'refactor-protocol', 'architecture-audit', 'karpathy-guidelines',
+  'spike-protocol', 'data-analysis', 'brainstorming', 'spec-authoring',
+  'writing-plans', 'filesystem', 'git', 'fetch', 'github',
+]);
 
 export const MANDATORIES_BY_BRANCH = {
   build:        ['tdd-loop', 'karpathy-guidelines', 'superpowers:verification-before-completion'],
@@ -66,6 +75,7 @@ const HINTS_BY_LANGUAGE = {
   python:     [{ name: 'python-patterns', reason: 'language=python' },
                { name: 'python-reviewer', reason: 'language=python (agent)' }],
   typescript: [{ name: 'typescript-reviewer', reason: 'language=typescript (agent)' }],
+  javascript: [{ name: 'typescript-reviewer', reason: 'language=javascript (agent)' }],
   rust:       [{ name: 'rust-patterns', reason: 'language=rust' },
                { name: 'rust-reviewer', reason: 'language=rust (agent)' }],
   kotlin:     [{ name: 'kotlin-reviewer', reason: 'language=kotlin (agent)' },
@@ -91,10 +101,15 @@ export function detectTaskType(prompt) {
   const lower = prompt.toLowerCase();
   for (const rule of TASK_RULES) {
     for (const kw of rule.keywords) {
-      if (lower.includes(kw)) return rule.branch;
+      if (keywordMatches(lower, kw)) return rule.branch;
     }
   }
   return null;
+}
+
+function keywordMatches(lowerPrompt, keyword) {
+  const phrase = keyword.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return new RegExp(`\\b${phrase}\\b`, 'i').test(lowerPrompt);
 }
 
 export function detectLanguages(files) {
@@ -122,6 +137,93 @@ function detectWorkspace(files) {
   return '(unknown)';
 }
 
+function registryRecords(registry = {}) {
+  const records = [];
+  for (const list of Object.values(registry)) {
+    if (!Array.isArray(list)) continue;
+    for (const item of list) {
+      if (item && item.name) records.push(item);
+    }
+  }
+  return records.sort((a, b) => {
+    const rank = { native: 0, ecc: 1, 'harness-builtin': 2, harness: 3 };
+    return (rank[a.source] ?? 9) - (rank[b.source] ?? 9);
+  });
+}
+
+function resolveName(name, kind, records) {
+  const [namespace, shortName] = name.includes(':') ? name.split(':') : [null, name];
+  return records.find((item) => {
+    if (kind && item.kind !== kind) return false;
+    if (namespace) return item.namespace === namespace && item.name === shortName;
+    return item.name === name;
+  }) || null;
+}
+
+function filterForMissingRegistry(names) {
+  return names.filter((name) => {
+    const shortName = name.includes(':') ? name.split(':').pop() : name;
+    return NATIVE_FALLBACK_NAMES.has(shortName);
+  });
+}
+
+function resolveItems(names, kind, records) {
+  const resolved = [];
+  const unresolved = [];
+  for (const name of names) {
+    const record = resolveName(name, kind, records);
+    if (record) {
+      resolved.push({ display_name: name, ...record });
+    } else {
+      unresolved.push({ name, kind });
+    }
+  }
+  return { resolved, unresolved };
+}
+
+function buildResolution({ agents, skills, mcpsProject, mcpsPlugin, hints }, registry) {
+  const records = registryRecords(registry);
+  const registryAvailable = records.length > 0;
+
+  const routed = registryAvailable ? {
+    agents,
+    skills,
+    mcpsProject,
+    mcpsPlugin,
+    hints,
+  } : {
+    agents: filterForMissingRegistry(agents),
+    skills: filterForMissingRegistry(skills),
+    mcpsProject: filterForMissingRegistry(mcpsProject),
+    mcpsPlugin: [],
+    hints: hints.filter((hint) => NATIVE_FALLBACK_NAMES.has(hint.name)),
+  };
+
+  const agentResolution = resolveItems(routed.agents, 'agent', records);
+  const skillResolution = resolveItems(routed.skills, 'skill', records);
+  const projectMcpResolution = resolveItems(routed.mcpsProject, 'mcp', records);
+  const pluginMcpResolution = resolveItems(routed.mcpsPlugin, 'mcp', records);
+  const hintResolution = resolveItems(routed.hints.map((hint) => hint.name), null, records);
+
+  return {
+    routed,
+    resolved: {
+      agents: agentResolution.resolved,
+      skills: skillResolution.resolved,
+      mcps_project: projectMcpResolution.resolved,
+      mcps_plugin: pluginMcpResolution.resolved,
+      hints: hintResolution.resolved,
+    },
+    unresolved: [
+      ...agentResolution.unresolved,
+      ...skillResolution.unresolved,
+      ...projectMcpResolution.unresolved,
+      ...pluginMcpResolution.unresolved,
+      ...hintResolution.unresolved.map((item) => ({ ...item, kind: 'hint' })),
+    ],
+  };
+}
+
 export function route({ prompt, files_in_scope = [], registry = {}, instincts = [] }) {
   const detected = detectTaskType(prompt) || 'fallback';
   const langs = detectLanguages(files_in_scope);
@@ -146,6 +248,14 @@ export function route({ prompt, files_in_scope = [], registry = {}, instincts = 
     hints.push({ name: 'superpowers:dispatching-parallel-agents', reason: `${files_in_scope.length} files in scope` });
   }
 
+  const resolution = buildResolution({
+    agents,
+    skills: mandatories,
+    mcpsProject: mcps.project,
+    mcpsPlugin: mcps.plugin,
+    hints,
+  }, registry);
+
   const cap = INSTINCT_CAP_BY_BRANCH[detected] || 6;
   const cappedInstincts = instincts.slice(0, cap);
 
@@ -157,12 +267,14 @@ export function route({ prompt, files_in_scope = [], registry = {}, instincts = 
     branch: detected,
     hook_profile: BRANCH_TO_PROFILE[detected],
     workspace,
-    mandatories,
-    agents,
-    skills: mandatories,
-    mcps_project: mcps.project,
-    mcps_plugin: mcps.plugin,
-    mcps: [...mcps.project, ...mcps.plugin],
+    mandatories: resolution.routed.skills,
+    agents: resolution.routed.agents,
+    skills: resolution.routed.skills,
+    mcps_project: resolution.routed.mcpsProject,
+    mcps_plugin: resolution.routed.mcpsPlugin,
+    mcps: [...resolution.routed.mcpsProject, ...resolution.routed.mcpsPlugin],
+    resolved: resolution.resolved,
+    unresolved: resolution.unresolved,
     signals: {
       files: files_in_scope,
       languages: langs,
@@ -171,7 +283,7 @@ export function route({ prompt, files_in_scope = [], registry = {}, instincts = 
       active_rules: rules,
     },
     instincts: cappedInstincts,
-    hints,
+    hints: resolution.routed.hints,
     languages_detected: langs,
     transition_detected: false,
     rules,
@@ -202,6 +314,11 @@ export function isMidTaskChatter(prompt) {
 
 export function mergeWithCache(cache, fresh, transitionDetected, prompt = '') {
   if (transitionDetected || !cache) return fresh;
+  const freshFiles = fresh?.signals?.files || [];
+  const cacheFiles = cache?.signals?.files || [];
+  if (freshFiles.length && JSON.stringify(freshFiles) !== JSON.stringify(cacheFiles)) {
+    return fresh;
+  }
   if (fresh.branch === 'fallback' && isMidTaskChatter(prompt)) return cache;
   return fresh;
 }
@@ -229,10 +346,10 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     catch { return []; }
   };
   const registry = {
-    agents: safe('ecc-agents.json'),
-    skills: [...safe('ecc-skills.json'), ...safe('harness-skills.json')],
+    agents: [...safe('ecc-agents.json'), ...safe('harness-builtins.json'), ...safe('native-inventory.json')],
+    skills: [...safe('ecc-skills.json'), ...safe('harness-skills.json'), ...safe('native-inventory.json')],
     commands: safe('ecc-commands.json'),
-    mcps: [...safe('ecc-mcps.json'), ...safe('harness-mcps.json')],
+    mcps: [...safe('ecc-mcps.json'), ...safe('harness-mcps.json'), ...safe('native-inventory.json')],
   };
 
   const { detectProjectDir } = await import('./lib/detect-project-dir.mjs');

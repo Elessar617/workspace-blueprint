@@ -57,6 +57,35 @@ test('caps at 20 files', () => {
   assert.equal(result.length, 20);
 });
 
+test('prompt paths are preserved before git-derived cap', () => {
+  const longList = Array.from({ length: 30 }, (_, i) => ` M src/file${i}.go`).join('\n');
+  const result = extractFileScope({
+    prompt: 'review scripts/route.mjs',
+    gitStatusOutput: longList,
+    gitDiffOutput: '',
+  });
+  assert.equal(result[0], 'scripts/route.mjs');
+  assert.equal(result.length, 20);
+});
+
+test('handles quoted paths with spaces', () => {
+  const result = extractFileScope({
+    prompt: 'fix "docs/my file.md"',
+    gitStatusOutput: '',
+    gitDiffOutput: '',
+  });
+  assert.deepEqual(result, ['docs/my file.md']);
+});
+
+test('handles parentheses and trailing punctuation', () => {
+  const result = extractFileScope({
+    prompt: 'fix docs/report(1).md and src/foo.go.',
+    gitStatusOutput: '',
+    gitDiffOutput: '',
+  });
+  assert.deepEqual(result, ['docs/report(1).md', 'src/foo.go']);
+});
+
 test('returns empty array on empty inputs', () => {
   const result = extractFileScope({ prompt: '', gitStatusOutput: '', gitDiffOutput: '' });
   assert.deepEqual(result, []);

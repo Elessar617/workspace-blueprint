@@ -19,12 +19,12 @@ test('extractNames ignores filesystem-looking tokens', () => {
 test('classifyNames separates resolved vs dangling', () => {
   const registry = {
     agents: [{ name: 'python-reviewer' }],
-    skills: [{ name: 'go-patterns' }],
+    skills: [{ name: 'go-patterns' }, { namespace: 'superpowers', name: 'requesting-code-review' }],
   };
   const { resolved, dangling } = classifyNames(
-    ['python-reviewer', 'go-patterns', 'no-such-thing'],
+    ['python-reviewer', 'go-patterns', 'superpowers:requesting-code-review', 'no-such-thing'],
     registry
   );
-  assert.deepEqual(resolved, ['python-reviewer', 'go-patterns']);
+  assert.deepEqual(resolved, ['python-reviewer', 'go-patterns', 'superpowers:requesting-code-review']);
   assert.deepEqual(dangling, ['no-such-thing']);
 });

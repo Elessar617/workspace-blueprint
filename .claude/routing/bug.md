@@ -6,11 +6,11 @@
 ## Always load
 
 - Agents: `implementer`, `reviewer`
-- Required skills (mandatories): `bug-investigation`, `systematic-debugging`, `tdd-loop`, `superpowers:verification-before-completion`
+- Required skills (mandatories): `caveman`, `bug-investigation`, `systematic-debugging`, `tdd-loop`, `superpowers:verification-before-completion`
 - Rules: all native rules
 - Hook profile: `standard`
 - MCPs (project-configured): `filesystem`, `git`
-- MCPs (plugin-available, discretionary): `serena`, `sequential-thinking`, `memory`
+- MCPs (plugin-available, discretionary): serena, sequential-thinking, memory
 
 ## Notes
 

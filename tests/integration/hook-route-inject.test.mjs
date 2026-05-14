@@ -22,7 +22,8 @@ test('hook returns JSON with additionalContext for build prompt', () => {
   assert.equal(result.status, 0);
   const payload = JSON.parse(result.stdout);
   assert.ok(payload.hookSpecificOutput.additionalContext.includes('branch: build'));
-  assert.ok(payload.hookSpecificOutput.additionalContext.includes('REQUIRED-SKILLS: caveman, tdd-loop'));
+  assert.ok(payload.hookSpecificOutput.additionalContext.includes('REQUIRED-SKILLS: caveman'));
+  assert.ok(payload.hookSpecificOutput.additionalContext.includes('tdd-loop'));
 });
 
 test('hook detects Go language when prompt mentions a .go file path', () => {
@@ -41,6 +42,13 @@ test('hook handles review branch keyword', () => {
   const result = runHook({ prompt: 'act as reviewer and audit the routing code' });
   const payload = JSON.parse(result.stdout);
   assert.ok(payload.hookSpecificOutput.additionalContext.includes('branch: review'));
+});
+
+test('hook review intent wins over add/fix keywords', () => {
+  const result = runHook({ prompt: 'act as reviewer and fix any issues in the add-file implementation' });
+  const payload = JSON.parse(result.stdout);
+  assert.ok(payload.hookSpecificOutput.additionalContext.includes('branch: review'));
+  assert.ok(payload.hookSpecificOutput.additionalContext.includes('superpowers:requesting-code-review'));
 });
 
 test('hook output includes active-instincts block', () => {

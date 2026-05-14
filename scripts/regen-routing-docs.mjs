@@ -4,6 +4,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
   AGENTS_BY_BRANCH,
+  ALWAYS_LOADED_SKILLS,
   MANDATORIES_BY_BRANCH,
   MCPS_BY_BRANCH,
   BRANCH_TO_PROFILE,
@@ -26,11 +27,12 @@ const BRANCH_TITLES = {
 
 export function renderBranchDoc(branch) {
   const agents = AGENTS_BY_BRANCH[branch] || [];
-  const skills = MANDATORIES_BY_BRANCH[branch] || [];
+  const skills = [...ALWAYS_LOADED_SKILLS, ...(MANDATORIES_BY_BRANCH[branch] || [])];
   const mcps = MCPS_BY_BRANCH[branch] || { project: [], plugin: [] };
   const profile = BRANCH_TO_PROFILE[branch] || 'standard';
 
   const fmt = (xs) => xs.length ? xs.map(x => `\`${x}\``).join(', ') : '_(none)_';
+  const fmtAdvisory = (xs) => xs.length ? xs.join(', ') : '_(none)_';
 
   return `# Routing Branch: ${BRANCH_TITLES[branch] || branch}
 
@@ -44,7 +46,7 @@ export function renderBranchDoc(branch) {
 - Rules: all native rules
 - Hook profile: \`${profile}\`
 - MCPs (project-configured): ${fmt(mcps.project)}
-- MCPs (plugin-available, discretionary): ${fmt(mcps.plugin)}
+- MCPs (plugin-available, discretionary): ${fmtAdvisory(mcps.plugin)}
 
 ## Notes
 

@@ -8,6 +8,22 @@ import { detectTaskType, detectLanguages, detectOutputSkills, route } from '../.
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = join(__dirname, '..', '..');
 
+function loadRegistry() {
+  const dir = join(REPO_ROOT, '.claude', 'registry');
+  const read = (f) => {
+    try { return JSON.parse(readFileSync(join(dir, f), 'utf8')); }
+    catch { return []; }
+  };
+  return {
+    agents: [...read('ecc-agents.json'), ...read('harness-builtins.json'), ...read('native-inventory.json')],
+    skills: [...read('ecc-skills.json'), ...read('harness-skills.json'), ...read('native-inventory.json')],
+    commands: read('ecc-commands.json'),
+    mcps: [...read('ecc-mcps.json'), ...read('harness-mcps.json'), ...read('native-inventory.json')],
+  };
+}
+
+const FULL_REGISTRY = loadRegistry();
+
 function branchAlwaysLoadItems(branch, label) {
   const content = readFileSync(join(REPO_ROOT, '.claude', 'routing', `${branch}.md`), 'utf8');
   const line = content.split('\n').find((l) => l.startsWith(`- ${label}:`)) || '';
@@ -59,6 +75,10 @@ test('detectLanguages from mixed files', () => {
   assert.ok(langs.includes('typescript'));
 });
 
+test('detectLanguages maps ESM/CommonJS scripts to javascript', () => {
+  assert.deepEqual(detectLanguages(['scripts/route.mjs', 'scripts/util.cjs']), ['javascript']);
+});
+
 test('detectOutputSkills does not reference unbundled document skills', () => {
   const skills = detectOutputSkills(['ship/docs/report.pdf', 'ship/docs/report.docx']);
   assert.deepEqual(skills, []);
@@ -100,7 +120,7 @@ test('route omits unbundled output skills for ship files but keeps caveman + shi
   const r = route({
     prompt: 'release the report',
     files_in_scope: ['ship/docs/report.pdf'],
-    registry: { agents: [], skills: [], commands: [], mcps: [] },
+    registry: FULL_REGISTRY,
   });
   assert.equal(r.branch, 'ship');
   assert.ok(r.skills.includes('caveman'));
@@ -111,7 +131,7 @@ test('route surfaces Go language items as hints for go-feature task', () => {
   const r = route({
     prompt: 'add a rate limiter to the gateway service',
     files_in_scope: ['gateway/handler.go'],
-    registry: { agents: [], skills: [], commands: [], mcps: [] },
+    registry: FULL_REGISTRY,
   });
   assert.equal(r.branch, 'build');
   const hintNames = r.hints.map((h) => h.name);
@@ -133,13 +153,13 @@ test('route includes every branch always-load agent and skill listed in routing 
     const r = route({
       prompt,
       files_in_scope: [],
-      registry: { agents: [], skills: [], commands: [], mcps: [] },
+      registry: FULL_REGISTRY,
     });
 
     for (const agent of branchAlwaysLoadItems(branch, 'Agents')) {
       assert.ok(r.agents.includes(agent), `${branch} route missing ${agent}`);
     }
-    for (const skill of branchAlwaysLoadItems(branch, 'Skills')) {
+    for (const skill of branchAlwaysLoadItems(branch, 'Required skills (mandatories)')) {
       assert.ok(r.skills.includes(skill), `${branch} route missing ${skill}`);
     }
   }
@@ -186,8 +206,14 @@ test('detectTaskType matches "audit" -> review', () => {
   assert.equal(detectTaskType('audit the routing system'), 'review');
 });
 
+test('review intent takes precedence over build and bug keywords', () => {
+  assert.equal(detectTaskType('review the add-file implementation'), 'review');
+  assert.equal(detectTaskType('act as reviewer and fix any issues'), 'review');
+  assert.equal(detectTaskType('evaluate the bug fix'), 'review');
+});
+
 test('route returns mandatories for build branch', () => {
-  const r = route({ prompt: 'add a rate limiter', files_in_scope: [], registry: {} });
+  const r = route({ prompt: 'add a rate limiter', files_in_scope: [], registry: FULL_REGISTRY });
   assert.ok(r.mandatories.includes('tdd-loop'));
   assert.ok(r.mandatories.includes('karpathy-guidelines'));
   assert.ok(r.mandatories.includes('superpowers:verification-before-completion'));
@@ -200,7 +226,7 @@ test('route returns mandatories for bug branch', () => {
 });
 
 test('route returns mandatories for review branch', () => {
-  const r = route({ prompt: 'act as reviewer', files_in_scope: [], registry: {} });
+  const r = route({ prompt: 'act as reviewer', files_in_scope: [], registry: FULL_REGISTRY });
   assert.ok(r.mandatories.includes('karpathy-guidelines'));
   assert.ok(r.mandatories.includes('superpowers:requesting-code-review'));
 });
@@ -215,7 +241,7 @@ test('route derives hints from go language signal', () => {
   const r = route({
     prompt: 'add rate limiter',
     files_in_scope: ['src/gateway/x.go'],
-    registry: {},
+    registry: FULL_REGISTRY,
   });
   const hintNames = r.hints.map((h) => h.name);
   assert.ok(hintNames.includes('golang-patterns'));
@@ -225,16 +251,36 @@ test('route derives hints from python language signal', () => {
   const r = route({
     prompt: 'add validator',
     files_in_scope: ['src/foo.py'],
-    registry: {},
+    registry: FULL_REGISTRY,
   });
   const hintNames = r.hints.map((h) => h.name);
   assert.ok(hintNames.includes('python-patterns'));
 });
 
 test('route returns mcps_project and mcps_plugin split for build', () => {
-  const r = route({ prompt: 'add feature', files_in_scope: [], registry: {} });
+  const r = route({ prompt: 'add feature', files_in_scope: [], registry: FULL_REGISTRY });
   assert.deepEqual(r.mcps_project.sort(), ['filesystem', 'git']);
   assert.ok(r.mcps_plugin.includes('serena'));
+});
+
+test('route resolves required skills and agents through registry metadata', () => {
+  const r = route({ prompt: 'act as reviewer', files_in_scope: [], registry: FULL_REGISTRY });
+  assert.ok(r.resolved.skills.some((item) => item.display_name === 'karpathy-guidelines' && item.path));
+  assert.ok(r.resolved.skills.some((item) => item.display_name === 'superpowers:requesting-code-review' && item.plugin_path));
+  assert.ok(r.resolved.agents.some((item) => item.display_name === 'reviewer' && item.path));
+});
+
+test('route falls back to native-only inventory when registry is unavailable', () => {
+  const r = route({
+    prompt: 'refactor auth module',
+    files_in_scope: ['src/auth.ts'],
+    registry: { agents: [], skills: [], commands: [], mcps: [] },
+  });
+  assert.ok(r.agents.includes('planner'));
+  assert.ok(r.agents.includes('reviewer'));
+  assert.ok(!r.agents.includes('refactor-cleaner'));
+  assert.ok(r.skills.includes('refactor-protocol'));
+  assert.ok(!r.skills.includes('superpowers:verification-before-completion'));
 });
 
 test('route applies instinct cap (build = 10)', () => {

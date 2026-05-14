@@ -43,6 +43,20 @@ test('formatOutput lists REQUIRED-SKILLS', () => {
   assert.ok(text.includes('REQUIRED-SKILLS: tdd-loop, karpathy-guidelines'));
 });
 
+test('formatOutput includes resolved paths when available', () => {
+  const text = formatOutput({
+    ...SAMPLE_RESULT,
+    resolved: {
+      skills: [{ display_name: 'tdd-loop', source: 'native', path: '.claude/skills/tdd-loop/SKILL.md' }],
+      agents: [{ display_name: 'planner', source: 'native', path: '.claude/agents/planner-agent.md' }],
+      mcps_project: [{ display_name: 'filesystem', source: 'native', command: 'npx' }],
+    },
+  });
+  assert.ok(text.includes('tdd-loop [native:.claude/skills/tdd-loop/SKILL.md]'));
+  assert.ok(text.includes('planner [native:.claude/agents/planner-agent.md]'));
+  assert.ok(text.includes('filesystem [native:npx]'));
+});
+
 test('formatOutput shows REQUIRED-SKILLS: (none) when empty', () => {
   const text = formatOutput({ ...SAMPLE_RESULT, mandatories: [] });
   assert.ok(text.includes('REQUIRED-SKILLS: (none)'));

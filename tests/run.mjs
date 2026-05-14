@@ -27,6 +27,14 @@ if (existsSync(hookDir)) {
 console.log('\n--- integration tests ---');
 const intDir = join(__dirname, 'integration');
 if (existsSync(intDir)) {
+  const intNodeFiles = readdirSync(intDir)
+    .filter((f) => f.endsWith('.test.mjs'))
+    .map((f) => join(intDir, f));
+  if (intNodeFiles.length) {
+    const r = spawnSync('node', ['--test', ...intNodeFiles], { stdio: 'inherit' });
+    if (r.status !== 0) failures++;
+  }
+
   for (const f of readdirSync(intDir)) {
     if (!f.endsWith('.sh')) continue;
     const r = spawnSync('bash', [join(intDir, f)], { stdio: 'inherit' });

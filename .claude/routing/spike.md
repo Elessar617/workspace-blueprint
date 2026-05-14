@@ -6,11 +6,11 @@
 ## Always load
 
 - Agents: `general-purpose`, `Explore`, `code-explorer`
-- Required skills (mandatories): `spike-protocol`, `data-analysis`
+- Required skills (mandatories): `caveman`, `spike-protocol`, `data-analysis`
 - Rules: all native rules
 - Hook profile: `minimal`
 - MCPs (project-configured): `filesystem`, `fetch`
-- MCPs (plugin-available, discretionary): `exa`, `context7`, `brave-search`, `firecrawl`, `mempalace`
+- MCPs (plugin-available, discretionary): exa, context7, brave-search, firecrawl, mempalace
 
 ## Notes
 

@@ -8,19 +8,38 @@ export const EXTENSIONS = [
 
 const MAX_FILES = 20;
 
+const EXTENSION_GROUP = EXTENSIONS.join('|');
+const ROOT_GROUP = WORKSPACE_ROOTS.join('|');
+
 const WORKSPACE_ROOTED_RE = new RegExp(
-  `\\b(${WORKSPACE_ROOTS.join('|')})/[\\w./-]+`,
+  `\\b(${ROOT_GROUP})/[A-Za-z0-9_./()~-]+`,
   'g',
 );
 const EXTENSION_BEARING_RE = new RegExp(
-  `\\b[\\w./-]+\\.(${EXTENSIONS.join('|')})\\b`,
+  `\\b[A-Za-z0-9_./()~-]+\\.(${EXTENSION_GROUP})\\b`,
+  'g',
+);
+const QUOTED_PATH_RE = new RegExp(
+  `["'\`]((?:${ROOT_GROUP})/[^"'\`]+?\\.(${EXTENSION_GROUP}))["'\`]`,
   'g',
 );
 
+function cleanPath(path) {
+  return path
+    .trim()
+    .replace(/^[<([{]+/, '')
+    .replace(/[.,;:!?]+$/, '');
+}
+
 function extractFromPrompt(prompt) {
   const out = new Set();
-  for (const m of prompt.matchAll(WORKSPACE_ROOTED_RE)) out.add(m[0]);
-  for (const m of prompt.matchAll(EXTENSION_BEARING_RE)) out.add(m[0]);
+  let unquoted = prompt;
+  for (const m of prompt.matchAll(QUOTED_PATH_RE)) {
+    out.add(cleanPath(m[1]));
+    unquoted = unquoted.replace(m[0], ' ');
+  }
+  for (const m of unquoted.matchAll(WORKSPACE_ROOTED_RE)) out.add(cleanPath(m[0]));
+  for (const m of unquoted.matchAll(EXTENSION_BEARING_RE)) out.add(cleanPath(m[0]));
   return out;
 }
 

@@ -28,10 +28,17 @@ test('isMidTaskChatter only matches short continuations', () => {
 });
 
 test('mergeWithCache reuses cache for mid-task chatter with no fresh route', () => {
-  const cache = { branch: 'build', agents: ['planner'], skills: [] };
-  const fresh = { branch: 'fallback', agents: ['implementer'], skills: ['x'] };
+  const cache = { branch: 'build', agents: ['planner'], skills: [], signals: { files: [] } };
+  const fresh = { branch: 'fallback', agents: ['implementer'], skills: ['x'], signals: { files: [] } };
   const result = mergeWithCache(cache, fresh, false, 'yes do that');
   assert.deepEqual(result, cache);
+});
+
+test('mergeWithCache uses fresh route when chatter names a new file scope', () => {
+  const cache = { branch: 'build', agents: ['planner'], signals: { files: ['docs/old.md'] } };
+  const fresh = { branch: 'fallback', agents: ['implementer'], signals: { files: ['scripts/route.mjs'] } };
+  const result = mergeWithCache(cache, fresh, false, 'ok, check scripts/route.mjs');
+  assert.deepEqual(result, fresh);
 });
 
 test('mergeWithCache uses fresh route for a new task without transition phrase', () => {

@@ -6,11 +6,11 @@
 ## Always load
 
 - Agents: `reviewer`, `adversary`
-- Required skills (mandatories): `karpathy-guidelines`, `superpowers:requesting-code-review`
+- Required skills (mandatories): `caveman`, `karpathy-guidelines`, `superpowers:requesting-code-review`
 - Rules: all native rules
 - Hook profile: `standard`
 - MCPs (project-configured): `filesystem`, `git`, `github`
-- MCPs (plugin-available, discretionary): `sequential-thinking`, `serena`
+- MCPs (plugin-available, discretionary): sequential-thinking, serena
 
 ## Notes
 

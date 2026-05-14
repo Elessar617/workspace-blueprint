@@ -14,8 +14,11 @@ fi
 if ! echo "$OUTPUT" | grep -q "branch: build"; then
   echo "FAIL: branch: build not in output"; echo "$OUTPUT"; exit 1
 fi
-if ! echo "$OUTPUT" | grep -q "REQUIRED-SKILLS: caveman, tdd-loop"; then
+if ! echo "$OUTPUT" | grep -q "REQUIRED-SKILLS: caveman"; then
   echo "FAIL: expected mandatories missing"; echo "$OUTPUT"; exit 1
+fi
+if ! echo "$OUTPUT" | grep -q "tdd-loop"; then
+  echo "FAIL: tdd-loop mandatory missing"; echo "$OUTPUT"; exit 1
 fi
 if ! echo "$OUTPUT" | grep -q "active-instincts:"; then
   echo "FAIL: active-instincts block missing"; echo "$OUTPUT"; exit 1

@@ -6,11 +6,11 @@
 ## Always load
 
 - Agents: `planner`, `implementer`, `reviewer`, `adversary`
-- Required skills (mandatories): `tdd-loop`, `karpathy-guidelines`, `superpowers:verification-before-completion`
+- Required skills (mandatories): `caveman`, `tdd-loop`, `karpathy-guidelines`, `superpowers:verification-before-completion`
 - Rules: all native rules
 - Hook profile: `standard`
 - MCPs (project-configured): `filesystem`, `git`
-- MCPs (plugin-available, discretionary): `serena`, `context7`, `sequential-thinking`, `memory`
+- MCPs (plugin-available, discretionary): serena, context7, sequential-thinking, memory
 
 ## Notes
 

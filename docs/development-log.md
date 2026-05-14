@@ -44,7 +44,7 @@ What shipped in a single day, roughly in build order:
 8. **Per-IDE preambles** — `AGENTS.md` (Codex / OpenCode), `.cursorrules` (Cursor), `GEMINI.md` (Gemini CLI). All four (including `CLAUDE.md` itself) point at the same `ROUTING.md` so cross-IDE routing converges on one source of truth.
 9. **Lifecycle scripts** — `scripts/{bootstrap,update-ecc,refresh-harness}.sh` for new-machine setup, ECC submodule bumps, and harness re-scrapes.
 10. **Cache mechanism** — `.claude/routing/.current.json` (gitignored), with transition-phrase invalidation in `route.mjs`.
-11. **Tests** — `tests/run.mjs` orchestrator drives three tiers: `tests/unit/*.test.mjs` (Node `--test`), `tests/hook/*.test.sh`, `tests/integration/*.sh`. Includes routing-cases snapshots, hook happy/error paths, and a bootstrap idempotency integration test.
+11. **Tests** — `tests/run.mjs` orchestrator drives three tiers: `tests/unit/*.test.mjs` (Node `--test`), `tests/hook/*.test.sh`, and `tests/integration/*.{test.mjs,sh}`. Includes routing-cases snapshots, hook happy/error paths, hook-route integration checks, and a bootstrap idempotency integration test.
 12. **The merge** — `1e7c03a Merge branch 'feat/ecc-bridge' into main` consolidated all the above onto main. Followed by docs additions (`limitations-and-deferred.md`) and a `.serena/` gitignore tweak.
 
 The discipline that day was unusually clean: every commit followed Conventional Commits format, every commit was atomic (one logical change), and the hook profile gates were added in **four separate commits** rather than batched. The commit history reads like a written-out implementation plan.
@@ -88,7 +88,7 @@ Most of what happened on day 2 was *correctness work* — closing gaps the day-1
 | **ECC bridge** (parallel routing layer) | `ROUTING.md` + 6 branch files + 11 registries + 4 per-IDE preambles + Claude Code hook + lifecycle scripts — all present, audit-hardened. |
 | **Submodule** | `external/ecc/` pinned at `894ee039` (`v1.10.0-617-g894ee039`) from `affaan-m/everything-claude-code`. |
 | **Registries** | 60 ECC agents + 323 skills + 75 commands + 1 MCP + 105 lang-rules + 3 hook-profiles + 3 built-ins + 33 native records. Harness plugin counts are machine-specific and refreshed from the local operator cache. Byte-stable across rebuilds for the portable sources. |
-| **Tests** | 102 unit + 2 hook + 1 bootstrap-idempotency + 8 with-profile integration tests. 0 failures. |
+| **Tests** | 111 unit + 2 hook + 1 hook-route Node integration + 1 bootstrap-idempotency + 8 with-profile integration tests. 0 failures. |
 | **Rules** | 7 native, all generic (portability hook excludes nothing under `.claude/rules/`). |
 | **Hooks** | 4 enforcement hooks, each gated by `BLUEPRINT_HOOK_PROFILE`. |
 | **Skills** | 15 local skills (6 project + 5 integrations + 4 routing-vendored). Source-available document skill bundles are intentionally not tracked in the public scaffold. |

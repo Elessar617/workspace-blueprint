@@ -6,13 +6,13 @@
 
 | Signal in prompt or context             | Workspace | Branch file                          |
 |------------------------------------------|-----------|--------------------------------------|
+| "review", "audit", "evaluate", "critique"| `build/`  | `.claude/routing/review.md`          |
 | "feature", "implement", "add"            | `build/`  | `.claude/routing/build.md`           |
 | "fix", "bug", "broken"                   | `build/`  | `.claude/routing/bug.md`             |
 | "refactor", "migrate", "rename"          | `build/`  | `.claude/routing/refactor.md`        |
 | "investigate", "spike", "explore"        | `lab/`    | `.claude/routing/spike.md`           |
 | "RFC", "ADR", "design", "spec", "brief"  | `spec/`   | `.claude/routing/spec-author.md`     |
 | "release", "ship", "changelog"           | `ship/`   | `.claude/routing/ship.md`            |
-| "review", "audit", "evaluate", "critique"| `build/`  | `.claude/routing/review.md`          |
 
 ## Global code-writing rule overlay
 
