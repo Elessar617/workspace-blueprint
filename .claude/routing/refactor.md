@@ -3,7 +3,7 @@
 ## Always load
 
 - Agents: `planner`, `implementer`, `reviewer`, `adversary`, `refactor-cleaner`, `code-simplifier`
-- Skills: `tdd-loop`, `karpathy-guidelines`
+- Skills: `tdd-loop`, `karpathy-guidelines`, `architecture-audit`
 - Rules: all native rules
 - Hook profile: `standard`
 - MCPs (advisory): `filesystem`, `git`

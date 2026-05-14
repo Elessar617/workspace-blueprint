@@ -9,7 +9,7 @@ An agent-native scaffold for software development with [Claude Code](https://git
 - **A four-agent loop** for the build pipeline: planner (one-shot) → implementer ↔ reviewer ↔ adversary (cycle, max 5)
 - **`.claude/` infrastructure:**
   - 7 native rules enforcing TDD, conventional commits, review gates, portability, and engineering constraints
-  - 10 skills (6 project-specific, 4 routing-vendored from harness plugins under MIT — see `SKILLS.md`)
+  - 15 skills (6 project-specific, 5 new integrations, 4 routing-vendored from harness plugins under MIT — see `SKILLS.md`)
   - 4 subagent specs
   - 4 bash hooks enforcing rules by construction (TDD, cycle cap, output sign-off, portability)
   - 7 configured MCP servers (`filesystem`, `git`, `fetch`, `sequential-thinking`, `memory`, `puppeteer`, `github`)

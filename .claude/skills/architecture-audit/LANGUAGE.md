@@ -1,4 +1,4 @@
-<!-- Adapted from github.com/mattpocock/skills/skills/engineering/improve-codebase-architecture/LANGUAGE.md @ e74f0061bb67222181640effa98c675bdb2fdaa7 -->
+> Adapted from github.com/mattpocock/skills/skills/engineering/improve-codebase-architecture/LANGUAGE.md @ e74f0061bb67222181640effa98c675bdb2fdaa7
 
 # Language
 

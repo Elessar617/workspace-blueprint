@@ -1,4 +1,4 @@
-<!-- Adapted in part from github.com/mattpocock/skills/skills/engineering/prototype/SKILL.md @ e74f0061bb67222181640effa98c675bdb2fdaa7 -->
+> Adapted in part from github.com/mattpocock/skills/skills/engineering/prototype/SKILL.md @ e74f0061bb67222181640effa98c675bdb2fdaa7
 
 # Prototype Shapes
 

@@ -1,6 +1,6 @@
 # Mattpocock Skills Integration — Design
 
-**Status:** Draft (awaiting user review)
+**Status:** Implemented (2026-05-14)
 **Date:** 2026-05-14
 **Repo:** `Elessar617/workspace-blueprint` (private)
 **Upstream:** [`mattpocock/skills`](https://github.com/mattpocock/skills) — MIT — pinned at commit `e74f0061bb67222181640effa98c675bdb2fdaa7` (2026-05-13)
@@ -84,7 +84,7 @@ The upstream verbatim versions of these are not adopted, but their ideas are fol
 | `setup-matt-pocock-skills` | His bootstrap script. We have our own `scripts/bootstrap.sh` and per-repo conventions. |
 | `misc/git-guardrails-claude-code` | Overlaps with native `commit-discipline` rule + our bash-hook layer. |
 | `misc/migrate-to-shoehorn` | TS-tool-specific migration; not relevant. |
-| `misc/scaffold-exercises` | Teaching-tool, not a development tool. |
+| `misc/scaffold-exercises` | Exercise harness for onboarding; not a development workflow tool. |
 | `misc/setup-pre-commit` | Husky-specific; our hook layer is plain bash. |
 
 ---

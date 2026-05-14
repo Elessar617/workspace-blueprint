@@ -66,6 +66,16 @@
     "path": ".claude/agents/reviewer-agent.md"
   },
   {
+    "name": "architecture-audit",
+    "kind": "skill",
+    "source": "native",
+    "description": "Surface architectural friction in a codebase and propose deepening opportunities — refactors that turn shallow modules into deep ones. Use when the user wants to improve architecture, find refactoring opportunities, consolidate tightly-coupled modules, or make a codebase more testable. Pairs with refactor-protocol for safe execution of approved candidates.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": ".claude/skills/architecture-audit/SKILL.md"
+  },
+  {
     "name": "brainstorming",
     "kind": "skill",
     "source": "native",
@@ -79,11 +89,21 @@
     "name": "bug-investigation",
     "kind": "skill",
     "source": "native",
-    "description": "Use when starting work on a reported bug or unexpected behavior. Enforces reproduce-before-fix and root-cause-before-patch. Drives a build/ iteration whose 01-spec/ is the diagnosis, not a feature plan.",
+    "description": "Use when starting work on a reported bug or unexpected behavior. Enforces reproduce-before-fix, root-cause-before-patch, and a feedback-loop-first discipline. Drives a build/ iteration whose 01-spec/ is the diagnosis, not a feature plan.",
     "languages": [],
     "tools": [],
     "model": null,
     "path": ".claude/skills/bug-investigation/SKILL.md"
+  },
+  {
+    "name": "caveman",
+    "kind": "skill",
+    "source": "native",
+    "description": "Ultra-compressed communication mode. Cuts token usage ~75% by dropping filler, articles, and pleasantries while keeping full technical accuracy. Use when user says \"caveman mode\", \"talk like caveman\", \"use caveman\", \"less tokens\", \"be brief\", or invokes /caveman.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": ".claude/skills/caveman/SKILL.md"
   },
   {
     "name": "data-analysis",
@@ -94,6 +114,16 @@
     "tools": [],
     "model": null,
     "path": ".claude/skills/data-analysis/SKILL.md"
+  },
+  {
+    "name": "handoff",
+    "kind": "skill",
+    "source": "native",
+    "description": "Compact the current conversation into a handoff document for another agent to pick up.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": ".claude/skills/handoff/SKILL.md"
   },
   {
     "name": "karpathy-guidelines",
@@ -156,6 +186,16 @@
     "path": ".claude/skills/tdd-loop/SKILL.md"
   },
   {
+    "name": "write-a-skill",
+    "kind": "skill",
+    "source": "native",
+    "description": "Create new agent skills with proper structure, progressive disclosure, and bundled resources. Use when user wants to create, write, or build a new skill. For spec-shaped artifacts (RFC, ADR, brief) use 'spec-authoring' instead.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": ".claude/skills/write-a-skill/SKILL.md"
+  },
+  {
     "name": "writing-plans",
     "kind": "skill",
     "source": "native",
@@ -164,6 +204,16 @@
     "tools": [],
     "model": null,
     "path": ".claude/skills/writing-plans/SKILL.md"
+  },
+  {
+    "name": "zoom-out",
+    "kind": "skill",
+    "source": "native",
+    "description": "Tell the agent to zoom out and give broader context or a higher-level perspective. Use when you're unfamiliar with a section of code or need to understand how it fits into the bigger picture.",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": ".claude/skills/zoom-out/SKILL.md"
   },
   {
     "name": "code-quality",

@@ -115,7 +115,7 @@ Cycle cap: 5 (hook-enforced). Sign-off required for `04-output/` (hook-enforced)
 
 ## Skills, Plugins, MCPs
 
-- **10 skills** in `.claude/skills/` — 6 project-specific (tdd-loop, bug-investigation, refactor-protocol, spike-protocol, spec-authoring, data-analysis) + 4 routing-vendored (systematic-debugging, writing-plans, brainstorming, karpathy-guidelines — MIT-attributed in `.claude/skills/THIRD_PARTY_LICENSES.md`, refreshed via `npm run refresh-vendored`)
+- **15 skills** in `.claude/skills/` — 6 project-specific (tdd-loop, bug-investigation, refactor-protocol, spike-protocol, spec-authoring, data-analysis) + 5 integrations (architecture-audit, caveman, handoff, write-a-skill, zoom-out) + 4 routing-vendored (systematic-debugging, writing-plans, brainstorming, karpathy-guidelines — MIT-attributed in `.claude/skills/THIRD_PARTY_LICENSES.md`, refreshed via `npm run refresh-vendored`)
 - **2 plugins** enabled: `obra/superpowers` and `affaan-m/everything-claude-code`
 - **7 MCP servers** configured: `filesystem`, `git`, `fetch`, `sequential-thinking`, `memory`, `puppeteer` (credential-free), `github` (placeholder env var)
 

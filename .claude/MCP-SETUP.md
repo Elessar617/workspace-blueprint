@@ -99,7 +99,7 @@ Ask Claude Code:
 > What skills do you have available in this project?
 ```
 
-Expected output includes the 10 local skills: 6 project skills (`tdd-loop`, `bug-investigation`, `refactor-protocol`, `spike-protocol`, `spec-authoring`, `data-analysis`) and 4 routing-vendored skills (`systematic-debugging`, `writing-plans`, `brainstorming`, `karpathy-guidelines`).
+Expected output includes the 15 local skills: 6 project skills (`tdd-loop`, `bug-investigation`, `refactor-protocol`, `spike-protocol`, `spec-authoring`, `data-analysis`), 5 integrations (`architecture-audit`, `caveman`, `handoff`, `write-a-skill`, `zoom-out`), and 4 routing-vendored skills (`systematic-debugging`, `writing-plans`, `brainstorming`, `karpathy-guidelines`).
 
 Optional document-generation skill bundles are not tracked in this public scaffold unless their license is cleared for redistribution. Keep any local copies ignored.
 

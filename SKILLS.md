@@ -99,10 +99,17 @@ Binary document-generation skills are optional local add-ons. The public scaffol
 | `data-analysis` | `data-analysis/SKILL.md` | Native — guidance for analysis spikes. |
 | `spec-authoring` | `spec-authoring/SKILL.md` | Native — RFC / ADR / brief shapes for the planner agent. |
 | `refactor-protocol` | `refactor-protocol/SKILL.md` | Native — blast-radius + behavior-equivalence discipline. |
+| `architecture-audit` | `architecture-audit/SKILL.md` | Native — surface architectural friction; propose deepening-opportunity refactors. Pairs with refactor-protocol. Auto-routes in `.claude/routing/refactor.md`. Adapted from mattpocock@e74f0061. |
+| `caveman` | `caveman/SKILL.md` | Native — ultra-compressed response mode. Triggers when user says "caveman mode". Explicit invocation only. Adapted from mattpocock@e74f0061. |
+| `handoff` | `handoff/SKILL.md` | Native — compact the current conversation into a handoff markdown for another agent. Explicit invocation only. Adapted from mattpocock@e74f0061. |
+| `write-a-skill` | `write-a-skill/SKILL.md` | Native — walkthrough for authoring new skills with proper SKILL.md structure and trigger discipline. Explicit invocation only. Adapted from mattpocock@e74f0061. |
+| `zoom-out` | `zoom-out/SKILL.md` | Native — ask the agent to step up a layer of abstraction and map relevant modules/callers. Explicit invocation only. Adapted from mattpocock@e74f0061. |
 | `systematic-debugging` | `systematic-debugging/SKILL.md` | Vendored from `superpowers@5.1.0` (MIT). |
 | `karpathy-guidelines` | `karpathy-guidelines/SKILL.md` | Vendored from `andrej-karpathy-skills@1.0.0` (MIT). |
 | `writing-plans` | `writing-plans/SKILL.md` | Vendored from `superpowers@5.1.0` (MIT). |
 | `brainstorming` | `brainstorming/SKILL.md` | Vendored from `superpowers@5.1.0` (MIT). |
+
+> **Hybridized 2026-05-14:** `tdd-loop`, `bug-investigation`, and `spike-protocol` incorporate ideas from mattpocock@e74f0061. See each skill's footer and `THIRD_PARTY_LICENSES.md`.
 
 Vendored-skill attribution and license text: `.claude/skills/THIRD_PARTY_LICENSES.md`. Refresh from upstream when plugin cache has a newer version: `npm run refresh-vendored`.
 

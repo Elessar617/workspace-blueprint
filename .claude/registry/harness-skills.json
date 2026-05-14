@@ -240,6 +240,2286 @@
     "description": ""
   },
   {
+    "name": "accessibility",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/accessibility",
+    "description": ""
+  },
+  {
+    "name": "agent-architecture-audit",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/agent-architecture-audit",
+    "description": ""
+  },
+  {
+    "name": "agent-eval",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/agent-eval",
+    "description": ""
+  },
+  {
+    "name": "agent-harness-construction",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/agent-harness-construction",
+    "description": ""
+  },
+  {
+    "name": "agent-introspection-debugging",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/agent-introspection-debugging",
+    "description": ""
+  },
+  {
+    "name": "agent-payment-x402",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/agent-payment-x402",
+    "description": ""
+  },
+  {
+    "name": "agent-sort",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/agent-sort",
+    "description": ""
+  },
+  {
+    "name": "agentic-engineering",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/agentic-engineering",
+    "description": ""
+  },
+  {
+    "name": "agentic-os",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/agentic-os",
+    "description": ""
+  },
+  {
+    "name": "ai-first-engineering",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/ai-first-engineering",
+    "description": ""
+  },
+  {
+    "name": "ai-regression-testing",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/ai-regression-testing",
+    "description": ""
+  },
+  {
+    "name": "android-clean-architecture",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/android-clean-architecture",
+    "description": ""
+  },
+  {
+    "name": "angular-developer",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/angular-developer",
+    "description": ""
+  },
+  {
+    "name": "api-connector-builder",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/api-connector-builder",
+    "description": ""
+  },
+  {
+    "name": "api-design",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/api-design",
+    "description": ""
+  },
+  {
+    "name": "architecture-decision-records",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/architecture-decision-records",
+    "description": ""
+  },
+  {
+    "name": "article-writing",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/article-writing",
+    "description": ""
+  },
+  {
+    "name": "automation-audit-ops",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/automation-audit-ops",
+    "description": ""
+  },
+  {
+    "name": "autonomous-agent-harness",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/autonomous-agent-harness",
+    "description": ""
+  },
+  {
+    "name": "autonomous-loops",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/autonomous-loops",
+    "description": ""
+  },
+  {
+    "name": "backend-patterns",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/backend-patterns",
+    "description": ""
+  },
+  {
+    "name": "benchmark",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/benchmark",
+    "description": ""
+  },
+  {
+    "name": "blueprint",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/blueprint",
+    "description": ""
+  },
+  {
+    "name": "brand-voice",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/brand-voice",
+    "description": ""
+  },
+  {
+    "name": "browser-qa",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/browser-qa",
+    "description": ""
+  },
+  {
+    "name": "bun-runtime",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/bun-runtime",
+    "description": ""
+  },
+  {
+    "name": "canary-watch",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/canary-watch",
+    "description": ""
+  },
+  {
+    "name": "carrier-relationship-management",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/carrier-relationship-management",
+    "description": ""
+  },
+  {
+    "name": "cisco-ios-patterns",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/cisco-ios-patterns",
+    "description": ""
+  },
+  {
+    "name": "ck",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/ck",
+    "description": ""
+  },
+  {
+    "name": "claude-devfleet",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/claude-devfleet",
+    "description": ""
+  },
+  {
+    "name": "click-path-audit",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/click-path-audit",
+    "description": ""
+  },
+  {
+    "name": "clickhouse-io",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/clickhouse-io",
+    "description": ""
+  },
+  {
+    "name": "code-tour",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/code-tour",
+    "description": ""
+  },
+  {
+    "name": "codebase-onboarding",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/codebase-onboarding",
+    "description": ""
+  },
+  {
+    "name": "coding-standards",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/coding-standards",
+    "description": ""
+  },
+  {
+    "name": "compose-multiplatform-patterns",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/compose-multiplatform-patterns",
+    "description": ""
+  },
+  {
+    "name": "configure-ecc",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/configure-ecc",
+    "description": ""
+  },
+  {
+    "name": "connections-optimizer",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/connections-optimizer",
+    "description": ""
+  },
+  {
+    "name": "content-engine",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/content-engine",
+    "description": ""
+  },
+  {
+    "name": "content-hash-cache-pattern",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/content-hash-cache-pattern",
+    "description": ""
+  },
+  {
+    "name": "context-budget",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/context-budget",
+    "description": ""
+  },
+  {
+    "name": "continuous-agent-loop",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/continuous-agent-loop",
+    "description": ""
+  },
+  {
+    "name": "continuous-learning",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/continuous-learning",
+    "description": ""
+  },
+  {
+    "name": "continuous-learning-v2",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/continuous-learning-v2",
+    "description": ""
+  },
+  {
+    "name": "cost-aware-llm-pipeline",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/cost-aware-llm-pipeline",
+    "description": ""
+  },
+  {
+    "name": "cost-tracking",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/cost-tracking",
+    "description": ""
+  },
+  {
+    "name": "council",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/council",
+    "description": ""
+  },
+  {
+    "name": "cpp-coding-standards",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/cpp-coding-standards",
+    "description": ""
+  },
+  {
+    "name": "cpp-testing",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/cpp-testing",
+    "description": ""
+  },
+  {
+    "name": "crosspost",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/crosspost",
+    "description": ""
+  },
+  {
+    "name": "csharp-testing",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/csharp-testing",
+    "description": ""
+  },
+  {
+    "name": "customer-billing-ops",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/customer-billing-ops",
+    "description": ""
+  },
+  {
+    "name": "customs-trade-compliance",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/customs-trade-compliance",
+    "description": ""
+  },
+  {
+    "name": "dart-flutter-patterns",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/dart-flutter-patterns",
+    "description": ""
+  },
+  {
+    "name": "dashboard-builder",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/dashboard-builder",
+    "description": ""
+  },
+  {
+    "name": "data-scraper-agent",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/data-scraper-agent",
+    "description": ""
+  },
+  {
+    "name": "database-migrations",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/database-migrations",
+    "description": ""
+  },
+  {
+    "name": "deep-research",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/deep-research",
+    "description": ""
+  },
+  {
+    "name": "defi-amm-security",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/defi-amm-security",
+    "description": ""
+  },
+  {
+    "name": "deployment-patterns",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/deployment-patterns",
+    "description": ""
+  },
+  {
+    "name": "design-system",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/design-system",
+    "description": ""
+  },
+  {
+    "name": "django-celery",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/django-celery",
+    "description": ""
+  },
+  {
+    "name": "django-patterns",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/django-patterns",
+    "description": ""
+  },
+  {
+    "name": "django-security",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/django-security",
+    "description": ""
+  },
+  {
+    "name": "django-tdd",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/django-tdd",
+    "description": ""
+  },
+  {
+    "name": "django-verification",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/django-verification",
+    "description": ""
+  },
+  {
+    "name": "dmux-workflows",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/dmux-workflows",
+    "description": ""
+  },
+  {
+    "name": "docker-patterns",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/docker-patterns",
+    "description": ""
+  },
+  {
+    "name": "documentation-lookup",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/documentation-lookup",
+    "description": ""
+  },
+  {
+    "name": "dotnet-patterns",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/dotnet-patterns",
+    "description": ""
+  },
+  {
+    "name": "e2e-testing",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/e2e-testing",
+    "description": ""
+  },
+  {
+    "name": "ecc-guide",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/ecc-guide",
+    "description": ""
+  },
+  {
+    "name": "ecc-tools-cost-audit",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/ecc-tools-cost-audit",
+    "description": ""
+  },
+  {
+    "name": "email-ops",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/email-ops",
+    "description": ""
+  },
+  {
+    "name": "energy-procurement",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/energy-procurement",
+    "description": ""
+  },
+  {
+    "name": "enterprise-agent-ops",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/enterprise-agent-ops",
+    "description": ""
+  },
+  {
+    "name": "error-handling",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/error-handling",
+    "description": ""
+  },
+  {
+    "name": "eval-harness",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/eval-harness",
+    "description": ""
+  },
+  {
+    "name": "evm-token-decimals",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/evm-token-decimals",
+    "description": ""
+  },
+  {
+    "name": "exa-search",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/exa-search",
+    "description": ""
+  },
+  {
+    "name": "fal-ai-media",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/fal-ai-media",
+    "description": ""
+  },
+  {
+    "name": "fastapi-patterns",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/fastapi-patterns",
+    "description": ""
+  },
+  {
+    "name": "finance-billing-ops",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/finance-billing-ops",
+    "description": ""
+  },
+  {
+    "name": "flox-environments",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/flox-environments",
+    "description": ""
+  },
+  {
+    "name": "flutter-dart-code-review",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/flutter-dart-code-review",
+    "description": ""
+  },
+  {
+    "name": "foundation-models-on-device",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/foundation-models-on-device",
+    "description": ""
+  },
+  {
+    "name": "frontend-design-direction",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/frontend-design-direction",
+    "description": ""
+  },
+  {
+    "name": "frontend-patterns",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/frontend-patterns",
+    "description": ""
+  },
+  {
+    "name": "frontend-slides",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/frontend-slides",
+    "description": ""
+  },
+  {
+    "name": "fsharp-testing",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/fsharp-testing",
+    "description": ""
+  },
+  {
+    "name": "gan-style-harness",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/gan-style-harness",
+    "description": ""
+  },
+  {
+    "name": "gateguard",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/gateguard",
+    "description": ""
+  },
+  {
+    "name": "git-workflow",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/git-workflow",
+    "description": ""
+  },
+  {
+    "name": "github-ops",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/github-ops",
+    "description": ""
+  },
+  {
+    "name": "golang-patterns",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/golang-patterns",
+    "description": ""
+  },
+  {
+    "name": "golang-testing",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/golang-testing",
+    "description": ""
+  },
+  {
+    "name": "google-workspace-ops",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/google-workspace-ops",
+    "description": ""
+  },
+  {
+    "name": "healthcare-cdss-patterns",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/healthcare-cdss-patterns",
+    "description": ""
+  },
+  {
+    "name": "healthcare-emr-patterns",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/healthcare-emr-patterns",
+    "description": ""
+  },
+  {
+    "name": "healthcare-eval-harness",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/healthcare-eval-harness",
+    "description": ""
+  },
+  {
+    "name": "healthcare-phi-compliance",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/healthcare-phi-compliance",
+    "description": ""
+  },
+  {
+    "name": "hermes-imports",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/hermes-imports",
+    "description": ""
+  },
+  {
+    "name": "hexagonal-architecture",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/hexagonal-architecture",
+    "description": ""
+  },
+  {
+    "name": "hipaa-compliance",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/hipaa-compliance",
+    "description": ""
+  },
+  {
+    "name": "homelab-network-readiness",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/homelab-network-readiness",
+    "description": ""
+  },
+  {
+    "name": "homelab-network-setup",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/homelab-network-setup",
+    "description": ""
+  },
+  {
+    "name": "homelab-pihole-dns",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/homelab-pihole-dns",
+    "description": ""
+  },
+  {
+    "name": "homelab-vlan-segmentation",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/homelab-vlan-segmentation",
+    "description": ""
+  },
+  {
+    "name": "homelab-wireguard-vpn",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/homelab-wireguard-vpn",
+    "description": ""
+  },
+  {
+    "name": "hookify-rules",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/hookify-rules",
+    "description": ""
+  },
+  {
+    "name": "inventory-demand-planning",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/inventory-demand-planning",
+    "description": ""
+  },
+  {
+    "name": "investor-materials",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/investor-materials",
+    "description": ""
+  },
+  {
+    "name": "investor-outreach",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/investor-outreach",
+    "description": ""
+  },
+  {
+    "name": "ios-icon-gen",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/ios-icon-gen",
+    "description": ""
+  },
+  {
+    "name": "iterative-retrieval",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/iterative-retrieval",
+    "description": ""
+  },
+  {
+    "name": "java-coding-standards",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/java-coding-standards",
+    "description": ""
+  },
+  {
+    "name": "jira-integration",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/jira-integration",
+    "description": ""
+  },
+  {
+    "name": "jpa-patterns",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/jpa-patterns",
+    "description": ""
+  },
+  {
+    "name": "knowledge-ops",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/knowledge-ops",
+    "description": ""
+  },
+  {
+    "name": "kotlin-coroutines-flows",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/kotlin-coroutines-flows",
+    "description": ""
+  },
+  {
+    "name": "kotlin-exposed-patterns",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/kotlin-exposed-patterns",
+    "description": ""
+  },
+  {
+    "name": "kotlin-ktor-patterns",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/kotlin-ktor-patterns",
+    "description": ""
+  },
+  {
+    "name": "kotlin-patterns",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/kotlin-patterns",
+    "description": ""
+  },
+  {
+    "name": "kotlin-testing",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/kotlin-testing",
+    "description": ""
+  },
+  {
+    "name": "laravel-patterns",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/laravel-patterns",
+    "description": ""
+  },
+  {
+    "name": "laravel-plugin-discovery",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/laravel-plugin-discovery",
+    "description": ""
+  },
+  {
+    "name": "laravel-security",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/laravel-security",
+    "description": ""
+  },
+  {
+    "name": "laravel-tdd",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/laravel-tdd",
+    "description": ""
+  },
+  {
+    "name": "laravel-verification",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/laravel-verification",
+    "description": ""
+  },
+  {
+    "name": "lead-intelligence",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/lead-intelligence",
+    "description": ""
+  },
+  {
+    "name": "liquid-glass-design",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/liquid-glass-design",
+    "description": ""
+  },
+  {
+    "name": "llm-trading-agent-security",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/llm-trading-agent-security",
+    "description": ""
+  },
+  {
+    "name": "logistics-exception-management",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/logistics-exception-management",
+    "description": ""
+  },
+  {
+    "name": "make-interfaces-feel-better",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/make-interfaces-feel-better",
+    "description": ""
+  },
+  {
+    "name": "manim-video",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/manim-video",
+    "description": ""
+  },
+  {
+    "name": "market-research",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/market-research",
+    "description": ""
+  },
+  {
+    "name": "mcp-server-patterns",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/mcp-server-patterns",
+    "description": ""
+  },
+  {
+    "name": "messages-ops",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/messages-ops",
+    "description": ""
+  },
+  {
+    "name": "mle-workflow",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/mle-workflow",
+    "description": ""
+  },
+  {
+    "name": "motion-advanced",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/motion-advanced",
+    "description": ""
+  },
+  {
+    "name": "motion-foundations",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/motion-foundations",
+    "description": ""
+  },
+  {
+    "name": "motion-patterns",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/motion-patterns",
+    "description": ""
+  },
+  {
+    "name": "motion-ui",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/motion-ui",
+    "description": ""
+  },
+  {
+    "name": "mysql-patterns",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/mysql-patterns",
+    "description": ""
+  },
+  {
+    "name": "nanoclaw-repl",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/nanoclaw-repl",
+    "description": ""
+  },
+  {
+    "name": "nestjs-patterns",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/nestjs-patterns",
+    "description": ""
+  },
+  {
+    "name": "netmiko-ssh-automation",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/netmiko-ssh-automation",
+    "description": ""
+  },
+  {
+    "name": "network-bgp-diagnostics",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/network-bgp-diagnostics",
+    "description": ""
+  },
+  {
+    "name": "network-config-validation",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/network-config-validation",
+    "description": ""
+  },
+  {
+    "name": "network-interface-health",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/network-interface-health",
+    "description": ""
+  },
+  {
+    "name": "nextjs-turbopack",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/nextjs-turbopack",
+    "description": ""
+  },
+  {
+    "name": "nodejs-keccak256",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/nodejs-keccak256",
+    "description": ""
+  },
+  {
+    "name": "nutrient-document-processing",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/nutrient-document-processing",
+    "description": ""
+  },
+  {
+    "name": "nuxt4-patterns",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/nuxt4-patterns",
+    "description": ""
+  },
+  {
+    "name": "openclaw-persona-forge",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/openclaw-persona-forge",
+    "description": ""
+  },
+  {
+    "name": "opensource-pipeline",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/opensource-pipeline",
+    "description": ""
+  },
+  {
+    "name": "perl-patterns",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/perl-patterns",
+    "description": ""
+  },
+  {
+    "name": "perl-security",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/perl-security",
+    "description": ""
+  },
+  {
+    "name": "perl-testing",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/perl-testing",
+    "description": ""
+  },
+  {
+    "name": "plan-orchestrate",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/plan-orchestrate",
+    "description": ""
+  },
+  {
+    "name": "plankton-code-quality",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/plankton-code-quality",
+    "description": ""
+  },
+  {
+    "name": "postgres-patterns",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/postgres-patterns",
+    "description": ""
+  },
+  {
+    "name": "product-capability",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/product-capability",
+    "description": ""
+  },
+  {
+    "name": "product-lens",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/product-lens",
+    "description": ""
+  },
+  {
+    "name": "production-audit",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/production-audit",
+    "description": ""
+  },
+  {
+    "name": "production-scheduling",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/production-scheduling",
+    "description": ""
+  },
+  {
+    "name": "project-flow-ops",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/project-flow-ops",
+    "description": ""
+  },
+  {
+    "name": "prompt-optimizer",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/prompt-optimizer",
+    "description": ""
+  },
+  {
+    "name": "python-patterns",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/python-patterns",
+    "description": ""
+  },
+  {
+    "name": "python-testing",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/python-testing",
+    "description": ""
+  },
+  {
+    "name": "pytorch-patterns",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/pytorch-patterns",
+    "description": ""
+  },
+  {
+    "name": "quality-nonconformance",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/quality-nonconformance",
+    "description": ""
+  },
+  {
+    "name": "quarkus-patterns",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/quarkus-patterns",
+    "description": ""
+  },
+  {
+    "name": "quarkus-security",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/quarkus-security",
+    "description": ""
+  },
+  {
+    "name": "quarkus-tdd",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/quarkus-tdd",
+    "description": ""
+  },
+  {
+    "name": "quarkus-verification",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/quarkus-verification",
+    "description": ""
+  },
+  {
+    "name": "ralphinho-rfc-pipeline",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/ralphinho-rfc-pipeline",
+    "description": ""
+  },
+  {
+    "name": "redis-patterns",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/redis-patterns",
+    "description": ""
+  },
+  {
+    "name": "regex-vs-llm-structured-text",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/regex-vs-llm-structured-text",
+    "description": ""
+  },
+  {
+    "name": "remotion-video-creation",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/remotion-video-creation",
+    "description": ""
+  },
+  {
+    "name": "repo-scan",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/repo-scan",
+    "description": ""
+  },
+  {
+    "name": "research-ops",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/research-ops",
+    "description": ""
+  },
+  {
+    "name": "returns-reverse-logistics",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/returns-reverse-logistics",
+    "description": ""
+  },
+  {
+    "name": "rules-distill",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/rules-distill",
+    "description": ""
+  },
+  {
+    "name": "rust-patterns",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/rust-patterns",
+    "description": ""
+  },
+  {
+    "name": "rust-testing",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/rust-testing",
+    "description": ""
+  },
+  {
+    "name": "safety-guard",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/safety-guard",
+    "description": ""
+  },
+  {
+    "name": "santa-method",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/santa-method",
+    "description": ""
+  },
+  {
+    "name": "scientific-db-pubmed-database",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/scientific-db-pubmed-database",
+    "description": ""
+  },
+  {
+    "name": "scientific-db-uspto-database",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/scientific-db-uspto-database",
+    "description": ""
+  },
+  {
+    "name": "scientific-pkg-gget",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/scientific-pkg-gget",
+    "description": ""
+  },
+  {
+    "name": "scientific-thinking-literature-review",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/scientific-thinking-literature-review",
+    "description": ""
+  },
+  {
+    "name": "scientific-thinking-scholar-evaluation",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/scientific-thinking-scholar-evaluation",
+    "description": ""
+  },
+  {
+    "name": "search-first",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/search-first",
+    "description": ""
+  },
+  {
+    "name": "security-bounty-hunter",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/security-bounty-hunter",
+    "description": ""
+  },
+  {
+    "name": "security-review",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/security-review",
+    "description": ""
+  },
+  {
+    "name": "security-scan",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/security-scan",
+    "description": ""
+  },
+  {
+    "name": "seo",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/seo",
+    "description": ""
+  },
+  {
+    "name": "skill-comply",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/skill-comply",
+    "description": ""
+  },
+  {
+    "name": "skill-scout",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/skill-scout",
+    "description": ""
+  },
+  {
+    "name": "skill-stocktake",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/skill-stocktake",
+    "description": ""
+  },
+  {
+    "name": "social-graph-ranker",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/social-graph-ranker",
+    "description": ""
+  },
+  {
+    "name": "springboot-patterns",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/springboot-patterns",
+    "description": ""
+  },
+  {
+    "name": "springboot-security",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/springboot-security",
+    "description": ""
+  },
+  {
+    "name": "springboot-tdd",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/springboot-tdd",
+    "description": ""
+  },
+  {
+    "name": "springboot-verification",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/springboot-verification",
+    "description": ""
+  },
+  {
+    "name": "strategic-compact",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/strategic-compact",
+    "description": ""
+  },
+  {
+    "name": "swift-actor-persistence",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/swift-actor-persistence",
+    "description": ""
+  },
+  {
+    "name": "swift-concurrency-6-2",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/swift-concurrency-6-2",
+    "description": ""
+  },
+  {
+    "name": "swift-protocol-di-testing",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/swift-protocol-di-testing",
+    "description": ""
+  },
+  {
+    "name": "swiftui-patterns",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/swiftui-patterns",
+    "description": ""
+  },
+  {
+    "name": "tdd-workflow",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/tdd-workflow",
+    "description": ""
+  },
+  {
+    "name": "team-builder",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/team-builder",
+    "description": ""
+  },
+  {
+    "name": "terminal-ops",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/terminal-ops",
+    "description": ""
+  },
+  {
+    "name": "tinystruct-patterns",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/tinystruct-patterns",
+    "description": ""
+  },
+  {
+    "name": "token-budget-advisor",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/token-budget-advisor",
+    "description": ""
+  },
+  {
+    "name": "ui-demo",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/ui-demo",
+    "description": ""
+  },
+  {
+    "name": "ui-to-vue",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/ui-to-vue",
+    "description": ""
+  },
+  {
+    "name": "unified-notifications-ops",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/unified-notifications-ops",
+    "description": ""
+  },
+  {
+    "name": "verification-loop",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/verification-loop",
+    "description": ""
+  },
+  {
+    "name": "video-editing",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/video-editing",
+    "description": ""
+  },
+  {
+    "name": "videodb",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/videodb",
+    "description": ""
+  },
+  {
+    "name": "visa-doc-translate",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/visa-doc-translate",
+    "description": ""
+  },
+  {
+    "name": "vite-patterns",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/vite-patterns",
+    "description": ""
+  },
+  {
+    "name": "windows-desktop-e2e",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/windows-desktop-e2e",
+    "description": ""
+  },
+  {
+    "name": "workspace-surface-audit",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/workspace-surface-audit",
+    "description": ""
+  },
+  {
+    "name": "x-api",
+    "namespace": "ecc",
+    "marketplace": "ecc",
+    "version": "2.0.0-rc.1",
+    "kind": "skill",
+    "source": "harness",
+    "plugin_path": "ecc/ecc/2.0.0-rc.1/skills/x-api",
+    "description": ""
+  },
+  {
     "name": "karpathy-guidelines",
     "namespace": "andrej-karpathy-skills",
     "marketplace": "karpathy-skills",

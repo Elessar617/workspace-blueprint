@@ -17,7 +17,7 @@
 Before starting Task 1, verify the working tree is clean and on the right commit:
 
 ```bash
-cd /Users/gardnerwilson/workspace/github.com/elessar617/workspace-blueprint
+cd <repo-root>
 git status                    # expect: clean
 git log -1 --oneline          # expect: 4f66d48 docs(spec): add mattpocock skills integration design
 node --version                # expect: v18+ (any v18+ works; package.json sets engines >=18)
