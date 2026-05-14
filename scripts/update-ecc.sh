@@ -32,7 +32,30 @@ echo "  agents:   $OLD_AGENTS -> $NEW_AGENTS"
 echo "  skills:   $OLD_SKILLS -> $NEW_SKILLS"
 echo "  commands: $OLD_COMMANDS -> $NEW_COMMANDS"
 
-git add external/ecc .claude/registry/
+echo
+echo "[update-ecc] ECC surface audit (routed vs. available):"
+ROUTED_NAMES=$(grep -hoE '`[a-z][a-z0-9-]+`' .claude/routing/*.md 2>/dev/null | tr -d '`' | sort -u)
+count_routed() {
+  local registry="$1"
+  echo "$ROUTED_NAMES" | while read name; do
+    [ -n "$name" ] || continue
+    jq -r --arg n "$name" '.[] | select(.name==$n) | .name' "$registry" 2>/dev/null
+  done | sort -u | wc -l | tr -d ' '
+}
+ROUTED_ECC_AGENTS=$(count_routed .claude/registry/ecc-agents.json)
+ROUTED_ECC_SKILLS=$(count_routed .claude/registry/ecc-skills.json)
+ROUTED_ECC_COMMANDS=$(count_routed .claude/registry/ecc-commands.json)
+printf "  agents:    %4d routed / %4d total\n" "$ROUTED_ECC_AGENTS" "$NEW_AGENTS"
+printf "  skills:    %4d routed / %4d total\n" "$ROUTED_ECC_SKILLS" "$NEW_SKILLS"
+printf "  commands:  %4d routed / %4d total\n" "$ROUTED_ECC_COMMANDS" "$NEW_COMMANDS"
+echo
+echo "[update-ecc] NOTE: every ECC item is invocable explicitly even when not"
+echo "  routed. Agents: dispatch via Task/Agent tool. Skills: Skill tool or"
+echo "  /ecc:<name>. Commands: /ecc:<name>. Routing only controls AUTO-LOAD"
+echo "  per task type for token efficiency. Unrouted != disabled."
+echo
+
+git add external/ecc .claude/registry/ scripts/update-ecc.sh
 echo
 echo "[update-ecc] staged the submodule bump and registry updates."
 echo "Review with:  git diff --staged"
