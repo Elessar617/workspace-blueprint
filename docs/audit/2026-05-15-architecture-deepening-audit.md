@@ -30,6 +30,8 @@
 
 - **Deletion test.** Strong — if you delete the four `Edit`-matching hooks but keep the scaffold, the shape of "what a hook is" is preserved. If you delete the scaffold and keep the hooks, the four hooks each re-grow the same 12 lines. The scaffold concentrates complexity.
 
+- **Status:** open
+
 ---
 
 ### 2. `ROUTING.md` Step-1 table and per-IDE preambles are hand-maintained — extend the regen pattern
@@ -49,6 +51,8 @@
   - Tests: the existing `routing-docs-in-sync.test.mjs` is the template. Adding `ROUTING.md` + 3 preambles to the same test is mechanical.
 
 - **Deletion test.** Strong — if you delete `regen-routing-docs.mjs`, drift reappears across N files. The script is earning its keep at N=7; widening it to N=11 is the same pattern at higher leverage.
+
+- **Status:** open
 
 - **Combines with prior audit:** closes H3 (ROUTING.md drift from `TASK_RULES`) and H5 (count drift across map files — if counts come from filesystem inspection in the same regen pass).
 
@@ -71,6 +75,8 @@
   - Tests: `tests/unit/route.test.mjs` already imports the function — the move makes that import truly side-effect-free, eliminating any future "import order matters" surprises.
 
 - **Deletion test.** Medium — if you delete the CLI block, you lose the shell entry point but the routing brain keeps working from JS. The brain is the deep module; the CLI is the adapter. Splitting them clarifies what each does. Not as load-bearing as candidates 1 or 2, but cheap and clean.
+
+- **Status:** open
 
 ---
 
@@ -97,6 +103,8 @@
 
 - **Deletion test.** Medium — if you delete one scraper, that source disappears. If you delete the *shared seam abstraction* you don't yet have, the three current scrapers still work; the test is whether ADDING the fourth feels mechanical. The benefit is most visible when N grows.
 
+- **Status:** open
+
 ---
 
 ### 5. Quick-win — `.claude/hooks/*.sh` and `settings.json` registrations have no checked invariant
@@ -113,6 +121,8 @@
 - **Benefits.** Locality (hook registration becomes a checked invariant), and prevents one specific failure mode (the dead-hook entry) that's currently silent.
 
 - **Deletion test.** Weak — this is a *guard*, not a refactor. Include as a quick-win because it costs ~10 minutes and removes one undocumented invariant.
+
+- **Status:** open
 
 ---
 
