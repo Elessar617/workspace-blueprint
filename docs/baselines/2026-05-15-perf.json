@@ -1,0 +1,24 @@
+{
+  "captured_at": "2026-05-15T10:36:27.907Z",
+  "captured_against_sha": "d2532b5",
+  "captured_in_env": "local",
+  "samples": 10,
+  "metrics": {
+    "hook_route_inject": {
+      "p50": 767.460542,
+      "p95": 846.119375,
+      "p99": 846.119375
+    },
+    "npm_test_duration": {
+      "p50": 6800.183959,
+      "p95": 7228.233083,
+      "p99": 7228.233083
+    },
+    "rebuild_registry": {
+      "p50": 336.084625,
+      "p95": 366.691708,
+      "p99": 366.691708
+    }
+  },
+  "notes": "Captured locally; CI re-run recommended for the canonical reference."
+}

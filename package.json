@@ -6,6 +6,7 @@
   "engines": { "node": ">=18.0.0" },
   "scripts": {
     "audit:agent-surface": "node scripts/agent-surface-audit.mjs",
+    "bench": "node scripts/bench.mjs",
     "rebuild-registry": "node scripts/rebuild-registry.mjs",
     "rebuild-harness": "node scripts/rebuild-registry.mjs --harness-only",
     "refresh-vendored": "node scripts/refresh-vendored.mjs",
