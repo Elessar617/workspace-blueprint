@@ -1,23 +1,23 @@
 {
-  "captured_at": "2026-05-15T10:36:27.907Z",
-  "captured_against_sha": "d2532b5",
+  "captured_at": "2026-05-15T10:44:14.476Z",
+  "captured_against_sha": "93cc0b9",
   "captured_in_env": "local",
   "samples": 10,
   "metrics": {
     "hook_route_inject": {
-      "p50": 767.460542,
-      "p95": 846.119375,
-      "p99": 846.119375
+      "p50": 669.352583,
+      "p95": 721.608167,
+      "p99": 721.608167
     },
     "npm_test_duration": {
-      "p50": 6800.183959,
-      "p95": 7228.233083,
-      "p99": 7228.233083
+      "p50": 6234.498209,
+      "p95": 6382.806166,
+      "p99": 6382.806166
     },
     "rebuild_registry": {
-      "p50": 336.084625,
-      "p95": 366.691708,
-      "p99": 366.691708
+      "p50": 315.378791,
+      "p95": 320.246166,
+      "p99": 320.246166
     }
   },
   "notes": "Captured locally; CI re-run recommended for the canonical reference."

@@ -30,8 +30,12 @@ function timeMs(fn) {
 
 function runQuiet(command, args, options = {}) {
   const r = spawnSync(command, args, { stdio: ['pipe', 'pipe', 'pipe'], ...options });
-  if (r.status !== 0 && r.status !== null) {
-    throw new Error(`${command} ${args.join(' ')} exited ${r.status}`);
+  if (r.error) {
+    throw new Error(`${command} ${args.join(' ')} failed to launch: ${r.error.message}`);
+  }
+  if (r.status !== 0) {
+    const stderr = (r.stderr ? r.stderr.toString('utf8').trim() : '').slice(0, 500);
+    throw new Error(`${command} ${args.join(' ')} exited ${r.status}${stderr ? `; stderr: ${stderr}` : ''}`);
   }
   return r;
 }
@@ -68,7 +72,10 @@ function benchRebuildRegistry() {
 }
 
 const shaResult = spawnSync('git', ['rev-parse', '--short', 'HEAD'], { cwd: REPO_ROOT });
+if (shaResult.error) throw new Error(`failed to invoke git: ${shaResult.error.message}`);
+if (shaResult.status !== 0) throw new Error(`git rev-parse exited ${shaResult.status}`);
 const sha = shaResult.stdout.toString().trim();
+if (!sha) throw new Error('git rev-parse returned empty SHA');
 const env = process.env.CI === 'true' ? 'ci' : 'local';
 
 const baseline = {
