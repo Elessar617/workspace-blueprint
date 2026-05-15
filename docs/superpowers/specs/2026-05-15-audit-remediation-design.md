@@ -86,9 +86,9 @@ Each metric is n=10 samples; gate compares median-to-median with **5% tolerance*
 
 | # | Slug | Scope | Closes |
 |---|---|---|---|
-| **01** | `01-regen-prose-widen` | Extend `scripts/regen-routing-docs.mjs` (or sibling) to also generate `ROUTING.md` Step 1 region, `AGENTS.md`, `.cursorrules`, `GEMINI.md`, and filesystem-derived counts in `CLAUDE.md`/`CONTEXT.md`/`START-HERE.md`. Add a sister drift test mirroring `tests/unit/routing-docs-in-sync.test.mjs`. Add an explicit "names resolve via `.claude/registry/*.json`" comment block to each regenerated routing file (closes H6: routing files list agents not in `.claude/agents/`). | H3, H5, H6, M3, L2 (5) |
-| **02** | `02-hook-scaffolding` | Extract shared hook preamble (profile-gate, JSON parse, tool-name matcher, target extract) into one helper. Add `Bash`-write-redirect matcher pattern so block hooks gain bash-bypass protection. Replace `route-inject.sh`'s bash + `node -e` chain with a single Node script using the same helper; new script adds `[INJECTION TRUNCATED]` marker when budget exceeded (closes M7). Add error logging to `.claude/routing/.last-error.log`. Update `.claude/agents/{adversary,reviewer}-agent.md` to read prior-cycle findings. Add fixture test `tests/integration/h1-cross-cycle-awareness.test.mjs`. | C2, H2, H1, M4, M7, M8, L3 (7) |
-| **03** | `03-route-cli-extract-and-gate` | Move `route.mjs` CLI block (lines 326–381) to `scripts/route-cli.mjs`. Make `route.mjs` import-safe (zero side effects on import). Add `PreToolUse(Skill)` hook recording invocations to `.claude/routing/.current.json`. Add `PreToolUse(Task)` hook refusing dispatch when `cached.mandatories ⊄ invoked_skills`. Move `enforce-portability.sh` to PreToolUse with content extraction. | C1, C3, M6/F7.3 (3) |
+| **01** | `01-regen-prose-widen` | Extend `scripts/regen-routing-docs.mjs` to also generate `ROUTING.md` Step 1 region, `AGENTS.md`, `.cursorrules`, `GEMINI.md`, and filesystem-derived counts in `CLAUDE.md`/`CONTEXT.md`/`START-HERE.md`. Add a sister drift test mirroring `tests/unit/routing-docs-in-sync.test.mjs`. Add an explicit "names resolve via `.claude/registry/*.json`" comment block to each regenerated routing file (closes H6: routing files list agents not in `.claude/agents/`). | H3, H5, H6, M3, L2 (5) |
+| **02** | `02-hook-scaffolding` | Extract shared hook preamble (profile-gate, JSON parse, tool-name matcher, target extract) into a **bash shared-include file** (sourced by each hook). Add `Bash`-write-redirect matcher pattern so block hooks gain bash-bypass protection. Replace `route-inject.sh`'s bash + `node -e` chain with a single Node script that uses the bash include for input parsing where applicable; new script adds `[INJECTION TRUNCATED]` marker when budget exceeded (closes M7). Add error logging to `.claude/routing/.last-error.log`. Update `.claude/agents/{adversary,reviewer}-agent.md` to read prior-cycle findings. Add fixture test `tests/integration/h1-cross-cycle-awareness.test.mjs`. | C2, H2, H1, M4, M7, M8, L3 (7) |
+| **03** | `03-route-cli-extract-and-gate` | Move `route.mjs` CLI block (lines 326–381) to `scripts/route-cli.mjs`. Make `route.mjs` import-safe (zero side effects on import). Add `PreToolUse(Skill)` hook recording invocations to `.claude/routing/.current.json`'s `invoked_skills` field. Add `PreToolUse(Task)` hook refusing dispatch when `cached.mandatories ⊄ invoked_skills`. Recorder clears `invoked_skills` on session start AND when `detectTransition()` fires (existing transition phrases); preserves within-task context. Move `enforce-portability.sh` to PreToolUse with content extraction. | C1, C3, M6/F7.3 (3) |
 | **04** | `04-instinct-gate-registry-tighten` | Gate `readInstincts()` behind `BLUEPRINT_INSTINCTS` env flag (default off). Trigger-aware filtering in `instinct-reader.mjs` (`inst.trigger` substring against prompt + files-in-scope). Confidence decay (halve per 30 days idle). Update `.claude/skills/handoff/SKILL.md` to require `created:` and `applies_to:` frontmatter; document that handoff docs >24h old don't auto-surface (closes H7). Update `rebuild-registry.mjs` to fail when same name appears in both `ecc-skills.json` and `harness-skills.json` without explicit `prefer:` in `ecc-config.json`. Document the gate in `.claude/MCP-SETUP.md`. | C4, H7, H8, M5, H4 (5) |
 | **05** | `05-perf-security-hardening` | Run `/ecc:security-scan` (AgentShield) AND `/ecc:security-review` (broader OWASP). Audit hook scripts for shell-injection (`jq -r` extractions, `node -e` chains). Audit `permissions.deny` completeness. Audit MCP server scopes (the 7 in `settings.json`). Secret scan across working tree + git history. Run final benchmark vs. baselines (5% median-to-median). Add `tests/perf/baseline-guard.test.mjs`. Any new security findings recorded in `docs/audit/2026-05-15-security-audit.md` with same `status:` mechanism. | New security findings + perf regression guards |
 
@@ -234,7 +234,7 @@ Each iteration commits to a feature branch (e.g., `feat/02-hook-scaffolding`). O
 |---|---|
 | Cycle 1–4 reviewer or adversary blocks | Normal — implementer revises in next cycle. No rollback. |
 | Cycle 5 exhausted without `verdict: pass` (`block-cycle-overrun.sh` engages) | Hook ENFORCES the stop. Halt iteration. Re-scope SPEC in a new spec doc; restart as new iteration with adjusted scope. |
-| Iteration lands but `tests/perf/baseline-guard.test.mjs` fails (CI) | Two paths: (a) revert the iteration's merge commit and re-iterate; (b) record performance debt in iteration 05's input list with a **named, defensible reason** and continue. Decision criterion (user-confirmed): named reason → continue; otherwise → revert. |
+| Iteration lands but `tests/perf/baseline-guard.test.mjs` fails (CI) | **Hardened policy (user-confirmed):** any ≥5% regression **auto-reverts** unless TWO conditions both hold: (1) implementer's `02-implement/notes-N.md` explicitly cites the audit finding ID that necessitated the regression with a paragraph explaining the trade-off; AND (2) reviewer concurs in `03-validate/review-N.md` with an explicit "perf cost acknowledged" line alongside `verdict: pass`. If both hold, regression is recorded as performance debt in iteration 05's input list. Otherwise the merge commit is reverted. The default behavior is revert — accepting the cost requires affirmative justification on both sides. |
 | Iteration lands but breaks an unrelated test | Revert. Per karpathy #3 (surgical changes), unintended breakage is by definition out-of-scope. |
 
 ---
@@ -273,8 +273,9 @@ New files:
 - `tests/integration/h1-cross-cycle-awareness.test.mjs`
 - `tests/unit/audit-findings-status.test.mjs`
 - `scripts/route-cli.mjs` (extracted from `scripts/route.mjs`)
-- `.claude/hooks/block-task-without-mandatories.sh` (or scaffold-based equivalent)
-- `.claude/hooks/record-skill-invocation.sh` (or scaffold-based equivalent)
+- `.claude/hooks/block-task-without-mandatories.sh`
+- `.claude/hooks/record-skill-invocation.sh`
+- A shared bash include file for hook preamble (path decided in implementation plan; sourced by all hooks)
 - `.claude/rules/memory-discipline.md`
 - `docs/audit/2026-05-15-security-audit.md` (populated by iteration 05)
 - `build/workflows/01-regen-prose-widen/` through `05-perf-security-hardening/` (five iteration dirs with the standard subdir layout)
@@ -317,15 +318,13 @@ Once the implementation plan is approved, individual iterations begin (planner a
 
 ---
 
-## 12. Open questions for the implementation-plan stage
+## 12. Decisions resolved during user review (2026-05-15)
 
-These do not block this design; they get answered during `writing-plans`:
+The three implementation-shape questions raised during brainstorming are answered here so the implementation plan inherits firm decisions rather than open questions. Rationale for each is preserved for future audits.
 
-- **Hook scaffold language.** Pure-bash shared include vs. Node helper invoked from thin bash wrapper. Tradeoff: bash is closer to the existing pattern; Node is closer to the routing brain and reuses existing test infrastructure. The implementation plan picks one with a written rationale.
-- **Where the regen-counts logic lives.** Extend `regen-routing-docs.mjs` (it'll grow) or create a sibling `regen-blueprint-prose.mjs`. The implementation plan decides based on whether the rendering logic stays cohesive.
-- **Cache invalidation for the `PreToolUse(Skill)` recorder.** When does `cached.invoked_skills` reset — per session start, per prompt, per task? The implementation plan defines the lifecycle.
-
-These are surfaced now per karpathy #1 ("If multiple interpretations exist, present them").
+- **Hook scaffold language: bash.** Pure-bash shared-include file, sourced by each hook. **Rationale:** closer to the existing pattern (all 5 current hooks are bash); preserves the existing authoring convention for downstream consumers who'll write their own hooks; avoids introducing a Node dependency to the hook layer. **Trade-off acknowledged:** bash tests are less expressive than Node tests; offset by keeping each hook's check logic small and using fixture-based integration tests.
+- **Regen logic location: extend `scripts/regen-routing-docs.mjs`.** Single script, no sibling. **Rationale:** the rendering logic stays cohesive — one source-of-truth (route.mjs exports + filesystem inspection) → many derived files. The single drift test `tests/unit/routing-docs-in-sync.test.mjs` extends in lockstep. **Trade-off:** the script will grow ~3x; mitigation is internal modularization (helper functions per output target).
+- **`PreToolUse(Skill)` recorder cache lifecycle: clear on session start AND on transition-phrase detection.** **Rationale (user, paraphrased):** "cleared often enough to save memory but not lose context." The implementation reuses the existing `detectTransition()` pattern from `scripts/route.mjs:295-304` (same transition phrases: `now let's`, `switch to`, `actually,`, `pivot to`). Within a contiguous task (no transition phrase fires), `cached.invoked_skills` persists across prompts so a multi-prompt task does not repeatedly trip the `block-task-without-mandatories` gate. Cache file path remains `.claude/routing/.current.json`. **Trade-off:** transition-phrase detection is heuristic; false negatives (no phrase but task pivots) mean stale skill records persist into a new task. Mitigation: the `block-task-without-mandatories` hook still surfaces the gate visibly — the operator (or session-start hook) can clear manually.
 
 ---
 
