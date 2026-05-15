@@ -96,7 +96,7 @@ Most of what happened on day 2 was *correctness work* — closing gaps the day-1
 | **Iteration workspaces** | `spec/`, `lab/`, `build/workflows/`, `ship/` exist but contain only templates and `.gitkeep`s — **by design**. The scaffold is the deliverable, not the iterations. |
 | **CI** | GitHub Actions cleanroom workflow configured in `.github/workflows/ci.yml`; tests also run locally via `npm test`. |
 | **Linter / formatter** | None configured. Project is plain Node 18+ ESM (`.mjs`) plus bash; the existing codebase style is consistent without formal enforcement. |
-| **Memory** (Claude Code persistent) | `feedback-no-prs-in-this-project` (solo project, commit-direct-to-main) and `feedback-scaffold-invariants` (never fill `.claude/reference/*` placeholders) saved at `~/.claude/projects/.../memory/`. |
+| **Memory** (Claude Code persistent) | Auto-memory at `~/.claude/projects/.../memory/MEMORY.md` (canonical). See that file for current entries. |
 
 ---
 
