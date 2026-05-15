@@ -53,6 +53,10 @@ If next cycle: `N += 1`. If `N > 5`, the `block-cycle-overrun.sh` hook will bloc
 - Write `04-output/ESCALATION.md` describing the cycles that ran and the unresolved findings.
 - Likely action: re-engage the planner with revised inputs and start a NEW iteration directory (`build/workflows/<NN+1>-<slug>-v2/`).
 
+### Step E: Cycle artifact archival
+
+When a cycle's reviewer/adversary completes with a `verdict: fail` or critical findings, the iteration moves to a new cycle (N+1). The prior `review-N.md` / `adversary-N.md` stay in place; they are **NOT deleted**. The implementer's input set for cycle N+1 is **only** the latest pair (per `sort -V | tail -1` semantics used in `.claude/hooks/block-output-without-signoff.sh:41-42`). Agents reading prior reports for cross-cycle context (per the iteration-02 update to agent specs) read all of them; agents extracting "the previous verdict" read only the latest. The directory should never be cleaned within an iteration; archival happens once when the iteration moves to `04-output/`, at which point intermediate `review-*.md` and `adversary-*.md` files may be moved to a `03-validate/archive/` subdirectory (optional housekeeping).
+
 ## Phase 3: Output
 
 When the loop exits to 04-output:

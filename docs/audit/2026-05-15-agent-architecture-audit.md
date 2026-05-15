@@ -126,7 +126,7 @@ The scaffold is well-engineered at the markdown-contract level and has strong un
 | M7 (`F10.2`) | `route-inject.sh` silently truncates at 6000 chars with no marker | 10 | `route-inject.sh:50` | **Status:** open |
 | M8 (`F10.4`) | All errors in `route-inject.sh` swallowed via `2>/dev/null \|\| true` | 10 | `route-inject.sh:14,17,19,28,44,50` | **Status:** open |
 | M9 (`F2.1`) | Same fact in `MEMORY.md`, dev log, instincts — no canonical source | 2+3+12 | 4+ surfaces for "no PRs in this project" | **Status:** closed (907a459) |
-| M10 (`F12.2`) | Prior `review-N.md` not archived; can be re-read by mistake | 12 | `block-cycle-overrun.sh:24-25` | **Status:** open |
+| M10 (`F12.2`) | Prior `review-N.md` not archived; can be re-read by mistake | 12 | `block-cycle-overrun.sh:24-25` | **Status:** closed (0ccad23) |
 | M11 (`F3.2`) | `.serena/memories/` and MCP memory unconstrained; no schema, no audit | 3+12 | `settings.json:78-82` | **Status:** open |
 
 ### LOW
