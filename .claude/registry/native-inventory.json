@@ -236,6 +236,16 @@
     "path": ".claude/rules/commit-discipline.md"
   },
   {
+    "name": "memory-discipline",
+    "kind": "rule",
+    "source": "native",
+    "description": "# Rule: Memory discipline",
+    "languages": [],
+    "tools": [],
+    "model": null,
+    "path": ".claude/rules/memory-discipline.md"
+  },
+  {
     "name": "nasa-power-of-10",
     "kind": "rule",
     "source": "native",
