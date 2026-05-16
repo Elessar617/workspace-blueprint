@@ -103,7 +103,7 @@
 
 - **Deletion test.** Medium — if you delete one scraper, that source disappears. If you delete the *shared seam abstraction* you don't yet have, the three current scrapers still work; the test is whether ADDING the fourth feels mechanical. The benefit is most visible when N grows.
 
-- **Status:** open
+- **Status:** closed (25b5f56)
 
 ---
 

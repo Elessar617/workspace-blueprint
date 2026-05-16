@@ -11,12 +11,13 @@ test('scrapeHarness stores portable plugin paths and keeps latest duplicate skil
   mkdirSync(join(pluginsDir, 'market', 'superpowers', '5.0.7', 'skills', 'brainstorming'), { recursive: true });
   mkdirSync(join(pluginsDir, 'market', 'superpowers', '5.1.0', 'skills', 'brainstorming'), { recursive: true });
 
-  const result = scrapeHarness({ pluginsDir, settingsPaths: [] });
-  assert.equal(result.skills.length, 1);
-  assert.equal(result.skills[0].name, 'brainstorming');
-  assert.equal(result.skills[0].version, '5.1.0');
-  assert.equal(result.skills[0].plugin_path, 'market/superpowers/5.1.0/skills/brainstorming');
-  assert.equal(result.skills[0].plugin_path.startsWith('/'), false);
+  const result = scrapeHarness({ root: pluginsDir, options: { settingsPaths: [] } });
+  const skills = result.records.filter((r) => r.kind === 'skill');
+  assert.equal(skills.length, 1);
+  assert.equal(skills[0].name, 'brainstorming');
+  assert.equal(skills[0].version, '5.1.0');
+  assert.equal(skills[0].plugin_path, 'market/superpowers/5.1.0/skills/brainstorming');
+  assert.equal(skills[0].plugin_path.startsWith('/'), false);
 
   rmSync(root, { recursive: true, force: true });
 });
@@ -28,8 +29,9 @@ test('scrapeHarness reads MCPs from multiple settings files', () => {
   writeFileSync(one, JSON.stringify({ mcpServers: { git: { command: 'npx' } } }));
   writeFileSync(two, JSON.stringify({ mcpServers: { fetch: { command: 'npx' } } }));
 
-  const result = scrapeHarness({ pluginsDir: join(root, 'missing'), settingsPaths: [one, two] });
-  assert.deepEqual(result.mcps.map((item) => item.name).sort(), ['fetch', 'git']);
+  const result = scrapeHarness({ root: join(root, 'missing'), options: { settingsPaths: [one, two] } });
+  const mcps = result.records.filter((r) => r.kind === 'mcp');
+  assert.deepEqual(mcps.map((item) => item.name).sort(), ['fetch', 'git']);
 
   rmSync(root, { recursive: true, force: true });
 });

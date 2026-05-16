@@ -28,69 +28,91 @@ function writeJsonAtomic(path, data) {
   renameSync(tmp, path);
 }
 
+// Filter a flat `records` array by `kind`. The unified scraper contract returns
+// records with each item carrying its own `kind`; the registry's per-kind JSON
+// files are derived here rather than inside each scraper.
+function byKind(records, kind) {
+  return records.filter((r) => r.kind === kind);
+}
+
 async function main() {
-  let eccResult = { agents: [], skills: [], commands: [], rules: [], mcps: [], skipped: [] };
+  let eccResult = { records: [], sha: null, skipped: [] };
 
   if (!HARNESS_ONLY) {
     const eccPath = resolveEccPath();
     console.log(`[rebuild-registry] ECC path: ${eccPath}`);
     if (existsSync(eccPath)) {
-      eccResult = scrapeEcc(eccPath);
-      console.log(`[rebuild-registry] ECC: ${eccResult.agents.length} agents, ${eccResult.skills.length} skills, ${eccResult.commands.length} commands, ${eccResult.mcps.length} mcps, ${eccResult.skipped.length} skipped`);
+      eccResult = scrapeEcc({ root: eccPath });
+      const eccAgents = byKind(eccResult.records, 'agent');
+      const eccSkills = byKind(eccResult.records, 'skill');
+      const eccCommands = byKind(eccResult.records, 'command');
+      const eccMcps = byKind(eccResult.records, 'mcp');
+      console.log(`[rebuild-registry] ECC: ${eccAgents.length} agents, ${eccSkills.length} skills, ${eccCommands.length} commands, ${eccMcps.length} mcps, ${eccResult.skipped.length} skipped`);
     } else {
       console.warn(`[rebuild-registry] ECC path missing: ${eccPath} - skipping ECC scrape`);
     }
   }
 
-  const native = scrapeNative(REPO_ROOT);
+  const nativeResult = scrapeNative({ root: REPO_ROOT });
+  const native = nativeResult.records;
   const hookProfiles = [
     { name: 'minimal', kind: 'hook-profile', source: 'native', description: 'Hooks no-op; exit 0 immediately.' },
     { name: 'standard', kind: 'hook-profile', source: 'native', description: 'Current hook behavior (default).' },
     { name: 'strict', kind: 'hook-profile', source: 'native', description: 'Current behavior plus future stricter variants.' },
   ];
-  const harness = scrapeHarness({
-    settingsPaths: [
-      join(REPO_ROOT, '.claude', 'settings.json'),
-      join(homedir(), '.claude', 'settings.json'),
-    ],
+  const harnessResult = scrapeHarness({
+    options: {
+      settingsPaths: [
+        join(REPO_ROOT, '.claude', 'settings.json'),
+        join(homedir(), '.claude', 'settings.json'),
+      ],
+    },
   });
-  console.log(`[rebuild-registry] Harness: ${harness.skills.length} skills, ${harness.mcps.length} mcps`);
+  const harnessSkills = byKind(harnessResult.records, 'skill');
+  const harnessMcps = byKind(harnessResult.records, 'mcp');
+  console.log(`[rebuild-registry] Harness: ${harnessSkills.length} skills, ${harnessMcps.length} mcps`);
   console.log(`[rebuild-registry] Native: ${native.length} items`);
 
+  const eccAgentsForWrite = byKind(eccResult.records, 'agent');
+  const eccSkillsForWrite = byKind(eccResult.records, 'skill');
+  const eccCommandsForWrite = byKind(eccResult.records, 'command');
+  const eccMcpsForWrite = byKind(eccResult.records, 'mcp');
+  const eccRulesForWrite = byKind(eccResult.records, 'rule');
+
   if (!HARNESS_ONLY) {
-    writeJsonAtomic(join(REGISTRY_DIR, 'ecc-agents.json'), eccResult.agents);
-    writeJsonAtomic(join(REGISTRY_DIR, 'ecc-skills.json'), eccResult.skills);
-    writeJsonAtomic(join(REGISTRY_DIR, 'ecc-commands.json'), eccResult.commands);
-    writeJsonAtomic(join(REGISTRY_DIR, 'ecc-mcps.json'), eccResult.mcps);
-    writeJsonAtomic(join(REGISTRY_DIR, 'ecc-language-rules.json'), eccResult.rules);
+    writeJsonAtomic(join(REGISTRY_DIR, 'ecc-agents.json'), eccAgentsForWrite);
+    writeJsonAtomic(join(REGISTRY_DIR, 'ecc-skills.json'), eccSkillsForWrite);
+    writeJsonAtomic(join(REGISTRY_DIR, 'ecc-commands.json'), eccCommandsForWrite);
+    writeJsonAtomic(join(REGISTRY_DIR, 'ecc-mcps.json'), eccMcpsForWrite);
+    writeJsonAtomic(join(REGISTRY_DIR, 'ecc-language-rules.json'), eccRulesForWrite);
     writeJsonAtomic(join(REGISTRY_DIR, 'ecc-hook-profiles.json'), hookProfiles);
   }
   writeJsonAtomic(join(REGISTRY_DIR, 'native-inventory.json'), native);
-  writeJsonAtomic(join(REGISTRY_DIR, 'harness-skills.json'), harness.skills);
-  writeJsonAtomic(join(REGISTRY_DIR, 'harness-mcps.json'), harness.mcps);
-  writeJsonAtomic(join(REGISTRY_DIR, 'harness-builtins.json'), harness.builtins);
+  writeJsonAtomic(join(REGISTRY_DIR, 'harness-skills.json'), harnessSkills);
+  writeJsonAtomic(join(REGISTRY_DIR, 'harness-mcps.json'), harnessMcps);
+  writeJsonAtomic(join(REGISTRY_DIR, 'harness-builtins.json'), harnessResult.builtins);
 
   const fullRegistry = {
     agents: HARNESS_ONLY
       ? (existsSync(join(REGISTRY_DIR, 'ecc-agents.json')) ? JSON.parse(readFileSync(join(REGISTRY_DIR, 'ecc-agents.json'), 'utf8')) : [])
-      : eccResult.agents,
+      : eccAgentsForWrite,
     skills: [
-      ...(HARNESS_ONLY ? (existsSync(join(REGISTRY_DIR, 'ecc-skills.json')) ? JSON.parse(readFileSync(join(REGISTRY_DIR, 'ecc-skills.json'), 'utf8')) : []) : eccResult.skills),
-      ...harness.skills,
+      ...(HARNESS_ONLY ? (existsSync(join(REGISTRY_DIR, 'ecc-skills.json')) ? JSON.parse(readFileSync(join(REGISTRY_DIR, 'ecc-skills.json'), 'utf8')) : []) : eccSkillsForWrite),
+      ...harnessSkills,
     ],
     commands: HARNESS_ONLY
       ? (existsSync(join(REGISTRY_DIR, 'ecc-commands.json')) ? JSON.parse(readFileSync(join(REGISTRY_DIR, 'ecc-commands.json'), 'utf8')) : [])
-      : eccResult.commands,
+      : eccCommandsForWrite,
     mcps: [
-      ...(HARNESS_ONLY ? (existsSync(join(REGISTRY_DIR, 'ecc-mcps.json')) ? JSON.parse(readFileSync(join(REGISTRY_DIR, 'ecc-mcps.json'), 'utf8')) : []) : eccResult.mcps),
-      ...harness.mcps,
+      ...(HARNESS_ONLY ? (existsSync(join(REGISTRY_DIR, 'ecc-mcps.json')) ? JSON.parse(readFileSync(join(REGISTRY_DIR, 'ecc-mcps.json'), 'utf8')) : []) : eccMcpsForWrite),
+      ...harnessMcps,
     ],
-    builtins: harness.builtins,
+    builtins: harnessResult.builtins,
     native,
     hookProfiles,
     rules: HARNESS_ONLY
       ? (existsSync(join(REGISTRY_DIR, 'ecc-language-rules.json')) ? JSON.parse(readFileSync(join(REGISTRY_DIR, 'ecc-language-rules.json'), 'utf8')) : [])
-      : eccResult.rules,
+      : eccRulesForWrite,
   };
 
   const filesToValidate = [];

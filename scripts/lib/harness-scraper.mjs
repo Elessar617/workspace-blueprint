@@ -10,13 +10,23 @@ const BUILTINS = [
 
 const compareVersion = (a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
 
-export function scrapeHarness({
-  pluginsDir = join(homedir(), '.claude', 'plugins', 'cache'),
-  settingsPath = join(homedir(), '.claude', 'settings.json'),
-  settingsPaths,
-} = {}) {
+// Unified scraper contract: ({ root, options }) → { records, builtins }
+//   root: the harness plugin cache directory (default ~/.claude/plugins/cache).
+//   options:
+//     - settingsPath:  single settings.json to scan for mcpServers (default ~/.claude/settings.json)
+//     - settingsPaths: array of settings.json files; if provided overrides settingsPath
+// `builtins` is a stable array of Claude Code built-in subagents that have no
+// on-disk file and therefore cannot be discovered by walking the plugin cache —
+// returned as a separate field so callers can address them without filtering.
+// Missing root returns { records: [], builtins } (settings parsing still runs
+// because settings files live outside the plugin cache).
+export function scrapeHarness({ root, options = {} } = {}) {
+  const pluginsDir = root || join(homedir(), '.claude', 'plugins', 'cache');
+  const settingsPath = options.settingsPath || join(homedir(), '.claude', 'settings.json');
+  const settingsPaths = options.settingsPaths;
+
   const skillsByKey = new Map();
-  const mcps = [];
+  const records = [];
   const builtins = BUILTINS.map((item) => ({ ...item }));
 
   if (existsSync(pluginsDir)) {
@@ -54,6 +64,7 @@ export function scrapeHarness({
       }
     }
   }
+  for (const skill of skillsByKey.values()) records.push(skill);
 
   const paths = settingsPaths || [settingsPath];
   const seenMcps = new Set();
@@ -65,7 +76,7 @@ export function scrapeHarness({
         for (const [name, config] of Object.entries(settings.mcpServers)) {
           if (seenMcps.has(name)) continue;
           seenMcps.add(name);
-          mcps.push({
+          records.push({
             name,
             kind: 'mcp',
             source: 'harness',
@@ -79,5 +90,5 @@ export function scrapeHarness({
     }
   }
 
-  return { skills: [...skillsByKey.values()], mcps, builtins };
+  return { records, builtins };
 }

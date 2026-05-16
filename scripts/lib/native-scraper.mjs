@@ -21,43 +21,51 @@ function pushIfMarkdown(out, file, repoRoot, opts) {
   if (existsSync(file) && extname(file) === '.md') out.push(readMarkdownRecord(file, repoRoot, opts));
 }
 
-export function scrapeNative(repoRoot) {
-  const out = [];
+// Unified scraper contract: ({ root, options }) → { records: [...] }
+//   root: the repository root containing .claude/{agents,skills,rules,settings.json}.
+//   options: reserved for future per-call configuration (currently unused).
+// When root does not exist, returns { records: [] } rather than throwing — the
+// failure mode of a missing path is "no records discovered," which is the same
+// contract surfaced by sibling scrapers (ecc, harness).
+export function scrapeNative({ root, options = {} } = {}) {
+  void options;
+  const records = [];
+  if (!root || !existsSync(root)) return { records };
 
-  const agentsDir = join(repoRoot, '.claude', 'agents');
+  const agentsDir = join(root, '.claude', 'agents');
   if (existsSync(agentsDir)) {
     for (const entry of readdirSync(agentsDir)) {
       const file = join(agentsDir, entry);
       if (!statSync(file).isFile() || extname(file) !== '.md') continue;
       const stem = filenameStem(file).replace(/-agent$/, '');
-      pushIfMarkdown(out, file, repoRoot, { kind: 'agent', name: stem });
+      pushIfMarkdown(records, file, root, { kind: 'agent', name: stem });
     }
   }
 
-  const skillsDir = join(repoRoot, '.claude', 'skills');
+  const skillsDir = join(root, '.claude', 'skills');
   if (existsSync(skillsDir)) {
     for (const entry of readdirSync(skillsDir)) {
       if (LOCAL_ONLY_SKILLS.has(entry)) continue;
       const file = join(skillsDir, entry, 'SKILL.md');
-      pushIfMarkdown(out, file, repoRoot, { kind: 'skill', name: entry });
+      pushIfMarkdown(records, file, root, { kind: 'skill', name: entry });
     }
   }
 
-  const rulesDir = join(repoRoot, '.claude', 'rules');
+  const rulesDir = join(root, '.claude', 'rules');
   if (existsSync(rulesDir)) {
     for (const entry of readdirSync(rulesDir)) {
       const file = join(rulesDir, entry);
       if (!statSync(file).isFile()) continue;
-      pushIfMarkdown(out, file, repoRoot, { kind: 'rule' });
+      pushIfMarkdown(records, file, root, { kind: 'rule' });
     }
   }
 
-  const settingsPath = join(repoRoot, '.claude', 'settings.json');
+  const settingsPath = join(root, '.claude', 'settings.json');
   if (existsSync(settingsPath)) {
     try {
       const settings = JSON.parse(readFileSync(settingsPath, 'utf8'));
       for (const [name, config] of Object.entries(settings.mcpServers || {})) {
-        out.push({
+        records.push({
           name,
           kind: 'mcp',
           source: 'native',
@@ -70,5 +78,5 @@ export function scrapeNative(repoRoot) {
     }
   }
 
-  return out;
+  return { records };
 }

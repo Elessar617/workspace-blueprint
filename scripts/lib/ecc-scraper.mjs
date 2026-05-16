@@ -28,13 +28,27 @@ export function getEccSha(eccPath) {
   return result.stdout.trim();
 }
 
-export function scrapeEcc(eccPath) {
-  const eccSha = getEccSha(eccPath);
+// Unified scraper contract: ({ root, options }) → { records, sha, skipped }
+//   root: the ECC working tree (typically the submodule path).
+//   options: reserved for future per-call configuration (currently unused).
+// `sha` is the git revision of `root` (or null if `root` is not a git tree); it
+// is the only field a sibling scraper does not expose, because the ECC source
+// is the only one we treat as versioned content. `skipped` is the list of
+// markdown files whose frontmatter failed to parse — surfaced so callers can
+// report a non-zero count without losing visibility into which files were
+// rejected.
+// Missing root returns { records: [], sha: null, skipped: [] } rather than
+// throwing — same failure-mode contract as scrapeNative/scrapeHarness.
+export function scrapeEcc({ root, options = {} } = {}) {
+  void options;
+  if (!root || !existsSync(root)) return { records: [], sha: null, skipped: [] };
+
+  const sha = getEccSha(root);
   const skipped = [];
-  const out = { agents: [], skills: [], commands: [], rules: [], mcps: [] };
+  const records = [];
 
   for (const [subdir, kind] of Object.entries(DIR_KIND_MAP)) {
-    const dirPath = join(eccPath, subdir);
+    const dirPath = join(root, subdir);
     for (const file of walkMarkdown(dirPath)) {
       const parsed = parseMarkdown(file);
       if (parsed.parseError) {
@@ -46,33 +60,28 @@ export function scrapeEcc(eccPath) {
         kind,
         source: 'ecc',
       });
-      record.path = relative(eccPath, file);
-      record.ecc_sha = eccSha;
-      const bucket =
-        kind === 'agent' ? 'agents'
-        : kind === 'skill' ? 'skills'
-        : kind === 'command' ? 'commands'
-        : 'rules';
-      out[bucket].push(record);
+      record.path = relative(root, file);
+      record.ecc_sha = sha;
+      records.push(record);
     }
   }
 
-  const mcpDir = join(eccPath, 'mcp-configs');
+  const mcpDir = join(root, 'mcp-configs');
   if (existsSync(mcpDir)) {
     for (const entry of readdirSync(mcpDir)) {
       const p = join(mcpDir, entry);
       if (extname(p) === '.json') {
-        out.mcps.push({
+        records.push({
           name: filenameStem(p),
           kind: 'mcp',
           source: 'ecc',
-          path: relative(eccPath, p),
+          path: relative(root, p),
           description: '',
-          ecc_sha: eccSha,
+          ecc_sha: sha,
         });
       }
     }
   }
 
-  return { ...out, skipped, eccSha };
+  return { records, sha, skipped };
 }
