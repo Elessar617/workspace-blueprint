@@ -7,6 +7,6 @@
 **How to apply:**
 - Implementer runs the project's lint + format commands as the last step before declaring `02-implement/` work done. Document the project's commands in `.claude/reference/tech-stack.md`.
 - Type checking (where the language supports it) is mandatory. Untyped code in a typed codebase is a regression.
-- No leftover `console.log`, `print`, `dbg!`, `byebug`, or equivalent debug statements in committed code. The reviewer agent flags any it finds as a critical issue.
+- No leftover `console.log`, `print`, `dbg!`, `byebug`, or equivalent debug statements in committed code. The reviewer agent flags any it finds as a critical issue. **Exception:** comments matching `# adversary: ...` or `// adversary: ...` are permitted on adversary-authored tests under `tests/` per `.claude/agents/adversary-agent.md`; they mark intentionally-failing edge-case probes for the implementer.
 - Imports must be sorted/grouped per the project's convention (or the formatter's default).
 - Dead code (unused imports, unreachable branches, commented-out blocks) gets removed, not preserved "in case we need it." Git history is the safety net.

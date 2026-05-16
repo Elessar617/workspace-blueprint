@@ -133,7 +133,7 @@ The scaffold is well-engineered at the markdown-contract level and has strong un
 
 | ID | Title | Layer | Status |
 |---|---|---|---|
-| L1 (`F1.6`) | Adversary `# adversary:` marker comments may conflict with `code-quality.md` debug-statement rule | 1+9 | **Status:** open |
+| L1 (`F1.6`) | Adversary `# adversary:` marker comments may conflict with `code-quality.md` debug-statement rule | 1+9 | **Status:** closed (e8e2aa5) |
 | L2 (`F1.7`) | `CLAUDE.md` cross-references `docs/superpowers/specs/*` which may not exist in consumer repos | 1 | **Status:** open |
 | L3 (`F10.1`) | Routing-injection HEADER is the only "this is platform, not user" attribution; fragile to reword | 10 | **Status:** open |
 | L4 (`F10.3`) | Two PreToolUse hooks on same matcher — actually safe (disjoint path filters) but undocumented | 10 | **Status:** open |
