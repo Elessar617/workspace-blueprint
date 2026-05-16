@@ -18,3 +18,10 @@ This file is regenerated from `scripts/route.mjs`. Edit the constants in that
 file, then run `npm run regen-routing-docs`. Tests in
 `tests/unit/routing-docs-in-sync.test.mjs` fail if this file drifts from the
 runtime data.
+
+> **Name resolution.** Agent, skill, and MCP names above resolve to concrete
+> paths via the registries in `.claude/registry/*.json` (built by `scripts/rebuild-
+> registry.mjs`). When a name is missing from every registry the routing layer
+> falls back to the native inventory only; downstream consumers can re-render
+> by editing constants in `scripts/route.mjs` and running `npm run regen-routing-
+> docs`.

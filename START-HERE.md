@@ -19,10 +19,10 @@ Three-layer routing keeps token usage tight:
 
 Then the agent infrastructure:
 
-- **`.claude/rules/`** — 7 always-loaded constraints (TDD mandatory, conventional commits, portability, etc.)
+- **`.claude/rules/`** — 8 always-loaded constraints (TDD mandatory, conventional commits, portability, etc.)
 - **`.claude/skills/`** — 15 procedures (6 project-specific, 5 integrations, 4 routing-vendored)
 - **`.claude/agents/`** — 4 subagent specs (planner, implementer, reviewer, adversary)
-- **`.claude/hooks/`** — 4 bash hooks that enforce rules by construction
+- **`.claude/hooks/`** — 5 bash hooks that enforce rules by construction
 - **`.claude/settings.json`** — wires hooks, MCP servers, plugins, permissions
 
 ## How work flows

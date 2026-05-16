@@ -4,15 +4,17 @@
 
 ## Step 1: Identify task type
 
-| Signal in prompt or context             | Workspace | Branch file                          |
-|------------------------------------------|-----------|--------------------------------------|
-| "review", "audit", "evaluate", "critique"| `build/`  | `.claude/routing/review.md`          |
-| "feature", "implement", "add"            | `build/`  | `.claude/routing/build.md`           |
-| "fix", "bug", "broken"                   | `build/`  | `.claude/routing/bug.md`             |
-| "refactor", "migrate", "rename"          | `build/`  | `.claude/routing/refactor.md`        |
-| "investigate", "spike", "explore"        | `lab/`    | `.claude/routing/spike.md`           |
-| "RFC", "ADR", "design", "spec", "brief"  | `spec/`   | `.claude/routing/spec-author.md`     |
-| "release", "ship", "changelog"           | `ship/`   | `.claude/routing/ship.md`            |
+<!-- regen:start ROUTING_STEP1 -->
+| Signal in prompt or context | Workspace | Branch file |
+|---|---|---|
+| "review", "audit", "evaluate", "critique", "act as reviewer" | `build/` | `.claude/routing/review.md` |
+| "add ", "implement", "feature", "build ", "create " | `build/` | `.claude/routing/build.md` |
+| "fix", "bug", "broken", "crash" | `build/` | `.claude/routing/bug.md` |
+| "refactor", "migrate", "rename", "restructure", "cleanup" | `build/` | `.claude/routing/refactor.md` |
+| "investigate", "spike", "explore", "prototype" | `lab/` | `.claude/routing/spike.md` |
+| "rfc", "adr", "design ", "spec ", "brief", "propose" | `spec/` | `.claude/routing/spec-author.md` |
+| "release", "ship", "changelog", "publish", "cut a v" | `ship/` | `.claude/routing/ship.md` |
+<!-- regen:end ROUTING_STEP1 -->
 
 ## Global code-writing rule overlay
 

@@ -33,7 +33,7 @@ When starting a task, ask in order:
 | **Write a brief** | `spec/CONTEXT.md` | `.claude/skills/spec-authoring/SKILL.md` only |
 | **Investigate a question (spike)** | `lab/CONTEXT.md` | `lab/00-template/`, `.claude/skills/spike-protocol/SKILL.md` |
 | **Run a data-analysis spike** | `lab/CONTEXT.md` | + `.claude/skills/data-analysis/SKILL.md` |
-| **Implement a feature** | `build/CONTEXT.md`, `build/workflows/CONTEXT.md` | `.claude/agents/{planner,implementer,reviewer,adversary}-agent.md` (in pipeline order), `.claude/skills/tdd-loop/SKILL.md`, `.claude/rules/` (all 5) |
+| **Implement a feature** | `build/CONTEXT.md`, `build/workflows/CONTEXT.md` | `.claude/agents/{planner,implementer,reviewer,adversary}-agent.md` (in pipeline order), `.claude/skills/tdd-loop/SKILL.md`, `.claude/rules/` (all 8) |
 | **Fix a bug** | `build/CONTEXT.md` | + `.claude/skills/bug-investigation/SKILL.md` |
 | **Refactor / migrate** | `build/CONTEXT.md` | + `.claude/skills/refactor-protocol/SKILL.md` |
 | **Write user-facing docs** | `ship/CONTEXT.md` | `.claude/reference/tech-stack.md`, the relevant `04-output/OUTPUT.md` |

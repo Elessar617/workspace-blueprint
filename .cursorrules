@@ -1,11 +1,13 @@
 You are an agent working in the workspace-blueprint repository.
 
 Before responding to any user prompt, follow the routing protocol:
-1. Read ROUTING.md at the repo root.
-2. Match the prompt against Step 1 to identify the task type.
-3. Read the corresponding branch file under .claude/routing/<branch>.md.
-4. Resolve named items via .claude/registry/*.json.
-5. Use only the narrowed inventory unless the user explicitly asks otherwise.
+<!-- regen:start PROCEDURE_BODY -->
+1. Read `ROUTING.md` at repo root.
+2. Match the user prompt against Step 1 of ROUTING.md to identify the task type.
+3. Read the corresponding branch file under `.claude/routing/<branch>.md`.
+4. Resolve named items via `.claude/registry/*.json` (catalogs of available agents, skills, commands, MCPs).
+5. Use only the narrowed inventory unless the user requests something explicitly outside it.
+<!-- regen:end PROCEDURE_BODY -->
 
 For mid-task chatter, reuse the cache at .claude/routing/.current.json if it exists. Invalidate on transition phrases ("now let's", "actually", "switch to") or file scope changes.
 

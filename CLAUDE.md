@@ -27,10 +27,10 @@ workspace-blueprint/
 │
 ├─ .claude/              ← cross-cutting agent infrastructure
 │  ├─ rules/             ← always-loaded constraints (LEAN, <40KB)
-│  ├─ skills/            ← on-demand procedures (10 skills: 6 project + 4 routing-vendored)
+│  ├─ skills/            ← on-demand procedures (15 skills: 6 project + 5 integrations + 4 routing-vendored)
 │  ├─ agents/            ← planner, implementer, reviewer, adversary specs
 │  ├─ reference/         ← looked up on demand (project + portable references)
-│  ├─ hooks/             ← four bash hooks enforcing rules by construction
+│  ├─ hooks/             ← 5 bash hooks enforcing rules by construction
 │  ├─ settings.json      ← wires hooks, plugins, MCP servers
 │  ├─ .portability-deny.txt   ← deny list for the portability hook
 │  └─ MCP-SETUP.md       ← post-clone setup: plugins + GitHub PAT

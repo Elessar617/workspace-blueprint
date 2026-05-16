@@ -6,11 +6,13 @@
 
 Before responding to a user prompt, agents in this repo MUST:
 
-1. Read `ROUTING.md` (the decision-tree entry file at repo root).
-2. Match the user's prompt against Step 1 of ROUTING.md to identify the task type.
+<!-- regen:start PROCEDURE_BODY -->
+1. Read `ROUTING.md` at repo root.
+2. Match the user prompt against Step 1 of ROUTING.md to identify the task type.
 3. Read the corresponding branch file under `.claude/routing/<branch>.md`.
-4. Resolve any named items via `.claude/registry/*.json` (catalogs of available agents, skills, commands, MCPs).
+4. Resolve named items via `.claude/registry/*.json` (catalogs of available agents, skills, commands, MCPs).
 5. Use only the narrowed inventory unless the user requests something explicitly outside it.
+<!-- regen:end PROCEDURE_BODY -->
 
 ## Cache
 
