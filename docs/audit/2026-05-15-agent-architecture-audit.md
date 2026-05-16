@@ -137,7 +137,7 @@ The scaffold is well-engineered at the markdown-contract level and has strong un
 | L2 (`F1.7`) | `CLAUDE.md` cross-references `docs/superpowers/specs/*` which may not exist in consumer repos | 1 | **Status:** open |
 | L3 (`F10.1`) | Routing-injection HEADER is the only "this is platform, not user" attribution; fragile to reword | 10 | **Status:** open |
 | L4 (`F10.3`) | Two PreToolUse hooks on same matcher — actually safe (disjoint path filters) but undocumented | 10 | **Status:** open |
-| L5 (`F10.5`) | `<!-- ECC:SUMMARY:START -->` block source documented; this repo does not actively run that hook | 10 | **Status:** open |
+| L5 (`F10.5`) | `<!-- ECC:SUMMARY:START -->` block source documented; this repo does not actively run that hook | 10 | **Status:** closed (9644582) |
 
 ### NEGATIVE FINDINGS (confirmed absent)
 

@@ -149,3 +149,11 @@ To temporarily disable a hook (e.g., during a refactor where the TDD hook is blo
 4. **Re-enable** as soon as the temporary work is done. Disable in a branch, restore on merge.
 
 If you find yourself disabling a hook repeatedly for the same reason, that's a signal the hook needs scoping (file extensions, paths) — file an issue rather than working around it.
+
+## Note: ECC session-summary block
+
+If the ECC plugin is installed and its `session-end.js` hook is registered globally in `~/.claude/settings.json`, sessions in this repo will produce a `<!-- ECC:SUMMARY:START --> ... <!-- ECC:SUMMARY:END -->` block that re-injects into the next session's context. **This repo does NOT register that hook in its own `.claude/settings.json`** — the block originates from the global config.
+
+The mechanism is **lossy by design**: it keeps the last 10 user messages truncated to 200 chars each, plus tool names and modified file paths. It does NOT preserve nuanced state. Treat it as a hint to the next session, not as a substitute for `/save-session` or the `superpowers:handoff` skill (with its 24h decay contract per `.claude/skills/handoff/SKILL.md`).
+
+If you do not want this behavior, comment out the ECC session-end hook in `~/.claude/settings.json` for sessions opened in this repo.
