@@ -76,7 +76,7 @@ The scaffold is well-engineered at the markdown-contract level and has strong un
 - **Mechanism:** `regen-routing-docs.mjs` regenerates `.claude/routing/*.md` from exported constants and a drift test enforces sync (`tests/unit/routing-docs-in-sync.test.mjs`). But `ROUTING.md`'s Step 1 keyword table is hand-maintained. Cross-check: `TASK_RULES[0].keywords` includes `'act as reviewer'`, `ROUTING.md` does not. Spike row missing `'prototype'`. Spec-author row missing `'propose'`. Ship row missing `'publish'` and `'cut a v'`. Refactor missing `'cleanup'` and `'restructure'`.
 - **Evidence:** `scripts/route.mjs:2-9` vs `ROUTING.md:7-15`. Only one assertion in `tests/unit/route.test.mjs:329-333` checks ROUTING.md content (for the literal "review", "audit" pair only).
 - **Confidence:** 0.95.
-- **Status:** open
+- **Status:** closed (7f54be3)
 
 #### H4 — Registry overlap silently resolved by source-rank (`F6.3`)
 - **Layer:** 6
@@ -90,14 +90,14 @@ The scaffold is well-engineered at the markdown-contract level and has strong un
 - **Mechanism:** Three "always-loaded" map files disagree with the filesystem. `CLAUDE.md:30` says "10 skills", `CLAUDE.md:118` says "15 skills" — actual: 14 dirs. `CLAUDE.md:33` and `START-HERE.md:25` say "four bash hooks" — actual: 5. `CONTEXT.md:36` says ".claude/rules/ (all 5)" — actual: 7. When a fresh agent decides whether to load "all 5 rules" but the dir has 7, the implicit invariant fails silently.
 - **Evidence:** `CLAUDE.md:30,33,118`, `START-HERE.md:22,23,25`, `CONTEXT.md:36`; filesystem counts.
 - **Confidence:** 1.0.
-- **Status:** open
+- **Status:** closed (7f54be3)
 
 #### H6 — Routing files list agents that don't exist in `.claude/agents/` (`F1.2`)
 - **Layer:** 1 + 6
 - **Mechanism:** `.claude/routing/refactor.md` lists `refactor-cleaner`, `code-simplifier`; `ship.md` lists `doc-updater`, `opensource-packager`; `spike.md` lists `general-purpose`, `Explore`, `code-explorer`; `spec-author.md` lists `architect`, `Plan`. None of these are in `.claude/agents/` (which has only 4 specs). `ROUTING.md:3` claims "Names resolve via `.claude/registry/*.json`" but this resolution path is unverifiable to a fresh agent without the plugins.
 - **Evidence:** `.claude/routing/*.md`, `.claude/agents/` directory listing.
 - **Confidence:** 0.95.
-- **Status:** open
+- **Status:** closed (7f54be3)
 
 #### H7 — Handoff skill has no decay contract; produces task-specific summary that re-enters as fact (`F4.1`)
 - **Layer:** 4 (distillation)
@@ -119,7 +119,7 @@ The scaffold is well-engineered at the markdown-contract level and has strong un
 |---|---|---|---|---|
 | M1 (`F1.3`) | Reviewer told NOT to run tests — verdict relies on implementer self-attestation | 1+9 | `reviewer-agent.md:44` vs `:40` | **Status:** open |
 | M2 (`F1.4`) | Inconsistent `review-N.md` filename refs (`<latest>`, `<cycle>`, `N`, `(N-1)`) | 1+9 | 4 files cite 4 different patterns | **Status:** open |
-| M3 (`F1.5`) | "all 5 rules" vs "all native rules" wording disagree | 1 | `CONTEXT.md:36` vs `.claude/routing/*.md:10` | **Status:** open |
+| M3 (`F1.5`) | "all 5 rules" vs "all native rules" wording disagree | 1 | `CONTEXT.md:36` vs `.claude/routing/*.md:10` | **Status:** closed (7f54be3) |
 | M4 (`F6.4`) | `route-inject.sh` bash-parses prompt JSON via inline `node -e`; brittle for multiline/huge | 6 | `route-inject.sh:9,11,15,50` | **Status:** open |
 | M5 (`F8.2`) | No correction path for wrong instincts; no decay mechanism | 8 | `instinct-reader.mjs:79` | **Status:** open |
 | M6 (`F9.1`/`F7.3`) | `enforce-portability.sh` is PostToolUse — bad write already on disk; can trigger apparent "repair" pattern | 7+9+10 | `settings.json:68-74` | **Status:** open |
@@ -134,7 +134,7 @@ The scaffold is well-engineered at the markdown-contract level and has strong un
 | ID | Title | Layer | Status |
 |---|---|---|---|
 | L1 (`F1.6`) | Adversary `# adversary:` marker comments may conflict with `code-quality.md` debug-statement rule | 1+9 | **Status:** closed (e8e2aa5) |
-| L2 (`F1.7`) | `CLAUDE.md` cross-references `docs/superpowers/specs/*` which may not exist in consumer repos | 1 | **Status:** open |
+| L2 (`F1.7`) | `CLAUDE.md` cross-references `docs/superpowers/specs/*` which may not exist in consumer repos | 1 | **Status:** closed (7f54be3) |
 | L3 (`F10.1`) | Routing-injection HEADER is the only "this is platform, not user" attribution; fragile to reword | 10 | **Status:** open |
 | L4 (`F10.3`) | Two PreToolUse hooks on same matcher — actually safe (disjoint path filters) but undocumented | 10 | **Status:** open |
 | L5 (`F10.5`) | `<!-- ECC:SUMMARY:START -->` block source documented; this repo does not actively run that hook | 10 | **Status:** closed (9644582) |
